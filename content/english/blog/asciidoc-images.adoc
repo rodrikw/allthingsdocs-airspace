@@ -1,0 +1,29 @@
+---
+title: "AsciiDoc images"
+date: 2021-12-02T13:19:08+02:00
+author: Rodrik Wade
+image : "images/blog/blog-post-6.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Documentation"]
+tags: ["AsciiDoc","Hugo"]
+description: "Formatting of AsciiDoc images in Hugo"
+draft: false
+type: "post"
+---
+
+AsciiDoc provides a lot of control over images, and this functionality is available to blog authors.
+
+For reasons that are not clear, the path to images needs to include `/airspace`/, for example: `image::/airspace/images/blog/kitten.jpg[]`.
+
+
+image::/airspace/images/blog/kitten.jpg[]
+
+Images can be resized:
+
+image::/airspace/images/blog/kitten.jpg[alt=kitten,width=200]
+
+The can also have captions:
+
+.A cute kitten
+image::/airspace/images/blog/kitten.jpg[alt=kitten,width=200]
+

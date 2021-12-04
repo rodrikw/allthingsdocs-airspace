@@ -1,0 +1,66 @@
+---
+title: "AsciiDoc blocks"
+date: 2021-11-30T14:41:00+02:00
+author: Rodrik Wade
+image : "images/blog/blog-post-1.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Documentation"]
+tags: ["AsciiDoc","Hugo"]
+description: "Formatting of AsciiDoc blocks in Hugo"
+draft: false
+type: "post"
+---
+
+:source-highlighter: rouge
+:rouge-style: monokai
+
+This post is to test the formatting of AsciiDoc block markup in Hugo.
+
+[NOTE]
+====
+This is a block note. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies laoreet justo eget dapibus. Pellentesque dictum, nisi et tincidunt tempus, nunc elit pulvinar enim, sed ornare libero ligula at eros. Vivamus eu sagittis nibh.
+
+This is another paragraph in the note. Quisque vehicula semper lacus, quis pellentesque est pulvinar eu. Curabitur dignissim turpis urna, quis commodo libero pharetra ultricies.
+====
+
+Here is a simple note:
+
+NOTE: This is a simple note. Pellentesque egestas posuere nisl, sit amet porta magna sollicitudin nec. Quisque malesuada non est non pulvinar. Phasellus eget tempus neque. Morbi vulputate hendrerit tortor non vulputate. Mauris vitae nunc varius, cursus elit at, lobortis lectus.
+
+Here is a one-line note:
+
+NOTE: This is a one-line note.
+
+IMPORTANT: This is an important note.
+
+The following is a sidebar:
+
+.This is the sidebar title
+****
+This is a sidebar. Praesent sodales mollis fringilla. Nunc sodales pulvinar diam non rutrum. Vivamus sed erat ipsum. Curabitur rhoncus dapibus venenatis. Cras imperdiet a ligula varius ornare. Curabitur eleifend tempor sapien, ut maximus ligula blandit eget.
+
+Proin erat justo, ultricies vitae nunc nec, dapibus molestie nisl. Cras tincidunt, neque id fringilla vulputate, massa sem pretium nunc, auctor faucibus eros leo non quam. Pellentesque pellentesque nibh at mauris gravida congue. Nunc nec felis luctus est condimentum varius.
+****
+
+The following is a blockquote:
+
+[quote, Monty Python and the Holy Grail]
+____
+Mauris congue aliquam nisi ultricies vestibulum. _This is italicised, so it should be regular._ In sit amet blandit dolor, id gravida massa. Nam pulvinar vestibulum lorem, vitae rutrum felis egestas non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+Maecenas ut iaculis urna. Morbi sed purus in nisl fringilla volutpat eget eu ante. Maecenas finibus augue eleifend nibh placerat mattis. Praesent ut lectus vitae sapien tristique feugiat.
+____
+
+The following is a source code block:
+
+[source,java]
+.Java source code
+----
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World"); <1>
+  }
+}
+----
+
+<1> This is the important bit.

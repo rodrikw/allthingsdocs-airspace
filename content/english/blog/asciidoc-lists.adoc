@@ -1,0 +1,71 @@
+---
+title: "AsciiDoc lists"
+date: 2021-11-30T12:27:37+02:00
+author: Rodrik Wade
+image : "images/blog/blog-post-1.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Documentation"]
+tags: ["AsciiDoc","Hugo"]
+draft: false
+type: "post"
+---
+
+AsciiDoc supports a wide range of list types.
+
+The following is an unnumbered list:
+
+* Unnumbered list item 1. Pellentesque egestas posuere nisl, sit amet porta magna sollicitudin nec. Quisque malesuada non est non pulvinar. Phasellus eget tempus neque. Morbi vulputate hendrerit tortor non vulputate. Mauris vitae nunc varius, cursus elit at, lobortis lectus.
+** This is a sublist
+** This too
+*** Subsublist
+* Unnumbered list item 2. Curabitur finibus tincidunt ligula, in volutpat orci laoreet vestibulum. Quisque nunc metus, aliquam eget nulla nec, pretium maximus magna.
+
+The following is a numbered list:
+
+. Numbered list item 1. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit. Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
+.. This should be lowercase latin
+.. This too
+... And this should be lower roman
+. Numbered list item 2. Curabitur finibus tincidunt ligula, in volutpat orci laoreet vestibulum. Quisque nunc metus, aliquam eget nulla nec, pretium maximus magna.
+
+The following is a simple list (no bullets or numbers)
+
+[none]
+* List item 1
+** Second level with bullet
+*** Third level with bullet
+* List item 2
+[none]
+** Second level without bullet
+[none]
+*** Third level without bullet
+* List item 3
+
+The following is a checklist:
+
+* [*] checked
+* [x] also checked
+* [ ] not checked
+* normal list item
+
+The following is a definition list:
+
+Light-year::
+A light-year is a unit of length used to express astronomical distances and is equivalent to about 9.46 trillion kilometres (9.46×10^12^ km). As defined by the International Astronomical Union (IAU), a light-year is the distance that light travels in a vacuum in one Julian year (365.25 days).
+
+Parsec::
+The parsec is a unit of length used to measure the large distances to astronomical objects outside the Solar System, approximately equal to 3.26 light-years
++
+This paragraph is still part of the definition. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit. Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
+
+This paragraph is *not* part of the definition. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit. Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
+
+This is a horizontal definition list:
+
+[horizontal]
+Astronomical unit::
+The astronomical unit (symbol: au or AU) is a unit of length, roughly the distance from Earth to the Sun and equal to about 150 million kilometres or ~8 light minutes.
+
+Planck length::
+In physics, the Planck length, denoted ℓP, is a unit of length in the system of Planck units that was originally proposed by physicist Max Planck, equal to 1.616255(18)×10^−35^ m.
+

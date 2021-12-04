@@ -1,0 +1,216 @@
+---
+title: "AsciiDoc tables"
+date: 2021-11-30T14:42:29+02:00
+author: Rodrik wade
+image : "images/blog/blog-post-6.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Documentation"]
+tags: ["AsciiDoc","Hugo"]
+description: "Formatting of AsciiDoc tables in Hugo"
+draft: false
+type: "post"
+---
+
+A wide range of table styles are possible by combining the AsciiDoc `frame` and `grid` settings.
+
+.Default (frame plus grid)
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.frame=ends
+[frame=ends]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.frame=sides
+[frame=sides]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.frame=none
+[frame=none]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.grid=rows
+[grid=rows]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.grid=cols
+[grid=cols]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+
+.grid=none
+[grid=none]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+
+.grid=rows, frame=none
+[grid=rows,frame=none]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+
+
+.grid=cols, frame=none
+[grid=cols,frame=none]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.grid=none, frame=none
+[grid=none,frame=none]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.width=50%
+[width=50%]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+
+
+.cols="s,^e,>d",width=75%
+[cols="s,^e,>d",width=75%]
+|===
+|Heading A | Heading B |Heading C
+
+|Cell 1A
+|Cell 1B
+|Cell 1C
+
+|Cell 2A
+|Cell 2B
+|Cell 2C
+
+|===
+
+.cols="d,.<,.^,.>",width=75%
+[cols="d,.<,.^,.>",width=75%]
+|===
+|Heading A | Heading B |Heading C | Heading D
+
+|Cell 1A. Fusce non dictum massa. Nullam in purus tristique, dictum nunc ac, cursus nibh.
+|Cell 1B
+|Cell 1C
+|Cell 1D
+
+|Cell 2A Ut auctor ante nec cursus finibus. Vestibulum tristique aliquet venenatis.
+|Cell 2B
+|Cell 2C
+|Cell 2D
+
+|===
