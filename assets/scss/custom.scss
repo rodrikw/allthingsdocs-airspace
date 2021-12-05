@@ -1,0 +1,156 @@
+
+/* Admonition blocks */
+
+.admonitionblock {
+    vertical-align: middle;
+    .table {
+        border-collapse: separate;
+    }
+    .content {
+        border-left: 2px solid $color-primary;
+        border-top-left-radius: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    td.icon {
+        padding-right: 0.5rem;
+    }
+    .title {
+        color: $color-primary;
+        display: inline;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    .paragraph:last-child p {
+        margin-bottom: 0;
+    }
+}
+
+/* Quote block */
+
+.quoteblock {
+    .attribution{
+        font-size: smaller;
+        font-style: italic;
+    }
+}
+
+/* Sidebar */
+
+.sidebarblock {
+    background-color: lighten( $light, 25);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    
+    .title {
+        color: $color-primary;
+        font-size: 24px;
+        font-weight: bold;
+        padding-top: 8px;
+        padding-bottom: 18px;
+        text-align: center;
+      }
+}
+
+
+/* Tables */
+
+table.tableblock {
+    margin-bottom: 1rem;
+    border: 1px solid $border-color;
+    color: $text-color;
+    font-size: $font-size;
+
+    &.frame-ends {
+        border-left-style: hidden;
+        border-right-style: hidden;        
+    }
+
+    &.frame-sides {
+        border-top-style: hidden;
+        border-bottom-style: hidden;
+    }
+
+    &.frame-none {
+        border-style: hidden;
+    }
+
+    th,
+    td {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    /*
+    th {
+        background-color: var(--color-brand-5th);
+    } */
+
+    &.grid-rows {
+        th,
+        td {
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
+    &.grid-cols {
+        th,
+        td {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+        }
+    }
+
+    &.grid-all {
+        th,
+        td {
+            border: 1px solid $border-color;
+        }
+    }
+
+    .title {
+        font-size: smaller;
+        text-align: left;
+        caption-side: top;
+        padding-bottom: 8 * $rem-base;
+      }
+  
+
+}
+
+p.tableblock,
+th.tableblock {
+    margin-bottom: 0;
+}
+  
+.halign-center {
+    text-align: center;
+}
+  
+.halign-left {
+    text-align: left;
+}
+  
+.halign-right {
+    text-align: right;
+}
+  
+.valign-bottom {
+    vertical-align: bottom;
+}
+  
+.valign-middle {
+    vertical-align: middle;
+}
+  
+.valign-top {
+    vertical-align: top;
+}
+ 
+ 
