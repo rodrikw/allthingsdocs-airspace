@@ -20,6 +20,7 @@ $font-secondary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .f
 $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 {{ end }}
 
+/* Original values:
 $h1: 40px;
 $h1-md: 34px;
 $h2: 28px;
@@ -27,6 +28,17 @@ $h2-md: 26px;
 $h2-sm: 22px;
 $h3: 20px;
 $h4: 18px;
+*/
+
+$rem-base: ($font-size / 16); 
+$h1: 40 * $rem-base; 
+$h1-md: 34 * $rem-base;
+$h2: 28 * $rem-base;
+$h2-md: 26 * $rem-base;
+$h2-sm: 22 * $rem-base;
+$h3: 20 * $rem-base;
+$h4: 18 * $rem-base; 
+
 
 @import 'mixins.scss';
 
