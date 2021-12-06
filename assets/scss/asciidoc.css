@@ -107,7 +107,7 @@ ol.arabic li::marker {
 .admonitionblock .content {
   border-left: 2px solid var(--color-brand-2nd);
   border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
   line-height: var(--body-line-height);
   padding-left: 0.5rem;
 }
