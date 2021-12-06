@@ -1,0 +1,37 @@
+---
+title: "AsciiDoc text"
+date: 2021-12-06T12:23:17+02:00
+author: Rodrik Wade
+image : "images/blog/blog-post-1.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Documentation"]
+tags: ["AsciiDoc","Hugo"]
+description: "Formatting of AsciiDoc text in Hugo"
+draft: false
+type: "post"
+---
+
+Aliquam erat volutpat. Nunc sit amet risus tincidunt, sodales enim non, imperdiet erat. Aliquam eu ligula orci. Nullam ultrices lacus ac lectus pretium luctus. Suspendisse posuere suscipit nisi. Curabitur a porta risus, a porta velit. Phasellus et quam vel massa ullamcorper sodales sed eget nisl. Nulla vehicula cursus lectus, at condimentum orci posuere non.
+
+== Heading level 2
+
+This post is to test the formatting of AsciiDoc block markup in Hugo.
+This is a paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Phasellus ultricies laoreet justo eget dapibus.
+Pellentesque dictum, nisi et tincidunt tempus, nunc elit pulvinar enim, sed ornare libero ligula at eros.
+Vivamus eu sagittis nibh.
+
+This is another paragraph in the note.
+Quisque vehicula semper lacus, quis pellentesque est pulvinar eu.
+Curabitur dignissim turpis urna, quis commodo libero pharetra ultricies.
+
+=== Heading level 3
+
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus sem est, luctus ac sagittis a, iaculis placerat neque. Nulla sed dui sagittis nunc finibus laoreet. Vestibulum mi leo, tempor vel vehicula eget, bibendum ut magna. Nullam lacinia urna nec lorem varius convallis. Nulla justo leo, vulputate ut elit at, aliquam vehicula tellus. Proin dictum varius libero vitae suscipit.
+
+Curabitur feugiat metus ac dapibus eleifend. Phasellus imperdiet ultricies tellus a dictum. Vestibulum lacinia ante id scelerisque consequat. Aenean pulvinar lorem ac ultrices ullamcorper. In dictum sodales enim vel semper. Curabitur sed ante at purus luctus accumsan. Curabitur efficitur nunc turpis, quis aliquam turpis sollicitudin vitae. Duis quis nunc at ante elementum hendrerit ut in mauris.
+
+=== Heading level 4
+
+Aliquam erat volutpat. Nunc sit amet risus tincidunt, sodales enim non, imperdiet erat. Aliquam eu ligula orci. Nullam ultrices lacus ac lectus pretium luctus. Suspendisse posuere suscipit nisi. Curabitur a porta risus, a porta velit. Phasellus et quam vel massa ullamcorper sodales sed eget nisl. Nulla vehicula cursus lectus, at condimentum orci posuere non.
+

@@ -1,4 +1,4 @@
-/* AsciiDoc modifications */
+    /* AsciiDoc modifications */
 
 
 
@@ -30,8 +30,8 @@
 /* Unordered lists */
 
 .col-md-8.mx-auto > .ulist {
-  margin-bottom: var(--list-top-level-margin-bottom);
-}
+    margin-bottom: var(--list-top-level-margin-bottom);
+  }
 
 
 .ulist {

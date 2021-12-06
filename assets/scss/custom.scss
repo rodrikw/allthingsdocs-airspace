@@ -1,19 +1,35 @@
+/* ############ Vars ############ */
 
-/* Admonition blocks */
+$li-margin-bottom: 0.5rem;
+$list-top-level-margin-bottom: 1rem;
+
+
+
+
+/* ############ AsciiDoc overrides ############ */
+
+
+.post-content p {
+    line-height: 0.5rem; /* Appears to have no effect */
+    margin-bottom: 16 * $rem-base;
+    }
+
+/* Admonition block */
 
 .admonitionblock {
     padding-bottom: 24 * $rem-base;
     vertical-align: middle;
+    font-size: $font-size;
 
     table {
         border-collapse: separate;
     }
 
     .content {
+        border-bottom-left-radius: 0.5rem;
         border-left: 2px solid $color-primary;
         border-top-left-radius: 0.5rem;
-        border-bottom-left-radius: 0.5rem;
-        padding-left: 0.5rem;
+        padding-left: 0.5rem;        
     }
 
     td.icon {
@@ -28,7 +44,7 @@
     }
 
     &.important .title {
-        color: red;
+        color: darkred;
     }
 
     .paragraph:last-child p {
@@ -36,19 +52,103 @@
     }
 }
 
-/* Quote block */
+/* Listingblock */
+
+
+
+.listingblock {
+
+    .title {
+        font-size: small;
+        padding-bottom: 8 * $rem-base;
+        padding-top: 0;
+    }
+
+
+}
+
+.colist {
+    margin-top: -8 *$rem-base;
+}
+
+
+/* Lists */
+
+/* Description list */
+
+.dlist {
+
+    dt {
+        margin-bottom: 8 * $rem-base;
+    }
+
+    p {
+        padding-left: 1rem;
+    }
+}
+
+.hdlist1 {
+    font-weight: bold;
+    vertical-align: text-bottom;
+}
+
+.hdlist2 {
+    vertical-align: text-bottom;
+}
+
+
+/* Unordered list */
+
+
+.ulist {
+
+    &:not(.none, .checklist) > {
+        ul {
+            list-style-type: disc;
+            margin-bottom: 0;
+        }
+        ul ul {
+            list-style-type: circle;
+            margin-bottom: 0
+            }
+        ul ul ul {
+            list-style-type: square;
+            margin-bottom: 0;
+            }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.post-content > .ulist {
+    margin-bottom: $list-top-level-margin-bottom;
+    color: red;
+}
+
+
+
+/* Quoteblock */
 
 .quoteblock {
     font-style: italic;
-
+    margin-bottom: 24 * $rem-base;
+    
     blockquote {
+        border-left-style: hidden;
+        margin-bottom: 0;
+
+
+
+        /* Quotation mark decoration */
         div.paragraph:first-of-type p::before {
-            content: open-quote;
             color: lighten( $light, 15);
+            content: open-quote;
             font-size: 48 * $rem-base;
             line-height: 0em;
             margin-right: 0.1em;
-            vertical-align: -0.45em;
+            vertical-align: -18 * $rem-base;            
         } 
     }
 
@@ -60,6 +160,7 @@
     .attribution{
         font-size: smaller;
         font-style: italic;
+        text-align: right;
     }
 }
 
@@ -109,22 +210,22 @@ table.tableblock {
 
     th,
     td {
-        padding-top: 0.4rem;
         padding-bottom: 0.4rem;
         padding-left: 0.4rem;
         padding-right: 0.4rem;
+        padding-top: 0.4rem;      
     }
 
     /*
     th {
-        background-color: var(--color-brand-5th);
+        background-color: $light);
     } */
 
     &.grid-rows {
         th,
         td {
-            border-top: 1px solid $border-color;
             border-bottom: 1px solid $border-color;
+            border-top: 1px solid $border-color;
         }
     }
 
@@ -144,10 +245,10 @@ table.tableblock {
     }
 
     .title {
-        font-size: smaller;
-        text-align: left;
         caption-side: top;
+        font-size: smaller;
         padding-bottom: 8 * $rem-base;
+        text-align: left;        
       }
   
 
@@ -183,7 +284,7 @@ th.tableblock {
 }
  
 
-
+/* Overrides of Airspace */
 
 section.feature.bg-2 div.col-md-6 {
     background-color: $light; 
