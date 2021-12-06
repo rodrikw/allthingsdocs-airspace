@@ -2,24 +2,35 @@
 /* Admonition blocks */
 
 .admonitionblock {
+    padding-bottom: 24 * $rem-base;
     vertical-align: middle;
-    .table {
+
+    table {
         border-collapse: separate;
     }
+
     .content {
         border-left: 2px solid $color-primary;
         border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
         padding-left: 0.5rem;
     }
+
     td.icon {
         padding-right: 0.5rem;
     }
+
     .title {
         color: $color-primary;
         display: inline;
         font-weight: bold;
         text-transform: uppercase;
-      }
+    }
+
+    &.important .title {
+        color: red;
+    }
+
     .paragraph:last-child p {
         margin-bottom: 0;
     }
@@ -28,6 +39,24 @@
 /* Quote block */
 
 .quoteblock {
+    font-style: italic;
+
+    blockquote {
+        div.paragraph:first-of-type p::before {
+            content: open-quote;
+            color: lighten( $light, 15);
+            font-size: 48 * $rem-base;
+            line-height: 0em;
+            margin-right: 0.1em;
+            vertical-align: -0.45em;
+        } 
+    }
+
+
+    em {
+        font-style: normal;
+    }
+
     .attribution{
         font-size: smaller;
         font-style: italic;
@@ -40,19 +69,19 @@
     background-color: lighten( $light, 25);
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
+    padding-top: 8 * $rem-base;
+    padding-bottom: 5 * $rem-base;
+    margin-bottom: 16 * $rem-base;
     border-radius: 0.5rem;
     
     .title {
         color: $color-primary;
-        font-size: 24px;
+        font-size: 24 * $rem-base;
         font-weight: bold;
-        padding-top: 8px;
-        padding-bottom: 18px;
+        padding-top: 8 * $rem-base;
+        padding-bottom: 18 * $rem-base;
         text-align: center;
-      }
+    }
 }
 
 
@@ -153,4 +182,12 @@ th.tableblock {
     vertical-align: top;
 }
  
- 
+
+
+
+section.feature.bg-2 div.col-md-6 {
+    background-color: $light; 
+    opacity: 0.85;
+    border-radius: 1rem;
+    
+}
