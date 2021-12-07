@@ -22,7 +22,7 @@ Images can be resized:
 
 image::/airspace/images/blog/kitten.jpg[alt=kitten,width=200]
 
-The can also have captions:
+They can also have captions:
 
 .A cute kitten
 image::/airspace/images/blog/kitten.jpg[alt=kitten,width=200]
