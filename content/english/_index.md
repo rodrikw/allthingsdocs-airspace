@@ -84,10 +84,10 @@ funfacts:
 
   testimonial_slider:
   # testimonial item loop
-  - name: "Raymond Roy"
-    image: "images/clients/avater-1.jpg"
-    designation: "CEO-Themefisher"
-    content: "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."
+  - name: "Egor Buynitskiy"
+    image: "images/clients/egor-buynitskiy.jpg"
+    designation: "Chief Product Officer, edna"
+    content: "Rodrik created an extremely thorough plan for implementing a document solution for edna, which significantly exceeded our expectations. It has enabled us to quickly implement a multilingual online site for our products, both conventional applications and APIs."
 
   # testimonial item loop
   - name: "Randi Renin"
