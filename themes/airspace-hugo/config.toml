@@ -9,6 +9,7 @@
 # customize your color and font from here.
 [params.variables]
 color_primary = "#044354" # "#655e7a"
+color_secondary = "#BCA3A5"
 body_color = "#fff"
 text_color = "#666666"
 text_dark = "#333333"
@@ -20,7 +21,7 @@ light = "#9DA9AF" # "#f5f5f5"
 
 # font variables
 # base font size for full website, 
-font_size = "15px" # default is 16px
+font_size = "18px" # default is 16px
 
 # Font Scale Sizes
 # "minorSecond": 1.067,
@@ -37,8 +38,9 @@ font_scale = "1.25" # default is "majorThird": 1.25
 # example: "Work+Sans:wght@400;500;600"
 font_primary = "Rosario:ital,wght@0,400;0,700;1,400;1,700"
 font_primary_type = "sans-serif" # [serif/sans-serif]
-font_secondary = "Volkhov:ital@1"
-font_secondary_type = "serif" # [serif/sans-serif]
+# font_secondary = "Volkhov:ital@1"
+font_secondary = "Rosario:ital,wght@0,400;0,700;1,400;1,700"
+font_secondary_type = "sans-serif" # [serif/sans-serif]
 font_icon = "Font Awesome 5 Free" # https://fontawesome.com/v5.15/icons/
 
 
