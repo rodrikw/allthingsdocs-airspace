@@ -5,7 +5,7 @@ banner:
   bg_image: "images/slider-bg.jpg"
   bg_overlay: true
   title: "Content marketing and documentation specialists"
-  content: "We love the Web and the work we do.We work closely with our clients to deliver  the best possible solutions for their needs"
+  content: "We love the Web and the work we do. We work closely with our clients to deliver the best possible solutions for their needs"
   button:
     enable: true
     label: "Discover Our Project"
@@ -15,8 +15,8 @@ banner:
 about:
   enable: true
   title: "About Us"
-  description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id."
+  description: "We are specialists in content marketing and product documentation"
+  content: "Together we have more than 40 years’ experience. Quisque metus sapien, porta nec nisi a, lobortis eleifend neque. Morbi mattis rutrum nibh, malesuada volutpat augue consequat vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tempus, mi ut rhoncus euismod, libero lacus fringilla dolor, vitae feugiat quam tortor sagittis nunc. Praesent in ante leo. Suspendisse lobortis nisl est. Mauris in varius lectus. Aliquam rutrum purus a dapibus ullamcorper.  "
   image: "images/wrapper-img.png"
 
 
