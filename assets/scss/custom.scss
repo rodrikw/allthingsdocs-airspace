@@ -1,12 +1,28 @@
-/* ############ Vars ############ */
+// ############ Vars ############
 
 $li-margin-bottom: 0.5rem;
 $list-top-level-margin-bottom: 1rem;
 
 
+// Overrides of the Airspace template
 
 
-/* ############ AsciiDoc overrides ############ */
+.slider .block p {
+    color: $white;
+}
+
+section.feature.bg-2 div.col-md-6 {
+    background-color: $light;
+    border-radius: 1rem;
+    opacity: 0.85;
+
+    p {
+        color: $text-dark;
+    }    
+}
+
+
+// ############ AsciiDoc-specific overrides ############
 
 
 .post-content p {
@@ -14,7 +30,7 @@ $list-top-level-margin-bottom: 1rem;
     margin-bottom: 16 * $rem-base;
     }
 
-/* Admonition block */
+// Admonition block
 
 .admonitionblock {
     padding-bottom: 24 * $rem-base;
@@ -52,14 +68,27 @@ $list-top-level-margin-bottom: 1rem;
     }
 }
 
-/* Listingblock */
+// Images
+
+.imageblock {
+    margin-bottom: 24 * $rem-base;
+
+    .title {
+        color: $text-light;
+        font-size: $font-size-small;
+        padding-top: 8 * $rem-base;
+    }
+}
+
+// Listingblock
 
 
 
 .listingblock {
 
     .title {
-        font-size: small;
+        color: $text-light;
+        font-size: $font-size-small;
         padding-bottom: 8 * $rem-base;
         padding-top: 0;
     }
@@ -69,12 +98,16 @@ $list-top-level-margin-bottom: 1rem;
 
 .colist {
     margin-top: -8 *$rem-base;
+
+    li::marker {
+         font-size: $font-size;
+    }
 }
 
 
-/* Lists */
+// Lists 
 
-/* Description list */
+// Description list
 
 .dlist {
 
@@ -97,7 +130,7 @@ $list-top-level-margin-bottom: 1rem;
 }
 
 
-/* Unordered list */
+// Unordered list
 
 
 .ulist {
@@ -129,7 +162,7 @@ $list-top-level-margin-bottom: 1rem;
 
 
 
-/* Quoteblock */
+// Quoteblock
 
 .quoteblock {
     font-style: italic;
@@ -141,7 +174,7 @@ $list-top-level-margin-bottom: 1rem;
 
 
 
-        /* Quotation mark decoration */
+        // Quotation mark decoration 
         div.paragraph:first-of-type p::before {
             color: lighten( $light, 15);
             content: open-quote;
@@ -164,7 +197,7 @@ $list-top-level-margin-bottom: 1rem;
     }
 }
 
-/* Sidebar */
+// Sidebar
 
 .sidebarblock {
     background-color: lighten( $light, 25);
@@ -186,7 +219,7 @@ $list-top-level-margin-bottom: 1rem;
 }
 
 
-/* Tables */
+// Tables
 
 table.tableblock {
     margin-bottom: 1rem;
@@ -246,7 +279,8 @@ table.tableblock {
 
     .title {
         caption-side: top;
-        font-size: smaller;
+        color: $text-light;
+        font-size: $font-size-small;
         padding-bottom: 8 * $rem-base;
         text-align: left;        
       }
@@ -282,13 +316,4 @@ th.tableblock {
 .valign-top {
     vertical-align: top;
 }
- 
 
-/* Overrides of Airspace */
-
-section.feature.bg-2 div.col-md-6 {
-    background-color: $light; 
-    opacity: 0.85;
-    border-radius: 1rem;
-    
-}
