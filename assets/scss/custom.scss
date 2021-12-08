@@ -1,7 +1,7 @@
 // ############ Vars ############
 
-$li-margin-bottom: 8 * $rem-base;
-$list-top-level-margin-bottom: 16 * $rem-base;
+$li-margin-bottom: 0.5rem;
+$list-top-level-margin-bottom: 1rem;
 
 
 // Overrides of the Airspace template
@@ -13,19 +13,12 @@ $list-top-level-margin-bottom: 16 * $rem-base;
 
 section.feature.bg-2 div.col-md-6 {
     background-color: $light;
-    border-radius: 16 * $rem-base;
+    border-radius: 1rem;
     opacity: 0.85;
 
     p {
         color: $text-dark;
     }    
-}
-
-// Bootstrap overrides
-
-.widget.widget-latest-post .media p {
-    color: $text-color;
-    font-size: $font-size-small;
 }
 
 
@@ -104,7 +97,7 @@ section.feature.bg-2 div.col-md-6 {
 }
 
 .colist {
-    margin-top: -8 * $rem-base;
+    margin-top: -8 *$rem-base;
 
     li::marker {
          font-size: $font-size;
@@ -123,7 +116,7 @@ section.feature.bg-2 div.col-md-6 {
     }
 
     p {
-        padding-left: 16 * $rem-base;
+        padding-left: 1rem;
     }
 }
 
@@ -187,7 +180,7 @@ section.feature.bg-2 div.col-md-6 {
             content: open-quote;
             font-size: 48 * $rem-base;
             line-height: 0em;
-            margin-right: 2 * $rem-base;
+            margin-right: 0.1em;
             vertical-align: -18 * $rem-base;            
         } 
     }
@@ -208,12 +201,12 @@ section.feature.bg-2 div.col-md-6 {
 
 .sidebarblock {
     background-color: lighten( $light, 25);
-    padding-left: 12 * $rem-base;
-    padding-right: 12 * $rem-base;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     padding-top: 8 * $rem-base;
-    padding-bottom: 8 * $rem-base;
+    padding-bottom: 5 * $rem-base;
     margin-bottom: 16 * $rem-base;
-    border-radius: 8 * $rem-base;
+    border-radius: 0.5rem;
     
     .title {
         color: $color-primary;
@@ -229,7 +222,7 @@ section.feature.bg-2 div.col-md-6 {
 // Tables
 
 table.tableblock {
-    margin-bottom: 16 * $rem-base;
+    margin-bottom: 1rem;
     border: 1px solid $border-color;
     color: $text-color;
     font-size: $font-size;
@@ -250,10 +243,10 @@ table.tableblock {
 
     th,
     td {
-        padding-bottom: 6 * $rem-base;
-        padding-left: 6 * $rem-base;
-        padding-right: 6 * $rem-base;
-        padding-top: 6 * $rem-base;      
+        padding-bottom: 0.4rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        padding-top: 0.4rem;      
     }
 
     /*
@@ -323,3 +316,4 @@ th.tableblock {
 .valign-top {
     vertical-align: top;
 }
+
