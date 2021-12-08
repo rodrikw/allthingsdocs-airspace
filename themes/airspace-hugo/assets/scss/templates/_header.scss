@@ -3,32 +3,32 @@
 --*/
 
 header {
-  min-height: 100px;
+  min-height: 100 * $rem-base;
   @include desktop {
-    min-height: 90px;
+    min-height: 90 * $rem-base;
   }
-  background: $white;
-  padding: 20px 0;
+  background: $navbar-bg;
+  padding: (20 * $rem-base) (0 * $rem-base);
   .navbar {
-    margin-bottom: 0px;
+    margin-bottom: 0 * $rem-base;
     border: 0px;
   }
   .navbar-brand {
-    padding-top: 5px;
+    padding-top: 5 * $rem-base;    
   }
   .navbar-default {
     background: none;
     border: 0px;
     .navbar-nav {
-        padding-top: 10px;
+        padding-top: 10 * $rem-base;
       li {
         a {
-          color: lighten( $black, 20 );
-          padding: 10px 26px;
-          font-size: 15px;
+          color: $text-color;
+          padding: (10 * $rem-base) (26 * $rem-base);
+          font-size: $font-size;
           font
           &:hover {
-            color: $black;
+            color: $color-brand-3;
           }
         }
       }
