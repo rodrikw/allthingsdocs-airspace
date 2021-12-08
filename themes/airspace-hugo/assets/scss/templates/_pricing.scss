@@ -4,48 +4,45 @@
 
 .pricing-table {
   .pricing-item {
-    padding: 40px 20px;
+    padding: (40 * $rem-base) (20 * $rem-base);
     background: $white;
     box-shadow: 0 8px 15px 0 rgba(5, 57, 106, .06);
 
     a.btn-main {
       text-transform: uppercase;
-      margin-top: 20px;
+      margin-top: (20 * $rem-base);
     }
 
     li {
-      font-weight: 400;
-      padding: 6px 0;
-      color: darken( $light, 57.64);
+      padding: (6 * $rem-base) (0 * $rem-base);
+      color: $text-color;
 
       i {
-        margin-right: 6px;
+        margin-right: (6 * $rem-base);
         color: $color-brand-1;
       }
     }
   }
 
   .price-title {
-    padding: 30px 0 20px;
+    padding: (30 * $rem-base) (0 * $rem-base) (20 * $rem-base);
 
     >h3 {
-      font-weight: 700;
-      margin: 0 0 5px;
-      font-size: 15px;
+      font-weight: bold;
+      margin: (0 * $rem-base) (0 * $rem-base) (5 * $rem-base);
+      font-size: $font-size;
       text-transform: uppercase;
     }
 
     >p {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 18px;
-      margin-top: 5px;
+      line-height: 18 * $rem-base;
+      margin-top: 6 * $rem-base;
     }
 
     .value {
       color: $color-brand-1;
-      font-size: 50px;
-      padding: 10px 0;
+      font-size: 50 * $rem-base;
+      padding: (10 * $rem-base) (0 * $rem-base);
     }
   }
 }
