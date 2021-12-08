@@ -7,29 +7,36 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 100px 0;
+  padding: (100 * $rem-base) (0 * $rem-base);
 
   @include large-desktop {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: (20 * $rem-base);
+    padding-bottom: (20 * $rem-base);
     background-attachment: unset;
   }
 
+  &.bg-2 div.col-md-6 {
+    background-color: $light;
+    border-radius: 16 * $rem-base;
+    opacity: 0.85;
+  }
+
   h2 {
-    margin: 0px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin: 0 * $rem-base;
+    padding-top: 30 * $rem-base;
+    padding-bottom: 30 * $rem-base;
   }
 
   p {
-    color: darken( $light, 41.37);
-    margin-bottom: 20px;
+    color: $text-dark;
+    margin-bottom: 20 * $rem-base;
   }
 
   .btn-view-works {
     background: lighten( $black, 42.35 );
     color: $white;
-    padding: 10px 20px;
-    margin-bottom: 30px;
+    padding: (10 * $rem-base) (20 * $rem-base);
+    margin-bottom: 30 * $rem-base;
   }
 }
+
