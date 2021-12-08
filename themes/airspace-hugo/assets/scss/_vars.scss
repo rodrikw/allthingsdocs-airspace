@@ -1,0 +1,35 @@
+// Color Variables
+
+$color-primary: #044354;
+$color-secondary: #BCA3A5;
+$brand-color-3: red;
+$body-color: #fff; /* May not be needed */
+$text-color: red; //#666666;
+$text-dark: blue; // #333333;
+$text-light: #7b7b7b;
+$body-bg: #fff;
+$border-color: #B3CACE;
+$black: #000;
+$white: #fff;
+$light: #9DA9AF;
+
+
+// Set rem
+
+
+// Font Variables
+
+$font-scale: "1.25"; // Not clear if this used
+$rem-base: (1rem / 16); // If rem-base is equal to rem size, then all values equate to px
+$font-size: 16 * $rem-base;
+$font-size-small: 14 * $rem-base;
+$font-size-smaller: 12 * $rem-base;
+$font-size-big: 18 * $rem-base;
+$h1: 40 * $rem-base; 
+$h1-md: 34 * $rem-base;
+$h2: 28 * $rem-base;
+$h2-md: 26 * $rem-base;
+$h2-sm: 22 * $rem-base;
+$h3: 20 * $rem-base;
+$h4: 18 * $rem-base;
+$base-line-height: 22 * $rem-base; 

@@ -1,5 +1,7 @@
 // Color Variables
 {{ with site.Params.variables }}
+
+/*
 $color-primary: {{.color_primary | default "#777"}};
 $color-secondary: {{.color_secondary | default "#0AA8A7"}};
 $text-color: {{.text_color | default "#777"}};
@@ -10,11 +12,11 @@ $border-color: {{.border_color | default "#ECECEC"}};
 $black: {{.black | default "#000"}};
 $white: {{.white | default "#fff"}};
 $light: {{.light | default "#EDF6F5"}};
-
+*/
 
 // Font Variables
-$font-size: {{.font_size | default "16px"}};
-$font-scale: {{.font_scale | default "1.25"}};
+// $font-size: {{.font_size | default "16px"}};
+// $font-scale: {{.font_scale | default "1.25"}};
 $font-primary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .font_primary | default "Lato") "+" " "}}', {{.font_primary_type | default "sans-serif"}};
 $font-secondary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .font_secondary | default "Lato") "+" " "}}', {{.font_secondary_type | default "sans-serif"}};
 $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
@@ -30,8 +32,9 @@ $h3: 20px;
 $h4: 18px;
 */
 
+/*
 $rem-base: ($font-size / 16);
-$font-size-small: round($font-size / $font-scale);
+$font-size-small: round($font-size * (10 /12));
 $h1: 40 * $rem-base; 
 $h1-md: 34 * $rem-base;
 $h2: 28 * $rem-base;
@@ -40,6 +43,15 @@ $h2-sm: 22 * $rem-base;
 $h3: 20 * $rem-base;
 $h4: 18 * $rem-base; 
 
+*/
+
+
+html {
+    font-size: 16px;
+}
+
+
+@import 'vars.scss';
 
 @import 'mixins.scss';
 

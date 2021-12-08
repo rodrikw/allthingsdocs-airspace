@@ -4,13 +4,10 @@
 @import url(https://fonts.googleapis.com/css?family=Volkhov:400italic);
 
 
-
-
 body {
-  line-height: 1.4;
+  line-height: $base-line-height;
   font-family: $font-primary;
   -webkit-font-smoothing: antialiased;
-
 }
 
 h1,
@@ -64,7 +61,7 @@ h4 {
 }
 
 p {
-  color: darken( $light, 49.41);
+  color: $text-color;
   font-size: $font-size;
   font-family: $font-primary;
 }
