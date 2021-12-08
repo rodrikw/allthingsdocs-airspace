@@ -1,16 +1,16 @@
 .contact-form {
-  padding-top: 70px;
-  padding-bottom: 35px;
+  padding-top: 70 * $rem-base;
+  padding-bottom: 35 * $rem-base;
 
   .block {
     .form-group {
-      padding-bottom: 15px;
-      margin: 0px;
+      padding-bottom: 15 * $rem-base;
+      margin: 0 * $rem-base;
 
       .form-control {
-        background: darken( $light, 0.392);
-        height: 60px;
-        border: 1px solid #EEF2F6;
+        background: $light;
+        height: 60 * $rem-base;
+        border: 1px solid $white;
         box-shadow: none;
         width: 100%;
       }
@@ -20,9 +20,9 @@
       margin-bottom: 13px;
 
       textarea {
-        background: darken( $light, 0.392);
-        height: 135px;
-        border: 1px solid #EEF2F6;
+        background: $light;
+        height: 135 * $rem-base;
+        border: 1px solid $white;
         box-shadow: none;
         width: 100%;
       }
@@ -34,29 +34,30 @@
 
     button {
       width: 100%;
-      height: 60px;
-      background: lighten( $black, 27.84);
+      height: 60 * $rem-base;
+      background: $dark;
       border: none;
       color: $white;
-      font-size: 18px;
+      font-size: $font-size-big;
     }
   }
 }
 
 
 .address-block {
-  margin-bottom: 40px;
+  margin-bottom: 40 * $rem-base;
 
   li {
+    color: $text-color;
     position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
+    padding-left: 30 * $rem-base;
+    margin-bottom: 10 * $rem-base;
 
     i {
       position: absolute;
       left: 0;
-      font-size: 20px;
-      line-height: 20px;
+      font-size: $h3;
+      line-height: 20 * $rem-base;      
     }
 
     div {
@@ -68,11 +69,11 @@
 
 
 .social-icons {
-  margin-top: 40px;
+  margin-top: 40 * $rem-base;
 
   li {
     display: inline-block;
-    margin: 0 6px;
+    margin: (0 * $rem-base) (6 * $rem-base);
   }
 
   a {
@@ -80,9 +81,9 @@
   }
 
   i {
-    color: #2C2C2C;
-    margin-right: 25px;
-    font-size: 25px;
+    color: $text-color;
+    margin-right: 25 * $rem-base;
+    font-size: 25 * $rem-base;
   }
 }
 
@@ -96,8 +97,8 @@
 }
 
 .contact-box {
-  padding-top: 35px;
-  padding-bottom: 58px;
+  padding-top: 35 * $rem-base;
+  padding-bottom: 60 * $rem-base;
 
   .block {
     img {
@@ -105,14 +106,14 @@
     }
 
     h2 {
-      font-weight: 300;
-      color: #000;
-      font-size: 28px;
-      padding-bottom: 30px;
+      font-weight: normal;
+      color: $black;
+      font-size: $h2;
+      padding-bottom: 30 * $rem-base;
     }
 
     p {
-      color: lighten( $black, 36.07);
+      color: $text-dark;
       display: block;
     }
 
