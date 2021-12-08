@@ -18,19 +18,19 @@ a:focus,
 a:hover {
   text-decoration: none;
   outline: 0;
-  color: $color-primary;
+  color: $color-brand-1;
 }
 
 blockquote {
   font-size: 18px;
-  border-color: $color-primary;
+  border-color: $color-brand-1;
   padding: 20px 40px;
   text-align: left;
   color: darken( $light, 50.98);
 }
 
 .navbar-toggle .icon-bar {
-  background: $color-primary;
+  background: $color-brand-1;
 }
 
 input[type="email"],
@@ -44,7 +44,7 @@ input[type="tel"] {
 
   &:focus {
     box-shadow: none;
-    border: 1px solid $color-primary;
+    border: 1px solid $color-brand-1;
   }
 }
 
@@ -55,7 +55,7 @@ input[type="tel"] {
 
   &:focus {
     box-shadow: none;
-    border: 1px solid $color-primary;
+    border: 1px solid $color-brand-1;
   }
 }
 
@@ -68,7 +68,7 @@ input[type="tel"] {
 // Button Style
 
 .btn-main {
-  background: $color-primary;
+  background: $color-brand-1;
   color: $white;
   display: inline-block;
   font-size: 14px;
@@ -87,7 +87,7 @@ input[type="tel"] {
   }
 
   &:hover {
-    background: darken($color-primary, 20%);
+    background: darken($color-brand-1, 20%);
     color: $white;
   }
 }
@@ -99,8 +99,8 @@ input[type="tel"] {
   color: $white;
 
   &:hover {
-    border: 1px solid $color-primary;
-    background: $color-primary;
+    border: 1px solid $color-brand-1;
+    background: $color-brand-1;
   }
 }
 
@@ -109,11 +109,11 @@ input[type="tel"] {
   @extend .btn-main;
   background: transparent;
   padding: 0;
-  color: $color-primary;
+  color: $color-brand-1;
 
   &:hover {
     background: transparent;
-    color: $color-primary;
+    color: $color-brand-1;
   }
 }
 
@@ -218,15 +218,15 @@ input[type="tel"] {
 }
 
 .bg-primary {
-  background: $color-primary;
+  background: $color-brand-1;
 }
 
 .bg-primary-dark {
-  background: darken($color-primary, 10%);
+  background: darken($color-brand-1, 10%);
 }
 
 .bg-primary-darker {
-  background: darken($color-primary, 20%);
+  background: darken($color-brand-1, 20%);
 
 }
 
@@ -486,8 +486,8 @@ input[type="tel"] {
     }
 
     li.active a {
-      background-color: $color-primary;
-      border: 1px solid $color-primary;
+      background-color: $color-brand-1;
+      border: 1px solid $color-brand-1;
       color: $white;
     }
 
@@ -497,7 +497,7 @@ input[type="tel"] {
 
       &:hover {
         border: 1px solid transparent;
-        background: $color-primary;
+        background: $color-brand-1;
         color: $white;
       }
     }
@@ -585,7 +585,7 @@ input[type="tel"] {
 
 .alert-solid {
   background: transparent;
-  color: $color-primary;
+  color: $color-brand-1;
 }
 
 .buttonPart {
@@ -614,14 +614,14 @@ input[type="tel"] {
     right: 0;
     width: 100%;
     height: 100%;
-    background: darken($color-primary, 10); /* originally 25 */
+    background: darken($color-brand-1, 10); /* originally 25 */
     opacity: 0.7; /* Originally 0.7 */
   }
 }
 
 .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: $color-primary !important;
+  background: $color-brand-1 !important;
 }
 
 
