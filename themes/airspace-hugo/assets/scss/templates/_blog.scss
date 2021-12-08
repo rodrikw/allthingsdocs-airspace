@@ -34,10 +34,10 @@
     text-transform: uppercase;
 
     a {
-      color: $color-primary;
+      color: $color-brand-1;
 
       &:hover {
-        color: $color-primary;
+        color: $color-brand-1;
       }
     }
   }
@@ -51,13 +51,13 @@
       li {
         display: inline-block;
         margin-right: 20 * $rem-base;
-        font-size: $font-size-smaller;        
+        font-size: $font-size-smaller;
 
         a {
           color: lighten( $black, 56.47 ); // Check
 
           &:hover {
-            color: $color-primary;
+            color: $color-brand-1;
           }
         }
       }
@@ -90,7 +90,7 @@
     blockquote {
       margin-top: 20px;
       font-size: $font-size-big;
-      border-color: $color-primary;
+      border-color: $color-brand-1;
       padding: (10 * $rem-base) (20 * $rem-base);
       text-align: left;
       color: $text-light;
@@ -126,14 +126,14 @@
 
       &:hover {
         color: $white;
-        background: $color-primary;
-        border: 1px solid $color-primary;
+        background: $color-brand-1;
+        border: 1px solid $color-brand-1;
       }
     }
 
     &.active>a {
-      background: $color-primary !important;
-      border: 1px solid $color-primary !important;
+      background: $color-brand-1 !important;
+      border: 1px solid $color-brand-1 !important;
     }
   }
 
