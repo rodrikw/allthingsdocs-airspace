@@ -1,29 +1,29 @@
 .footer {
-  background: darken( $light, 1.5);
-  min-height: 205px;
+  background: $light;
+  min-height: 205 * $rem-base;
   text-align: center;
-  padding-top: 67px;
+  padding-top: 67 * $rem-base;
   p {
-    font-size: 13px;
-    line-height: 25px;
-    color: lighten( $black, 56.86274509803921 );
+    font-size: $font-size-small;
+    line-height: 24 * $rem-base;
+    color: $text-dark;
   }
   a {
-    color: lighten( $black, 34.9 );
+    color: $text-dark;
   }
   .footer-menu {
-    padding-bottom: 25px;
+    padding-bottom: 25 * $rem-base;
     ul {
-      margin: 0px;
-      padding: 0px;
+      margin: 0 * $rem-base;
+      padding: 0 * $rem-base;
       li {
         display: inline-block;
-        padding: 0px 20px;
+        padding: (0 * $rem-base) (20 * $rem-base);
         a {
           display: inline-block;
-          color: lighten( $black, 28.6 );
+          color: $text-dark;
           &:hover {
-            color: $black;
+            color: $brand-color-3;
           }
         }
       }
@@ -31,7 +31,7 @@
   }
   .copyright {
     a {
-      font-weight: 600;
+      font-weight: normal;
     }
   }
 }
