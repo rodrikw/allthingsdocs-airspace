@@ -48,7 +48,7 @@
     font-weight: 500;
 
     a {
-      color: $color-primary;
+      color: $color-brand-1;
       font-size: 14px;
       text-transform: uppercase;
     }
@@ -62,7 +62,7 @@
   }
 
   .comment-button {
-    color: $color-primary;
+    color: $color-brand-1;
     display: inline-block;
     margin-left: 5px;
     font-size: 12px;
@@ -73,7 +73,7 @@
     }
 
     &:hover {
-      color: $color-primary;
+      color: $color-brand-1;
     }
   }
 }
@@ -95,7 +95,7 @@
     p {
       line-height: 30px;
       font-size: 20px;
-      color: $color-primary;
+      color: $color-brand-1;
     }
   }
 }
@@ -125,7 +125,7 @@
     color: $black;
 
     &:hover {
-      color: $color-primary;
+      color: $color-brand-1;
     }
   }
 
@@ -151,7 +151,7 @@
 
         i {
           &:hover {
-            color: $color-primary;
+            color: $color-brand-1;
           }
         }
       }
@@ -209,7 +209,7 @@
       margin-bottom: 8px;
 
       a {
-        color: $color-primary;
+        color: $color-brand-1;
         font-size: 13px;
       }
     }
@@ -238,7 +238,7 @@
 
     &:focus {
       box-shadow: none;
-      border: 1px solid $color-primary;
+      border: 1px solid $color-brand-1;
     }
   }
 
