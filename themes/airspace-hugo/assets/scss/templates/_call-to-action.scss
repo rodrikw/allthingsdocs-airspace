@@ -1,16 +1,16 @@
 .call-to-action {
   text-align: center;
-  padding: 70px 0px;
+  padding: (70 * $rem-base) (0 * $rem-base);
 
   @include tablet {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20 * $rem-base;
+    padding-bottom: 20 * $rem-base;
   }
 
   h2 {
     color: $white;
-    margin: 0px;
-    padding: 30px 0px;
+    margin: 0 * $rem-base;
+    padding: (30 * $rem-base) (0 * $rem-base);
   }
 
   p {
@@ -18,9 +18,9 @@
   }
 
   .btn-main {
-    padding: 15px 35px;
-    font-size: 12px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: (15 * $rem-base) (35 * $rem-base);
+    font-size: $font-size-smaller;
+    margin-top: 30 * $rem-base;
+    margin-bottom: 30 * $rem-base;
   }
 }
