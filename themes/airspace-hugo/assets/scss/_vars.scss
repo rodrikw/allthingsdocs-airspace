@@ -23,13 +23,11 @@ $color-brand-1: #044354;
 $color-brand-2: #BCA3A5;
 $color-brand-3: #D8340E;
 $body-color: #fff; /* May not be needed */
-$text-color: #666666;
-$text-dark: #333333;
-$text-light: #7b7b7b;
+$text-color: $color-gray-70;
+$text-dark: $color-jet-70;
+$text-light: $color-smoke-90;
 $body-bg: #fff;
 $border-color: #B3CACE;
-
-
 $light: #9DA9AF;
 $dark: #474747;
 
