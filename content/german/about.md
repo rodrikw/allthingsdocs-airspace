@@ -66,7 +66,7 @@ features:
 
   # feature item loop
   - icon : "fas fa-unlock" #https://fontawesome.com/v5.15/icons
-    name : "App Secutity"
+    name : "App Security"
     content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
 
   # feature item loop
