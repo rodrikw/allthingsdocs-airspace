@@ -36,7 +36,7 @@ pricing:
     - 24/7 Tech Support
 
   # pricing table loop
-  - name : "Advance"
+  - name : "Advanced"
     price: "$299"
     content : "Suitable for large businesses with unlimited employees"
     link : "#"
