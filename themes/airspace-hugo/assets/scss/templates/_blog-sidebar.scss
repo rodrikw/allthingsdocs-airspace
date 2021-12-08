@@ -1,16 +1,15 @@
 .widget {
-  margin-bottom: 65px;
+  margin-bottom: 65 *  $rem-base;
 
   @include tablet {
     margin-bottom: 35px;
   }
 
   .widget-title {
-    margin-top: 0px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: lighten( $black, 20 );
-    font-weight: 500;
+    margin-top: 0 * $rem-base;
+    margin-bottom: 16 * $rem-base;
+    font-size: $font-size;
+    color: $text-color;    
     border-bottom: 1px solid $border-color;
   }
 
@@ -24,19 +23,18 @@
 
       .media-heading {
         a {
-          color: $black;
-          font-size: 16px;
+          color: $text-dark;
+          font-size: $font-size;
         }
       }
 
       p {
-        font-size: 12px;
-        color: darken( $light, 47.45);
+        font-size: $font-size-smaller;                
       }
     }
 
     @include desktop {
-      padding-top: 20px;
+      padding-top: 20 * $rem-base;
     }
   }
   //end Latest Posts
@@ -45,29 +43,29 @@
   &.widget-category {
     ul {
       li {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 30 * $rem-base;
+        padding-bottom: 10 * $rem-base;
 
         a {
           color: lighten( $black, 50.3 );
-          padding: 10px;
-          padding-left: 20px;
-          padding-right: 20px;
+          padding: 10 * $rem-base;
+          padding-left: 20 * $rem-base;
+          padding-right: 20 * $rem-base;
           @include transition-multi (padding 0.3s ease, border 0.3s ease);
 
           &:before {
-            padding-right: 10px;
+            padding-right: 10 * $rem-base;
           }
 
           &:hover {
             color: $color-primary;
-            padding-left: 25px;
+            padding-left: 24 * $rem-base;
           }
 
           &:active {
-            padding-left: 24px;
+            padding-left: 24 * $rem-base;
             border: 1px solid $color-primary;
-            border-radius: 30px;
+            border-radius: 30 * $rem-base;
             @include transition (padding, 0s);
           }
         }
@@ -76,7 +74,7 @@
           color: $white;
           background: $color-primary;
           border: 1px solid $color-primary;
-          border-radius: 30px;
+          border-radius: 30 * $rem-base;
           pointer-events: none;
           cursor: default;
         }
@@ -89,17 +87,17 @@
   &.widget-tag {
     ul {
       li {
-        margin-bottom: 10px;
+        margin-bottom: 10 * $rem-base;
         display: inline-block;
-        margin-right: 5px;
+        margin-right: 5 * $rem-base;
 
         a {
-          color: lighten( $black, 50.3 );
+          color: $text-light;
           display: inline-block;
-          padding: 8px 15px;
+          padding: (8 * $rem-base) (15 * $rem-base);
           border: 1px solid $border-color;
-          border-radius: 30px;
-          font-size: 14px;
+          border-radius: 30 * $rem-base;
+          font-size: $font-size-small;
           @include transition-multi (background-color 0.3s ease, border 0.3s ease, color 0.1s ease);
 
           &:hover {
