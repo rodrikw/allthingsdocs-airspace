@@ -8,7 +8,7 @@
 
 .post {
   background: $white;
-  margin-bottom: 55px;
+  margin-bottom: 55 * $rem-base;
 
   @include tablet {
     margin-bottom: 20px;
@@ -30,7 +30,7 @@
   }
 
   .post-title {
-    margin-top: 25px;
+    margin-top: 25 * $rem-base;
     text-transform: uppercase;
 
     a {
@@ -43,19 +43,18 @@
   }
 
   .post-meta {
-    font-size: 13px;
-    margin-top: 10px;
+    color: $text-light;
+    font-size: $font-size-smaller;
+    margin-top: 10 * $rem-base;
 
     ul {
       li {
         display: inline-block;
-        color: lighten( $black, 56.47 );
-        margin-right: 20px;
-        font-size: 12px;
-        letter-spacing: .5px;
+        margin-right: 20 * $rem-base;
+        font-size: $font-size-smaller;        
 
         a {
-          color: lighten( $black, 56.47 );
+          color: lighten( $black, 56.47 ); // Check
 
           &:hover {
             color: $color-primary;
@@ -70,46 +69,46 @@
   }
 
   .post-content {
-    margin-top: 20px;
+    margin-top: 20 * $rem-base;
 
     p {
-      line-height: 26px;
+      line-height: $base-line-height;
     }
 
     ul {
-      font-size: 15px;
-      padding: 10px 20px;
+      font-size: $font-size;
+      padding: (10 * $rem-base) (20 * $rem-base);
       font-family: $font-primary;
       list-style: circle;
     }
     ol {
-      font-size: 15px;
-      padding: 10px 20px;
+      font-size: $font-size;
+      padding: (10 * $rem-base) (20 * $rem-base);
       font-family: $font-primary;
     }
 
     blockquote {
       margin-top: 20px;
-      font-size: 18px;
+      font-size: $font-size-big;
       border-color: $color-primary;
-      padding: 10px 20px;
+      padding: (10 * $rem-base) (20 * $rem-base);
       text-align: left;
-      color: darken( $light, 50.98);
+      color: $text-light;
     }
 
     .btn-main {
-      padding: 10px 20px;
-      margin: 15px 0;
-      font-size: 12px;
+      padding: (10 * $rem-base) (20 * $rem-base);
+      margin: (15 * $rem-base) (0 * $rem-base);
+      font-size: $font-size-smaller;
     }
   }
 }
 
 .post-pagination {
-  margin: 0px;
+  margin: 0;
 
   @include desktop {
-    margin-bottom: 60px;
+    margin-bottom: 60 * $rem-base;
   }
 
   @include tablet {
@@ -117,9 +116,9 @@
   }
 
   >li {
-    margin: 0 2px;
+    margin: (0 * $rem-base) (2 * $rem-base);
     display: inline-block;
-    font-size: 14px;
+    font-size: $font-size-small;
 
     >a {
       color: $black;
