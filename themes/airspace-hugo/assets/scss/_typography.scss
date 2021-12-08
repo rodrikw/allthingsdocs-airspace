@@ -64,7 +64,7 @@ h4 {
 }
 
 p {
-  color: darken( $light, 49.41);
+  color: $text-color;
   font-size: $font-size;
   font-family: $font-primary;
 }
