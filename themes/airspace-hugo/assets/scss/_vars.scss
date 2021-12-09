@@ -43,6 +43,7 @@ $bg-primary: $color-brand-1;
 $bg-primary-dark:darken($color-brand-1, 10%);
 $bg-primary-darker: darken($color-brand-1, 20%);
 $bg-dark: $color-jet-80;
+$color-main-title: darken( $light, 5.0);
 
 // Set rem
 
@@ -62,6 +63,7 @@ $font-size-smaller: (12 * $rem-base);
 $font-size-smallest: (10 * $rem-base);
 $font-size-big: (18 * $rem-base);
 $font-size-bigger: (20 * $rem-base);
+$h1-main-title: (45 * $rem-base);
 $h1: (40 * $rem-base);
 $h1-md: (34 * $rem-base);
 $h2: (28 * $rem-base);
