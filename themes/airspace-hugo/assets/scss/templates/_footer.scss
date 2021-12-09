@@ -1,29 +1,32 @@
 .footer {
   background: $light;
-  min-height: 205 * $rem-base;
+  min-height: (205 * $rem-base);
   text-align: center;
-  padding-top: 67 * $rem-base;
+  padding-top: (67 * $rem-base);
   p {
     font-size: $font-size-small;
-    line-height: 24 * $rem-base;
+    line-height: $base-line-height;
     color: $text-dark;
   }
   a {
     color: $text-dark;
+    &:hover {
+      color: $a-hover;
+    }
   }
   .footer-menu {
-    padding-bottom: 25 * $rem-base;
+    padding-bottom: (25 * $rem-base);
     ul {
-      margin: 0 * $rem-base;
-      padding: 0 * $rem-base;
+      margin: 0;
+      padding: 0;
       li {
         display: inline-block;
-        padding: (0 * $rem-base) (20 * $rem-base);
+        padding: 0 (20 * $rem-base);
         a {
           display: inline-block;
           color: $text-dark;
           &:hover {
-            color: $color-brand-3;
+            color: $a-hover;
           }
         }
       }
