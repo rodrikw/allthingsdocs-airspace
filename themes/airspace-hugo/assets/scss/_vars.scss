@@ -23,14 +23,19 @@ $color-brand-1: #044354;
 $color-brand-2: #BCA3A5;
 $color-brand-3: #D8340E;
 $body-color: #fff; /* May not be needed */
+$light: #9DA9AF;
+$dark: #474747;
+
+// Text colors
 $text-color: $color-gray-70;
 $text-dark: $color-jet-70;
-$text-light: $color-smoke-90;
+$text-light: $color-smoke-70;
+
+// UI element colors
 $body-bg: $white;
 $border-color: #B3CACE;
 $navbar-bg: $white;
-$light: #9DA9AF;
-$dark: #474747;
+
 
 
 // Set rem
