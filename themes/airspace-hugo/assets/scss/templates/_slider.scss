@@ -1,3 +1,4 @@
+/* Main slider on the home page */
 .slider {
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,45 +12,45 @@
   }
 
   .block {
-    color: darken( $light, 8.4);
+    color: $color-main-title;
     text-align: center;
 
     h1 {
       font-weight: 100;
-      font-size: 45px;
+      font-size: $h1-main-title;
       line-height: 1.33em;
       letter-spacing: 0.2em;
-      padding-bottom: 15px;
+      padding-bottom: (15 * $rem-base);
       text-transform: uppercase;
 
       @include tablet {
-        font-size: 35px;
+        font-size: $h1-md;
       }
 
       @include mobile {
-        font-size: 28px;
+        font-size: $h2;
       }
 
       @include mobile-xs {
-        font-size: 26px;
+        font-size: $h2-md;
       }
     }
 
     p {
-      margin-bottom: 30px;
-      color: darken( $light, 25.09803921568627);
-      font-size: 18px;
-      line-height: 1.5em;
-      font-weight: 300;
+      margin-bottom: (30 * $rem-base);
+      color: $text-lighter;
+      font-size: $font-size-big;
+      line-height: $line-height-big;      
+
 
       @include mobile {
-        font-size: 14px;
+        font-size: $font-size-small;
       }
     }
 
     @include mobile {
       .btn {
-        font-size: 12px;
+        font-size: $font-size-smaller;
       }
     }
   }
