@@ -3,24 +3,24 @@
 --*/
 
 header {
-  min-height: 100 * $rem-base;
+  min-height: (100 * $rem-base);
   @include desktop {
-    min-height: 90 * $rem-base;
+    min-height: (90 * $rem-base);
   }
   background: $navbar-bg;
-  padding: (20 * $rem-base) (0 * $rem-base);
+  padding: (20 * $rem-base) 0;
   .navbar {
-    margin-bottom: 0 * $rem-base;
+    margin-bottom: 0;
     border: 0px;
   }
   .navbar-brand {
-    padding-top: 5 * $rem-base;
+    padding-top: (5 * $rem-base);
   }
   .navbar-default {
     background: none;
     border: 0px;
     .navbar-nav {
-        padding-top: 10 * $rem-base;
+        padding-top: (10 * $rem-base);
       li {
         a {
           color: $text-color;
