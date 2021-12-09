@@ -206,24 +206,23 @@ input[type="tel"] {
 }
 
 .bg-gray {
-  background: $light;
+  background: $bg-gray;
 }
 
 .bg-primary {
-  background: $color-brand-1;
+  background: $bg-primary;
 }
 
 .bg-primary-dark {
-  background: darken($color-brand-1, 10%);
+  background: $bg-primary-dark;
 }
 
 .bg-primary-darker {
-  background: darken($color-brand-1, 20%);
-
+  background: $bg-primary-darker;
 }
 
 .bg-dark {
-  background: #202122;
+  background: $bg-dark;
 }
 
 

@@ -39,10 +39,21 @@ $navbar-bg: $white;
 $a-hover-color: $color-brand-3;
 $a-hover-color-light: lighten($a-hover-color, 30%);
 
+$bg-gray: $light;
+$bg-primary: $color-brand-1;
+$bg-primary-dark:darken($color-brand-1, 10%);
+$bg-primary-darker: darken($color-brand-1, 20%);
+$bg-dark: $color-jet-70;
+
 
 
 // Set rem
 
+/*
+html {
+    font-size: 16px;
+}
+*/
 
 // Font Variables
 
