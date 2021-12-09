@@ -14,7 +14,7 @@ header {
     border: 0px;
   }
   .navbar-brand {
-    padding-top: 5 * $rem-base;    
+    padding-top: 5 * $rem-base;
   }
   .navbar-default {
     background: none;
@@ -28,7 +28,7 @@ header {
           font-size: $font-size;
           font
           &:hover {
-            color: $color-brand-3;
+            color: $a-hover-color;
           }
         }
       }
