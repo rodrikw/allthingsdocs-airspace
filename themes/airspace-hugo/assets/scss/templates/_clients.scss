@@ -1,14 +1,14 @@
 .clients-logo-section{
-  padding-top: 30 * $rem-base; 
-  padding-bottom: 75 * $rem-base;
+  padding-top: (30 * $rem-base); 
+  padding-bottom: (75 * $rem-base);
   .clients-logo-img{
-    padding: (0 * $rem-base) (50 * $rem-base); 
+    padding: 0 (50 * $rem-base); 
   }
 }
 
 .clients-logo {
   img {
     width: auto!important;
-    padding: 20 * $rem-base;
+    padding: (20 * $rem-base);
   }
 }
