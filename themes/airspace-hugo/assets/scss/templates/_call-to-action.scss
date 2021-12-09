@@ -3,14 +3,14 @@
   padding: (70 * $rem-base) (0 * $rem-base);
 
   @include tablet {
-    padding-top: 20 * $rem-base;
-    padding-bottom: 20 * $rem-base;
+    padding-top: (20 * $rem-base);
+    padding-bottom: (20 * $rem-base);
   }
 
   h2 {
     color: $text-lighter;
-    margin: 0 * $rem-base;
-    padding: (30 * $rem-base) (0 * $rem-base);
+    margin: 0;
+    padding: (30 * $rem-base) 0;
   }
 
   p {
@@ -20,7 +20,7 @@
   .btn-main {
     padding: (15 * $rem-base) (35 * $rem-base);
     font-size: $font-size-smaller;
-    margin-top: 30 * $rem-base;
-    margin-bottom: 30 * $rem-base;
+    margin-top: (30 * $rem-base);
+    margin-bottom: (30 * $rem-base);
   }
 }
