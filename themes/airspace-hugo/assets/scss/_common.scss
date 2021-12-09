@@ -611,10 +611,6 @@ input[type="tel"] {
 
 }
 
-.slider .block p {
-  color: $text-lighter !important; // Otherwise is overwritten by Bootstrap
-}
-
 .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background: $color-brand-1 !important;
