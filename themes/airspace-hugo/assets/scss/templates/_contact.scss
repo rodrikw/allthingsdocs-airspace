@@ -16,6 +16,11 @@
       }
     }
 
+    input.form-control {
+        background-color: purple; // This is being overridden somewhere
+      }
+    
+
     .form-group-2 {
       margin-bottom: 13px;
 
@@ -40,6 +45,8 @@
       color: $white;
       font-size: $font-size-big;
     }
+
+    
   }
 }
 

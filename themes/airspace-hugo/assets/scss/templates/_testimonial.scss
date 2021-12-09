@@ -1,9 +1,9 @@
 .testimonial {
-  padding: 100px 0;
+  padding: (100 * $rem-base) 0;
 
   @include tablet {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: (20 * $rem-base);
+    padding-bottom: (20 * $rem-base);
   }
 
   .counter-box {
@@ -11,7 +11,7 @@
       width: 50%;
       float: left;
       text-align: center;
-      margin: 30px 0 30px;
+      margin: (30 * $rem-base) 0 (30 * $rem-base);
 
       @include tablet {
         margin-top: 0px;
@@ -21,72 +21,74 @@
 
   .testimonial-carousel {
     border: 1px solid $border-color;
-    padding: 24px;
+    padding: (24 * $rem-base);
 
     i {
-      font-size: 35px;
-      margin-bottom: 20px;
+      font-size: (35 * $rem-base);
+      margin-bottom: (20 * $rem-base);
     }
 
     p {
       font-family: $font-secondary;
-      line-height: 28px;
-      padding-bottom: 20px;
+      line-height: $line-height-big;
+      padding-bottom: (20 * $rem-base);
     }
 
     .user {
       img {
-        padding-bottom: 0px;
-        border-radius: 500px;
-        width: 80px;
+        padding-bottom: 0;
+        border-radius: 100%;
+        width: (90 * $rem-base);
         display: inline-block;
       }
 
       p {
         font-family: $font-primary;
         padding-bottom: 0;
-        margin-top: 6px;
-        font-size: 12px;
-        line-height: 20px;
+        margin-top: (6 * $rem-base);
+        font-size: $font-size-smaller;
+        line-height: $line-height-base;
 
         span {
           display: block;
-          color: lighten( $black, 22.54 );
-          font-weight: 600;
+          color: $text-color;
+          font-weight: bold;
         }
       }
     }
 
+    // Not clear what this controls
     .owl-carousel .owl-pagination div {
       border: 1px solid #1D1D1D;
       border-radius: 500px;
       display: inline-block;
-      height: 10px;
-      margin-right: 15px;
-      width: 10px;
+      height: (10 * $rem-base);
+      margin-right: (15 * $rem-base);
+      width: (10 * $rem-base);
     }
 
+    // Not clear what this controls
     .owl-carousel .owl-pagination div.active {
       background: lighten( $black, 36.07);
-      font-size: 30px;
+      font-size: (30 * $rem-base);
       display: inline-block;
-      border: 0px;
+      border: 0;
     }
   }
 }
 
 .counter-box {
   i {
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: (35 * $rem-base);
+    margin-bottom: (15 * $rem-base);
   }
 
   h4 {
-    font-size: 30px;
+    font-size: $h2;
     font-weight: bold;
   }
 
   span {
-    color: lighten( $black, 33.3 );
+    color: $text-dark;
   }
 }
