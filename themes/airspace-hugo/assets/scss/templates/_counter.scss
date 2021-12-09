@@ -3,28 +3,29 @@
 ==================================================================*/
 
 .counter {
-  padding: 100px 0;
+  padding: (100 * $rem-baseS) 0;
 
   .counter-title {
-    margin-bottom: 50px;
-
+    margin-bottom: (50 * $rem-base);
+    
+    
     h2 {
       color: $black;
-      margin-bottom: 20px;
-      font-size: 42px;
-      font-weight: 600;
-      line-height: 35px;
+      margin-bottom: (20 * $rem-base);
+      font-size: $h1;
+      font-weight: bold;
+      line-height: (35 * $rem-base);
     }
 
     p {
       color: lighten( $black, 33.3 );
-      font-size: 16px;
+      font-size: $font-size;
     }
   }
 }
 
 .counters-item {
-  padding-bottom: 30px;
+  padding-bottom: (30 * $rem-base);
   color: lighten( $black, 26.6 );
   position: relative;
 
@@ -44,23 +45,23 @@
   }
 
   >div {
-    margin: 6px 0;
+    margin: (6 * $rem-base) 0;
   }
 
   span {
     display: inline;
-    font-size: 35px;
-    line-height: 50px;
+    font-size: (35 * $rem-base);
+    line-height: (50 * $rem-base);
   }
 
   i {
-    font-size: 40px;
+    font-size: (40 * $rem-base);
     display: inline-block;
     color: $color-brand-1;
   }
 
   h3 {
-    font-size: 17px;
+    font-size: $h4;
     margin: 0;
   }
 }
