@@ -3,15 +3,15 @@
 ==================================================================*/
 
 .blog {
-  background: darken( $light, 1.17);
+  background: darken( $light, 1.17); // Not clear what this affects
 }
 
 .post {
   background: $white;
-  margin-bottom: 55 * $rem-base;
+  margin-bottom: (55 * $rem-base);
 
   @include tablet {
-    margin-bottom: 20px;
+    margin-bottom: (20 * $rem-base);
   }
 
   .post-media {
@@ -30,7 +30,7 @@
   }
 
   .post-title {
-    margin-top: 25 * $rem-base;
+    margin-top: (25 * $rem-base);
     text-transform: uppercase;
 
     a {
@@ -43,33 +43,33 @@
   }
 
   .post-meta {
-    color: $text-light;
+    color: $text-color;
     font-size: $font-size-smaller;
-    margin-top: 10 * $rem-base;
+    margin-top: (10 * $rem-base);
 
     ul {
       li {
         display: inline-block;
-        margin-right: 20 * $rem-base;
+        margin-right: (20 * $rem-base);
         font-size: $font-size-smaller;
 
         a {
-          color: lighten( $black, 56.47 ); // Check
+          color: $text-color;
 
           &:hover {
-            color: $color-brand-1;
+            color: $color-brand-3;
           }
         }
       }
     }
 
     .post-author {
-      color: $black;
+      color: red; // $black;
     }
   }
 
   .post-content {
-    margin-top: 20 * $rem-base;
+    margin-top: (20 * $rem-base);
 
     p {
       line-height: $base-line-height;
@@ -108,11 +108,11 @@
   margin: 0;
 
   @include desktop {
-    margin-bottom: 60 * $rem-base;
+    margin-bottom: (60 * $rem-base);
   }
 
   @include tablet {
-    margin-bottom: 25px;
+    margin-bottom: (25 * $rem-base);
   }
 
   >li {
