@@ -57,7 +57,7 @@ about:
 ################################ feature #####################################
 features:
   enable : true
-  title : "We are indepented Design & Development Agency"
+  title : "We are independent content and documentation specialists"
   feature_item:
   # feature item loop
   - icon : "fab fa-app-store-ios" #https://fontawesome.com/v5.15/icons
