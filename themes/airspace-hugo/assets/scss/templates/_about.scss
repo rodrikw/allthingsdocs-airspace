@@ -1,3 +1,4 @@
+// Main page
 .about{
   .block{
     h2 {
@@ -16,6 +17,7 @@
     }
   }
 
+  // About page
   .about-img {
     overflow:hidden;
 
@@ -24,7 +26,7 @@
     }
 
     img {
-      opacity: .6;
+      //opacity: 0.6;
       @include transition (all, 0.5s, ease-out);
     }
   }
