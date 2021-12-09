@@ -22,9 +22,9 @@ a:hover {
 }
 
 blockquote {
-  font-size: 18px;
+  font-size: $font-size-big;
   border-color: $color-brand-1;
-  padding: 20px 40px;
+  padding: (20 * $rem-base) (40 * $rem-base);
   text-align: left;
   color: darken( $light, 50.98);
 }
@@ -38,9 +38,9 @@ input[type="password"],
 input[type="text"],
 input[type="tel"] {
   box-shadow: none;
-  height: 45px;
+  height: (45 * $rem-base);
   outline: none;
-  font-size: 14px;
+  font-size: $font-size-small;
 
   &:focus {
     box-shadow: none;
@@ -71,18 +71,18 @@ input[type="tel"] {
   background: $color-brand-1;
   color: $white;
   display: inline-block;
-  font-size: 14px;
+  font-size: $font-size-small;
   letter-spacing: 1px;
-  padding: 14px 35px;
+  padding: (14 * $rem-base) (35 * $rem-base);
   text-transform: uppercase;
   border-radius: 0;
   @include transition (all, 0.2s, ease);
 
   &.btn-icon {
     i {
-      font-size: 16px;
+      font-size: $font-size;
       vertical-align: middle;
-      margin-right: 5px;
+      margin-right: (5 * $rem-base);
     }
   }
 
@@ -118,29 +118,29 @@ input[type="tel"] {
 }
 
 .btn-large {
-  padding: 20px 45px;
+  padding: (20 * $rem-base) (45 * $rem-base);
 
   &.btn-icon {
     i {
-      font-size: 16px;
+      font-size: $font-size;
       vertical-align: middle;
-      margin-right: 5px;
+      margin-right: (5 * $rem-base);
     }
   }
 }
 
 .btn-small {
   @extend .btn-main;
-  padding: 10px 25px;
-  font-size: 12px;
+  padding:  (10 * $rem-base)  (25 * $rem-base);
+  font-size: $font-size-smaller;
 }
 
 .btn-round {
-  border-radius: 4px;
+  border-radius: (4 * $rem-base);
 }
 
 .btn-round-full {
-  border-radius: 50px;
+  border-radius: (50 * $rem-base);
 }
 
 
@@ -151,32 +151,24 @@ input[type="tel"] {
 }
 
 
-
-
-
-
-
-
-
-
 .mt-10 {
-  margin-top: 20px;
+  margin-top: (20 * $rem-base);
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: (20 * $rem-base);
 }
 
 .mt-30 {
-  margin-top: 30px;
+  margin-top: (30 * $rem-base);
 }
 
 .mt-40 {
-  margin-top: 40px;
+  margin-top: (40 * $rem-base);
 }
 
 .mt-50 {
-  margin-top: 50px;
+  margin-top: (50 * $rem-base);
 }
 
 .btn:focus {
@@ -209,8 +201,8 @@ input[type="tel"] {
 
 .bg-shadow {
   background-color: $white;
-  box-shadow: 0 16px 24px rgba(0, 0, 0, .08);
-  padding: 20px;
+  box-shadow: 0 (16 * $rem-base) (24 * $rem-base) rgba(0, 0, 0, .08);
+  padding: (20 * $rem-base);
 }
 
 .bg-gray {
@@ -236,23 +228,23 @@ input[type="tel"] {
 
 
 .section {
-  padding: 100px 0;
+  padding: (100 * $rem-base) 0;
 
   @include tablet {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: (20 * $rem-base);
+    padding-bottom: (20 * $rem-base);
   }
 }
 
 .section-sm {
-  padding: 70px 0;
+  padding: (70 * $rem-base) 0;
 }
 
 .title {
-  padding: 20px 0 30px;
+  padding: (20 * $rem-base) 0  (30 * $rem-base);
 
   h2 {
-    font-size: 18px;
+    font-size: $h4;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -260,17 +252,17 @@ input[type="tel"] {
 }
 
 .section-title {
-  margin-bottom: 70px;
+  margin-bottom:  (70 * $rem-base);
 
   @include tablet {
-    margin-bottom: 20px;
+    margin-bottom: (20 * $rem-base);
   }
 
   h2 {
     text-transform: uppercase;
     font-weight: 600;
     margin: 0px;
-    padding: 30px 0px;
+    padding:  (30 * $rem-base) 0px;
   }
 
   p {
@@ -282,22 +274,22 @@ input[type="tel"] {
 
 
 .section-subtitle {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 30px;
+  font-size: $h2;
+  font-weight: bold;
+  margin-bottom:  (30 * $rem-base);
 
   @include mobile-xs {
-    font-size: 26px;
+    font-size: $h2-md;
   }
 
   @include mobile {
-    font-size: 24px;
+    font-size: $h2-sm;
   }
 }
 
 
 .page-title {
-  padding: 100px 0;
+  padding:  (100 * $rem-base) 0;
   @extend .overly;
 
   .block {
@@ -319,19 +311,19 @@ input[type="tel"] {
 
 
 .heading {
-  padding-bottom: 60px;
+  padding-bottom:  (60 * $rem-base);
   text-align: center;
 
   h2 {
     color: $black;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: $h2;
+    line-height: (40 * $rem-base);
     font-weight: 400;
   }
 
   p {
-    font-size: 18px;
-    line-height: 40px;
+    font-size: $font-size-big;
+    line-height: (40 * $rem-base);
     color: lighten( $black, 16.078);
     font-weight: 300;
   }
@@ -346,11 +338,11 @@ input[type="tel"] {
 
 
 .page-wrapper {
-  padding: 70px 0;
+  padding:  (70 * $rem-base) 0;
 
   @include tablet {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: (20 * $rem-base);
+    padding-bottom: (20 * $rem-base);
   }
 }
 
@@ -361,8 +353,8 @@ input[type="tel"] {
       display: inline-block;
 
       a {
-        font-size: 18px;
-        color: lighten( $black, 20 );
+        font-size: $font-size-big;
+        color: $text-color;
         display: inline-block;
         padding: 7px 12px;
         color: $white;
@@ -375,7 +367,7 @@ input[type="tel"] {
 
       .facebook {
         background: #3b5998;
-        padding: 7px 18px;
+        padding: 7px 18px; // leave as px
       }
 
       .googleplus {
@@ -427,7 +419,7 @@ input[type="tel"] {
     opacity: 1;
     visibility: visible;
     position: absolute;
-    padding: 15px;
+    padding:  (15 * $rem-base);
     border: 1px solid #ebebeb;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: absolute;
@@ -447,7 +439,7 @@ input[type="tel"] {
 
 
 .commonSelect {
-  margin-left: 10px;
+  margin-left:  (10 * $rem-base);
   padding-right: 6px;
   position: relative;
 
@@ -455,9 +447,9 @@ input[type="tel"] {
     content: '\f3d0';
     font-family: $font-icon;
     position: absolute;
-    right: -4px;
-    top: 4px;
-    font-size: 10px;
+    right: (-4 * $rem-base);
+    top: (4 * $rem-base);
+    font-size: $font-size-smallest;
   }
 
   select {
@@ -479,10 +471,10 @@ input[type="tel"] {
 .tabCommon {
   .nav-tabs {
     border-bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom:  (10 * $rem-base);
 
     li {
-      margin-right: 5px;
+      margin-right: (5 * $rem-base);
     }
 
     li.active a {
@@ -504,7 +496,7 @@ input[type="tel"] {
   }
 
   .tab-content {
-    padding: 20px;
+    padding: (20 * $rem-base);
     border: 1px solid $border-color;
   }
 }
@@ -525,16 +517,16 @@ input[type="tel"] {
 
       a {
         display: block;
-        font-size: 14px;
+        font-size: $font-size-small;
         text-transform: uppercase;
-        padding: 10px 10px;
+        padding:  (10 * $rem-base)  (10 * $rem-base);
       }
 
       a:before {
         color: lighten( $black, 33.3 );
         content: "\f209";
         position: absolute;
-        right: 25px;
+        right:  (25 * $rem-base);
         font-family: $font-icon;
       }
 
@@ -551,7 +543,7 @@ input[type="tel"] {
 
 
 .list-circle {
-  padding-left: 20px;
+  padding-left: (20 * $rem-base);
 
   li {
     list-style-type: circle;
@@ -562,13 +554,13 @@ input[type="tel"] {
 .play-icon {
   border: 1px solid $border-color;
   display: inline-block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  font-size: 30px;
+  width:  (60 * $rem-base);
+  height:  (60 * $rem-base);
+  border-radius:  (50 * $rem-base);
+  font-size: (30 * $rem-base);
 
   i {
-    line-height: 60px;
+    line-height:  (60 * $rem-base);
   }
 }
 
@@ -578,8 +570,8 @@ input[type="tel"] {
   border-width: 2px;
 
   i {
-    margin: 0 5px;
-    font-size: 16px;
+    margin: 0 (5 * $rem-base);
+    font-size: $font-size;
   }
 }
 
@@ -591,11 +583,11 @@ input[type="tel"] {
 .buttonPart {
   li {
     @include mobile {
-      margin-bottom: 8px;
+      margin-bottom: (8 * $rem-base);
     }
 
     @include tablet {
-      margin-bottom: 8px;
+      margin-bottom: (8 * $rem-base);
     }
   }
 }
@@ -617,13 +609,17 @@ input[type="tel"] {
     background: darken($color-brand-1, 10); /* originally 25 */
     opacity: 0.7; /* Originally 0.7 */
   }
+
+}
+
+.slider .block p {
+  color: $text-lighter !important; // Otherwise is overwritten by Bootstrap
 }
 
 .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background: $color-brand-1 !important;
 }
-
 
 
 #success,
