@@ -64,7 +64,7 @@
     }
 
     .post-author {
-      color: red; // $black;
+      color: $text-dark;
     }
   }
 
@@ -121,7 +121,7 @@
     font-size: $font-size-small;
 
     >a {
-      color: $black;
+      color: $text-dark;
       @include transition (all, 0.3s, ease);
 
       &:hover {
