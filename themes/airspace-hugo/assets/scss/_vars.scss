@@ -37,6 +37,7 @@ $body-bg: $white;
 $border-color: #B3CACE;
 $navbar-bg: $white;
 $a-hover-color: $color-brand-3;
+$a-hover-color-light: lighten($a-hover-color, 30%);
 
 
 
