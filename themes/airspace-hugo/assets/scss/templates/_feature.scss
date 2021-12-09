@@ -1,6 +1,6 @@
 .feature {
   background: url("../img/feature-bg.jpg");
-  background-position: 50% 94px;
+  background-position: 50% (94 * $rem-base);
   display: block;
   position: relative;
   background-attachment: fixed;
@@ -17,23 +17,23 @@
 
   &.bg-2 div.col-md-6 {
     background-color: $light;
-    border-radius: 16 * $rem-base;
+    border-radius: (16 * $rem-base);
     opacity: 0.85;
   }
 
   h2 {
-    margin: 0 * $rem-base;
-    padding-top: 30 * $rem-base;
-    padding-bottom: 30 * $rem-base;
+    margin: 0;
+    padding-top: (30 * $rem-base);
+    padding-bottom: (30 * $rem-base);
   }
 
   p {
     color: $text-dark;
-    margin-bottom: 20 * $rem-base;
+    margin-bottom: (20 * $rem-base);
   }
 
   .btn-view-works {
-    background: lighten( $black, 42.35 );
+    background: $color-gray-70;
     color: $white;
     padding: (10 * $rem-base) (20 * $rem-base);
     margin-bottom: 30 * $rem-base;
