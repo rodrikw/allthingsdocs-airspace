@@ -44,6 +44,16 @@
 
       .portfolio-content {
         transform: translateY(-50%);
+
+        a.h3 {
+          &:hover,
+          :focus {
+            color: $a-hover-color-light;
+          }
+        }
+
+
+
       }
     }
   }
