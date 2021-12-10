@@ -1,6 +1,6 @@
 ---
 title: "AsciiDoc lists"
-date: 2021-11-30T12:27:37+02:00
+date: 2021-12-10T09:08:15+02:00
 author: Rodrik Wade
 image : "images/blog/blog-post-1.jpg"
 bg_image: "images/feature-bg.jpg"
@@ -12,33 +12,90 @@ type: "post"
 
 AsciiDoc supports a wide range of list types.
 
+Maecenas a molestie libero.
+Vivamus ultricies aliquam vehicula.
+Nullam laoreet at enim tristique vulputate.
+Integer mattis ipsum quis urna elementum vulputate.
+Maecenas sem enim, mattis tincidunt tempus ac, facilisis ut mauris.
+Integer placerat commodo elit nec feugiat.
+Nam mollis hendrerit justo, vel varius erat varius at.
+Sed et ultricies odio, posuere maximus quam.
+Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+== Level 2 heading
+
+Phasellus et diam semper justo consequat pellentesque et sed ante.
+Sed non convallis leo, in mattis nunc.
+Cras id odio vulputate purus blandit egestas.
+Aliquam eu varius ante, a sagittis lacus.
+Curabitur viverra lorem sit amet malesuada molestie.
+Vestibulum sed eros aliquam, eleifend urna nec, blandit dui.
+
+=== Level 3 heading
+
+Donec tincidunt hendrerit tincidunt.
+Donec et finibus dui, porta elementum ipsum.
+Mauris molestie, risus ut viverra ornare, turpis justo consectetur elit, nec porta tortor nunc in erat.
+Mauris et nibh non mi fringilla fringilla.
+Ut nec turpis tellus.
+Nulla facilisi.
+
+Suspendisse pulvinar vulputate tellus, et consequat ex facilisis nec.
+In gravida, massa a aliquam posuere, nunc mauris rutrum dui, nec bibendum tortor quam ac ligula.
+Vestibulum justo risus, faucibus sit amet risus ac, convallis rhoncus nunc.
+Phasellus tempus magna massa, sed hendrerit risus iaculis vel.
+Sed nec lacinia nunc.
+In hac habitasse platea dictumst.
+
 The following is an unnumbered list:
 
-* Unnumbered list item 1. Pellentesque egestas posuere nisl, sit amet porta magna sollicitudin nec. Quisque malesuada non est non pulvinar. Phasellus eget tempus neque. Morbi vulputate hendrerit tortor non vulputate. Mauris vitae nunc varius, cursus elit at, lobortis lectus.
+* Unnumbered list item 1. Pellentesque egestas posuere nisl, sit amet porta magna sollicitudin nec.
+Quisque malesuada non est non pulvinar.
+Phasellus eget tempus neque.
+Morbi vulputate hendrerit tortor non vulputate.
+Mauris vitae nunc varius, cursus elit at, lobortis lectus.
 ** This is a sublist
 ** This too
 *** Subsublist
-* Unnumbered list item 2. Curabitur finibus tincidunt ligula, in volutpat orci laoreet vestibulum. Quisque nunc metus, aliquam eget nulla nec, pretium maximus magna.
+**** Fourth-level
+* Unnumbered list item 2. Curabitur finibus tincidunt ligula, in volutpat orci laoreet vestibulum.
+Quisque nunc metus, aliquam eget nulla nec, pretium maximus magna.
 
 The following is a numbered list:
 
-. Numbered list item 1. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit. Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
+. Numbered list item 1. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit.
+Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
++
+This is a second paragraph in the first list item.
+Donec at ante vestibulum, malesuada nulla dapibus, venenatis est.
+Sed vitae urna id dolor posuere hendrerit.
+Etiam commodo ligula nisl, eu placerat odio pretium in.
+
 .. This should be lowercase latin
 .. This too
 ... And this should be lower roman
-. Numbered list item 2. Curabitur finibus tincidunt ligula, in volutpat orci laoreet vestibulum. Quisque nunc metus, aliquam eget nulla nec, pretium maximus magna.
+
+. Numbered list item 2. Curabitur finibus tincidunt ligula, in volutpat orci laoreet vestibulum.
+Quisque nunc metus, aliquam eget nulla nec, pretium maximus magna.
+
+The following list should use upper roman numerals:
+
+[upperroman]
+. List item one
+
+. List item two
+. list item three
+
 
 The following is a simple list (no bullets or numbers)
 
 [none]
 * List item 1
-** Second level with bullet
-*** Third level with bullet
+** Second level with bullet.
+It is not possible to have unnumbered sublists.
+*** Third level with bullet.
+
 * List item 2
-[none]
-** Second level without bullet
-[none]
-*** Third level without bullet
 * List item 3
 
 The following is a checklist:
@@ -46,19 +103,25 @@ The following is a checklist:
 * [*] checked
 * [x] also checked
 * [ ] not checked
-* normal list item
+* normal list item.
+This seems wrong (because it has no bullet) but it is as formatted in the IntelliJ IDEA preview.
 
 The following is a definition list:
 
 Light-year::
-A light-year is a unit of length used to express astronomical distances and is equivalent to about 9.46 trillion kilometres (9.46×10^12^ km). As defined by the International Astronomical Union (IAU), a light-year is the distance that light travels in a vacuum in one Julian year (365.25 days).
+A light-year is a unit of length used to express astronomical distances and is equivalent to about 9.46 trillion kilometres (9.46×10^12^ km).
+As defined by the International Astronomical Union (IAU), a light-year is the distance that light travels in a vacuum in one Julian year (365.25 days).
 
 Parsec::
-The parsec is a unit of length used to measure the large distances to astronomical objects outside the Solar System, approximately equal to 3.26 light-years
+The parsec is a unit of length used to measure the large distances to astronomical objects outside the Solar System, approximately equal to 3.26 light-years.
 +
-This paragraph is still part of the definition. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit. Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
+This paragraph is still part of the definition.
+Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit.
+Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
 
-This paragraph is *not* part of the definition. Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit. Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
+This paragraph is *not* part of the definition.
+Aliquam faucibus, libero id mollis ultricies, diam mauris aliquam augue, vel tempor mi turpis in velit.
+Ut mi justo, mollis ac erat sed, malesuada laoreet tortor.
 
 This is a horizontal definition list:
 
@@ -69,3 +132,67 @@ The astronomical unit (symbol: au or AU) is a unit of length, roughly the distan
 Planck length::
 In physics, the Planck length, denoted ℓP, is a unit of length in the system of Planck units that was originally proposed by physicist Max Planck, equal to 1.616255(18)×10^−35^ m.
 
+Vestibulum sed justo leo.
+Sed a maximus ante, sodales luctus purus.
+Sed velit sem, convallis eu risus nec, blandit pulvinar risus.
+Phasellus venenatis pretium lorem quis pharetra.
+Donec nisl massa, sollicitudin eu justo eget, fringilla semper lacus.
+Maecenas maximus elit vitae scelerisque cursus.
+
+==== Heading 4
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Vestibulum sodales arcu ac ultrices tincidunt.
+Pellentesque porttitor velit volutpat, euismod metus vitae, cursus justo.
+Quisque quis elit accumsan, auctor enim at, ultricies ante.
+Nulla nec maximus neque, ut auctor urna.
+Nullam maximus diam eget purus consequat vestibulum.
+Maecenas massa massa, congue eu placerat eu, feugiat vitae sapien.
+Vestibulum lectus enim, tincidunt a varius in, scelerisque vitae neque.
+Praesent enim enim, gravida sed condimentum at, dignissim quis lorem.
+In ultrices interdum tempus.
+
+=== Heading 3
+
+Nulla mattis sem ac diam finibus ultricies.
+Etiam iaculis ac diam eu aliquam.
+Vivamus pharetra dui sed lectus euismod luctus.
+Etiam mauris augue, volutpat id magna eu, mattis posuere felis.
+Aenean sed nulla eget sem posuere molestie.
+Nullam tincidunt sapien in urna laoreet lacinia.
+Aenean id dignissim libero.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+.A table in the text
+|===
+|Heading A |Heading B |Heading C
+
+|Sed at ante et odio facilisis commodo eget nec tellus.
+Nulla mattis sem ac diam finibus ultricies.
+Etiam iaculis ac diam eu aliquam.
+
+Vivamus pharetra dui sed lectus euismod luctus.
+Etiam mauris augue, volutpat id magna eu, mattis posuere felis.
+|Proin rhoncus neque eu porta congue.
+Aenean sed nulla eget sem posuere molestie.
+Nullam tincidunt sapien in urna laoreet lacinia.
+
+Aenean id dignissim libero.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+|Vestibulum lectus enim, tincidunt a varius in, scelerisque vitae neque.
+
+|Nullam ligula ex, ultrices in leo id, imperdiet viverra orci.
+|Aenean sed nulla eget sem posuere molestie.
+|Nullam tincidunt sapien in urna laoreet lacinia.
+
+|===
+
+Nulla facilisi.
+Proin rhoncus neque eu porta congue.
+Etiam tortor eros, aliquam id velit quis, rhoncus condimentum ligula.
+Cras ultricies erat quis gravida tristique.
+Vivamus porta velit mattis arcu consectetur, vitae bibendum mauris vulputate.
+Nullam condimentum mauris vitae turpis viverra pellentesque.
+Nullam viverra magna nec tortor imperdiet, ut faucibus purus elementum.
+Aenean enim ex, aliquam at ultrices et, semper et augue.
+Nunc eget luctus magna.
