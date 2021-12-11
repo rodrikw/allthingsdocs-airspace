@@ -1,5 +1,5 @@
 .navigation {
-  background: $navbar-bg;
+  background: $color-bg-navbar;
   padding: (20 * $rem-base) 0;
 
   .navbar {
@@ -19,7 +19,7 @@
       padding-top: (10 * $rem-base);
 
       a {
-        color: $text-color;
+        color: $color-text-base;
         padding: (10 * $rem-base) (15 * $rem-base);
 
         font : {
@@ -30,19 +30,19 @@
 
         &:hover,
         &:focus {
-          color: $a-hover-color;
+          color: $color-a-hover;
           background: transparent;
         }
       }
 
       a.current {
-        color: $text-dark;
+        color: $color-text-dark;
         pointer-events: none;
         cursor: default;
       }
 
       a.current-parent {
-        color: $text-dark;
+        color: $color-text-dark;
       }
 
       select {
@@ -51,7 +51,7 @@
     }
 
     .current > .dropdown-toggle {
-      color: $text-dark;
+      color: $color-text-dark;
     }
 
     .dropdown-menu {
@@ -63,20 +63,20 @@
       a {
         text-transform: none;
         font-weight: normal;
-        color: $text-color;
+        color: $color-text-base;
         padding: (10 * $rem-base) (20 * $rem-base);
         @include transition-multi (color 0.1s ease, padding 0.3s ease);
 
         &:hover {
           background: $color-brand-1;
-          color: $text-light;
+          color: $color-text-light;
           padding-left: (25 * $rem-base);
         }
       }
 
       a.current {
         padding-left: (25 * $rem-base);
-        color: $text-light;
+        color: $color-text-light;
         background: $color-brand-1;
       }
     }

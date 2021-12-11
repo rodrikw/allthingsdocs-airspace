@@ -20,7 +20,7 @@
   }
 
   .testimonial-carousel {
-    border: 1px solid $border-color;
+    border: 1px solid $color-border;
     padding: (24 * $rem-base);
 
     i {
@@ -51,7 +51,7 @@
 
         span {
           display: block;
-          color: $text-color;
+          color: $color-text-base;
           font-weight: bold;
         }
       }
@@ -89,6 +89,6 @@
   }
 
   span {
-    color: $text-dark;
+    color: $color-text-dark;
   }
 }

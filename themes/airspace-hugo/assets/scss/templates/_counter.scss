@@ -7,8 +7,8 @@
 
   .counter-title {
     margin-bottom: (50 * $rem-base);
-    
-    
+
+
     h2 {
       color: $black;
       margin-bottom: (20 * $rem-base);
@@ -34,7 +34,7 @@
   }
 
   &:before {
-    background: darken( $light, 7.843137254901947);
+    background: darken( $color-bg-light, 7.843137254901947);
     content: "";
     margin-top: -27.5px;
     height: 55px;

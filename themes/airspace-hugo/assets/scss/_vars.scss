@@ -22,28 +22,39 @@ $black: #000;
 $color-brand-1: #044354;
 $color-brand-2: #BCA3A5;
 $color-brand-3: #D8340E;
-$body-color: #fff; /* May not be needed */
-$light: #9DA9AF;
-$dark: #474747;
+$color-brand-4: #9DA9AF;
+$color-brand-5: purple; // placeholder
+$color-brand-6: green; // placeholder
 
-// Text colors
-$text-color: $color-gray-70;
-$text-dark: $color-jet-70;
-$text-light: $color-gray-50; // Suitable for light backgrounds
-$text-lighter: $color-smoke-70; // Suitable for dark backgrounds
 
 // UI element colors
-$body-bg: $white;
-$border-color: #B3CACE;
-$navbar-bg: $white;
-$a-hover-color: $color-brand-3;
-$a-hover-color-light: lighten($a-hover-color, 30%);
-$bg-gray: $light;
-$bg-primary: $color-brand-1;
-$bg-primary-dark:darken($color-brand-1, 10%);
-$bg-primary-darker: darken($color-brand-1, 20%);
-$bg-dark: $color-jet-80;
-$color-main-title: darken( $light, 5.0);
+// Text colors
+$color-text-base: $color-gray-70;
+$color-text-dark: $color-jet-70;
+$color-text-light: $color-gray-50; // Suitable for light backgrounds
+$color-text-lighter: $color-smoke-70; // Suitable for dark backgrounds
+
+
+$color-border: #B3CACE;
+$color-bg-navbar: $white; // Top navigation bar
+$color-a: lighten($color-brand-1, 15%); 
+$color-a-hover: $color-brand-3;
+$color-a-hover-light: lighten($color-a-hover, 30%);
+
+// Background colors
+$color-bg-body: $white;
+$color-bg-light: $color-brand-4;
+$color-bg-lighter: lighten( $color-bg-light, 25);
+$color-bg-gray: $color-bg-light;
+$color-bg-primary: $color-brand-1;
+$color-bg-primary-dark: darken($color-bg-primary, 10%);
+$color-bg-primary-darker: darken($color-bg-primary, 20%);
+$color-bg-dark: #474747;
+
+
+
+
+$color-title-main: darken( $color-brand-4, 5.0);
 
 // Set rem
 

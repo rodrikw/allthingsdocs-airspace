@@ -32,22 +32,22 @@
 
 .dark-service {
   .title {
-    color: $text-lighter;
+    color: $color-text-lighter;
   }
 
   .service-item {
     padding-bottom: (30 * $rem-base);
     text-align: center;
-    
+
 
     i {
-      color: $text-lighter;
+      color: $color-text-lighter;
       font-size: (40 * $rem-base);
       margin-bottom: (10 * $rem-base);
     }
 
     h4 {
-      color: $text-lighter;
+      color: $color-text-lighter;
       padding-top: (15 * $rem-base);
       margin: 0;
       margin-top: (10 * $rem-base);
@@ -55,7 +55,7 @@
     }
 
     p {
-      color: $text-light;
+      color: $color-text-light;
       padding-top: (10 * $rem-base);
       margin: 0;
     }

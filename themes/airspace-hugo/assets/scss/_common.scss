@@ -13,20 +13,25 @@ img{
   height: auto;
 }
 
-a,
-a:focus,
-a:hover {
+a {
   text-decoration: none;
   outline: 0;
-  color: $color-brand-1;
+  color: $color-a;
+
+  &:focus,
+  &:hover {
+    color: $color-a-hover;
+    text-decoration: none;
+  }
 }
+
 
 blockquote {
   font-size: $font-size-big;
   border-color: $color-brand-1;
   padding: (20 * $rem-base) (40 * $rem-base);
   text-align: left;
-  color: darken( $light, 50.98);
+  color: darken( $color-bg-light, 50.98);
 }
 
 .navbar-toggle .icon-bar {
@@ -172,7 +177,7 @@ input[type="tel"] {
 }
 
 .btn:focus {
-  color: darken( $light, 10.9);
+  color: darken( $color-bg-light, 10.9);
 }
 
 .w-100 {
@@ -206,23 +211,23 @@ input[type="tel"] {
 }
 
 .bg-gray {
-  background: $bg-gray;
+  background: $color-bg-gray;
 }
 
 .bg-primary {
-  background: $bg-primary;
+  background: $color-bg-primary;
 }
 
 .bg-primary-dark {
-  background: $bg-primary-dark;
+  background: $color-bg-primary-dark;
 }
 
 .bg-primary-darker {
-  background: $bg-primary-darker;
+  background: $color-bg-primary-darker;
 }
 
 .bg-dark {
-  background: $bg-dark;
+  background: $color-bg-dark;
 }
 
 
@@ -266,7 +271,7 @@ input[type="tel"] {
 
   p {
     font-style: italic;
-    color: darken( $light, 57.64);
+    color: darken( $color-bg-light, 57.64);
     font-family: $font-secondary;
   }
 }
@@ -353,7 +358,7 @@ input[type="tel"] {
 
       a {
         font-size: $font-size-big;
-        color: $text-color;
+        color: $color-text-base;
         display: inline-block;
         padding: 7px 12px;
         color: $white;
@@ -409,7 +414,7 @@ input[type="tel"] {
     transform: translate(0px, 0px);
     opacity: 1;
     visibility: visible;
-    color: darken( $light, 50.98);
+    color: darken( $color-bg-light, 50.98);
     transform: translateY(0px);
   }
 
@@ -484,7 +489,7 @@ input[type="tel"] {
 
     a {
       border-radius: 0;
-      background: $light;
+      background: $color-bg-light;
 
       &:hover {
         border: 1px solid transparent;
@@ -496,7 +501,7 @@ input[type="tel"] {
 
   .tab-content {
     padding: (20 * $rem-base);
-    border: 1px solid $border-color;
+    border: 1px solid $color-border;
   }
 }
 
@@ -551,7 +556,7 @@ input[type="tel"] {
 
 
 .play-icon {
-  border: 1px solid $border-color;
+  border: 1px solid $color-border;
   display: inline-block;
   width:  (60 * $rem-base);
   height:  (60 * $rem-base);

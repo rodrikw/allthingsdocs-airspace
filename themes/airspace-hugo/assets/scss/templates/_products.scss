@@ -186,7 +186,7 @@
 
         .btn-transparent {
           color: lighten( $black, 26.6 );
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid $color-border;
         }
       }
 
@@ -212,7 +212,7 @@
       margin-bottom: 4px;
 
       a {
-        color: darken( $light, 57.64);
+        color: darken( $color-bg-light, 57.64);
 
         &:hover {
           color: $black;

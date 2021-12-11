@@ -12,7 +12,7 @@
   }
 
   .block {
-    color: $color-main-title;
+    color: $color-title-main;
     text-align: center;
 
     h1 {
@@ -38,9 +38,9 @@
 
     p {
       margin-bottom: (30 * $rem-base);
-      color: $text-lighter;
+      color: $color-text-lighter;
       font-size: $font-size-big;
-      line-height: $line-height-big;      
+      line-height: $line-height-big;
 
 
       @include mobile {

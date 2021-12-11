@@ -8,7 +8,7 @@
       margin: 0 * $rem-base;
 
       .form-control {
-        background: $light;
+        background: $color-bg-lighter;
         height: 60 * $rem-base;
         border: 1px solid $white;
         box-shadow: none;
@@ -16,16 +16,12 @@
       }
     }
 
-    input.form-control {
-        background-color: purple; // This is being overridden somewhere
-      }
-    
 
     .form-group-2 {
       margin-bottom: 13px;
 
       textarea {
-        background: $light;
+        background: $color-bg-lighter;
         height: 135 * $rem-base;
         border: 1px solid $white;
         box-shadow: none;
@@ -40,13 +36,13 @@
     button {
       width: 100%;
       height: 60 * $rem-base;
-      background: $dark;
+      background: $color-bg-dark;
       border: none;
       color: $white;
       font-size: $font-size-big;
     }
 
-    
+
   }
 }
 
@@ -55,7 +51,7 @@
   margin-bottom: 40 * $rem-base;
 
   li {
-    color: $text-color;
+    color: $color-text-base;
     position: relative;
     padding-left: 30 * $rem-base;
     margin-bottom: 10 * $rem-base;
@@ -64,7 +60,7 @@
       position: absolute;
       left: 0;
       font-size: $h3;
-      line-height: 20 * $rem-base;      
+      line-height: 20 * $rem-base;
     }
 
     div {
@@ -88,7 +84,7 @@
   }
 
   i {
-    color: $text-color;
+    color: $color-text-base;
     margin-right: 25 * $rem-base;
     font-size: 25 * $rem-base;
   }
@@ -120,7 +116,7 @@
     }
 
     p {
-      color: $text-dark;
+      color: $color-text-dark;
       display: block;
     }
 

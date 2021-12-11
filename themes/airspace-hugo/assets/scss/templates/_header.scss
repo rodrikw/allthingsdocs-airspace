@@ -7,7 +7,7 @@ header {
   @include desktop {
     min-height: (90 * $rem-base);
   }
-  background: $navbar-bg;
+  background: $color-bg-navbar;
   padding: (20 * $rem-base) 0;
   .navbar {
     margin-bottom: 0;
@@ -23,12 +23,12 @@ header {
         padding-top: (10 * $rem-base);
       li {
         a {
-          color: $text-color;
+          color: $color-text-base;
           padding: (10 * $rem-base) (26 * $rem-base);
           font-size: $font-size;
           font
           &:hover {
-            color: $a-hover-color;
+            color: $color-a-hover;
           }
         }
       }

@@ -16,7 +16,7 @@
   }
 
   &.bg-2 div.col-md-6 {
-    background-color: $light;
+    background-color: $color-bg-light;
     border-radius: (16 * $rem-base);
     opacity: 0.85;
   }
@@ -28,7 +28,7 @@
   }
 
   p {
-    color: $text-dark;
+    color: $color-text-dark;
     margin-bottom: (20 * $rem-base);
   }
 

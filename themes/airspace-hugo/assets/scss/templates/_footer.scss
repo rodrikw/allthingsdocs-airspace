@@ -1,17 +1,17 @@
 .footer {
-  background: $light;
+  background: $color-bg-light;
   min-height: (205 * $rem-base);
   text-align: center;
   padding-top: (67 * $rem-base);
   p {
     font-size: $font-size-small;
     line-height: $line-height-base;
-    color: $text-dark;
+    color: $color-text-dark;
   }
   a {
-    color: $text-dark;
+    color: $color-text-dark;
     &:hover {
-      color: $a-hover-color;
+      color: $color-a-hover;
     }
   }
   .footer-menu {
@@ -24,9 +24,9 @@
         padding: 0 (20 * $rem-base);
         a {
           display: inline-block;
-          color: $text-dark;
+          color: $color-text-dark;
           &:hover {
-            color: $a-hover-color;
+            color: $color-a-hover;
           }
         }
       }

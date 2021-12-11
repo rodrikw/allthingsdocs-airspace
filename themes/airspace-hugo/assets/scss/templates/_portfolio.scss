@@ -10,11 +10,11 @@
 
         label {
           display: inline-block;
-          border: 1px solid $border-color;
+          border: 1px solid $color-border;
           padding: (8 * $rem-base) (25 * $rem-base);
           cursor: pointer;
           font-size: $font-size;
-          color: $text-color;
+          color: $color-text-base;
           outline: 0;
           background: $white;
           margin: (2 * $rem-base);
@@ -48,7 +48,7 @@
         a.h3 {
           &:hover,
           :focus {
-            color: $a-hover-color-light;
+            color: $color-a-hover-light;
           }
         }
 
@@ -107,17 +107,17 @@
     h4 {
       margin-bottom: (20 * $rem-base);
       padding-bottom: (10 * $rem-base);
-      border-bottom: 2px dashed $border-color;
+      border-bottom: 2px dashed $color-border;
     }
 
     span {
-      color: $text-color;
+      color: $color-text-base;
       width: (180 * $rem-base); // Check - possibly use vw
       display: inline-block;
     }
 
     strong {
-      color: $text-dark;
+      color: $color-text-dark;
       font-weight: normal;
     }
 

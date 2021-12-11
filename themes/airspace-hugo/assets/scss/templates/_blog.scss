@@ -3,7 +3,7 @@
 ==================================================================*/
 
 .blog {
-  background: darken( $light, 1.17); // Not clear what this affects
+  background: darken( $color-bg-light, 1.17); // Not clear what this affects
 }
 
 .post {
@@ -43,7 +43,7 @@
   }
 
   .post-meta {
-    color: $text-color;
+    color: $color-text-base;
     font-size: $font-size-smaller;
     margin-top: (10 * $rem-base);
 
@@ -54,17 +54,17 @@
         font-size: $font-size-smaller;
 
         a {
-          color: $text-color;
+          color: $color-text-base;
 
           &:hover {
-            color: $a-hover-color;
+            color: $color-a-hover;
           }
         }
       }
     }
 
     .post-author {
-      color: $text-dark;
+      color: $color-text-dark;
     }
   }
 
@@ -93,7 +93,7 @@
       border-color: $color-brand-1;
       padding: (10 * $rem-base) (20 * $rem-base);
       text-align: left;
-      color: $text-light;
+      color: $color-text-light;
     }
 
     .btn-main {
@@ -121,7 +121,7 @@
     font-size: $font-size-small;
 
     >a {
-      color: $text-dark;
+      color: $color-text-dark;
       @include transition (all, 0.3s, ease);
 
       &:hover {
