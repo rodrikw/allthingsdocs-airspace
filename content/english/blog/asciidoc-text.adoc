@@ -16,6 +16,9 @@ Aliquam erat volutpat. Nunc sit amet risus tincidunt, sodales enim non, imperdie
 == Heading level 2
 
 This post is to test the formatting of AsciiDoc block markup in Hugo.
+This a link to http://www.wikipedia.com[Wikipedia].
+
+
 This is a paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Phasellus ultricies laoreet justo eget dapibus.
 Pellentesque dictum, nisi et tincidunt tempus, nunc elit pulvinar enim, sed ornare libero ligula at eros.
