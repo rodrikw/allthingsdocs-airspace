@@ -2,7 +2,7 @@
 title: "AsciiDoc tables"
 date: 2021-11-30T14:42:29+02:00
 author: Rodrik wade
-image : "images/blog/blog-post-6.jpg"
+image : "images/blog/general-ledger.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
@@ -27,6 +27,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
+
 .frame=ends
 [frame=ends]
 |===
@@ -41,6 +43,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 |Cell 2C
 
 |===
+
+{nbsp}
 
 .frame=sides
 [frame=sides]
@@ -57,6 +61,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
+
 .frame=none
 [frame=none]
 |===
@@ -71,6 +77,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 |Cell 2C
 
 |===
+
+{nbsp}
 
 .grid=rows
 [grid=rows]
@@ -87,6 +95,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
+
 .grid=cols
 [grid=cols]
 |===
@@ -102,6 +112,7 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
 
 .grid=none
 [grid=none]
@@ -118,6 +129,7 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
 
 .grid=rows, frame=none
 [grid=rows,frame=none]
@@ -134,7 +146,7 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
-
+{nbsp}
 
 .grid=cols, frame=none
 [grid=cols,frame=none]
@@ -151,6 +163,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
+
 .grid=none, frame=none
 [grid=none,frame=none]
 |===
@@ -165,6 +179,8 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 |Cell 2C
 
 |===
+
+{nbsp}
 
 .width=50%
 [width=50%]
@@ -181,7 +197,9 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 
 |===
 
+{nbsp}
 
+It is possible to specify the width of tables (and columns):
 
 .cols="s,^e,>d",width=75%
 [cols="s,^e,>d",width=75%]
@@ -197,6 +215,10 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 |Cell 2C
 
 |===
+
+{nbsp}
+
+It is also possible to specify the horizontal and vertical alignment of text in table cells:
 
 .cols="d,.<,.^,.>",width=75%
 [cols="d,.<,.^,.>",width=75%]

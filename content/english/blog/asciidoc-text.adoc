@@ -2,7 +2,7 @@
 title: "AsciiDoc text"
 date: 2021-12-06T12:23:17+02:00
 author: Rodrik Wade
-image : "images/blog/blog-post-1.jpg"
+image : "images/blog/book-of-kells.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
@@ -10,6 +10,7 @@ description: "Formatting of AsciiDoc text in Hugo"
 draft: false
 type: "post"
 ---
+This blog post shows how AsciiDoc paragraphs and headings are formatted in Hugo.
 
 Aliquam erat volutpat. Nunc sit amet risus tincidunt, sodales enim non, imperdiet erat. Aliquam eu ligula orci. Nullam ultrices lacus ac lectus pretium luctus. Suspendisse posuere suscipit nisi. Curabitur a porta risus, a porta velit. Phasellus et quam vel massa ullamcorper sodales sed eget nisl. Nulla vehicula cursus lectus, at condimentum orci posuere non.
 

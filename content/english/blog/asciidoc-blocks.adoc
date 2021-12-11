@@ -2,7 +2,7 @@
 title: "AsciiDoc blocks"
 date: 2021-11-30T14:41:00+02:00
 author: Rodrik Wade
-image : "images/blog/blog-post-1.jpg"
+image : "images/blog/print-block.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
@@ -14,7 +14,8 @@ type: "post"
 :source-highlighter: rouge
 :rouge-style: monokai
 
-This post is to test the formatting of AsciiDoc block markup in Hugo.
+This post shows the formatting of AsciiDoc block markup in Hugo.
+AsciiDoc supports quote blocks, sidebars, admonitions, and code blocks.
 
 [NOTE]
 ====

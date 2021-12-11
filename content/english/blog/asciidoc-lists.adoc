@@ -2,7 +2,7 @@
 title: "AsciiDoc lists"
 date: 2021-12-10T09:08:15+02:00
 author: Rodrik Wade
-image : "images/blog/blog-post-1.jpg"
+image : "images/blog/list.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
@@ -10,7 +10,7 @@ draft: false
 type: "post"
 ---
 
-AsciiDoc supports a wide range of list types.
+AsciiDoc supports a wide range of list types, including standard numbered and bulleted lists, description lists, and checklists.
 
 Maecenas a molestie libero.
 Vivamus ultricies aliquam vehicula.
