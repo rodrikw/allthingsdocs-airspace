@@ -9,9 +9,11 @@ $list-top-level-margin-bottom: 1rem;
 // ############ AsciiDoc-specific overrides ############
 
 
-.post-content p {
-    line-height: 0.5rem; /* Appears to have no effect */
-    margin-bottom: 16 * $rem-base;
+.post-content,
+.post-excerpt p {
+    line-height: $line-height-base !important;
+    margin: $margin-p-v 0;
+    // color: blue;
     }
 
 // Admonition block
@@ -58,7 +60,7 @@ $list-top-level-margin-bottom: 1rem;
     margin-bottom: 24 * $rem-base;
 
     .title {
-        color: $text-light;
+        color: $color-text-light;
         font-size: $font-size-small;
         padding-top: 8 * $rem-base;
     }
@@ -71,7 +73,7 @@ $list-top-level-margin-bottom: 1rem;
 .listingblock {
 
     .title {
-        color: $text-light;
+        color: $color-text-light;
         font-size: $font-size-small;
         padding-bottom: 8 * $rem-base;
         padding-top: 0;
@@ -93,57 +95,122 @@ $list-top-level-margin-bottom: 1rem;
 
 // Description list
 
-.dlist {
-
-    dt {
-        margin-bottom: 8 * $rem-base;
-    }
-
-    p {
-        padding-left: 1rem;
-    }
-}
-
+// also applied to vertical decription lists
 .hdlist1 {
+    color: $color-text-base;
     font-weight: bold;
+    font-size: $font-size;
+    line-height: $line-height-base;
     vertical-align: text-bottom;
+    //background-color: aqua;
 }
+
 
 .hdlist2 {
     vertical-align: text-bottom;
+    //background-color: orange;
+    
+    p {
+      //background-color: yellow;
+      margin: 0 0 $margin-li-b 0;  
+    }
+}
+
+.dlist {
+
+    dt {
+        margin: $margin-p-v 0 $margin-li-b 0;
+        
+    }
+
+    p {
+        margin: 0 0 $margin-li-b $indent-em;
+        padding-left: 0;        
+    }
 }
 
 
-// Unordered list
+
+
+// Ordered list
+
+.olist {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    // background-color: yellow;
+
+    ol {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        // background-color: aqua;
+
+        li::marker {
+            color: $color-text-base;
+        }
+
+    }
+
+    p {
+        // background-color: orange;
+        margin-top: 0;
+        margin-bottom: $margin-li-b;
+    }
+}
+
+// Unordered lists and checklists
 
 
 .ulist {
 
-    &:not(.none, .checklist) > {
-        ul {
-            list-style-type: disc;
-            margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    // background-color: yellow;
+
+    ul {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        // background-color: aqua;
+
+        li::marker {
+            color: $color-text-base;
         }
-        ul ul {
-            list-style-type: circle;
-            margin-bottom: 0
-            }
-        ul ul ul {
-            list-style-type: square;
-            margin-bottom: 0;
-            }
-    }
 
+        &.checklist,
+        &.none {
+            list-style-type: none;
+        }
+
+        &:not(.none, .checklist) {
+            list-style-type: disc;
+
+            ul {
+                list-style: circle;
+
+                ul {
+                    list-style-type: square;
+
+                    ul {
+                        list-style-type: disc;
+                    }
+                }
+            }
+        }
+    }
+    
     p {
-        margin-bottom: 0;
+        // background-color: orange;
+        margin-top: 0;
+        margin-bottom: $margin-li-b;
     }
 }
-
-.post-content > .ulist {
-    margin-bottom: $list-top-level-margin-bottom;
-    color: red;
-}
-
 
 
 // Quoteblock
@@ -160,7 +227,7 @@ $list-top-level-margin-bottom: 1rem;
 
         // Quotation mark decoration 
         div.paragraph:first-of-type p::before {
-            color: lighten( $light, 15);
+            color: lighten( $color-bg-light, 15);
             content: open-quote;
             font-size: 48 * $rem-base;
             line-height: 0em;
@@ -184,7 +251,7 @@ $list-top-level-margin-bottom: 1rem;
 // Sidebar
 
 .sidebarblock {
-    background-color: lighten( $light, 25);
+    background-color: $color-bg-lighter;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-top: 8 * $rem-base;
@@ -207,8 +274,8 @@ $list-top-level-margin-bottom: 1rem;
 
 table.tableblock {
     margin-bottom: 1rem;
-    border: 1px solid $border-color;
-    color: $text-color;
+    border: 1px solid $color-border;
+    color: $color-text-base;
     font-size: $font-size;
 
     &.frame-ends {
@@ -227,46 +294,47 @@ table.tableblock {
 
     th,
     td {
-        padding-bottom: 0.4rem;
-        padding-left: 0.4rem;
-        padding-right: 0.4rem;
-        padding-top: 0.4rem;      
+        padding-bottom: $padding-cell-v;
+        padding-left: $padding-cell-h;
+        padding-right: $padding-cell-h;
+        padding-top: $padding-cell-v;      
     }
 
     /*
     th {
-        background-color: $light);
+        background-color: $color-bg-light);
     } */
 
     &.grid-rows {
         th,
         td {
-            border-bottom: 1px solid $border-color;
-            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $color-border;
+            border-top: 1px solid $color-border;
         }
     }
 
     &.grid-cols {
         th,
         td {
-    border-left: 1px solid $border-color;
-    border-right: 1px solid $border-color;
+    border-left: 1px solid $color-border;
+    border-right: 1px solid $color-border;
         }
     }
 
     &.grid-all {
         th,
         td {
-            border: 1px solid $border-color;
+            border: 1px solid $color-border;
         }
     }
 
     .title {
         caption-side: top;
-        color: $text-light;
+        color: $color-text-light;
         font-size: $font-size-small;
-        padding-bottom: 8 * $rem-base;
-        text-align: left;        
+        margin-bottom:  $margin-li-b;
+        padding-top: 0;
+        text-align: left;             
       }
   
 
@@ -274,7 +342,9 @@ table.tableblock {
 
 p.tableblock,
 th.tableblock {
-    margin-bottom: 0;
+    margin-bottom: $li-margin-bottom;
+    margin-top: 0 ;
+    //background-color: yellow;
 }
   
 .halign-center {
