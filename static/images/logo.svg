@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30.594812mm"
+   height="6.349998mm"
+   viewBox="0 0 30.594812 6.349998"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <rect
+       x="279.90991"
+       y="612.30292"
+       width="91.637169"
+       height="49.567379"
+       id="rect7572" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-29.235024,-126.12492)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:6.45325px;line-height:1.25;font-family:Rosario;-inkscape-font-specification:'Rosario, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d8340e;fill-opacity:1;stroke-width:0.161332"
+       x="28.822016"
+       y="131.06166"
+       id="text2762"><tspan
+         id="tspan2760"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:6.45325px;font-family:Rosario;-inkscape-font-specification:'Rosario, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d8340e;fill-opacity:1;stroke-width:0.161332"
+         x="28.822016"
+         y="131.06166">InterloQuio</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text7570"
+       style="font-size:39.9999px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal';white-space:pre;shape-inside:url(#rect7572)" />
+  </g>
+</svg>
