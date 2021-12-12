@@ -1,0 +1,373 @@
+// ############ Vars ############
+
+$li-margin-bottom: 0.5rem;
+$list-top-level-margin-bottom: 1rem;
+
+
+
+
+// ############ AsciiDoc-specific overrides ############
+
+
+.post-content,
+.post-excerpt p {
+    line-height: $line-height-base !important;
+    margin: $margin-p-v 0;
+    // color: blue;
+    }
+
+// Admonition block
+
+.admonitionblock {
+    padding-bottom: 24 * $rem-base;
+    vertical-align: middle;
+    font-size: $font-size;
+
+    table {
+        border-collapse: separate;
+    }
+
+    .content {
+        border-bottom-left-radius: 0.5rem;
+        border-left: 2px solid $color-brand-1;
+        border-top-left-radius: 0.5rem;
+        padding-left: 0.5rem;        
+    }
+
+    td.icon {
+        padding-right: 0.5rem;
+    }
+
+    .title {
+        color: $color-brand-1;
+        display: inline;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &.important .title {
+        color: darkred;
+    }
+
+    .paragraph:last-child p {
+        margin-bottom: 0;
+    }
+}
+
+// Images
+
+.imageblock {
+    margin-bottom: 24 * $rem-base;
+
+    .title {
+        color: $color-text-light;
+        font-size: $font-size-small;
+        padding-top: 8 * $rem-base;
+    }
+}
+
+// Listingblock
+
+
+
+.listingblock {
+
+    .title {
+        color: $color-text-light;
+        font-size: $font-size-small;
+        padding-bottom: 8 * $rem-base;
+        padding-top: 0;
+    }
+
+
+}
+
+.colist {
+    margin-top: -8 *$rem-base;
+
+    li::marker {
+         font-size: $font-size;
+    }
+}
+
+
+// Lists 
+
+// Description list
+
+// also applied to vertical decription lists
+.hdlist1 {
+    color: $color-text-base;
+    font-weight: bold;
+    font-size: $font-size;
+    line-height: $line-height-base;
+    vertical-align: text-bottom;
+    //background-color: aqua;
+}
+
+
+.hdlist2 {
+    vertical-align: text-bottom;
+    //background-color: orange;
+    
+    p {
+      //background-color: yellow;
+      margin: 0 0 $margin-li-b 0;  
+    }
+}
+
+.dlist {
+
+    dt {
+        margin: $margin-p-v 0 $margin-li-b 0;
+        
+    }
+
+    p {
+        margin: 0 0 $margin-li-b $indent-em;
+        padding-left: 0;        
+    }
+}
+
+
+
+
+// Ordered list
+
+.olist {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    // background-color: yellow;
+
+    ol {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        // background-color: aqua;
+
+        li::marker {
+            color: $color-text-base;
+        }
+
+    }
+
+    p {
+        // background-color: orange;
+        margin-top: 0;
+        margin-bottom: $margin-li-b;
+    }
+}
+
+// Unordered lists and checklists
+
+
+.ulist {
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    // background-color: yellow;
+
+    ul {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        // background-color: aqua;
+
+        li::marker {
+            color: $color-text-base;
+        }
+
+        &.checklist,
+        &.none {
+            list-style-type: none;
+        }
+
+        &:not(.none, .checklist) {
+            list-style-type: disc;
+
+            ul {
+                list-style: circle;
+
+                ul {
+                    list-style-type: square;
+
+                    ul {
+                        list-style-type: disc;
+                    }
+                }
+            }
+        }
+    }
+    
+    p {
+        // background-color: orange;
+        margin-top: 0;
+        margin-bottom: $margin-li-b;
+    }
+}
+
+
+// Quoteblock
+
+.quoteblock {
+    font-style: italic;
+    margin-bottom: 24 * $rem-base;
+    
+    blockquote {
+        border-left-style: hidden;
+        margin-bottom: 0;
+
+
+
+        // Quotation mark decoration 
+        div.paragraph:first-of-type p::before {
+            color: lighten( $color-bg-light, 15);
+            content: open-quote;
+            font-size: 48 * $rem-base;
+            line-height: 0em;
+            margin-right: 0.1em;
+            vertical-align: -18 * $rem-base;            
+        } 
+    }
+
+
+    em {
+        font-style: normal;
+    }
+
+    .attribution{
+        font-size: smaller;
+        font-style: italic;
+        text-align: right;
+    }
+}
+
+// Sidebar
+
+.sidebarblock {
+    background-color: $color-bg-lighter;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 8 * $rem-base;
+    padding-bottom: 5 * $rem-base;
+    margin-bottom: 16 * $rem-base;
+    border-radius: 0.5rem;
+    
+    .title {
+        color: $color-brand-1;
+        font-size: 24 * $rem-base;
+        font-weight: bold;
+        padding-top: 8 * $rem-base;
+        padding-bottom: 18 * $rem-base;
+        text-align: center;
+    }
+}
+
+
+// Tables
+
+table.tableblock {
+    margin-bottom: 1rem;
+    border: 1px solid $color-border;
+    color: $color-text-base;
+    font-size: $font-size;
+
+    &.frame-ends {
+        border-left-style: hidden;
+        border-right-style: hidden;        
+    }
+
+    &.frame-sides {
+        border-top-style: hidden;
+        border-bottom-style: hidden;
+    }
+
+    &.frame-none {
+        border-style: hidden;
+    }
+
+    th,
+    td {
+        padding-bottom: $padding-cell-v;
+        padding-left: $padding-cell-h;
+        padding-right: $padding-cell-h;
+        padding-top: $padding-cell-v;      
+    }
+
+    /*
+    th {
+        background-color: $color-bg-light);
+    } */
+
+    &.grid-rows {
+        th,
+        td {
+            border-bottom: 1px solid $color-border;
+            border-top: 1px solid $color-border;
+        }
+    }
+
+    &.grid-cols {
+        th,
+        td {
+    border-left: 1px solid $color-border;
+    border-right: 1px solid $color-border;
+        }
+    }
+
+    &.grid-all {
+        th,
+        td {
+            border: 1px solid $color-border;
+        }
+    }
+
+    .title {
+        caption-side: top;
+        color: $color-text-light;
+        font-size: $font-size-small;
+        margin-bottom:  $margin-li-b;
+        padding-top: 0;
+        text-align: left;             
+      }
+  
+
+}
+
+p.tableblock,
+th.tableblock {
+    margin-bottom: $li-margin-bottom;
+    margin-top: 0 ;
+    //background-color: yellow;
+}
+  
+.halign-center {
+    text-align: center;
+}
+  
+.halign-left {
+    text-align: left;
+}
+  
+.halign-right {
+    text-align: right;
+}
+  
+.valign-bottom {
+    vertical-align: bottom;
+}
+  
+.valign-middle {
+    vertical-align: middle;
+}
+  
+.valign-top {
+    vertical-align: top;
+}
+
