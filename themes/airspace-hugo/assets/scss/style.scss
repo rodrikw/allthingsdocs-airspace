@@ -108,4 +108,6 @@ $h4: 18 * $rem-base;
 
 @import 'templates/_footer.scss';
 
-@import 'custom.scss';
+@import 'templates/_asciidoc.scss';
+
+@import 'templates/_github-hilight.scss';
