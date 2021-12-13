@@ -13,17 +13,16 @@ type: "post"
 
 AsciiDoc provides a lot of control over images, and this functionality is available to blog authors.
 
-For reasons that are not clear, the path to images needs to include `/airspace`/, for example: `image::/airspace/images/blog/kitten.jpg[]`.
 
 
-image::/airspace/images/blog/kitten.jpg[]
+image::/images/blog/kitten.jpg[]
 
 Images can be resized:
 
-image::/airspace/images/blog/kitten.jpg[alt=kitten,width=200]
+image::/images/blog/kitten.jpg[alt=kitten,width=200]
 
 They can also have captions:
 
 .A cute kitten
-image::/airspace/images/blog/kitten.jpg[alt=kitten,width=200]
+image::/images/blog/kitten.jpg[alt=kitten,width=200]
 

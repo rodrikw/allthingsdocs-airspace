@@ -31,7 +31,7 @@ $list-top-level-margin-bottom: 1rem;
         border-bottom-left-radius: 0.5rem;
         border-left: 2px solid $color-brand-1;
         border-top-left-radius: 0.5rem;
-        padding-left: 0.5rem;        
+        padding-left: 0.5rem;
     }
 
     td.icon {
@@ -75,8 +75,13 @@ $list-top-level-margin-bottom: 1rem;
     .title {
         color: $color-text-light;
         font-size: $font-size-small;
-        padding-bottom: 8 * $rem-base;
+        padding-bottom: (4 * $rem-base);
         padding-top: 0;
+    }
+
+    .content {
+      padding-left: 0;
+      padding-right: 0;
     }
 
 
@@ -88,10 +93,14 @@ $list-top-level-margin-bottom: 1rem;
     li::marker {
          font-size: $font-size;
     }
+
+    p {
+      margin-top: 0;
+    }
 }
 
 
-// Lists 
+// Lists
 
 // Description list
 
@@ -109,10 +118,10 @@ $list-top-level-margin-bottom: 1rem;
 .hdlist2 {
     vertical-align: text-bottom;
     //background-color: orange;
-    
+
     p {
       //background-color: yellow;
-      margin: 0 0 $margin-li-b 0;  
+      margin: 0 0 $margin-li-b 0;
     }
 }
 
@@ -120,12 +129,12 @@ $list-top-level-margin-bottom: 1rem;
 
     dt {
         margin: $margin-p-v 0 $margin-li-b 0;
-        
+
     }
 
     p {
         margin: 0 0 $margin-li-b $indent-em;
-        padding-left: 0;        
+        padding-left: 0;
     }
 }
 
@@ -204,7 +213,7 @@ $list-top-level-margin-bottom: 1rem;
             }
         }
     }
-    
+
     p {
         // background-color: orange;
         margin-top: 0;
@@ -217,25 +226,29 @@ $list-top-level-margin-bottom: 1rem;
 
 .quoteblock {
     font-style: italic;
-    margin-bottom: 24 * $rem-base;
-    
+    margin-bottom: $margin-p-v;
+    padding-top: 0;
+
     blockquote {
         border-left-style: hidden;
         margin-bottom: 0;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
 
-
-
-        // Quotation mark decoration 
+        // Quotation mark decoration
         div.paragraph:first-of-type p::before {
             color: lighten( $color-bg-light, 15);
             content: open-quote;
             font-size: 48 * $rem-base;
             line-height: 0em;
             margin-right: 0.1em;
-            vertical-align: -18 * $rem-base;            
-        } 
+            vertical-align: -18 * $rem-base;
+        }
     }
 
+    p {
+      font-size: $font-size !important;      
+    }
 
     em {
         font-style: normal;
@@ -258,7 +271,7 @@ $list-top-level-margin-bottom: 1rem;
     padding-bottom: 5 * $rem-base;
     margin-bottom: 16 * $rem-base;
     border-radius: 0.5rem;
-    
+
     .title {
         color: $color-brand-1;
         font-size: 24 * $rem-base;
@@ -280,7 +293,7 @@ table.tableblock {
 
     &.frame-ends {
         border-left-style: hidden;
-        border-right-style: hidden;        
+        border-right-style: hidden;
     }
 
     &.frame-sides {
@@ -297,7 +310,7 @@ table.tableblock {
         padding-bottom: $padding-cell-v;
         padding-left: $padding-cell-h;
         padding-right: $padding-cell-h;
-        padding-top: $padding-cell-v;      
+        padding-top: $padding-cell-v;
     }
 
     /*
@@ -334,9 +347,9 @@ table.tableblock {
         font-size: $font-size-small;
         margin-bottom:  $margin-li-b;
         padding-top: 0;
-        text-align: left;             
+        text-align: left;
       }
-  
+
 
 }
 
@@ -346,28 +359,27 @@ th.tableblock {
     margin-top: 0 ;
     //background-color: yellow;
 }
-  
+
 .halign-center {
     text-align: center;
 }
-  
+
 .halign-left {
     text-align: left;
 }
-  
+
 .halign-right {
     text-align: right;
 }
-  
+
 .valign-bottom {
     vertical-align: bottom;
 }
-  
+
 .valign-middle {
     vertical-align: middle;
 }
-  
+
 .valign-top {
     vertical-align: top;
 }
-
