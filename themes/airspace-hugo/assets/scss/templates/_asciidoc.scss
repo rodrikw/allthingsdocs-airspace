@@ -54,6 +54,15 @@ $list-top-level-margin-bottom: 1rem;
     }
 }
 
+// Code (inline)
+
+code {
+    background-color: $color-bg-code;
+    color: $color-text-code;
+}
+
+
+
 // Images
 
 .imageblock {
@@ -63,6 +72,7 @@ $list-top-level-margin-bottom: 1rem;
         color: $color-text-light;
         font-size: $font-size-small;
         padding-top: 8 * $rem-base;
+        padding-bottom: 0;
     }
 }
 
@@ -274,10 +284,10 @@ $list-top-level-margin-bottom: 1rem;
 
     .title {
         color: $color-brand-1;
-        font-size: 24 * $rem-base;
+        font-size: $h2-sm;
         font-weight: bold;
-        padding-top: 8 * $rem-base;
-        padding-bottom: 18 * $rem-base;
+        padding-top: (8 * $rem-base);
+        padding-bottom: (18 * $rem-base);
         text-align: center;
     }
 }
@@ -307,10 +317,7 @@ table.tableblock {
 
     th,
     td {
-        padding-bottom: $padding-cell-v;
-        padding-left: $padding-cell-h;
-        padding-right: $padding-cell-h;
-        padding-top: $padding-cell-v;
+        padding: $padding-cell-v $padding-cell-h;       
     }
 
     /*
