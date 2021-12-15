@@ -1,0 +1,66 @@
+---
+title: "Creating a Hugo website"
+date: 2021-12-12T13:25:20+02:00
+author: Rodrik Wade
+image: images/blog/big-bang.jpg
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Hugo","Installation"]
+description: "The process followed to create this website using Hugo and the Airspace theme"
+draft: false
+type: "post"
+---
+:experimental:
+
+The basic setup of Hugo on your local computer is easy, and well documented:
+
+. Go to the folder in which you want to create the Hugo site structure.
+In my case this was `C:{backslash}Users{backslash}__UserName__{backslash}Documents{backslash}`
+. Run the command `hugo new site _yoursitename_`.
++
+TIP: In a Windows environment, I recommend using https://docs.microsoft.com/en-us/windows/terminal/[Windows Terminal].
++
+The result will be a new site with the following folders and files:
++
+----
+archetypes
+content
+data
+layouts
+resources
+static
+themes
+.hugo_build.lock
+config.toml
+----
+
+However, you can't run the Hugo server until you apply a theme.
+I initially chose the https://themes.gohugo.io/themes/navigator-hugo/[Navigator theme] but after a while swapped to using the https://themes.gohugo.io/themes/airspace-hugo/[Airspace theme].
+I liked the fact that the newer Airspace theme uses https://sass-lang.com/documentation/syntax#scss[SCSS] rather than plain CSS.
+
+To install the Airspace theme, do the following:
+
+. Go to https://github.com/themefisher/airspace-hugo and click *Code > Download ZIP*:
++
+image::/airspace/images/blog/github-code-download-zip.png[]
+. Extract the contents of the downloaded ZIP file.
+. Rename the resulting folder from `airspace-hugo-master` to `airspace-hugo`.
+. Copy the folder into the `themes` folder in your new Hugo site.
+. In the `airspace-hugo` folder, go to the `exampleSite` folder.
+. Copy the contents of the `exampleSite` folder:
++
+----
+assets
+config
+content
+i18n
+static
+nelify.toml
+----
+. Go to the root folder of the Hugo site and paste the contents.
+This will replace the empty folders that were in the root folder.
+. Go to the `themes` folder and delete the `exampleSite` folder.
+. Return to the root folder and run the command `hugo server`.
+You should now see a URL at which the generated site is available:
++
+`Web Server is available at ++http://localhost:1313/airspace/++ (bind address 127.0.0.1)`
