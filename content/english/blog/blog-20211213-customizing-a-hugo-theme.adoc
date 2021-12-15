@@ -1,12 +1,12 @@
 ---
 title: "Customizing a Hugo theme"
 date: 2021-12-13T15:02:18+02:00
-author: Rodrik Wade
-image: images/blog/artist-palette.jpg
+author: "Rodrik Wade"
+image: "images/blog/artist-palette.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
-tags: ["Hugo","CSS"]
-description: "Description of blog"
+tags: ["Hugo","CSS", "SCSS"]
+description: "Customizations made to the SCSS of the Airspace theme"
 draft: false
 type: "post"
 ---

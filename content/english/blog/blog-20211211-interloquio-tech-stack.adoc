@@ -1,11 +1,11 @@
 ---
 title: "Interloquio’s tech stack"
 date: 2021-12-11T08:47:28+02:00
-author: Rodrik Wade
+author: "Rodrik Wade"
 image: "images/blog/ship-engine.jpg"
 bg_image: "images/feature-bg.jpg"
-categories: ["Category one"]
-tags: ["tech stack","jamstack"]
+categories: ["Website"]
+tags: ["Tech stack","Jamstack"]
 description: "Details the tech stack used to deploy this site."
 draft: false
 type: "post"

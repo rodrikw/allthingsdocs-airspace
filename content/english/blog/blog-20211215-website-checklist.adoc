@@ -11,7 +11,7 @@ draft: false
 type: "post"
 ---
 
-The following is a list of the items that need to be completed (some of the items are aspirational):
+below is a list of the items that need to be completed (some of the items are aspirational):
 
 * [x] Create a Hugo site
 * [x] Add a template
@@ -22,9 +22,9 @@ The following is a list of the items that need to be completed (some of the item
 * [ ] Develop brand icons (Mark)
 * [ ] Finalize site copy
 * [ ] Legal stuff (e.g. data collection notice)
-* [ ] Register a domain name
-* [ ] SSL certificate (possibly through Netlify)
-* [ ] Enable forms for contact page
+* [ ] Register a domain name (through Netlify)
+* [ ] SSL certificate
+* [ ] Enable forms for the contact page
 * [ ] Enable analytics
 * [ ] Enable search
 * [ ] Link site to the documentation site

@@ -1,12 +1,12 @@
 ---
 title: "Deploying the Interloquio website"
 date: 2021-12-14T13:02:26+02:00
-author: Rodrik Wade
-image: images/blog/setting-sail.jpg
+author: "Rodrik Wade"
+image: "images/blog/setting-sail.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
-tags: ["Deployment","Netlify", "Hugo"]
-description: "The process involved in deploying the Interloquio website to Netlify"
+tags: ["Deployment","Netlify","Hugo"]
+description: "The process involved in deploying this website to Netlify for the first time"
 draft: false
 type: "post"
 ---
