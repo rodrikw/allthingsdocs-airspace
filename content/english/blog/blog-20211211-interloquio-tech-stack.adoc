@@ -1,0 +1,55 @@
+---
+title: "Interloquio’s tech stack"
+date: 2021-12-11T08:47:28+02:00
+author: Rodrik Wade
+image: "images/blog/ship-engine.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Category one"]
+tags: ["tech stack","jamstack"]
+description: "Details the tech stack used to deploy this site."
+draft: false
+type: "post"
+---
+
+This site is built using a Jamstack architecture.
+In March 2021 I hadn't even heard of Jamstack, but then I began investigating cutrrent approaches to delivering online documentation, and suddenly Jamstack was everywhere.
+
+The "`jam`" in "`Jamstack`" stands  for JavaScript, API and markup:
+
+[none]
+* *Markup* refers to markup languages such as XML, HTML, Markdown, or reStructuredText in which content is created.
+I wanted to make use of AsciiDoc because it is easy to use and more powerful than Markdown.
+It's also what the documentation site uses.
+
+* *JavaScript* is used to enhance the user experience and differentiate Jamstack sites from the old-style static websites of the 1990s.
+JavaScript is also used together with APIs to link to back-end services.
+
+* *APIs* are used to outsource the provision of services to specialist providers.
+APIs are commonly employed for authentication, search, payments, and content management.
+At present, this site does not make use of any APIs -- that's my next project.
+
+A key component of the Jamstack approach is the static site generator, which converts the content (markup) into HTML, adds in the CSS and JavaScript, and then generates all the site pages so that they can hosted by a service like Netlify.
+I chose Hugo for the following reasons:
+
+* I wanted to be able to use AsciiDoc to create content (specifically, blog posts) and Hugo offered support for AsciiDoc, using AsciiDoctor.
+* My limited investigation suggested that Hugo was relatively easy to work with (although Gatsby certainly had its fans).
+* Hugo promised to integrate easily with Netlify, which I had already settled on as the hosting system.
+
+Combining all of this, we have a solution architecture that looks like this:
+
+.Interloquio website architecture
+image::/airspace/images/blog/website-arch-diagram.svg[]
+
+. Content can be created using any text editor.
+My preferred environment is https://www.jetbrains.com/idea/[IntelliJ IDEA Community edition] with the https://plugins.jetbrains.com/plugin/7391-asciidoc[AsciiDoc plugin].
+. The Hugo server detects whenever changes to the site project are saved, and immediately rebuilds the local preview site.
+. Periodically changes should be committed to the local Git.
+The site folder must be initiated as a Git repo.
+. Changes are pushed to the remote Git repo.
+In the case of this site, that's on GitHub.
+. When a deploy of the repo is created on GitHub, this is detected by Netlify.
+The Netlify build environment is instantiated with the necessary components (Hugo, Asciidoctor and so on) and the site is generated.
+. The site contents are then pushed to the Netlify CDN.
+
+
+
