@@ -1,0 +1,71 @@
+---
+title: "Deploying the Interloquio website"
+date: 2021-12-14T13:02:26+02:00
+author: Rodrik Wade
+image: images/blog/setting-sail.jpg
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Deployment","Netlify", "Hugo"]
+description: "The process involved in deploying the Interloquio website to Netlify"
+draft: false
+type: "post"
+---
+
+Once I had some sample content in place, the next step was to publish the site to Netlify.
+In the case of a Hugo site, the process works as follows:
+
+. You push the site to your Git repository (in my case GitHub).
+. In Netlify, you create a link to the repo and specify some build parameters.
+. You then deploy the site.
++
+In the process of deploying, Netlify fires up an entire build environment for Hugo plus any dependencies (more on that in a moment), generates the site, and then destroys the build environment.
+All of this takes seconds, but it does mean that a Hugo deployment consumes some of your allocation of Netlify build minutes.
+
+The first time I tried to deploy the site, the build failed.
+I suspected this was because I was using AsciiDoc in place of Markdown and so had AsciiDoctor as an additional dependency that the Netlify build environment needed to be configured for.
+An https://stackoverflow.com/questions/53245578/asciidoc-hugo-site-with-netlify[online search] confirmed that this was the case.
+A further dependency existed for the Rouge gem, used for syntax highlighting.
+
+I discovered that I needed to add a file call `Gemfile` (no file extension) and `Gemfile.lock` file in the same folder as the `netlify.toml` file.
+
+. In Windows Explorer (or https://docs.microsoft.com/en-us/windows/terminal/install[Windows terminal]/command prompt) go to the root folder of your Hugo project.
+. In a text editor, create a file with the following content and save it as `Gemfile`:
++
+[source]
+.Gemfile
+----
+source 'https://rubygems.org'
+gem 'asciidoctor'
+gem 'rouge'
+----
+. Install `bundler` by running this command in Windows terminal: `gem install bundler`
+. Run bundler: `bundle install`.
++
+The result should be a `Gemfile.lock` file with content like the following:
++
+[source]
+.Gemfile.lock
+----
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciidoctor (2.0.16)
+    rouge (3.26.1)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  asciidoctor
+  rouge
+
+BUNDLED WITH
+   2.2.33
+
+----
+
+After pushing the changes to Github, rerunning the Netlify deployment succeeded.
+The deployment took
+
+
+
