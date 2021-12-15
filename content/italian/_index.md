@@ -8,7 +8,7 @@ banner:
   content: "We love the Web and the work we do.We work closely with our clients to deliver  the best possible solutions for their needs"
   button:
     enable: true
-    label: "Discover Our Project"
+    label: "Discover what we do"
     link: "project"
 
 ############################# About #################################
