@@ -33,6 +33,7 @@ $color-text-base: $color-gray-70;
 $color-text-dark: $color-jet-70;
 $color-text-light: $color-gray-50; // Suitable for light backgrounds
 $color-text-lighter: $color-smoke-70; // Suitable for dark backgrounds
+$color-text-code: lighten($color-brand-1, 15%);
 
 
 $color-border: #B3CACE;
@@ -50,6 +51,7 @@ $color-bg-primary: $color-brand-1;
 $color-bg-primary-dark: darken($color-bg-primary, 10%);
 $color-bg-primary-darker: darken($color-bg-primary, 20%);
 $color-bg-dark: #474747;
+$color-bg-code: $color-smoke-70;
 
 
 
