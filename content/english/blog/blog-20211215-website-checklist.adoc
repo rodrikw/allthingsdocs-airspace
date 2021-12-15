@@ -1,0 +1,33 @@
+---
+title: "Website to-do list"
+date: 2021-12-15T09:27:47+02:00
+author: "Rodrik Wade"
+image: "images/blog/list.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Hugo","Netlify"]
+description: "A checklist of the items that need to be completed"
+draft: false
+type: "post"
+---
+
+The following is a list of the items that need to be completed (some of the items are aspirational):
+
+* [x] Create a Hugo site
+* [x] Add a template
+* [x] Customize the template's CSS to handle AsciiDoc
+* [x] Customize the template's CSS to reflect Interloquio's branding
+* [x] Deploy site to Netlify for development purposes
+* [ ] Develop brand logo (Mark)
+* [ ] Develop brand icons (Mark)
+* [ ] Finalize site copy
+* [ ] Legal stuff (e.g. data collection notice)
+* [ ] Register a domain name
+* [ ] SSL certificate (possibly through Netlify)
+* [ ] Enable forms for contact page
+* [ ] Enable analytics
+* [ ] Enable search
+* [ ] Link site to the documentation site
+* [ ] GDPR/POPI notice
+
+
