@@ -5,18 +5,18 @@ banner:
   bg_image: "images/slider-bg.jpg"
   bg_overlay: true
   title: "Content marketing and documentation specialists"
-  content: "We love the Web and the work we do. We work closely with our clients to deliver the best possible solutions for their needs"
+  content: "We combine extensive experience in developing effective content marketing with expertise in documentation design and delivery."
   button:
     enable: true
-    label: "Discover Our Project"
+    label: "Discover what we do"
     link: "project"
 
 ############################# About #################################
 about:
   enable: true
   title: "About Us"
-  description: "We are specialists in content marketing and product documentation"
-  content: "Together we have more than 40 years’ experience. Quisque metus sapien, porta nec nisi a, lobortis eleifend neque. Morbi mattis rutrum nibh, malesuada volutpat augue consequat vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tempus, mi ut rhoncus euismod, libero lacus fringilla dolor, vitae feugiat quam tortor sagittis nunc. Praesent in ante leo. Suspendisse lobortis nisl est. Mauris in varius lectus. Aliquam rutrum purus a dapibus ullamcorper.  "
+  description: "We specialize in content marketing and product documentation"
+  content: "Together we have more than 40 years’ complementary experience:</br></br>_Mark_ is the content marketing specialist. He conceptualizes, develops, and manages content in traditional marketing, product marketing, sales support, and public relations. His particular strength is brand building, having worked for much of his career at B2B2C fintech companies breaking into international markets. Mark also contributes strong design skills.</br></br>_Rodrik_ is the documentation specialist, with many years’ experience designing and developing training and product documentation. He also has an abiding interest in the technologies used to manage and deliver online and print documentation."
   image: "images/wrapper-img.png"
 
 
@@ -24,19 +24,15 @@ about:
 portfolio:
   enable: true
   bg_image: "images/feature-bg.jpg"
-  title: "WE BELIEVE IN GREAT IDEAS"
-  content: " Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+  title: "ABOUT THIS SITE"
+  content: "This site, and the accompanying documentation site, aim to showcase what we do. But they are also where we try out new things -- so they may be a bit rough around the edges. 
 
 
-  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-
-  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-  "
+We will be recording what we have done and what we have learnt along the way in our blog."
   button:
     enable: true
-    label: "View Works"
-    link: "project"
+    label: "View our blog"
+    link: "blog"
 
 
 ############################# Service ############################
@@ -60,7 +56,7 @@ cta:
 funfacts:
   enable: true
   title: "Fun Facts About Us"
-  description: "'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, <br> there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics'"
+  description: "I don't think that we can make this section work for us, except possibly for the testimonials."
   funfact_item:
   # funfacts item loop
   - icon: "fas fa-mug-hot" #https://fontawesome.com/v5.15/icons
@@ -84,22 +80,15 @@ funfacts:
 
   testimonial_slider:
   # testimonial item loop
-  - name: "Raymond Roy"
-    image: "images/clients/avater-1.jpg"
-    designation: "CEO-Themefisher"
-    content: "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."
+  - name: "Egor Buynitskiy"
+    image: "images/clients/egor-buynitskiy.jpg"
+    designation: "Chief Product Officer, edna"
+    content: "Rodrik created an extremely thorough plan for implementing a document solution for edna, which significantly exceeded our expectations. It has enabled us to quickly implement a multilingual online site for our products, both conventional applications and APIs."
 
   # testimonial item loop
   - name: "Randi Renin"
     image: "images/clients/avater-1.jpg"
-    designation: "CEO-Themefisher"
+    designation: "CEO - Themefisher"
     content: "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."
-
-  # testimonial item loop
-  - name: "Rose Rio"
-    image: "images/clients/avater-3.jpg"
-    designation: "CEO-Themefisher"
-    content: "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."
-
 
 ---
