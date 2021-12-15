@@ -16,27 +16,30 @@
   }
 
   &.bg-2 div.col-md-6 {
+    margin: auto;
+    max-width: 75vw;
     background-color: $color-bg-light;
     border-radius: (16 * $rem-base);
-    opacity: 0.85;
+    opacity: 0.9;
   }
 
   h2 {
-    margin: 0;
-    padding-top: (30 * $rem-base);
-    padding-bottom: (30 * $rem-base);
+    margin-top: (30 * $rem-base);
+    margin-bottom: (20 * $rem-base);
   }
 
   p {
+    font-size: $font-size-big;
     color: $color-text-dark;
-    margin-bottom: (20 * $rem-base);
+    margin-bottom: $margin-p-v;
   }
 
   .btn-view-works {
     background: $color-gray-70;
     color: $white;
     padding: (10 * $rem-base) (20 * $rem-base);
-    margin-bottom: 30 * $rem-base;
+    margin-bottom: (30 * $rem-base);
+    margin-top: (10 * $rem-base)
   }
 }
 
