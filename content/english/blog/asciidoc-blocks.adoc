@@ -1,7 +1,7 @@
 ---
 title: "AsciiDoc blocks"
 date: 2021-11-30T14:41:00+02:00
-author: Rodrik Wade
+author: "Rodrik Wade"
 image : "images/blog/print-block.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]

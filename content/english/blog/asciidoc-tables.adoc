@@ -1,7 +1,7 @@
 ---
 title: "AsciiDoc tables"
 date: 2021-11-30T14:42:29+02:00
-author: Rodrik wade
+author: "Rodrik Wade"
 image : "images/blog/general-ledger.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
