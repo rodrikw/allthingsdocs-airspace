@@ -12,7 +12,7 @@ type: "post"
 ---
 
 This site is built using a Jamstack architecture.
-In March 2021 I hadn't even heard of Jamstack, but then I began investigating cutrrent approaches to delivering online documentation, and suddenly Jamstack was everywhere.
+In March 2021 I hadn't even heard of Jamstack, but then I began investigating current approaches to delivering online documentation, and suddenly Jamstack was everywhere.
 
 The "`jam`" in "`Jamstack`" stands  for JavaScript, API and markup:
 

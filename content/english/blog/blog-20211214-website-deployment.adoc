@@ -64,8 +64,12 @@ BUNDLED WITH
 
 ----
 
-After pushing the changes to Github, rerunning the Netlify deployment succeeded.
-The deployment took
+After pushing the changes to GitHub, rerunning the Netlify deployment succeeded.
+The deployment took 24 seconds of build time.
+This is almost certainly longer than a pure Hugo site (with no use of Asciidoctor) would take.
+
+Currently netlify is building off the main branch, which means that it is triggered whenever any changes are pushed to GitHub.
+While this is certainly responsive, it's probably not ideal.
 
 
 
