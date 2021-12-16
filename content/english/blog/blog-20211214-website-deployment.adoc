@@ -11,12 +11,15 @@ draft: false
 type: "post"
 ---
 
-Once I had some sample content in place, the next step was to publish the site to Netlify.
-In the case of a Hugo site, the process works as follows:
+Once I had some sample content in place, the next step was to deploy the site to Netlify.
+It is possible to set up continuous deployment, which means that Netlify monitors a designated Git repository for changes to a specified build (for example, main or prod) and automatically runs a build whenever changes are detected.
+
+In the case of a Hugo site, the continuous deployment process works as follows:
 
 . You push the site to your Git repository (in my case GitHub).
-. In Netlify, you create a link to the repo and specify some build parameters.
-. You then deploy the site.
+. In Netlify, you create a link to the repo and specify some build parameters, including the branch that Netlify monitors for changes.
+(Netlify provides typical default values for most of these parameters, making the setup very easy).
+. You then initiate the first deployment of the site.
 +
 In the process of deploying, Netlify fires up an entire build environment for Hugo plus any dependencies (more on that in a moment), generates the site, and then destroys the build environment.
 All of this takes seconds, but it does mean that a Hugo deployment consumes some of your allocation of Netlify build minutes.
@@ -26,9 +29,9 @@ I suspected this was because I was using AsciiDoc in place of Markdown and so ha
 An https://stackoverflow.com/questions/53245578/asciidoc-hugo-site-with-netlify[online search] confirmed that this was the case.
 A further dependency existed for the Rouge gem, used for syntax highlighting.
 
-I discovered that I needed to add a file call `Gemfile` (no file extension) and `Gemfile.lock` file in the same folder as the `netlify.toml` file.
+I discovered that I needed to add a `Gemfile` (no file extension) and `Gemfile.lock` file in the same folder as the `netlify.toml` file.
 
-. In Windows Explorer (or https://docs.microsoft.com/en-us/windows/terminal/install[Windows terminal]/command prompt) go to the root folder of your Hugo project.
+. Go to the root folder of your Hugo project.
 . In a text editor, create a file with the following content and save it as `Gemfile`:
 +
 [source]
@@ -38,7 +41,7 @@ source 'https://rubygems.org'
 gem 'asciidoctor'
 gem 'rouge'
 ----
-. Install `bundler` by running this command in Windows terminal: `gem install bundler`
+. Install `bundler` by running this command in https://docs.microsoft.com/en-us/windows/terminal/[Windows terminal] (or the at the command prompt): `gem install bundler`
 . Run bundler: `bundle install`.
 +
 The result should be a `Gemfile.lock` file with content like the following:
@@ -68,8 +71,6 @@ After pushing the changes to GitHub, rerunning the Netlify deployment succeeded.
 The deployment took 24 seconds of build time.
 This is almost certainly longer than a pure Hugo site (with no use of Asciidoctor) would take.
 
-Currently Netlify is building off the main branch, which means that it is triggered whenever any changes are pushed to GitHub.
-While this is certainly responsive, it's probably not ideal.
-
-
-
+Initially Netlify was configured to build off the main branch, which meant that it triggered whenever any changes were pushed to GitHub.
+This didn't provide enough control and resulted in too many builds.
+So now Netlify builds off a prod branch, which can be manually updated from the main branch.
