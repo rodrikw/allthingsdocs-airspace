@@ -18,7 +18,7 @@ In the case of a Hugo site, the continuous deployment process works as follows:
 
 . You push the site to your Git repository (in my case GitHub).
 . In Netlify, you create a link to the repo and specify some build parameters, including the branch that Netlify monitors for changes.
-(Netlify provides typical default values for most of these parameters, making the setup very easy).
+Netlify provides typical default values for most of these parameters, making the setup very easy.
 . You then initiate the first deployment of the site.
 +
 In the process of deploying, Netlify fires up an entire build environment for Hugo plus any dependencies (more on that in a moment), generates the site, and then destroys the build environment.
