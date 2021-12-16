@@ -20,10 +20,8 @@ address_descriptors = false
 phone = "0124857985320"
 email = "demo@email.com"
 location = """
-**Themefisher**  
-North Main Street  
-Brooklyn, New South Wales  
-Australia
+Somerset West
+South Africa
 """
 # copyright
 copyright = "Based on the Airspace theme designed By [Themefisher](https://themefisher.com/) and developed by [Gethugothemes](https://gethugothemes.com/)"
