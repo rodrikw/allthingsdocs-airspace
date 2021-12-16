@@ -24,4 +24,8 @@ This results in the following workflow:
 . Commit the changes to the dev branch in my local Git.
 . Push the changes to GitHub.
 . Create a pull request.
+This can be initiated in GitHub Desktop, but it does necessitate the GitHub site being opened.
 . Merge the changes into main.
+
+Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
+There is an alternative approach in which you merge changes from dev to main on your local Git. The disadvantage to this is that it requires switching to the main branch first, and then you're apt to forget and start editing the main branch directly.
