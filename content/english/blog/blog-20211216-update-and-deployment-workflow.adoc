@@ -1,0 +1,27 @@
+---
+title: "Update and deployment workflow"
+date: 2021-12-16T11:00:04+02:00
+author: "Rodrik Wade"
+image: "images/blog/leaf-stream.jpg"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Netlify","Hugo","Workflow"]
+description: "Devising a workflow for updating and deploying changes to the website"
+draft: false
+type: "post"
+---
+
+Initially Netlify was configured to build off the main branch and I made edits directly to the main branch on my local Git.
+This meant that whenever I pushed changes back to GitHub, Netlify triggered a new build.
+This didn't provide enough control and resulted in too many builds.
+
+I tried setting up a prod branch and configuring Netlify to build off that, but this resulted in a poor GitHub workflow: GitHub expects changes to branches to be contributed back to main, not the other way round.
+So now Netlify builds off the main branch but I develop on dev.
+This results in the following workflow:
+
+. In GitHub Desktop, I refresh my local copy of the dev branch (I don't always do this because I'm currently the only one working on the site).
+. Make my changes to the site contents.
+. Commit the changes to the dev branch in my local Git.
+. Push the changes to GitHub.
+. Create a pull request.
+. Merge the changes into main.
