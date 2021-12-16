@@ -73,4 +73,7 @@ This is almost certainly longer than a pure Hugo site (with no use of Asciidocto
 
 Initially Netlify was configured to build off the main branch, which meant that it triggered whenever any changes were pushed to GitHub.
 This didn't provide enough control and resulted in too many builds.
+
+I tried setting up a prod branch and configuring Netlify to build off that, but this resulted in a poor GitHub workflow: GitHub expects changes to branches to be contributed back to main, not the other way round:
+
 So now Netlify builds off a prod branch, which can be manually updated from the main branch.
