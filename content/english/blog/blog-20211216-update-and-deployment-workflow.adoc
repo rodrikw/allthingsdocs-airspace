@@ -11,21 +11,26 @@ draft: false
 type: "post"
 ---
 
-Initially Netlify was configured to build off the main branch and I made edits directly to the main branch on my local Git.
+Initially Netlify was configured to build off the main branch and I also made edits directly to the main branch on my local Git.
 This meant that whenever I pushed changes back to GitHub, Netlify triggered a new build.
 This didn't provide enough control and resulted in too many builds.
 
 I tried setting up a prod branch and configuring Netlify to build off that, but this resulted in a poor GitHub workflow: GitHub expects changes to branches to be contributed back to main, not the other way round.
-So now Netlify builds off the main branch but I develop on dev.
-This results in the following workflow:
+So now Netlify builds off the main branch, while I develop on a dev branch.
+
+This is the workflow:
 
 . In GitHub Desktop, I refresh my local copy of the dev branch (I don't always do this because I'm currently the only one working on the site).
 . Make my changes to the site contents.
 . Commit the changes to the dev branch in my local Git.
 . Push the changes to GitHub.
-. Create a pull request.
+. Create a pull request:
++
+image::/images/blog/pull-request.png[]
 This can be initiated in GitHub Desktop, but it does necessitate the GitHub site being opened.
-. Merge the changes into main.
+. Merge the changes into main:
++
+image::/images/blog/merge-pull-request.png[]
 
 Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
-There is an alternative approach in which you merge changes from dev to main on your local Git. The disadvantage to this is that it requires switching to the main branch first, and then you're apt to forget and start editing the main branch directly.
+There is an alternative approach in which you merge changes from dev to main on your local Git. The disadvantage to this is that it requires switching to the main branch first, and then I'm apt to forget and start editing the main branch directly.
