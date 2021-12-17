@@ -3,6 +3,7 @@ title: "Update and deployment workflow"
 date: 2021-12-16T11:00:04+02:00
 author: "Rodrik Wade"
 image: "images/blog/leaf-stream.jpg"
+image_caption: "<a href='https://unsplash.com/photos/_wuBZxQIYnU'>Float</a> by <a href='https://unsplash.com/@connerbowe'>conner bowe</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Netlify","Hugo","Workflow"]

@@ -83,7 +83,7 @@ funfacts:
   - name: "Ellen Someone"
     image: "images/clients/avater-3.jpg"
     designation: "Chief Product Officer"
-    content: "Rodrik created an extremely thorough plan for implementing a document solution for edna, which significantly exceeded our expectations. It has enabled us to quickly implement a multilingual online site for our products, both conventional applications and APIs."
+    content: "Rodrik created an extremely thorough plan for implementing a document solution for us, which significantly exceeded our expectations. It has enabled us to quickly implement a multilingual online site for our products, both conventional applications and APIs."
 
   # testimonial item loop
   - name: "Randi Renin"

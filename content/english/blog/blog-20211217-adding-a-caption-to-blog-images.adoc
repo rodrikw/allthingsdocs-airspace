@@ -1,0 +1,113 @@
+---
+title: "Adding a caption to blog images"
+date: 2021-12-17T10:58:07+02:00
+author: "Rodrik Wade"
+image: "images/blog/tags-japan.jpg"
+image_caption: "<a href='https://unsplash.com/photos/V7RyEH0rvf0'>Tags, Kyoto, Japan</a> by <a href='https://unsplash.com/@trulysoutheastasia'>D J</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Hugo","templates"]
+description: "How to add a caption to the blog template"
+draft: false
+type: "post"
+---
+
+:source-highlighter: rouge
+
+The Airspace blog template includes an image at the top of the blog.
+I like to make use of Creative Commons images but these usually require an attribution.
+Unfortunately, the Airspace template didn't make allowance for that.
+
+I had feared that adding the ability to define an attribution in the header the blog would be complex, but it turned out to be pretty simple.
+
+Inspection of the source of a blog page indicated that I was looking for a `<div class="post-thumb">`.
+This occurred in a number of layout files but the one I wanted turned out to be in `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default`:
+
+[source,html]
+----
+<div class="post-thumb">
+            {{ with .Params.image -}}
+            <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+            {{- end }}
+</div>
+----
+
+I decided to wrap the `<img>` tag in a `<figure>`, which would allow me to add a `<figcaption>` element:
+
+[source,html]
+----
+<div class="post-thumb">
+            <figure>
+                {{ with .Params.image -}}
+                <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+                {{- end }}
+                  <figcaption>
+                    Caption goes here
+                  </figcaption>
+            </figure>
+</div>
+----
+
+I wanted to be able to add a parameter to the blog header, like this:
+
+[source]
+----
+title: "Adding a caption to blog images"
+date: 2021-12-17T10:58:07+02:00
+author: "Rodrik Wade"
+image: "images/blog/new_image.png"
+image_caption: "<a href='https://www.example.com/'>Title of Image</a> by <a href='https://www.example.com/'>Creator's name</a>, <a href='https://creativecommons.org/licenses/by/2.0/'>CC by 2.0</a>, cropped" <1>
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Hugo","templates"]
+description: "How to add a caption to the blog template"
+draft: false
+type: "post"
+----
+
+<1> The new parameter
+
+I thought I would have to implement some way of extracting this new parameter but in fact https://gohugo.io/content-management/front-matter/#user-defineduser-defined variable[fields added to the front matter] are automatically placed into the `.Params` variable, so the field I added could be accessed as `.Params.image_caption`:
+
+[source,html]
+----
+<div class="post-thumb">
+            <figure>
+            {{ with .Params.image -}}
+              <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+            {{- end }}
+                <figcaption>
+                  {{ .Params.image_caption }}
+                </figcaption>
+            </figure>
+</div>
+----
+
+This worked with plain text captions but not with those that included HTML.
+The solution was to add the `safeHTML` function:
+
+[source,html]
+----
+<div class="post-thumb">
+            <figure>
+            {{ with .Params.image -}}
+              <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+            {{- end }}
+                <figcaption>
+                  {{ .Params.image_caption | safeHTML }}
+                </figcaption>
+            </figure>
+</div>
+----
+
+The final step was to add an SCSS rule to `{backslash}themes{backslash}airspace-hugo{backslash}assets{backslash}scss{backslash}templates{backslash}_single-post.scss` to format the caption:
+
+[source,css]
+----
+ figcaption {
+    color: $color-text-light;
+    font-size: $font-size-smaller;
+    font-style: italic;
+    margin-top: 0.1em;
+    }
+----

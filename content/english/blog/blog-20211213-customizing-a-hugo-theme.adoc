@@ -3,6 +3,7 @@ title: "Customizing a Hugo theme"
 date: 2021-12-13T15:02:18+02:00
 author: "Rodrik Wade"
 image: "images/blog/artist-palette.jpg"
+image_caption: "<a href='https://unsplash.com/photos/cWY499Ma1SQ'>Palette</a> by <a href='https://unsplash.com/@starrynite'>Zhang Xinxin</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Hugo","CSS", "SCSS"]

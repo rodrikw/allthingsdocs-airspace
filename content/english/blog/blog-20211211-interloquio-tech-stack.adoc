@@ -3,6 +3,7 @@ title: "Interloquio’s tech stack"
 date: 2021-12-11T08:47:28+02:00
 author: "Rodrik Wade"
 image: "images/blog/ship-engine.jpg"
+image_caption: "<a href='https://unsplash.com/photos/AP-OWtqJJeE'>Ship engine</a> by <a href='https://unsplash.com/@miqul'>Michal Mrozek</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Tech stack","Jamstack"]
@@ -38,7 +39,7 @@ I chose Hugo for the following reasons:
 Combining all of this, we have a solution architecture that looks like this:
 
 .Interloquio website architecture
-image::/airspace/images/blog/website-arch-diagram.svg[]
+image::/images/blog/website-arch-diagram.svg[]
 
 . Content can be created using any text editor.
 My preferred environment is https://www.jetbrains.com/idea/[IntelliJ IDEA Community edition] with the https://plugins.jetbrains.com/plugin/7391-asciidoc[AsciiDoc plugin].

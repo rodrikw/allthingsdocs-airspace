@@ -1,8 +1,9 @@
 ---
 title: "Website to-do list"
-date: 2021-12-15T09:27:47+02:00
+date: 2021-12-16T15:58:41+02:00
 author: "Rodrik Wade"
-image: "images/blog/list.jpg"
+image: "images/blog/to-do-list.jpg"
+image_caption: "<a href='https://unsplash.com/photos/RLw-UC03Gwc'>Person writing bucket list</a> by <a href='https://unsplash.com/@glenncarstenspeters'>Glenn Carstens-Peters</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Hugo","Netlify"]
@@ -18,16 +19,19 @@ Below is a list of the items that need to be completed (some of the items are as
 * [x] Customize the template's CSS to handle AsciiDoc
 * [x] Customize the template's CSS to reflect Interloquio's branding
 * [x] Deploy site to Netlify for development purposes
+* [x] Enable the contact page form
+* [x] Modify blog layout to allow image attribution to be specified
 * [ ] Develop brand logo (Mark)
 * [ ] Develop brand icons (Mark)
-* [ ] Finalize site copy
 * [ ] Legal stuff (e.g. data collection notice)
+* [ ] Finalize site copy
 * [ ] Register a domain name (through Netlify)
 * [ ] SSL certificate
-* [ ] Enable forms for the contact page
-* [ ] Enable analytics
-* [ ] Enable search
+* [ ] Enable analytics (Netlify)
+* [ ] Enable search (Algolia?)
 * [ ] Link site to the documentation site
-* [ ] GDPR/POPI notice
+* [ ] GDPR/POPI notice (if required)
+
+
 
 
