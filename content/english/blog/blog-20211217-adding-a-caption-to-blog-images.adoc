@@ -37,13 +37,13 @@ I decided to wrap the `<img>` tag in a `<figure>`, which would allow me to add a
 [source,html]
 ----
 <div class="post-thumb">
-            {{ with .Params.image -}}
             <figure>
-            <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
-            {{- end }}
-              <figcaption>
-                Caption goes here
-              </figcaption>
+                {{ with .Params.image -}}
+                <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+                {{- end }}
+                  <figcaption>
+                    Caption goes here
+                  </figcaption>
             </figure>
 </div>
 ----
@@ -72,13 +72,13 @@ I thought I would have to implement some way of extracting this new parameter bu
 [source,html]
 ----
 <div class="post-thumb">
-            {{ with .Params.image -}}
             <figure>
-            <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+            {{ with .Params.image -}}
+              <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
             {{- end }}
-              <figcaption>
-                {{ .Params.image_caption }}
-              </figcaption>
+                <figcaption>
+                  {{ .Params.image_caption }}
+                </figcaption>
             </figure>
 </div>
 ----
@@ -89,15 +89,15 @@ The solution was to add the `safeHTML` function:
 [source,html]
 ----
 <div class="post-thumb">
-            {{ with .Params.image -}}
             <figure>
-            <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+            {{ with .Params.image -}}
+              <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
             {{- end }}
-              <figcaption>
-                {{ .Params.image_caption | safeHTML }}
-              </figcaption>
+                <figcaption>
+                  {{ .Params.image_caption | safeHTML }}
+                </figcaption>
             </figure>
-          </div>
+</div>
 ----
 
 The final step was to add an SCSS rule to `{backslash}themes{backslash}airspace-hugo{backslash}assets{backslash}scss{backslash}templates{backslash}_single-post.scss` to format the caption:
