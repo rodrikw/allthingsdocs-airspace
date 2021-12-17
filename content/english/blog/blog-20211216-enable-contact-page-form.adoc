@@ -1,0 +1,46 @@
+---
+title: "Enabling the contact form"
+date: 2021-12-16T16:00:18+02:00
+author: "Rodrik Wade"
+image: "images/blog/mailboxes.jpg"
+image_caption: "<a href='https://unsplash.com/photos/nOFY1ERoWoM'>Mailboxes in Piskobu, Cyprus</a> by <a href='https://unsplash.com/@sarunesed'>Sarune Sedereviciute</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Netlify","Forms","reCAPTCHA"]
+description: "Getting the contact page form to work"
+draft: false
+type: "post"
+---
+
+The Airspace theme comes with a contact page with a form.
+The layout file for this form includes this line:
+
+[source,html]
+----
+<form method="POST" {{ if .use_netlify }}name="{{ printf "contact_%s" $.Language.Lang }}" action="{{ "/message_sent" | relLangURL }}" netlify netlify-honeypot="nhp"{{ else }}name="contact" action="{{ .action | safeURL }}"{{ end }}>
+----
+
+The key bit is the `netlify` attribute.
+This tells Netlify to process the form.
+When the build process runs, Netlify replaces the `netlify` attribute and inserts a hidden input that enables form submissions to be processed.
+This should happen automatically, but in my case the form wasn't being submitted even though the Netlify dashboard indicated that the form had been detected.
+
+While reading the Netlify documentation related to forms, I came across https://docs.netlify.com/forms/spam-filters/#recaptcha-2-challenge[information about reCAPTCHA].
+I remembered that I had seen reCAPTCHA in the same form layout:
+
+[source,html]
+----
+{{ if .use_recaptcha -}}
+            <div class="form-group-h">
+              <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
+            </div>
+            {{- end }}
+----
+
+Sure enough, disabling the reCAPTCHA option in the `{backslash}config{backslash}_default{backslash}params.toml` file fixed the problem.
+To use this reCAPTCHA functionality I would have to provide a reCAPTCHA site key in the `params.toml` file.
+Instead, at a later date I might try enabling the https://docs.netlify.com/forms/spam-filters/#netlify-provided-recaptcha-2[Netlify-provided reCAPTCHA functionality].
+
+The form in the Airspace template also includes the `netlify-honeypot` attribute.
+This informs Netlify that there is a hidden honeypot field intended to lure spambots.
+If the hidden field is filled, then it can be assumed that the form was submitted by a bot not a human.
