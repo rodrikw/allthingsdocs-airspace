@@ -6,7 +6,7 @@ image : "images/blog/list.jpg"
 bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
-draft: false
+draft: true
 type: "post"
 ---
 

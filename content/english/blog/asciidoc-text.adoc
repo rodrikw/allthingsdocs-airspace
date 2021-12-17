@@ -7,7 +7,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
 description: "Formatting of AsciiDoc text in Hugo"
-draft: false
+draft: true
 type: "post"
 ---
 This blog post shows how AsciiDoc paragraphs and headings are formatted in Hugo.

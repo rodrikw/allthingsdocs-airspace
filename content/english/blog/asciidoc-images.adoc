@@ -7,7 +7,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Documentation"]
 tags: ["AsciiDoc","Hugo"]
 description: "Formatting of AsciiDoc images in Hugo"
-draft: false
+draft: true
 type: "post"
 ---
 
