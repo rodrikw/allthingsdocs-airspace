@@ -15,15 +15,14 @@
 
   .post-thumb {
     margin-top: (30 * $rem-base);
-  }
+  }  
+}
 
-
-  figcaption {
-    color: $color-text-light;
-    font-size: $font-size-smaller;
-    font-style: italic;
-    margin-top: 0.1em;
-  }
+figcaption {
+  color: $color-text-light;
+  font-size: $font-size-smaller;
+  font-style: italic;
+  margin-top: 0.1em;
 }
 
 .post-sub-heading {
