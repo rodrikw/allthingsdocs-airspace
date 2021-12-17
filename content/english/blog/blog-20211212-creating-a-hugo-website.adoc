@@ -43,7 +43,8 @@ To install the Airspace theme, do the following:
 
 . Go to https://github.com/themefisher/airspace-hugo and click *Code > Download ZIP*:
 +
-image::/airspace/images/blog/github-code-download-zip.png[]
+image::/images/blog/github-code-download-zip.png[]
+
 . Extract the contents of the downloaded ZIP file.
 . Rename the resulting folder from `airspace-hugo-master` to `airspace-hugo`.
 . Copy the folder into the `themes` folder in your new Hugo site.
