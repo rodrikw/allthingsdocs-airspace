@@ -25,13 +25,13 @@
             </ul>
           </div>
           <div class="post-thumb">
-            {{ with .Params.image -}}
             <figure>
-            <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
-            {{- end }}
-              <figcaption>
-                {{ .Params.image_caption | safeHTML }}
-              </figcaption>
+            {{ with .Params.image -}}
+              <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
+              {{- end }}
+                <figcaption>
+                  {{ .Params.image_caption | safeHTML }}
+                </figcaption>
             </figure>
           </div>
           <div class="post-content post-excerpt">
