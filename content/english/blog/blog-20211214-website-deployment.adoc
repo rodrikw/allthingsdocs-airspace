@@ -2,7 +2,8 @@
 title: "Deploying the Interloquio website"
 date: 2021-12-14T13:02:26+02:00
 author: "Rodrik Wade"
-image: "images/blog/setting-sail.jpg"
+image: "images/blog/sails-furled.jpg"
+image_caption: "<a href='https://unsplash.com/photos/0Z9a2xlIjg4'>Ships mast, sail and rigging</a> by <a href='https://unsplash.com/@anniespratt'>Annie Spratt</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Deployment","Netlify","Hugo"]
