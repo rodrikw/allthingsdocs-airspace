@@ -21,14 +21,17 @@ Below is a list of the items that need to be completed (some of the items are as
 * [x] Deploy site to Netlify for development purposes
 * [x] Enable the contact page form
 * [x] Modify blog layout to allow image attribution to be specified
-* [ ] Develop brand logo (Mark)
+* [x] Modify the service layout to use SVG icons instead of Fontawsome icons
+* [x] Fix the formatting of dates
+* [ ] Add comment functionality to the blog
+* [ ] Develop a brand logo (Mark)
 * [ ] Develop brand icons (Mark)
 * [ ] Legal stuff (e.g. data collection notice)
 * [ ] Finalize site copy
 * [ ] Register a domain name (through Netlify)
 * [ ] SSL certificate
 * [ ] Enable analytics (Netlify)
-* [ ] Enable search (Algolia?)
+* [ ] Enable search (Algolia)
 * [ ] Link site to the documentation site
 * [ ] GDPR/POPI notice (if required)
 
