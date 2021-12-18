@@ -47,61 +47,58 @@ featured_service:
 service:
   enable : true
   title : "Our Services"
-  description : "**I hope we can replace Fontawesome icons with custom ones.** 
-
-
-The following are some of the services that we provide:"
+  description : "We offer the following services:"
   service_item:
     # service item loop
-    - icon : fas fa-bullseye #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/analysis.svg
       name: Needs analysis
       content: "Thorough, structured analysis of your documentation or product marketing needs."
 
     # service item loop
     - icon : fas fa-layer-group #https://fontawesome.com/v5.15/icons
       name: Architecting delivery solutions
-      content: "Detailed plans for a documentation delivery solution that meet your particular requirements"
+      content: "Detailed plans for a documentation delivery solution that meets your particular requirements"
 
 
     # service item loop
-    - icon : fas fa-layer-group #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/migration.svg
       name: Migration strategies
       content: "Strategies for efficiently migrating existing documentation to an open-source toolset"
 
 
     # service item loop
-    - icon : fas fa-layer-group #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-layer-group #https://fontawesome.com/v5.15/icons
       name: Definition of documentation sets
       content: "Definition of document sets that best match your users’ needs, however complex and interdependent your offering may be"
 
     # service item loop
-    - icon : fas fa-layer-group #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-layer-group #https://fontawesome.com/v5.15/icons
       name: Document outlines
       content: "Outlines enable technical writers to create new documents following logical, consistent patterns"
 
     # service item loop
-    - icon : fas fa-feather #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-feather #https://fontawesome.com/v5.15/icons
       name: Templates and stylesheets
       content: "Enhance your brand with professionally designed and implemented templates and stylesheets for print and online documentation"
 
     # service item loop
-    - icon : fas fa-bug #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-bug #https://fontawesome.com/v5.15/icons
       name: Style  guides
       content: "Ensure consistency of terminology, grammar and tone with comprehensive documenation style guides"
 
     
     # service item loop
-    - icon : fas fa-leaf #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-leaf #https://fontawesome.com/v5.15/icons
       name: Training
       content: "Training in the use of new technologies such as AsciiDoc and Antora."
 
     # service item loop
-    - icon : fas fa-globe-asia #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-globe-asia #https://fontawesome.com/v5.15/icons
       name: Brand Identity
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
 
     # service item loop
-    - icon : fas fa-feather #https://fontawesome.com/v5.15/icons
+    - icon: fas fa-feather #https://fontawesome.com/v5.15/icons
       name: Brand Identity
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
 

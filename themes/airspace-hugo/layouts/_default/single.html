@@ -13,7 +13,7 @@
           <h2 class="post-title">{{ .Title }}</h2>
           <div class="post-meta">
             <ul>
-              <li><i class="ion-calendar"></i> {{ time.Format ":date_long" .PublishDate }}</li>
+              <li><i class="ion-calendar"></i> {{ time.Format "2 January 2006" .PublishDate }}</li>
               <li><i class="ion-android-people"></i>
                 {{ i18n "posted_by" }}
                 {{ $authors := slice }}{{ if reflect.IsSlice .Params.author }}{{ $authors = .Params.author }}{{ else }}{{ $authors = (slice .Params.author) }}{{ end -}}
@@ -42,6 +42,11 @@
             {{ template "_internal/disqus.html" . }}
           </div>
           {{- end }}
+
+          <div class="commentbox"></div>
+          <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+          <script>commentBox('5676977218387968-proj')</script>
+
         </div>
       </div>
       <div class="col-md-4">
@@ -55,6 +60,11 @@
 {{ else -}}
 {{ .Render "default" }}
 {{- end }}
+
+
+
 <!-- /regular page -->
 
 {{ end }}
+
+
