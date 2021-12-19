@@ -44,7 +44,7 @@ This didn't work as is for me because it seemed that a shortcode couldn't be use
 Instead, I needed to make a few changes:
 
 . Move the `graphcomment.html` file (containing the code provided by GraphComment) from the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}shortcodes` folder to the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}partials` folder.
-. Instead of inserting a shortcode link, `{{< graphcomment  >}}`, insert a partials link, `{{ partial "graphcomment.html" . }}` into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` file.
+. Instead of inserting a shortcode link,  `{{zwsp}{< graphcomment  >}}`, insert a partials link, `{{zwsp}{ partial "graphcomment.html" . }}`, into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` file.
 
 In the end, the `graphcomment.html` file contained the following:
 
@@ -92,7 +92,7 @@ This is important because otherwise every build triggered by a change to the pro
 Following the advice of Janne Kemppainen in https://pakstech.com/blog/hugo-comments/[Hugo Comments], I inserted `{{ .Permalink }}`.
 <4> The end of the `{{ if -}} {{- end}}` block.
 
-The `single.html` file contains only a single line addition:
+The `single.html` file contains only a one-line addition:
 
 [source,html]
 ----
