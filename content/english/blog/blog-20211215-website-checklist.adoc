@@ -23,7 +23,7 @@ Below is a list of the items that need to be completed (some of the items are as
 * [x] Modify blog layout to allow image attribution to be specified
 * [x] Modify the service layout to use SVG icons instead of Fontawsome icons
 * [x] Fix the formatting of dates
-* [ ] Add comment functionality to the blog
+* [x] Add comment functionality to the blog
 * [ ] Develop a brand logo (Mark)
 * [ ] Develop brand icons (Mark)
 * [ ] Legal stuff (e.g. data collection notice)
