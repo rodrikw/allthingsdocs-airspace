@@ -40,22 +40,29 @@ As does the fact that their clients include _Le Monde_.
 GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), text formatting, and media embedding.
 
 To set up GraphComment, I followed the instructions provided in https://discourse.gohugo.io/t/graph-comment-setup-in-2-minutes/34925[Graph Comment setup in 2 Minutes].
-This didn't quite work for me -- something was off with the shortcode.
-As I quickfix, I simply moved the code directly into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` layout file:
+This didn't work as is for me because it seemed that a shortcode couldn't be used in the context in which I wanted to insert it.
+Instead, I needed to make a few changes:
+
+. Move the `graphcomment.html` file (containing the code provided by GraphComment) from the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}shortcodes` folder to the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}partials` folder.
+. Instead of inserting a shortcode link, `{{< graphcomment  >}}`, insert a partials link, `{{ partial "graphcomment.html" . }}` into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` file.
+
+In the end, the `graphcomment.html` file contained the following:
 
 [source,html]
 ----
-<div id="graphcomment"></div>
+{{ if (not .Site.IsServer) -}} <1>
+
+          <div id="graphcomment"></div>
           <script type="text/javascript">
 
             /* - - - CONFIGURATION VARIABLES - - - */
 
             var __semio__params = {
-              graphcommentId: "id-specified-during-sign-up", // make sure the id is yours <1>
+              graphcommentId: "Interloquio", // make sure the id is yours <2>
 
               behaviour: {
                 // HIGHLY RECOMMENDED
-                uid: "{{ .Permalink }}", // unique identifer for the comments thread on your page (ex: your page id) <2>
+                uid: "{{ .Permalink }}", // uniq identifer for the comments thread on your page (ex: your page id) <3>
               },
 
               // configure your variables here
@@ -75,11 +82,45 @@ As I quickfix, I simply moved the code directly into the `{backslash}themes{back
               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
             })();
           </script>
-----
 
-<1> This is the ID that _you_ specify during the sign-up process.
-<2> This is an ID that uniquely identifies the blog post.
+{{- end }} <4>
+----
+<1> Following the advice given in https://msfjarvis.dev/posts/integrating-comments-in-hugo-sites-with-commento/[Integrating comments in Hugo sites with commento], the code is wrapped in an `{{ if -}} {{- end}}` block, which ensures that the comment functionality is not included when previewing the site on my computer.
+This is important because otherwise every build triggered by a change to the project would count towards the page views limit.
+<2> This is the ID that _you_ specify during the sign-up process.
+<3> This is an ID that uniquely identifies the blog post.
 Following the advice of Janne Kemppainen in https://pakstech.com/blog/hugo-comments/[Hugo Comments], I inserted `{{ .Permalink }}`.
+<4> The end of the `{{ if -}} {{- end}}` block.
+
+The `single.html` file contains only a single line addition:
+
+[source,html]
+----
+          {{ partial "graphcomment.html" . }} <1>
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        {{ partial "blog-sidebar.html" . }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- regular page -->
+{{ else -}}
+{{ .Render "default" }}
+{{- end }}
+
+
+<!-- /regular page -->
+
+{{ end }}
+
+
+----
+<1> This line referencing the `graphcomment.html` file was added.
+The following lines to the end of the `single.html` file are provided for context.
 
 The appearance of GraphComment is clean and unobtrusive, especially after changing the theme colour:
 
@@ -88,22 +129,6 @@ image::/images/blog/graphcomment-comment.png[]
 There are a few instances of Franglais in the UI text, but nothing too serious:
 
 image::/images/blog/graphcomment-comment-franglais.png[]
-
-One thing to note is that each time Hugo Server rebuilds, it counts as a page view.
-So it is possible to add a lot of page views editing the site.
-Probably not a million in a month, but still.
-To avoid this, I followed the advice given in https://msfjarvis.dev/posts/integrating-comments-in-hugo-sites-with-commento/[Integrating comments in Hugo sites with commento] and wrapped the code in an `{{ if -}} {{- end }}` block:
-
-[source]
-----
-{{ if (not .Site.IsServer) -}}
-
-⋮
-
-{{- end }}
-----
-
-This ensures that the comment functionality is not included when previewing the site on my computer.
 
 When a comment is posted, I receive an email notification with links that enable me to approve the post or moderate it:
 
