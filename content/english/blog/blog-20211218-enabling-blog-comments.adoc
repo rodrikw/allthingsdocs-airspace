@@ -1,0 +1,127 @@
+---
+title: "Enabling blog comments"
+date: 2021-12-18T10:47:35+02:00
+author: "Rodrik Wade"
+image: "images/blog/graffiti.jpg"
+image_caption: "<a href='https://unsplash.com/photos/uymG7UVPXpI'>Graffiti, Amsterdam, Netherlands</a> by <a href='https://unsplash.com/@maxvdo'>Max van den Oetelaar</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Hugo","Comments"]
+description: "How to set up blog comments using GraphComment"
+draft: false
+type: "post"
+---
+
+Most blogs allow readers to post comments, although corporate blogs often don't. Enabling comments in a blog is quite easy using one of the many commenting services.
+
+My criteria for choosing a commenting solution were the following:
+
+* Should be a service.
+I didn't want to deal with the complexity of containers or other types of installation, even if these do provide more control.
+* Should have a free tier with reasonably generous limits.
+I want to try comments out and don't want to commit myself to payments.
+* Should have reasonable payment tiers.
+In the unlikely event that I would need to move to a paid tier, I don't want it to be too expensive -- under USD{nbsp}10 a month is good.
+* Should be easy to install.
+* Shouldn't have ads or dubious tracking.
+* Should allow anonymous comments.
+
+There are lots of comment services that can be used with Hugo.
+The Hugo documentation provides a https://gohugo.io/content-management/comments/#alternatives[list of alternatives] to Disqus.
+Janne Kemppainen provides https://pakstech.com/blog/hugo-comments/[a summary] of many of them.
+
+In the end, I whittled my options down to two:
+
+* https://commentbox.io/[Commentbox]
+* https://graphcomment.com[GraphComment]
+
+I first tried adding CommentBox, and it was very easy:
+
+. Set up an account.
+. Note down the unique ID that is provided during setup.
+. Copy three lines of code into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` layout file:
++
+[source,html]
+----
+<div class="commentbox"></div>
+          <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+          <script>commentBox('your-unique-id')</script>
+----
+. Add in the unique ID.
+
+The result was a very neat appearance:
+
+image::/images/blog/commentbox-comment.png[]
+
+However, I decided to give GraphComment a try for a few reasons:
+
+* The 1 million views a month limit seems more generous than the 100 comments a month limit offered by CommentBox.
+* The first paid tier is $7.00 as opposed to $10.00 for CommentBox.
+* GraphComment is a French company that has to comply with European data standards such as https://en.wikipedia.org/wiki/General_Data_Protection_Regulation[GDPR], which makes me feel more comfortable.
+As does the fact that their clients include Le Monde.
+
+To set up GraphComment, I followed the instructions provided in https://discourse.gohugo.io/t/graph-comment-setup-in-2-minutes/34925[Graph Comment setup in 2 Minutes].
+This didn't quite work for me.
+Something was off with the shortcode.
+As I quickfix, I simply moved the code directly into the `single.html` layout file.
+This is not quite as neat as for CommentBox as the code is longer:
+
+[source,html]
+----
+<div id="graphcomment"></div>
+          <script type="text/javascript">
+
+            /* - - - CONFIGURATION VARIABLES - - - */
+
+            var __semio__params = {
+              graphcommentId: "id-specified-during-sign-up", // make sure the id is yours <1>
+
+              behaviour: {
+                // HIGHLY RECOMMENDED
+                uid: "{{ .Permalink }}", // unique identifer for the comments thread on your page (ex: your page id) <2>
+              },
+
+              // configure your variables here
+
+            }
+
+            /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+            function __semio__onload() {
+              __semio__gc_graphlogin(__semio__params)
+            }
+
+
+            (function() {
+              var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+              gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+            })();
+          </script>
+----
+
+<1> This is the ID that _you_ specify during the sign-up process.
+<2> This is an ID that uniquely identifies the blog post.
+Following the advice of Janne Kemppainen in https://pakstech.com/blog/hugo-comments/[Hugo Comments], I inserted `{{ .Permalink }}`.
+
+The appearance of GraphComment is inoffensive:
+
+image::/images/blog/graphcomment-comment.png[]
+
+There are a few instances of Franglais in the UI text, but nothing too serious.
+
+One thing to note is that each time Hugo Server rebuilds, it counts as a page view.
+So it is possible to add a lot of page views editing the site.
+Probably not a million in a month, but still.
+To avoid this, I followed the advice given in https://msfjarvis.dev/posts/integrating-comments-in-hugo-sites-with-commento/[Integrating comments in Hugo sites with commento] and wrapped the code in an `{{ if -}} {{- end }}` block:
+
+[source]
+----
+{{ if (not .Site.IsServer) -}}
+
+⋮
+
+{{- end }}
+----
+
+This ensures that the comment functionality is not included when previewing the site on my computer.
