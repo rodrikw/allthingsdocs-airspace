@@ -40,7 +40,7 @@ As does the fact that their clients include _Le Monde_.
 GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), text formatting, and media embedding.
 
 To set up GraphComment, I followed the instructions provided in https://discourse.gohugo.io/t/graph-comment-setup-in-2-minutes/34925[Graph Comment setup in 2 Minutes].
-This didn't quite work for me -- Something was off with the shortcode.
+This didn't quite work for me -- something was off with the shortcode.
 As I quickfix, I simply moved the code directly into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` layout file:
 
 [source,html]
