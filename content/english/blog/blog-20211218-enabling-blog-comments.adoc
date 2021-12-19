@@ -12,7 +12,7 @@ draft: false
 type: "post"
 ---
 
-Most blogs allow readers to post comments, although corporate blogs often don't. Enabling comments in a blog is quite easy using one of the many commenting services.
+Most blogs allow readers to post comments, and enabling comments is easy to do using one of the many commenting services.
 
 My criteria for choosing a commenting solution were the following:
 
@@ -27,44 +27,21 @@ In the unlikely event that I would need to move to a paid tier, I don't want it 
 * Should allow anonymous comments.
 
 There are lots of comment services that can be used with Hugo.
-The Hugo documentation provides a https://gohugo.io/content-management/comments/#alternatives[list of alternatives] to Disqus.
+The Hugo documentation provides a https://gohugo.io/content-management/comments/#alternatives[list of alternatives] to Disqus (the de facto default).
 Janne Kemppainen provides https://pakstech.com/blog/hugo-comments/[a summary] of many of them.
 
-In the end, I whittled my options down to two:
+In the end, I decided on https://graphcomment.com[GraphComment] for these reasons:
 
-* https://commentbox.io/[Commentbox]
-* https://graphcomment.com[GraphComment]
-
-I first tried adding CommentBox, and it was very easy:
-
-. Set up an account.
-. Note down the unique ID that is provided during setup.
-. Copy three lines of code into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` layout file:
-+
-[source,html]
-----
-<div class="commentbox"></div>
-          <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-          <script>commentBox('your-unique-id')</script>
-----
-. Add in the unique ID.
-
-The result was a very neat appearance:
-
-image::/images/blog/commentbox-comment.png[]
-
-However, I decided to give GraphComment a try for a few reasons:
-
-* The 1 million views a month limit seems more generous than the 100 comments a month limit offered by CommentBox.
-* The first paid tier is $7.00 as opposed to $10.00 for CommentBox.
+* It has a free tier that allows a very generous 1 million views a month.
+* The first paid tier is a reasonable $7.00 a month.
 * GraphComment is a French company that has to comply with European data standards such as https://en.wikipedia.org/wiki/General_Data_Protection_Regulation[GDPR], which makes me feel more comfortable.
-As does the fact that their clients include Le Monde.
+As does the fact that their clients include _Le Monde_.
+
+GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), text formatting, and media embedding.
 
 To set up GraphComment, I followed the instructions provided in https://discourse.gohugo.io/t/graph-comment-setup-in-2-minutes/34925[Graph Comment setup in 2 Minutes].
-This didn't quite work for me.
-Something was off with the shortcode.
-As I quickfix, I simply moved the code directly into the `single.html` layout file.
-This is not quite as neat as for CommentBox as the code is longer:
+This didn't quite work for me -- Something was off with the shortcode.
+As I quickfix, I simply moved the code directly into the `{backslash}themes{backslash}airspace-hugo{backslash}layouts{backslash}_default{backslash}single.html` layout file:
 
 [source,html]
 ----
@@ -104,11 +81,13 @@ This is not quite as neat as for CommentBox as the code is longer:
 <2> This is an ID that uniquely identifies the blog post.
 Following the advice of Janne Kemppainen in https://pakstech.com/blog/hugo-comments/[Hugo Comments], I inserted `{{ .Permalink }}`.
 
-The appearance of GraphComment is inoffensive:
+The appearance of GraphComment is clean and unobtrusive, especially after changing the theme colour:
 
 image::/images/blog/graphcomment-comment.png[]
 
-There are a few instances of Franglais in the UI text, but nothing too serious.
+There are a few instances of Franglais in the UI text, but nothing too serious:
+
+image::../images/blog/graphcomment-comment-franglais.png[]
 
 One thing to note is that each time Hugo Server rebuilds, it counts as a page view.
 So it is possible to add a lot of page views editing the site.
@@ -125,3 +104,13 @@ To avoid this, I followed the advice given in https://msfjarvis.dev/posts/integr
 ----
 
 This ensures that the comment functionality is not included when previewing the site on my computer.
+
+When a comment is posted, I receive an email notification with links that enable me to approve the post or moderate it:
+
+image::/images/blog/graphcomment-comment-notification.png[]
+
+The *Moderate this message* link opens the GraphComment dashboard:
+
+image::/images/blog/graphcomment-comment-dashboard.png[]
+
+There I can approve, reply, delete, or mark the message as spam.
