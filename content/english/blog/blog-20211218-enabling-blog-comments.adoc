@@ -87,7 +87,7 @@ image::/images/blog/graphcomment-comment.png[]
 
 There are a few instances of Franglais in the UI text, but nothing too serious:
 
-image::../images/blog/graphcomment-comment-franglais.png[]
+image::/images/blog/graphcomment-comment-franglais.png[]
 
 One thing to note is that each time Hugo Server rebuilds, it counts as a page view.
 So it is possible to add a lot of page views editing the site.
