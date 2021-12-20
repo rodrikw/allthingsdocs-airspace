@@ -10,7 +10,7 @@
 
               behaviour: {
                 // HIGHLY RECOMMENDED
-                uid: "{{ .Permalink }}", // uniq identifer for the comments thread on your page (ex: your page id)
+                uid: "{{ index (split .File.LogicalName "-") 0 }}", // unique identifier for the comments thread on your page (ex: your page id)
               },
 
               // configure your variables here

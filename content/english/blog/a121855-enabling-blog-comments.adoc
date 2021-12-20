@@ -89,7 +89,9 @@ In the end, the `graphcomment.html` file contained the following:
 This is important because otherwise every build triggered by a change to the project would count towards the page views limit.
 <2> This is the ID that _you_ specify during the sign-up process.
 <3> This is an ID that uniquely identifies the blog post.
-Following the advice of Janne Kemppainen in https://pakstech.com/blog/hugo-comments/[Hugo Comments], I inserted `{{ .Permalink }}`.
+Following the advice of Andreas Rein in https://www.andreasrein.net/posts/hyvor-talk-hugo-commenting-systems/[Choosing a commenting plugin and integrating Hyvor Talk in Hugo], I inserted `{{ index (split .File.LogicalName "-") 0 }}`.
+This inserts the start of the file name preceding the first hyphen.
+This value is intended to be a unique, invariant identifier composed of an abbreviated creation date plus two additional digits.
 <4> The end of the `{{ if -}} {{- end}}` block.
 
 The `single.html` file contains only a one-line addition:

@@ -77,7 +77,7 @@ service:
       content: "Outlines enable technical writers to create new documents following logical, consistent patterns"
 
     # service item loop
-    - icon: fas fa-feather #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/templates.svg
       name: Templates and stylesheets
       content: "Enhance your brand with professionally designed and implemented templates and stylesheets for print and online documentation"
 
@@ -88,7 +88,7 @@ service:
 
     
     # service item loop
-    - icon: fas fa-leaf #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/training.svg
       name: Training
       content: "Training in the use of new technologies such as AsciiDoc and Antora."
 
