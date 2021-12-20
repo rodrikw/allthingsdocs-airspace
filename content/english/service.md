@@ -50,7 +50,7 @@ service:
   description : "We offer the following services:"
   service_item:
     # service item loop
-    - icon: /images/services/analysis.svg
+    - icon: /images/services/analysis.svgz
       name: Needs analysis
       content: "Thorough, structured analysis of your documentation or product marketing needs."
 
