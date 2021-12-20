@@ -55,7 +55,7 @@ service:
       content: "Thorough, structured analysis of your documentation or product marketing needs."
 
     # service item loop
-    - icon : fas fa-layer-group #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/blank.svg
       name: Architecting delivery solutions
       content: "Detailed plans for a documentation delivery solution that meets your specific requirements"
 
@@ -67,12 +67,12 @@ service:
 
 
     # service item loop
-    - icon: fas fa-layer-group #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/series.svg
       name: Definition of documentation sets
       content: "Definition of document sets that best match your users’ needs, however complex and interdependent your offering may be"
 
     # service item loop
-    - icon: fas fa-layer-group #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/blank.svg
       name: Document outlines
       content: "Outlines to enable your technical writers and developers to create new documents following logical, consistent patterns"
 
@@ -82,7 +82,7 @@ service:
       content: "Enhance your brand with professionally designed and implemented templates and stylesheets for print and online documentation"
 
     # service item loop
-    - icon: fas fa-bug #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/blank.svg
       name: Style  guides
       content: "Ensure consistency of terminology, grammar, and tone with comprehensive documentation style guides"
 
@@ -93,12 +93,12 @@ service:
       content: "Training in the use of new technologies such as AsciiDoc and Antora"
 
     # service item loop
-    - icon: fas fa-globe-asia #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/blank.svg
       name: Brand Identity
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
 
     # service item loop
-    - icon: fas fa-feather #https://fontawesome.com/v5.15/icons
+    - icon: /images/services/blank.svg
       name: Brand Identity
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
 
