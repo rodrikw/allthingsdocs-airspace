@@ -57,7 +57,7 @@ service:
     # service item loop
     - icon : fas fa-layer-group #https://fontawesome.com/v5.15/icons
       name: Architecting delivery solutions
-      content: "Detailed plans for a documentation delivery solution that meets your particular requirements"
+      content: "Detailed plans for a documentation delivery solution that meets your specific requirements"
 
 
     # service item loop
@@ -74,7 +74,7 @@ service:
     # service item loop
     - icon: fas fa-layer-group #https://fontawesome.com/v5.15/icons
       name: Document outlines
-      content: "Outlines enable technical writers to create new documents following logical, consistent patterns"
+      content: "Outlines to enable your technical writers and developers to create new documents following logical, consistent patterns"
 
     # service item loop
     - icon: /images/services/templates.svg
@@ -84,13 +84,13 @@ service:
     # service item loop
     - icon: fas fa-bug #https://fontawesome.com/v5.15/icons
       name: Style  guides
-      content: "Ensure consistency of terminology, grammar and tone with comprehensive documenation style guides"
+      content: "Ensure consistency of terminology, grammar, and tone with comprehensive documentation style guides"
 
     
     # service item loop
     - icon: /images/services/training.svg
       name: Training
-      content: "Training in the use of new technologies such as AsciiDoc and Antora."
+      content: "Training in the use of new technologies such as AsciiDoc and Antora"
 
     # service item loop
     - icon: fas fa-globe-asia #https://fontawesome.com/v5.15/icons
