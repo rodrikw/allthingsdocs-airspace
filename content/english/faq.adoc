@@ -1,62 +1,98 @@
 ---
-title: "Frequently Asked Questions"
+title: "Privacy policy"
 description: "This is meta description"
 subtitle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, repudiandae."
-lastmod: 2021-12-09T09:25:48+02:00
+lastmod: 2021-12-20T13:37:53+02:00
 bg_image: "images/feature-bg.jpg"
 layout: "faq"
-draft: false
+draft: draft
 ---
 
-=== Welcome to Airspace!
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ullam sint quas pariatur ipsam nemo
-repellendus suscipit quod accusantium numquam tempora assumenda sequi, velit voluptatem soluta voluptatibus
-nesciunt ducimus iure. Excepturi voluptatum ullam tenetur perspiciatis alias delectus beatae voluptatibus
-magni facere aspernatur, qui, quas nesciunt blanditiis assumenda a expedita accusantium quos consectetur neque
-nemo. Necessitatibus est quod quo deserunt, dicta aut voluptatem blanditiis, alias quos sed vel unde enim
-dolore aliquam quis reiciendis qui vitae reprehenderit. Similique nemo accusamus, vel possimus error cumque
-quas, tempora repellendus velit, unde cupiditate impedit deserunt fugit labore et nostrum sapiente est
-obcaecati maiores voluptates.
+== DEFINITIONS
 
-==== 1.Overview
+The following words shall have the meanings set out opposite them and capitalised terms used throughout this consent form shall have a corresponding meaning:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iusto, alias, tempora fuga quam eveniet
-neque excepturi aliquid. Eligendi, mollitia.
+“Professional Advisory/Consulting Offering” means strategy and management advisory/consulting services provided in terms of a formal engagement and subject to the contractual terms of the engagement and our standard terms and conditions;
 
-==== 2. Data We Collect
+“Interloquio” or “us” or “our” means ???;
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, earum, quibusdam? Accusantium, eaque at
-quasi dicta quis consectetur. Temporibus, natus illo quasi, magni neque fugiat ducimus omnis, ab ullam
-reprehenderit obcaecati. Inventore ut nisi repellendus dolores odit. Ea molestias perspiciatis enim, tenetur
-impedit suscipit quidem optio asperiores quibusdam. Minus, vel.
+“Personal Information” means any information relating to an identifiable, living natural person and if applicable, to an existing identifiable juristic person as defined in section 1 of POPIA, and which includes, but is not restricted to, personal, identifying, contact, residential, financial, medical, biometric, correspondence, criminal, educational, employment and behavioural information, as well as any assessments, evaluations and interpretations in respect of any of the aforesaid and further within the context of this Consent Form it applies to any information of Consortium Members that is necessary for the furtherance of the purposes of the Consortium;
 
-==== 3. How We Use Data
+“POPIA” means the Protection of Personal Information Act 4 of 2013;
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus repellat id, laboriosam ipsa
-repudiandae quisquam, suscipit officiis, praesentium itaque facilis distinctio dolorum. Velit reiciendis
-libero laudantium corporis, delectus impedit sunt.
+“Processing” refers to the collection, recorded, temporary storage, deletion and destruction of Personal Information as the context may require and for the purpose as contemplated in this consent form and any reference to “Process” shall have a corresponding meaning;
 
-==== 4. How We Disclose Data.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur itaque ut culpa totam ratione! Iste
-possimus beatae consequuntur, fugit iusto fugiat id, dignissimos culpa obcaecati voluptatum omnis est
-quibusdam quos, et illo rerum quae dolorem error quis suscipit asperiores facilis? Ratione, facere architecto
-modi incidunt voluptatibus iusto maiores, at libero accusamus aliquam dolor minus autem possimus illum maxime,
-fugit fuga! A libero adipisci molestias praesentium distinctio odio, alias accusantium, dolorum itaque,
-necessitatibus labore! Facilis explicabo pariatur laudantium quibusdam consequatur ex odio labore sequi animi.
-Voluptatem impedit, maiores, cupiditate, iure possimus neque quaerat natus aut minima quibusdam tempora
-magnam, vero itaque!
+“Statement” means this privacy statement.
 
-==== 5. Security
+== PREAMBLE
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis quod saepe, inventore ipsum sint
-cum iste quae ratione nobis laborum minima autem totam similique, quia neque deleniti! Provident, suscipit.
+Interloquio may from time to time Process your Personal Information and is strongly committed to protect and maintain your privacy.
+This Statement aims to explain how your Personal Information will be Processed by Interloquio and what the purpose of the Processing of your Personal Information is.
+Please note that this Statement applies to all interactions Interloquio may have with you, both directly and indirectly.
 
-==== 6. Advertising.
+== Processing of Personal Information
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eaque repellendus placeat aperiam fugit.
-Quod inventore quis quos, molestias nostrum tempora quae adipisci dolorem ipsam repellendus officia,
-voluptatem assumenda porro possimus, eius eum enim qui natus! Quas numquam voluptas reiciendis eveniet ab at
-provident omnis mollitia ipsa. Asperiores vero rem cum minima voluptas, vitae magni accusantium quae. Sed,
-expedita, ad.
+Interloquio may collect Personal Information from you, through our interactions with you.
+You provide some of this Personal Information directly, and we may obtain some of it by collecting Personal Information from third parties.
+The Personal Information that we collect depends on the context of your interactions with Interloquio and the choices you make.
+Please note that all Processing of your Personal Information by us is voluntary.
+When we ask you to provide Personal Information, you may at any time decline.
+
+== The purpose of processing your Personal Information
+
+Interloquio uses the Personal Information that we collect from you, to provide you with quality services, typically in the domain of our Professional Advisory, Consulting offering.
+
+In particular, we use Personal Information to:
+
+* Improve, develop and strengthen our business and service offerings that we offer to you in general.
+* Improve and develop our deliverables in terms of its insights generation by making them more contextually relevant to you.
+* Personalize our deliverables.
+* Advertise and market to you, which includes sending promotional communications, targeting advertising, and presenting you with relevant offers.
+* To satisfy all laws and regulatory requirements that we need to comply with.
+
+Some of the Personal Information that we receive, as a part of our recruitment efforts, is used to meet Interloquio’s resourcing requirements.
+
+== limitation to and manner of processing Personal Information
+
+Your Personal Information shall only be Processed by Interloquio or an authorized third party operator for the aforementioned purposes, or any other third party where required in terms of applicable law.
+
+The Processing of Personal Information by Interloquio for the purposes contemplated above are limited to manual (human) methods of Processing at this point in time.
+
+We may, eventually, attempt to incorporate automated methods for the Processing of Personal Information, however we envisage these automated methods to be supported by our manual methods.
+Example of these Processing methods: Our envisaged automated methods include artificial intelligence (“AI”), which we think of as a set of technologies that enable computers to perceive, learn, reason, and assist in decision-making to solve problems in ways that are similar to what people do.
+To build, train, and improve the accuracy of our automated methods of processing (including AI), we will manually review some of the predictions and inferences produced by the automated methods against the underlying data from which the predictions and inferences were made.
+
+We confirm that we will update this Statement when we roll out automated methods for Processing in an attempt to be transparent and to ensure that you remain informed regarding the Processing of your Personal Information.
+
+Please take note that Interloquio may outsource the Processing of its Personal Information to third-party operators from time to time and transfer your Personal Information abroad in accordance with the relevant provisions of POPIA for the purposes set out herein, or any applicable data protection laws which may apply to Interloquio.
+
+== Security
+
+We confirm that we implement generally accepted standards of technology and operational security in order to safeguard your Personal Information from loss or unauthorised use.
+Although we use appropriate security measures once we have received Personal Information, the transmission of such Personal Information over the internet (including through electronic correspondence) is never completely secure.
+
+We confirm that we endeavour to protect your Personal Information as far as reasonably possible, but we cannot guarantee the security of Personal Information transmitted to or by us.
+
+== Access and control the Processing of your Personal Information
+
+Please note that you can choose the manner in which and whether your Personal Information may be Processed by Interloquio.
+You are entitled to restrict access to your Personal Information by Interloquio or request reasonable access to your Personal Information held by Interloquio, in accordance with sections 23 and 24 of POPIA, as well as the correction, reduction or deletion thereof, as the relevant circumstances may require.
+
+You can control the Personal Information that has been obtained by Interloquio, and exercise your privacy and data protection rights in terms of POPIA at any time, by contacting Interloquio.
+In some cases, your ability to access or control your Personal Information will be limited, as required or permitted by applicable law.
+How you can access or control your Personal Information will also depend on how your Personal Information is being used.
+For example, you can:
+
+* Control the use of your Personal Information for interest-based advertising from Interloquio by emailing ??? in order to instruct our helpdesk to manage your preferences.
+
+* Access and clear some of your Personal Information by emailing your request to our helpdesk at info@wbdsolutions.com.
+
+* In the event that this Statement is unclear in any respect or should you have a bespoke request that is not dealt with in terms of this Statement, please feel free to email ??? and we will be more than happy to assist you.
+
+== Privacy overview
+
+This website uses cookies to improve your experience while you navigate through the website.
+Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website.
+
