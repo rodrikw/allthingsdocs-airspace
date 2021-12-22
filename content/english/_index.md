@@ -17,7 +17,7 @@ about:
   title: "About Us"
   description: "We specialize in content marketing and product documentation"
   content: "Together we have more than 40 years’ complementary experience:</br></br>_Mark_ is the content marketing specialist. He conceptualizes, develops, and manages content in traditional marketing, product marketing, sales support, and public relations. His particular strength is brand building, having worked for much of his career at B2B2C fintech companies breaking into international markets. Mark also contributes strong design skills.</br></br>_Rodrik_ is the documentation specialist, with many years’ experience designing and developing training and product documentation. He also has an abiding interest in the technologies used to manage and deliver online and print documentation."
-  image: "images/wrapper-img.png"
+  image: "images/cairo.jpg"
 
 
 ######################### Portfolio ###############################
