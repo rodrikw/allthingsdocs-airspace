@@ -92,15 +92,6 @@ service:
       name: Training
       content: "Training in the use of new technologies such as AsciiDoc and Antora"
 
-    # service item loop
-    - icon: /images/services/blank.svg
-      name: Brand Identity
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
-
-    # service item loop
-    - icon: /images/services/blank.svg
-      name: Brand Identity
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
 
 ############################# call to action #################################
 cta:
