@@ -67,7 +67,7 @@ type: "post"
 
 <1> The new parameter
 
-I thought I would have to implement some way of extracting this new parameter but in fact https://gohugo.io/content-management/front-matter/#user-defineduser-defined variable[fields added to the front matter] are automatically placed into the `.Params` variable, so the field I added could be accessed as `.Params.image_caption`:
+I thought I would have to implement some way of extracting this new parameter but in fact https://gohugo.io/content-management/front-matter/#user-defined[fields added to the front matter] are automatically placed into the `.Params` variable, so the field I added could be accessed as `.Params.image_caption`:
 
 [source,html]
 ----
