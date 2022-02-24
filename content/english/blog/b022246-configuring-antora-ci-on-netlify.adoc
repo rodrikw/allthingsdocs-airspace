@@ -1,6 +1,6 @@
 ---
 title: "Configuring continuous integration of an Antora project on Netlify"
-date: 2022-02-22T12:26:46+02:00
+date: 2022-02-24T17:57:20+02:00
 author: "Rodrik Wade"
 image: "images/blog/clockwork.jpg"
 image_caption: <a href='https://unsplash.com/photos/f0dJjQMhfXo'>Untitled</a> by <a href='https://unsplash.com/@sigmund'>Sigmund
@@ -9,7 +9,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify"]
 description: "Details how to set up continuous integration of an Antora playbook project on Netlify"
-draft: true
+draft: false
 type: "post"
 ---
 
