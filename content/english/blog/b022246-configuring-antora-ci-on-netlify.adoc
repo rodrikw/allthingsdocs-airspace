@@ -1,0 +1,114 @@
+---
+title: "Configuring continuous integration of an Antora project on Netlify"
+date: 2022-02-22T12:26:46+02:00
+author: "Rodrik Wade"
+image: "images/blog/new_image.jpg"
+image_caption: <a href='https://unsplash.com/photos/f0dJjQMhfXo'>Untitled</a> by <a href='https://unsplash.com/@sigmund'>Sigmund
+</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Doc site"]
+tags: ["Antora","Netlify"]
+description: "Details how to set up continuous integration of an Antora playbook project on Netlify"
+draft: true
+type: "post"
+---
+
+As with Hugo, it is possible to configure an Antora project to be built on Netlify.
+This means that Netlify monitors a designated Git repository (on a provider such as GitHub or GitLab) for changes to a specified build (for example, main) and automatically runs a build whenever changes are detected.
+
+In the case of an Antora project:
+
+. You push the site contents (AsciiDoc source) to a repo on your Git provider (in my case on GitHub).
+. You create a separate playbook project and push that to your Git provider.
+. In Netlify, you create a link to the playbook repo and specify some build parameters, including the branch that Netlify monitors for changes.
+. You then initiate the deployment of the site.
++
+In the process of deploying, Netlify fires up a build environment for Antora plus any dependencies, generates the site, and then destroys the build environment.
+All of this takes seconds, but it does mean that a deployment consumes some of your allocation of Netlify build minutes.
+
+To try this out, you can use the standard Antora demo doc site.
+This is a small project that is stored in two repos on GitLab:
+
+* https://gitlab.com/antora/demo/demo-component-a
+* https://gitlab.com/antora/demo/demo-component-b
+
+The setup is well explained in https://docs.antora.org/antora/latest/install-and-run-quickstart/[Install and Run Antora Quickstart].
+
+If you are starting from scratch, you should perform the following steps:
+
+. https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs[Install Node.js]
+. https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-antora[Install Antora]
++
+This details how to install Antora within the playbook project, which is the preferred approach (as opposed to installing it globally).
+. https://docs.antora.org/antora/latest/install-and-run-quickstart/#create-a-playbook[Create a playbook]
+The playbook specifies, among other things, what content to include (and where it is located) and what UI bundle (template) is applied.
+
+Note that at this stage you will have a local copy of the playbook project.
+You do not have local copies of the two demo components.
+These are located on GitLab.
+
+You should now have a `doc-site` folder with the following contents:
+
+----
+node_modules/
+antora-playbook.yml
+package.json
+package-lock.json
+----
+
+Netlify uses the `package.json` and `package-lock.json` files.
+
+The `package.json`  file specifies any dependencies required to run the build.
+Minimally this is the version of Antora:
+
+[source,json]
+.package.json
+----
+{
+      "dependencies": {
+      "antora": "~> 3.0"
+   }
+}
+----
+
+During the installation you ran `npm i`, which generated the `package-lock.json`.
+You can choose to rerun this command in a terminal.
+
+To prepare the project for Netlify, do the following (kindly provided by Dan Allen):
+
+. In a text editor, create a `netlify.toml` file with the following contents:
++
+[source,toml]
+----
+[build]
+publish = "build/site"
+command = "npx antora --redirect-facility=netlify antora-playbook.yml"
+----
++
+This specifies the command that Netlify will run, as well as the folder in which the site will be published.
+It is possible to configure these manually in Netlify but this is not recommended.
+
+. Create a Git repository in your `docs-site` folder.
+
+. Add the `node_modules` folder to `.gitignore`.
+You don't want to include the contents in your repo.
+
+. Commit and push the `docs-site repo` to your remote Git.
+This is typically on GitHub, GitLab, or Bitbucket.
+
+. In your Netlify account, click *Add new site > Import an existing project*.
+
+. When prompted to connect to your Git provider, choose GitHub, GitLab, or Bitbucket as appropriate.
+
+. Search for the `docs-site` repo and select it.
++
+You should see that the build command and publish directory fields have been filled from the `netlify.toml` file.
+. Click *Deploy site*.
++
+After a few seconds you should see that your site has been deployed.
+. Follow the automatically generated link to check that the site has deployed correctly.
+
+NOTE: Changes to the playbook project (`docs-site`) will trigger the redeployment of the site.
+Changes to the content repos (in this case https://gitlab.com/antora/demo/demo-component-a and https://gitlab.com/antora/demo/demo-component-a) will not.
+This is likely not to be desirable.
+In later posts I'll look at how to configure scheduled builds and also how to configure builds that occur when the content repos are merged.
