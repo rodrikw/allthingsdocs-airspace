@@ -1,0 +1,55 @@
+---
+title: "Triggering a build of an Antora project by Netlify when merging in GitHub"
+date: 2022-02-25T12:59:19+02:00
+author: "Rodrik Wade"
+image: "images/blog/cars-merging.jpg"
+image_caption: "<a href='https://unsplash.com/photos/cxR46yRiJd4'>Peak Hour - Newcastle Upon Tyne - Feb 2020</a> by <a href='https://unsplash.com/@freshseteyes'>Quaid Lagan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Doc site"]
+tags: ["Antora","Netlify","GitHub"]
+description: "How to set up GitHub to trigger builds of an Antora project on Netlify when changes are merged into the main branch."
+draft: true
+type: "post"
+---
+
+Triggering the build of a site when changes are merged into the main branch ensures that builds occur regularly but not excessively frequently, and that they are only triggered by a trusted user (repo owner).
+This approach works well with the workflow detailed in xref:../a121630-update-and-deployment-workflow.adoc[Update and deployment workflow].
+
+As with scheduled builds (see xref:../a022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify]), this technique makes use of a GitHub workflow to trigger a buildhook on Netlify.
+However, in this case the workflow runs whenever a user merges changes back into the repo to which the workflow is attached.
+
+This procedure assumes that you have already created a buildhook in Netlify for the playbook project.
+For instructions on how to do so, see xref:../a022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify].
+
+NOTE: In this case the workflow is added to the content repo but the buildhook is created for the playbook repo because you need to trigger the build to use the playbook.
+If your site uses multiple content repos then you would need to repeat this procedure for each one.
+
+. In the root of Antora content repo, create a `.github/workflows/` folder.
+
+. In the folder create a YAML file, such as `onmerge.yml` with the following content:
++
+[source,yaml]
+.onmerge.yml
+----
+# .github/workflows/onmerge.yml
+
+name: Trigger build of site on merge
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        run: curl -X POST -d {} <your_build_hook>
+----
++
+This is based on the workflow detailed in https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-workflow-when-a-pull-request-merges[Running your workflow when a pull request merges].
+. Push the changes to content project to the GitHub repo.
+If you need to merge the changes back into the main branch, this should immediately trigger the workflow.
+
+To monitor the workflow in GitHub, select the content repo to which you added the workflow, and click *Actions*.
