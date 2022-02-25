@@ -3,7 +3,7 @@ title: "Configuring continuous integration of an Antora project on Netlify"
 date: 2022-02-24T17:57:20+02:00
 author: "Rodrik Wade"
 image: "images/blog/clockwork.jpg"
-image_caption: <a href='https://unsplash.com/photos/f0dJjQMhfXo'>Untitled</a> by <a href='https://unsplash.com/@sigmund'>Sigmund</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+image_caption: "<a href='https://unsplash.com/photos/f0dJjQMhfXo'>Untitled</a> by <a href='https://unsplash.com/@sigmund'>Sigmund</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify"]
