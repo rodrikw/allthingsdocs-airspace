@@ -17,7 +17,7 @@ Netlify it self does not support scheduling of builds so the approach is create 
 
 The assumption is that you have already created an Antora playbook project for the site and have set up continuous deployment on Netlify as described in a separate blog.
 
-xref:b022246-configuring-antora-ci-on-netlify.adoc[Configuring Antora]
+xref:../b022246-configuring-antora-ci-on-netlify.adoc[Configuring Antora]
 
 To create the buildhook, follow the procedure detailed by Eric Jinks in https://ericjinks.com/blog/2019/netlify-scheduled-build/[Schedule your Netlify build with GitHub Actions]):
 
