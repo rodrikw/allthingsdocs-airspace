@@ -37,13 +37,13 @@ We will be recording what we have done and what we have learnt along the way in 
 
 ############################# Service ############################
 service:
-  enable: true
+  enable: false
   # service content comes from "service.md" file
 
 
 ############################ call to action ###########################
 cta:
-  enable: true
+  enable: false
   bg_image: "images/call-to-action-bg.jpg"
   title: "We design delightful digital experiences."
   content: "Read more about what we do and our philosophy of design. Judge for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
@@ -54,7 +54,7 @@ cta:
 
 ############################# Funfacts ###############################
 funfacts:
-  enable: true
+  enable: false
   title: "Fun Facts About Us"
   description: "I don't think that we can make this section work for us, except possibly for the testimonials."
   funfact_item:

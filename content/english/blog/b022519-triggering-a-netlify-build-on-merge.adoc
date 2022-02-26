@@ -12,7 +12,7 @@ draft: false
 type: "post"
 ---
 
-Triggering the build of a site when changes are merged into the main branch ensures that builds occur regularly but not excessively frequently, and that they are only triggered by a trusted user (repo owner).
+Triggering a build of a site when changes are merged into the main branch ensures that builds occur regularly but not excessively frequently, and that they are only triggered by a trusted user (repo owner).
 This approach works well with the workflow detailed in xref:../a121630-update-and-deployment-workflow.adoc[Update and deployment workflow].
 
 As with scheduled builds (see xref:../a022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify]), this technique makes use of a GitHub workflow to trigger a buildhook on Netlify.
