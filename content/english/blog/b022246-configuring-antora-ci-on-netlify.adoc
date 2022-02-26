@@ -40,7 +40,8 @@ If you are starting from scratch, you should perform the following steps:
 +
 This details how to install Antora within the playbook project, which is the preferred approach (as opposed to installing it globally).
 . https://docs.antora.org/antora/latest/install-and-run-quickstart/#create-a-playbook[Create a playbook]
-The playbook specifies, among other things, what content to include (and where it is located) and what UI bundle (template) is applied.
++
+The playbook specifies, among other things, what content to include, where it is located, and what UI bundle (template) is applied.
 
 Note that at this stage you will have a local copy of the playbook project.
 You do not have local copies of the two demo components.
