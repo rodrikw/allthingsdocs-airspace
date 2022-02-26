@@ -1,4 +1,4 @@
 ---
 layout: "message_sent"
-draft: false
+draft: true
 ---
