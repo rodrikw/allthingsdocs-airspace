@@ -17,12 +17,9 @@ image = "images/logo.svg" # this image will be used as fallback if a page has no
 # Whether to display text descriptors (like "E-mail: ", "Phone: ") before the address block elements
 address_descriptors = false
 # contact info
-phone = "0124857985320"
-email = "demo@email.com"
-location = """
-Somerset West
-South Africa
-"""
+phone = ""
+email = ""
+location = ""
 # copyright
 copyright = "Based on the Airspace theme designed By [Themefisher](https://themefisher.com/) and developed by [Gethugothemes](https://gethugothemes.com/)"
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
