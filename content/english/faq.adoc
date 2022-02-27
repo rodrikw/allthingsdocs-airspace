@@ -6,6 +6,7 @@ lastmod: 2021-12-20T13:37:53+02:00
 bg_image: "images/feature-bg.jpg"
 layout: "faq"
 draft: draft
+enabled: false
 ---
 
 
