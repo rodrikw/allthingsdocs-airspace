@@ -45,7 +45,7 @@ source 'https://rubygems.org'
 gem 'asciidoctor'
 gem 'rouge'
 ----
-. Install `bundler` by running this command in https://docs.microsoft.com/en-us/windows/terminal/[Windows terminal] (or the at the command prompt): `gem install bundler`
+. Install `bundler` by running this command in https://docs.microsoft.com/en-us/windows/terminal/[Windows terminal] (or at the command prompt): `gem install bundler`
 . Run bundler: `bundle install`.
 +
 The result should be a `Gemfile.lock` file with content like the following:
