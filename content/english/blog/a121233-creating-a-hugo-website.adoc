@@ -12,6 +12,7 @@ draft: false
 type: "post"
 ---
 :experimental:
+:source-highlighter: rouge
 
 The basic setup of Hugo on your local computer is easy, and well documented:
 
@@ -23,7 +24,7 @@ TIP: In a Windows environment, I recommend using https://docs.microsoft.com/en-u
 +
 The result will be a new site with the following folders and files:
 +
-----
+....
 archetypes
 content
 data
@@ -33,7 +34,7 @@ static
 themes
 .hugo_build.lock
 config.toml
-----
+....
 
 However, you can't run the Hugo server until you apply a theme.
 I initially chose the https://themes.gohugo.io/themes/navigator-hugo/[Navigator theme] but after a while swapped to using the https://themes.gohugo.io/themes/airspace-hugo/[Airspace theme].
@@ -41,7 +42,7 @@ I liked the fact that the newer Airspace theme uses https://sass-lang.com/docume
 
 To install the Airspace theme, do the following:
 
-. Go to https://github.com/themefisher/airspace-hugo and click *Code > Download ZIP*:
+. Go to https://github.com/themefisher/airspace-hugo and click menu:Code[Download ZIP]:
 +
 image::/images/blog/github-code-download-zip.png[]
 
@@ -51,14 +52,15 @@ image::/images/blog/github-code-download-zip.png[]
 . In the `airspace-hugo` folder, go to the `exampleSite` folder.
 . Copy the contents of the `exampleSite` folder:
 +
-----
+....
 assets
 config
 content
 i18n
 static
 nelify.toml
-----
+....
+
 . Go to the root folder of the Hugo site and paste the contents.
 This will replace the empty folders that were in the root folder.
 . Go to the `themes` folder and delete the `exampleSite` folder.

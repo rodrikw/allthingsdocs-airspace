@@ -8,9 +8,12 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Hugo","Comments"]
 description: "How to set up blog comments using GraphComment"
-draft: false
+draft: true
 type: "post"
 ---
+
+:experimental:
+:source-highlighter: rouge
 
 Most blogs allow readers to post comments, and enabling comments is easy to do using one of the many commenting services.
 

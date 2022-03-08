@@ -8,9 +8,12 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify","GitHub"]
 description: "How to set up GitHub to trigger builds of an Antora project on Netlify when changes are merged into the main branch."
-draft: false
+draft: true
 type: "post"
 ---
+
+:experimental:
+:source-highlighter: rouge
 
 Triggering a build of a site when changes are merged into the main branch ensures that builds occur regularly but not excessively frequently, and that they are only triggered by a trusted user (repo owner).
 This approach works well with the workflow detailed in xref:../a121630-update-and-deployment-workflow.adoc[Update and deployment workflow].
@@ -52,4 +55,4 @@ This is based on the workflow detailed in https://docs.github.com/en/actions/usi
 . Push the changes to content project to the GitHub repo.
 If you need to merge the changes back into the main branch, this should immediately trigger the workflow.
 
-To monitor the workflow in GitHub, select the content repo to which you added the workflow, and click *Actions*.
+To monitor the workflow in GitHub, select the content repo to which you added the workflow, and click btn:[Actions].

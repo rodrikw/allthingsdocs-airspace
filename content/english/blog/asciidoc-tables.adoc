@@ -14,6 +14,7 @@ type: "post"
 A wide range of table styles are possible by combining the AsciiDoc `frame` and `grid` settings.
 
 .Default (frame plus grid)
+[%footer]
 |===
 |Heading A | Heading B |Heading C
 
@@ -24,6 +25,11 @@ A wide range of table styles are possible by combining the AsciiDoc `frame` and 
 |Cell 2A
 |Cell 2B
 |Cell 2C
+
+|Footer 3A
+|Footer 3B
+|Footer 3C
+
 
 |===
 
@@ -234,5 +240,31 @@ It is also possible to specify the horizontal and vertical alignment of text in 
 |Cell 2B
 |Cell 2C
 |Cell 2D
+
+|===
+
+Tables can contain tables:
+
+.Nested table
+[width=75%]
+|===
+|Heading A | Heading B
+
+|Cell 1A
+a|Cell 1B
+
+[width=100%]
+!===
+!Inner table ! Header
+
+! 1
+! 2
+
+
+
+!===
+
+|Cell 2A
+|Cell 2B
 
 |===

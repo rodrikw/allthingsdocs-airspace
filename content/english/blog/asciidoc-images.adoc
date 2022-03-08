@@ -24,5 +24,5 @@ image::/images/blog/kitten.jpg[alt=kitten,width=200]
 They can also have captions:
 
 .A cute kitten
-image::/images/blog/kitten.jpg[alt=kitten,width=200]
+image::../../images/blog/kitten.jpg[alt=kitten,width=200]
 
