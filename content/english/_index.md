@@ -28,9 +28,8 @@ portfolio:
   enable: true
   bg_image: "images/feature-bg.jpg"
   title: "ABOUT THIS SITE"
-  content: "I have recently become particularly interested in a docs-as-code approach combined with a Jamstack architecture. 
-I'm also an AsciiDoc enthusiast. 
-So this site is an attempt to put what I've recently learnt into practice. 
+  content: "I am interested in recent documentation trends such as the docs-as-code approach, use of lightweight markup languages, and sites employing a Jamstack architecture. 
+This site is an attempt to put what I've learnt into practice. 
 I'll be trying out new things and gradually expanding the site. This does mean that the sight might be a bit rough around the edges.
 
 
