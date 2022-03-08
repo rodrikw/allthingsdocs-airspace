@@ -8,7 +8,7 @@ banner:
   content: "I specialise in the design, delivery, and management of technical documentation."
   button:
     enable: false
-    label: "Discover what we do"
+    label: "Discover what I do"
     link: "project"
 
 ############################# About #################################
@@ -16,7 +16,7 @@ about:
   enable: true
   title: "About Me"
   description: "Rodrik Wade"
-  content: "I'm a documentation specialist with more than 20 years’ experience designing and developing training and product documentation, as well as managing training and documentation teams. I have a particular interest in the technologies used to create and deliver online and print documentation.
+  content: "I have over 20 years’ experience designing and developing training and product documentation, as well as managing training and documentation teams. A particular interest is the technologies used to create and deliver online and print documentation.
 
 
 I live in Somerset West, on the outskirts of Cape Town, South Africa."
@@ -28,12 +28,11 @@ portfolio:
   enable: true
   bg_image: "images/feature-bg.jpg"
   title: "ABOUT THIS SITE"
-  content: "I am interested in recent documentation trends such as the docs-as-code approach, use of lightweight markup languages, and sites employing a Jamstack architecture. 
-This site is an attempt to put what I've learnt into practice. 
-I'll be trying out new things and gradually expanding the site. This does mean that the sight might be a bit rough around the edges.
+  content: "I recently started exploring a docs-as-code approach combined with use of a Jamstack architecture to deliver online documentation. 
+I've also become an enthusiast of AsciiDoc plus Antora.
+This site is an attempt to put what I've learnt into practice.
 
-
-I am recording what I've done and what I've learnt along the way in my blog."
+I'll be trying out new things and gradually expanding the site as I go. Read what I've been doing on my blog"
   button:
     enable: true
     label: "View the blog"
