@@ -27,11 +27,14 @@ This is the workflow:
 . Push the changes to GitHub.
 . Create a pull request:
 +
-image::/images/blog/pull-request.png[]
+image::/images/blog/pull-request.png["GitHub Create pull request."]
 This can be initiated in GitHub Desktop, but it does necessitate the GitHub site being opened.
 . Merge the changes into main:
 +
-image::/images/blog/merge-pull-request.png[]
+image::/images/blog/merge-pull-request.png["GitHub Merge pull request."]
 
 Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
 There is an alternative approach in which you merge changes from dev to main on your local Git. The disadvantage to this is that it requires switching to the main branch first, and then I'm apt to forget and start editing the main branch directly.
+
+NOTE: Netlify can be configured so that whenever a pull request is created, a preview is built and deployed.
+This is allows reviewers to see changes before they are published to the public site.

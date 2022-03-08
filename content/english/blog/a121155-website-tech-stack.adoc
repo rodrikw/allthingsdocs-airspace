@@ -38,7 +38,7 @@ I chose Hugo for the following reasons:
 Combining all of this, we have a solution architecture that looks like this:
 
 .Website architecture
-image::/images/blog/website-arch-diagram.svg[]
+image::/images/blog/website-arch-diagram.svg["Diagram showing changes previewed on Hugo Server, then pushed to GitHub, triggering a build deployment on Netlify."]
 
 . Content can be created using any text editor.
 My preferred environment is https://www.jetbrains.com/idea/[IntelliJ IDEA Community edition] with the https://plugins.jetbrains.com/plugin/7391-asciidoc[AsciiDoc plugin].
@@ -49,7 +49,4 @@ The site folder must be initiated as a Git repo.
 In the case of this site, that's on GitHub.
 . When a changes is pushed to the GitHub, this is detected by Netlify.
 The Netlify build environment is instantiated with the necessary components (Hugo, Asciidoctor and so on) and the site is generated.
-. The site contents are then pushed to the Netlify CDN.
-
-
-
+. The site contents are then pushed to https://www.netlify.com/products/edge/[Netlify Edge].
