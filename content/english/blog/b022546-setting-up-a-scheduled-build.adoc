@@ -8,9 +8,13 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify","GitHub"]
 description: "How to set up GitHub to trigger scheduled builds of an Antora project on Netlify."
-draft: false
+draft: true
 type: "post"
 ---
+
+:experimental:
+:source-highlighter: rouge
+
 
 A common approach to updating a doc site is to build the site on a regular automated schedule, for example, daily at midnight.
 Netlify itself has recently introduced https://github.com/netlify/labs/blob/main/features/scheduled-functions/documentation/README.md[scheduled functions] but it's still a beta feature.
@@ -61,6 +65,6 @@ When run, a CURL request containing the buildhook is sent to Netlify, triggering
 You can monitor the workflow in GitHub:
 
 . Select the workflow repo.
-. Click *Actions*:
+. Click btn:[Actions]:
 +
 image::/images/blog/github-workflows.jpg[alt="GitHub workflows"]

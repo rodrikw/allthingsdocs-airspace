@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Hugo","Netlify"]
 description: "A checklist of the items that need to be completed"
-draft: false
+draft: true
 type: "post"
 ---
 

@@ -4,19 +4,22 @@ banner:
   enable: true
   bg_image: "images/slider-bg.jpg"
   bg_overlay: true
-  title: "Content marketing and documentation specialists"
-  content: "We combine extensive experience in developing effective content marketing with expertise in documentation design and delivery."
+  title: "Technical documentation specialist"
+  content: "I specialise in the design, delivery, and management of technical documentation."
   button:
-    enable: true
+    enable: false
     label: "Discover what we do"
     link: "project"
 
 ############################# About #################################
 about:
   enable: true
-  title: "About Us"
-  description: "We specialize in content marketing and product documentation"
-  content: "Together we have more than 40 years’ complementary experience:</br></br>_Mark_ is the content marketing specialist. He conceptualizes, develops, and manages content in traditional marketing, product marketing, sales support, and public relations. His particular strength is brand building, having worked for much of his career at B2B2C fintech companies breaking into international markets. Mark also contributes strong design skills.</br></br>_Rodrik_ is the documentation specialist, with many years’ experience designing and developing training and product documentation. He also has an abiding interest in the technologies used to manage and deliver online and print documentation."
+  title: "About Me"
+  description: "Rodrik Wade"
+  content: "I'm a documentation specialist with more than 20 years’ experience designing and developing training and product documentation, as well as managing training and documentation teams. I have a particular interest in the technologies used to create and deliver online and print documentation.
+
+
+I live in Somerset West, on the outskirts of Cape Town, South Africa."
   image: "images/cairo.jpg"
 
 
@@ -25,13 +28,16 @@ portfolio:
   enable: true
   bg_image: "images/feature-bg.jpg"
   title: "ABOUT THIS SITE"
-  content: "This site, and the accompanying documentation site, aim to showcase what we do. But they are also where we try out new things -- so they may be a bit rough around the edges. 
+  content: "I have recently become particularly interested in a docs-as-code approach combined with a Jamstack architecture. 
+I'm also an AsciiDoc enthusiast. 
+So this site is an attempt to put what I've recently learnt into practice. 
+I'll be trying out new things and gradually expanding the site. This does mean that the sight might be a bit rough around the edges.
 
 
-We will be recording what we have done and what we have learnt along the way in our blog."
+I am recording what I've done and what I've learnt along the way in my blog."
   button:
     enable: true
-    label: "View our blog"
+    label: "View the blog"
     link: "blog"
 
 

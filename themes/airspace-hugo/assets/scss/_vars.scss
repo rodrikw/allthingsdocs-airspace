@@ -18,13 +18,18 @@ $color-jet-70: #222;
 $color-jet-80: #191919;
 $black: #000;
 
-
+/* ~ Sherpa blue: */
 $color-brand-1: #044354;
+/* ~ Silver pink: */
 $color-brand-2: #BCA3A5;
+/* ~ Vermilion: */
 $color-brand-3: #D8340E;
+/* ~ Metallic silver */
 $color-brand-4: #9DA9AF;
-$color-brand-5: purple; // placeholder
-$color-brand-6: green; // placeholder
+/* ~ Pale acqua */
+$color-brand-5: #B3CACE;
+/* ~ Tana (light green) */
+$color-brand-6: #D5E0C7;
 
 
 // UI element colors
@@ -34,7 +39,9 @@ $color-text-dark: $color-jet-70;
 $color-text-light: $color-gray-50; // Suitable for light backgrounds
 $color-text-lighter: $color-smoke-70; // Suitable for dark backgrounds
 $color-text-code: lighten($color-brand-1, 15%);
-
+$color-text-warning: red;
+$color-text-caution: darkorange;
+$color-text-hilight-red: $color-brand-3;
 
 $color-border: #B3CACE;
 $color-bg-navbar: $white; // Top navigation bar
@@ -51,10 +58,7 @@ $color-bg-primary: $color-brand-1;
 $color-bg-primary-dark: darken($color-bg-primary, 10%);
 $color-bg-primary-darker: darken($color-bg-primary, 20%);
 $color-bg-dark: #474747;
-$color-bg-code: $color-smoke-70;
-
-
-
+$color-bg-code: lighten($color-brand-4, 30); // $color-smoke-70;
 
 $color-title-main: darken( $color-brand-4, 5.0);
 
