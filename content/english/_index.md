@@ -32,6 +32,7 @@ portfolio:
 I've also become an enthusiast of AsciiDoc plus Antora.
 This site is an attempt to put what I've learnt into practice.
 
+
 I'll be trying out new things and gradually expanding the site as I go. Read what I've been doing on my blog"
   button:
     enable: true
