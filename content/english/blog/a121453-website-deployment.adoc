@@ -16,7 +16,7 @@ type: "post"
 :source-highlighter: rouge
 
 Once I had some sample content in place, the next step was to deploy the site to Netlify.
-It is possible to set up continuous deployment, which means that Netlify monitors a designated Git repository for changes to a specified build (for example, main or prod) and automatically runs a build whenever changes are detected.
+It is possible to set up continuous deployment, which means that Netlify monitors a designated Git repository for changes to a specified build (typically main) and automatically runs a build whenever changes are detected.
 
 In the case of a Hugo site, the continuous deployment process works as follows:
 

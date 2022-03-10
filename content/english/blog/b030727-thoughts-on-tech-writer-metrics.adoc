@@ -28,10 +28,9 @@ I should say that I'm sceptical about the value of most metrics, especially prod
 Too often, metrics measure only what can be easily measured, not what it is actually important to measure.
 In addition, metrics can have perverse effects, driving unwanted behaviour such as producing unnecessarily long documents in order to increase the writer's word count (similar to counting the number of lines of code that a developer produces).
 
-Productivity metrics also need to take into account quality.
-Jack Barr and Stephanie Rosenbaum <<barr>> define productivity with this equation:
+As Tom Johnson points out in https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?], productivity metrics need to take into account quality. He quotes Jack Barr and Stephanie Rosenbaum, who define productivity as follows:
 
-[quote,"Barr, J.P. and Rosenbaum, S. (2003) Documentation and Training Productivity Benchmarks, Volume 50, No. 4, Nov 2003."]
+[quote,"Barr, J.P. and Rosenbaum, S. (2003) Documentation and Training Productivity Benchmarks, Volume 50, No. 4, Nov 2003. p471."]
 ____
 (Quality × Quantity) ÷ Time = Productivity
 ____
@@ -99,7 +98,4 @@ For simplicity's sake, count each time a document is sent to the reviewer as one
 NOTE: This metric might have the unintended consequence of dissuading technical writers from sending their documentation for subsequent reviews.
 
 |===
-
-
-
 
