@@ -1,0 +1,30 @@
+---
+title: "Going live"
+date: 2022-03-11T13:28:28+02:00
+author: "Rodrik Wade"
+image: "images/blog/plunge.jpg"
+image_caption: "<a href='https://unsplash.com/photos/oVVx567Z0zs'>Spitting Cave, Hawaii</a> by <a href='https://unsplash.com/@kekaiahsam'>Kekai AhSam</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Domain registration","Netlify"]
+description: "The process of registering a domain name through Netlify and going live."
+draft: false
+type: "post"
+---
+
+:experimental:
+:source-highlighter: rouge
+
+Today I registered `allthingsdocs.com` through Netlify.
+The registration process is remarkably simple:
+
+. Log in to Netlify.
+. Choose the site for which you wish to register a domain.
+The assumption is that you already have a site with a `.netlify.app` address.
+. Click btn:[Set up a custom domain].
+. Enter your proposed domain name and verify it.
+If the domain name is available, you will be quoted a registration fee.
+. Accept and enter your credit card details.
+
+A few seconds later your registration will be complete, including an SSL/TLS certificate provided by https://letsencrypt.org/[Let's Encrypt], and the site will be live.
+By far the hardest part for me was deciding on a name -- I'm still in two minds about the name but I needed to take the plunge.
