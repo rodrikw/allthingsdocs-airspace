@@ -72,7 +72,7 @@
 
 
 .social-icons {
-  margin-top: 40 * $rem-base;
+  margin-top: 0; // reduced from 40 * rembase
 
   li {
     display: inline-block;
