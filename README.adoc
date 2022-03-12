@@ -1,5 +1,5 @@
-= interloquio-airspace
+= allthingsdocs-airspace
 
 image:https://api.netlify.com/api/v1/badges/bf7dd0d5-cdcc-4e9b-97cd-54742bab4c28/deploy-status[Deploy Status,link=https://app.netlify.com/sites/allthingsdocs/deploys]
 
-The Interloquio Hugo site using a modified version of the Airspace theme.
+The All Things Docs Hugo site using a modified version of the Airspace theme.
