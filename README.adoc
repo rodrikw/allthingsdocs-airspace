@@ -1,3 +1,14 @@
 = interloquio-airspace
+:url-netlify-deploys: https://app.netlify.com/sites/antora-docs/deploys
+
+image:https://www.netlify.com/img/global/badges/netlify-dark.svg[Deploy Status,45,20,link={url-netlify-deploys}]
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf7dd0d5-cdcc-4e9b-97cd-54742bab4c28/deploy-status)](https://app.netlify.com/sites/allthingsdocs/deploys)
+
+image:https://api.netlify.com/api/v1/badges/bf7dd0d5-cdcc-4e9b-97cd-54742bab4c28/deploy-status[Deploy Status,link=https://app.netlify.com/sites/allthingsdocs/deploys]
+
 
 The Interloquio Hugo site using a modified version of the Airspace theme.
+
+
