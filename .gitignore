@@ -1,2 +1,5 @@
 resources/_gen/
 _gen
+.env
+public
+/Algolia-API-keys.txt
