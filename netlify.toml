@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npm run build:prod"
+  command = "hugo --minify --gc && npm run algolia"
   
 [build.environment]
   HUGO_VERSION = "0.89.4"
