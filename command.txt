@@ -1,1 +1,7 @@
 hugo server -t navigator-hugo -w -D
+hugo server -t airspace-hugo -w -D
+
+
+
+
+command = "hugo --minify --gc && npm run atomic-algolia"
