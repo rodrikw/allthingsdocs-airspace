@@ -17,21 +17,21 @@ Below is a list of the items that need to be completed (some of the items are as
 * [x] Create a Hugo site
 * [x] Add a template
 * [x] Customize the template's CSS to handle AsciiDoc
-* [x] Customize the template's CSS to reflect Interloquio's branding
+* [x] Customize the template's CSS to reflect own branding
 * [x] Deploy site to Netlify for development purposes
 * [x] Enable the contact page form
 * [x] Modify blog layout to allow image attribution to be specified
 * [x] Modify the service layout to use SVG icons instead of Fontawsome icons
 * [x] Fix the formatting of dates
 * [x] Add comment functionality to the blog
-* [ ] Develop a brand logo (Mark)
-* [ ] Develop brand icons (Mark)
-* [ ] Legal stuff (e.g. data collection notice)
-* [ ] Finalize site copy
-* [ ] Register a domain name (through Netlify)
-* [ ] SSL certificate
-* [ ] Enable analytics (Netlify)
+* [ ] Develop a brand logo
+* [ ] Develop brand icons
+* [x] Finalize MVP site copy
+* [x] Register a domain name (through Netlify)
+* [x] SSL certificate
+* [x] Enable analytics (Netlify)
 * [ ] Enable search (Algolia)
+* [ ] Legal stuff (e.g. data collection notice)
 * [ ] Link site to the documentation site
 * [ ] GDPR/POPI notice (if required)
 

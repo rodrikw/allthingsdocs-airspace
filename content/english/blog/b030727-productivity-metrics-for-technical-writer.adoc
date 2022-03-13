@@ -3,7 +3,7 @@ title: "Productivity metrics for technical writers"
 date: 2022-03-07T11:02:27+02:00
 author: "Rodrik Wade"
 image: "images/blog/dashboard.jpg"
-image_caption: "<a href='https://unsplash.com/photos/MHIw0nSxCR4'>Untitled</a> by <a href='https://unsplash.com/@condorito1953'>Arie Wubben</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+image_caption: "<a href='https://unsplash.com/photos/MHIw0nSxCR4'>Assorted dial-meter board</a> by <a href='https://unsplash.com/@condorito1953'>Arie Wubben</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Managerial"]
 tags: ["Metrics","Productivity"]
@@ -12,7 +12,7 @@ draft: true
 type: "post"
 ---
 
-Last year as part of project to detail a documentation strategy for a client, I was asked to include a section on metrics.
+Last year, as part of project to detail a documentation strategy for a client, I was asked to include a section on metrics.
 These included metrics for the following:
 
 [horizontal]
@@ -26,7 +26,7 @@ In this blog post I'll focus on the first of these.
 
 I should say that I'm sceptical about the value of most metrics, especially productivity metrics.
 Too often, metrics measure only what can be easily measured, not what it is actually important to measure.
-In addition, metrics can have perverse effects, driving unwanted behaviour such as producing unnecessarily long documents in order to increase the writer's word count (similar to counting the number of lines of code that a developer produces).
+In addition, metrics may have perverse effects, driving unwanted behaviour such as producing unnecessarily long documents in order to increase the writer's word count (similar to counting the number of lines of code that a developer produces).
 
 As Tom Johnson points out in https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?], productivity metrics need to take into account quality. He quotes Jack Barr and Stephanie Rosenbaum, who define productivity as follows:
 
@@ -91,7 +91,7 @@ Assuming that writers, developers, and architects all log time, this metric can 
 |<{nbsp}3
 |This is a similar metric to *Average documentation/{zwsp}review ratio*.
 Although review/{zwsp}revision iterations are inevitable, they should be kept to a minimum.
-Ideally, they should average less than three, that is, the reviewer should not normally need to review a document more than twice (initial review and approval).
+Ideally, they should average less than three, that is, the reviewer should not normally need to review a document more than twice (initial review and follow-up review leading to approval).
 
 For simplicity's sake, count each time a document is sent to the reviewer as one iteration, regardless of how in-depth the review is.
 
@@ -99,3 +99,4 @@ NOTE: This metric might have the unintended consequence of dissuading technical 
 
 |===
 
+I'd be very interested to here whether you employ productivity metrics and if so, what form they take.
