@@ -24,7 +24,7 @@ min = "0.87.0"
 
 ############################# Outputs ##############################
 [outputs]
-home = ["HTML", "WebAppManifest"]
+home = ["HTML", "WebAppManifest","Algolia"]
 
 ############################# Imaging ##############################
 [imaging]
@@ -72,3 +72,9 @@ suffixes = [""]
 [outputFormats.WebAppManifest]
 mediaType = "application/manifest+json"
 rel = "manifest"
+
+[outputFormats.Algolia]
+mediaType = "application/json"
+baseName = "algolia"
+isPlainText = true
+notAlternative = true
