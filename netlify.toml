@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo && npm run atomic-algolia"
+  command = "hugo --minify --gc && npm run atomic-algolia"
   
 [build.environment]
   HUGO_VERSION = "0.89.4"
