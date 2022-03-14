@@ -78,3 +78,30 @@
     }
   });
 </script>
+
+<!-- Algolia search -->
+
+<!-- Load Algolia scripts -->
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.js"></script>
+<!-- Initialise search -->
+<script>
+  var client = algoliasearch("5DCZ8YTBTP","12931bd9a52d9bd61f5ab9e1a4c039c4");
+  var index = client.initIndex("prod_AllThingsDocs");
+  autocomplete('#search-input', {
+    hint: false,    
+  }, [
+    {
+      source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+        displayKey: 'title',
+        templates: {
+            suggestion: function(suggestion) {
+              return suggestion._highlightResult.title.value;
+            }
+          }
+      }
+    ]).on("autocomplete:selected",function(event, suggestion, dataset, context) {
+      console.log(event, suggestion, dataset, context);
+      window.location.href = suggestion.href;
+    });
+</script>
