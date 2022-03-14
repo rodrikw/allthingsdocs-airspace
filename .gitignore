@@ -3,3 +3,4 @@ _gen
 .env
 public
 /Algolia-API-keys.txt
+node_modules
