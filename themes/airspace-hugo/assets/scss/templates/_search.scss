@@ -1,24 +1,38 @@
 input#search-input {
     border: 1px solid $color-border;
-    border-radius: 4px;
+    border-radius: 4 * $rem-base;
     color: $color-text-base;
     font-size: inherit;
     height: 2em;
     box-sizing: border-box;
-    padding-left: 0.5em;
-    padding-right: 0.5em;    
-    vertical-align:text-top;    
+    padding: (4 * $rem-base) (6 * $rem-base);    
+    vertical-align: text-top;    
 }
 
 input#search-button {
-    background-color: $color-bg-lighter;
-    color: $color-text-base;
+    background-color: $white;
     border: 1px solid $color-border;
+    border-radius: 4 * $rem-base;
+    color: $color-text-light;
+    display: inline-block;
+    font-size: inherit;
     height: 2em;
-    vertical-align:text-top;
-    border-radius: 4px;
-    padding-left: 0.5em;
-    padding-right: 0.5em; 
+    padding: (4 * $rem-base) (6 * $rem-base);
+    vertical-align: text-top;
+    @include transition-multi (background-color 0.3s ease, border 0.3s ease, color 0.1s ease);
+
+    &:hover {
+        color: $color-brand-1;
+        background: rgba($color-brand-1, 0.3);
+        border: 1px solid rgba($color-brand-1, 0.3);
+      }
+    
+    &:active {
+    color: $color-brand-1;
+    border: 1px solid $color-brand-1;
+    background: $white;
+    @include transition (background-color, 0.1s, ease);
+    }
 
 
 
