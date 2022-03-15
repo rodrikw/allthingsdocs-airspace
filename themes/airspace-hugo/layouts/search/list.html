@@ -1,9 +1,18 @@
 {{ define "main" }}
-{{ partial "search-form.html" . }}
 
-<ul id="results">
-    <li>
-        Enter a keyword above to search this site.
-    </li>
-</ul>
+{{ partial "page-title.html" . }}
+
+<section class="section">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="section-title text-center">
+                <ul id="search-results"><div class="container">
+                    <li>
+                        Enter a keyword in the search field above to search this site.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}
