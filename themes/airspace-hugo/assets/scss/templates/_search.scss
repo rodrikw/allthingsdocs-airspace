@@ -38,7 +38,15 @@ input#search-button {
 
 }ul#results {
     li {
-        font-size: $font-size;
         color: $color-text-base;
+        font-size: $font-size;
+        margin-bottom: 2em;
+        
+
+        a {
+            font-size: $font-size-bigger;            
+        }
     }
+
+
 } 
