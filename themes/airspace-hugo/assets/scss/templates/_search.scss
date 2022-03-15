@@ -36,4 +36,9 @@ input#search-button {
 
 
 
-}
+}ul#results {
+    li {
+        font-size: $font-size;
+        color: $color-text-base;
+    }
+} 
