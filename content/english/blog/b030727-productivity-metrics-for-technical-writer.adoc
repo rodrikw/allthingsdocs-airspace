@@ -12,7 +12,7 @@ draft: true
 type: "post"
 ---
 
-Last year, as part of project to detail a documentation strategy for a client, I was asked to include a section on metrics.
+Last year, as part of a project to detail a documentation strategy for a client, I was asked to include a section on metrics.
 These included metrics for the following:
 
 [horizontal]

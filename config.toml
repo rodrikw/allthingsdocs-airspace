@@ -1,3 +1,4 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-GB-oxendict'
 title = 'All Things Docs'
+theme = 'airspace-hugo'

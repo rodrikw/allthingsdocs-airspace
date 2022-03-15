@@ -17,7 +17,7 @@
         </a>
       </div>
 
-      <div class="collapse navbar-collapse" id="navigation">
+        <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav navbar-right">
           <!-- menu active -->
           {{ $currentPage := . }}
@@ -75,7 +75,11 @@
             </select>
             {{ end }}
           </li>
+          <li>
+            {{ partial "search-form.html" . }}
+          </li>
         </ul>
+        
       </div>
     </nav>
   </div>
