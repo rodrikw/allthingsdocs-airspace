@@ -8,11 +8,20 @@
 </form>
 
 <template id="search-result" hidden>
-    <article class="content post">
-        <h2 class="post-title"><a class="summary-title-link"></a></h2>
-        <summary class="summary"></summary>
-        <div class="read-more-container">
-            <a class="read-more-link">Read More »</a>
-        </div>
-    </article>
+    {{ partial "page-title.html" . }}
+        <section class="section">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="text-center">
+                        <article class="content post">
+                            <h2 class="post-title"><a class="summary-title-link"></a></h2>
+                            <summary class="summary"></summary>
+                            <div class="read-more-container">
+                                <a class="read-more-link">Read More »</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 </template>
