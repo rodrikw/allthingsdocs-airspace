@@ -6,22 +6,28 @@
 
 .search {
   display: flex;
+  border: 1px solid $color-border;
+  border-radius: 0.5em;
+  height: 2em;
   justify-content: center;
-  border: 1px solid black;
-  min-width: 1em;
-  height: 1em;
   line-height: 1;
-  border-radius: 0.75em;
-  padding: 0.25em;
+  margin-top: 0.4em;
+  min-width: 2em;  
+  padding: 0.25em;  
 }
 
 .search-icon {
-  color: black;
   cursor: pointer;
   width: 1em;
   height: 1em;
   margin: 0;
-  vertical-align: bottom;
+  vertical-align: middle;
+
+  color: $color-text-base;
+  transition: color 1.5s;
+  &:hover {
+    color: $color-brand-3;
+  }
 }
 
 .search[data-running] .search-icon {
@@ -29,13 +35,14 @@
 }
 
 .search-input {
+  appearance: textfield;
   border-width: 0;
   padding: 0;
   margin: 0;
   width: 0;
   outline: none;
   background: transparent;
-  transition: width 0.5s;
+  transition: width 0.5s;  
 }
 
 .search-input:focus {
