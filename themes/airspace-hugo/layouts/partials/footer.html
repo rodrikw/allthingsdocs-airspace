@@ -3,8 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="footer-menu">
-          <ul>
-            {{ partial "search-index.html" . }}
+          <ul>            
             {{ range site.Menus.footer }}
             <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
             {{ end }}
