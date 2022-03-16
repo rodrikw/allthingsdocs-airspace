@@ -91,7 +91,8 @@ window.addEventListener("DOMContentLoaded", function(event)
     var results = index.search(term);
 
     // The element where search results should be displayed, adjust as needed.
-    var target = document.querySelector(".main-inner");
+    // var target = document.querySelector(".main-inner");
+    var target = document.querySelector("div.page-wrapper");
 
     while (target.firstChild)
       target.removeChild(target.firstChild);
