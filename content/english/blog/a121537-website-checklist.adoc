@@ -29,6 +29,7 @@ Below is a list of the items that need to be completed (some of the items are as
 * [x] SSL certificate
 * [x] Enable analytics (Netlify)
 * [x] Enable search (lunr.js)
+* [ ] Implement Webmentions
 * [ ] Develop a brand logo
 * [ ] Develop brand icons
 * [ ] Legal stuff (e.g. data collection notice)
