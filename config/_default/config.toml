@@ -24,7 +24,7 @@ min = "0.87.0"
 
 ############################# Outputs ##############################
 [outputs]
-home = ["HTML", "WebAppManifest","Algolia"]
+home = ["HTML", "WebAppManifest","SearchIndex"]
 
 ############################# Imaging ##############################
 [imaging]
@@ -66,15 +66,12 @@ suffixes = ["webmanifest"]
 delimiter = ""
 suffixes = [""]
 
-
 ############################ Output Format ###########################
 [outputFormats]
 [outputFormats.WebAppManifest]
 mediaType = "application/manifest+json"
 rel = "manifest"
 
-[outputFormats.Algolia]
+[outputFormats.SearchIndex]
 mediaType = "application/json"
-baseName = "algolia"
-isPlainText = true
-notAlternative = true
+baseName = "search"
