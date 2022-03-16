@@ -1,4 +1,4 @@
-// Styles for the search field, button and results page.
+// Styles for the search field  , button and results page.
 input#search-input {
     border: 1px solid $color-border;
     border-radius: 4 * $rem-base;
@@ -40,7 +40,9 @@ input#search-button {
 
 
 
-}ul#results {
+}
+
+ul#results {
     li {
         color: $color-text-base;
         font-size: $font-size;

@@ -24,13 +24,13 @@ Below is a list of the items that need to be completed (some of the items are as
 * [x] Modify the service layout to use SVG icons instead of Fontawsome icons
 * [x] Fix the formatting of dates
 * [x] Add comment functionality to the blog
-* [ ] Develop a brand logo
-* [ ] Develop brand icons
 * [x] Finalize MVP site copy
 * [x] Register a domain name (through Netlify)
 * [x] SSL certificate
 * [x] Enable analytics (Netlify)
-* [ ] Enable search (Algolia)
+* [x] Enable search (lunr.js)
+* [ ] Develop a brand logo
+* [ ] Develop brand icons
 * [ ] Legal stuff (e.g. data collection notice)
 * [ ] Link site to the documentation site
 * [ ] GDPR/POPI notice (if required)

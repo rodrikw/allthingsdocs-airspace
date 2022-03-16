@@ -1,0 +1,127 @@
+---
+title: "Adding search functionality using lunr.js"
+date: 2022-03-15T15:03:25+02:00
+author: "Rodrik Wade"
+image: "images/blog/hebrew-scroll.jpg"
+image_caption: "<a href='https://unsplash.com/photos/eQ2Z9ay9Wws'>Historic Hebrew scroll from Łódź, Poland</a> by <a href='https://unsplash.com/@rocinante_11'>Mick Haupt</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Search","lunr.js"]
+description: "How search functionality was added using lunr.js."
+draft: true
+type: "post"
+---
+
+:experimental:
+:source-highlighter: rouge
+
+In the case of a static website there is no backend database that can be queried.
+Instead, delivering search functionality relies on generating an index of the contents.
+
+There are two main approaches to doing this:
+
+[horizontal]
+Algolia::
+A search API that relies on the site contents being indexed and the index being uploaded to Algolia's servers.
+When a user initiates a search, the search is performed by Algolia and the results are returned to the website.
+This means that search is dependent on a connection to Algolia.
+The main advantage to using Algolia is that their APIs and widgets can provide a very slick search experience.
+In addition, Algolia supplies sophisticated analytics.
++
+Algolia has a free tier that requires only the display of their logo.
+With some care taken to minimize the index data uploaded to their servers, this allocation is likely to suffice for small sites.
+
+lunr.js::
+A small, full-text search library for use in browsers. lunr.js enables users to search data directly in the client without requiring any interaction with the server.
+This results in quick searches that can be performed even if the network connection to the server is lost.
+The disadvantage is more data needs to be downloaded initially. lunr.js does not offer the kinds analytic functionality that Algolia does, but it's free.
+
+Initially, I intended to implement an Algolia-based search for this site.
+My hope was that the API would result in a simpler process delivering a more compelling interface.
+I followed the detailed guidance provided Tom Bennett in his blog post https://www.bennet.org/blog/site-search-jamstack-hugo-algolia/[Site search on the JAMstack with Hugo & Algolia].
+After some minor hurdles, I was able to get the basic search working, but then I really struggled to work out how to modify the search and refine user interface.
+The Algolia documentation is comprehensive but still left me wanting more basic examples.
+In the end I decided to try lunr.js.
+
+I followed the approach detailed by Victoria Drake in her blog post https://victoria.dev/blog/add-search-to-hugo-static-sites-with-lunr[Add search to Hugo static sites with Lunr].
+I found her instructions very clear, and relatively quickly I had a version working.
+I diverged from Victoria's approach only in using an online service to minify the `lunr.js` file.
+
+NOTE: The search doesn't work in the preview provided by Hugo server, so I used Netlify's preview functionality to check that everything was working before deploying.
+
+Sometimes when following procedures, I struggle to know exactly where files should be placed in a Hugo site structure.
+This is where I placed the files files that Victoria's procedure requires:
+
+.File locations
+....
+\<root-site-folder>\content\english\search\_index.md
+\<root-site-folder>\static\js\lunr.min.js
+\<root-site-folder>\static\js\search.js
+\<root-site-folder>\themes\<my-site-theme>\assets\scss\style.scss -- modified to include @import 'templates/_search.scss';
+\<root-site-folder>\themes\<my-site-theme>\assets\scss\templates\_search.scss -- added to style the search elements
+\<root-site-folder>\themes\<my-site-theme>\layouts\partials\footer.html -- modified to include search-index.html.
+\<root-site-folder>\themes\<my-site-theme>\layouts\partials\header.html -- modified to include search-form.html.
+\<root-site-folder>\themes\<my-site-theme>\layouts\partials\search-form.html
+\<root-site-folder>\themes\<my-site-theme>\layouts\partials\search-index.html
+\<root-site-folder>\themes\<my-site-theme>\layouts\search\list.html
+....
+
+The `_search.scss` file contains some styling of the input box and button, and the search results:
+
+._search.scss
+[source,scss]
+----
+// Styles for the search field, button and results page.
+input#search-input {
+    border: 1px solid $color-border;
+    border-radius: 4 * $rem-base;
+    color: $color-text-base;
+    display: inline-flex;
+    font-size: inherit;
+    height: 2em;
+    box-sizing: border-box;
+    margin-top: (4 * $rem-base);
+    padding: (4 * $rem-base) (6 * $rem-base);
+    vertical-align: text-top;
+}
+
+input#search-button {
+    background-color: $white;
+    border: 1px solid $color-border;
+    border-radius: 4 * $rem-base;
+    color: $color-text-light;
+    display: inline-flex;
+    font-size: inherit;
+    height: 2em;
+    margin-top: (4 * $rem-base);
+    padding: (4 * $rem-base) (6 * $rem-base);
+    vertical-align: text-top;
+    @include transition-multi (background-color 0.3s ease, border 0.3s ease, color 0.1s ease);
+
+    &:hover {
+        color: $color-brand-1;
+        background: rgba($color-brand-1, 0.3);
+        border: 1px solid rgba($color-brand-1, 0.3);
+      }
+
+    &:active {
+    color: $color-brand-1;
+    border: 1px solid $color-brand-1;
+    background: $white;
+    @include transition (background-color, 0.1s, ease);
+    }
+
+}
+
+ul#results {
+    li {
+        color: $color-text-base;
+        font-size: $font-size;
+        margin-bottom: 2em;
+
+        a {
+            font-size: $font-size-bigger;
+        }
+    }
+}
+----
