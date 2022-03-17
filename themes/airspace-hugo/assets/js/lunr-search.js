@@ -97,13 +97,13 @@ window.addEventListener("DOMContentLoaded", function(event)
     while (target.firstChild)
       target.removeChild(target.firstChild);
 
-    // Added to insert serac-result-start template
+    // Added to insert search-result-start template
     var template = document.getElementById("search-result-start");
     var element = template.content.cloneNode(true);
     target.appendChild(element);    
     // End added
 
-    var title
+    var title = document.createElement("h1");
     title.id = "search-results";
     title.className = "list-title";
 
