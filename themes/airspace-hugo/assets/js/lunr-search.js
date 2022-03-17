@@ -97,15 +97,11 @@ window.addEventListener("DOMContentLoaded", function(event)
     while (target.firstChild)
       target.removeChild(target.firstChild);
 
-    // Added
-
+    // Added to insert serac-result-start template
     var template = document.getElementById("search-result-start");
     var element = template.content.cloneNode(true);
-    element.querySelector("#results-title").textContent = "Hello2";
     target.appendChild(element);    
-    
-    
-    //
+    // End added
 
     var title = document.createElement("h2");
     title.id = "search-results";
@@ -136,6 +132,12 @@ window.addEventListener("DOMContentLoaded", function(event)
     title.scrollIntoView(true);
 
     searchDone();
+
+    // Added to insert search-result-end template
+    var template = document.getElementById("search-result-end");
+    var element = template.content.cloneNode(true);
+    target.appendChild(element);    
+    // End added
   }
 
   // This matches Hugo's own summary logic:
