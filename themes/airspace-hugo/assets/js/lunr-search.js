@@ -101,8 +101,8 @@ window.addEventListener("DOMContentLoaded", function(event)
 
     var template = document.getElementById("search-result-start");
     var element = template.content.cloneNode(true);
-    element.querySelector(".summary").textContent = "Hello2";
-    target.appendChild(element);
+    element.querySelector("#results-title").textContent = "Hello2";
+    target.appendChild(element);    
     
     
     //
