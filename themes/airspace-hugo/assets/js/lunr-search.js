@@ -103,18 +103,20 @@ window.addEventListener("DOMContentLoaded", function(event)
     target.appendChild(element);    
     // End added
 
-    var title = document.createElement("h2");
-    title.id = "search-results";
-    title.className = "list-title";
+    var subtitle
+    // subtitle.id = "search-results-description";
+    // subtitle.className = "list-title";
 
     if (results.length == 0)
-      title.textContent = `No results found for “${term}”`;
+      subtitle.textContent = `No results found for “${term}”`;
     else if (results.length == 1)
-      title.textContent = `Found one result for “${term}”`;
+      subtitle.textContent = `Found one result for “${term}”`;
     else
-      title.textContent = `Found ${results.length} results for “${term}”`;
-    target.appendChild(title);
-    document.title = title.textContent;
+      subtitle.textContent = `Found ${results.length} results for “${term}”`;
+    // target.appendChild(title);
+    // document.title = title.textContent;
+
+    element.querySelector("search-results-description") = subtitle.textContent;
 
     var template = document.getElementById("search-result");
     for (var result of results)
@@ -129,7 +131,7 @@ window.addEventListener("DOMContentLoaded", function(event)
       element.querySelector(".summary").textContent = truncate(doc.content, 70);
       target.appendChild(element);
     }
-    title.scrollIntoView(true);
+    // title.scrollIntoView(true);
 
     searchDone();
 
