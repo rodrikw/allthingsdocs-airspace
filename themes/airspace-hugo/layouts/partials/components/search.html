@@ -8,10 +8,18 @@
 
 <!-- Template for the start of the results section. -->
 <template id="search-result-start" hidden>
-    <section class="section">
+    <section class="page-title bg-2" style="background-image: url('{{ .Params.bg_image | relURL }}');">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block">
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Params.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 </template>
 
 <!-- Template for presenting each search results. -->
@@ -27,9 +35,5 @@
 
 <!-- Template for the end of the results section. -->
 <template id="search-result-end" hidden>
-                    <p>Start of END</p>
-                </div>
-            </div>
-        </div>
-    </section>  
+    <p>Start of END</p>                
 </template>
