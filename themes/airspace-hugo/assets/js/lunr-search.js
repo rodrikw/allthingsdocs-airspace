@@ -104,8 +104,8 @@ window.addEventListener("DOMContentLoaded", function(event)
     // End added
 
     var subtitle
-    // subtitle.id = "search-results-description";
-    // subtitle.className = "list-title";
+    subtitle.id = "search-results-description";
+    subtitle.className = "list-title";
 
     if (results.length == 0)
       subtitle.textContent = `No results found for “${term}”`;
@@ -113,8 +113,8 @@ window.addEventListener("DOMContentLoaded", function(event)
       subtitle.textContent = `Found one result for “${term}”`;
     else
       subtitle.textContent = `Found ${results.length} results for “${term}”`;
-    // target.appendChild(title);
-    // document.title = title.textContent;
+    target.appendChild(subtitle);
+    document.title = subtitle.textContent;
 
     element.querySelector("search-results-description") = subtitle.textContent;
 
