@@ -6,7 +6,14 @@
     <input type="search" id="search-input" class="search-input">
 </form>
 
-<!-- Template for presenting search results -->
+<!-- Template for the start of the results section. -->
+<template id="search-result-start" hidden>
+    <div>
+        <h2>HELLO</h2>
+    </div>
+</template>
+
+<!-- Template for presenting each search results. -->
 <template id="search-result" hidden>       
     <section class="section">
         <div class="container">
@@ -24,3 +31,11 @@
         </div>
     </section>                    
 </template>
+
+<!-- Template for the end of the results section. -->
+<template id="search-result-end" hidden>
+    <div>
+        <h2>GOODBYE</h2>
+    </div>
+</template>
+
