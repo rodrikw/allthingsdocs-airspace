@@ -7,19 +7,7 @@
 </form>
 
 <!-- Template for presenting search results -->
-<template id="search-result" hidden>
-    <section class="page-title bg-2" style="background-image: url('{{ .Params.bg_image | relURL }}');">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="block">
-                <h1>{{ .Title }}</h1>
-                <p>{{ .Params.description }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>    
+<template id="search-result" hidden>       
     <section class="section">
         <div class="container">
             <div class="row">
