@@ -104,7 +104,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     // End added
 
     var title
-    title.id = "search-results-description";
+    title.id = "search-results";
     title.className = "list-title";
 
     if (results.length == 0)
@@ -116,7 +116,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     target.appendChild(title);
     document.title = title.textContent;
 
-    //element.querySelector("search-results-description") = subtitle.textContent;
+    // element.querySelector("search-results") = subtitle.textContent;
 
     var template = document.getElementById("search-result");
     for (var result of results)
