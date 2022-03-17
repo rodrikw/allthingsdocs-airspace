@@ -90,7 +90,7 @@ window.addEventListener("DOMContentLoaded", function(event)
   {
     var results = index.search(term);
 
-    // The element where search results should be displayed, adjust as needed.
+    // The element where search results should be displayed, adjust as required.
     // var target = document.querySelector(".main-inner");
     var target = document.querySelector("main");
 
