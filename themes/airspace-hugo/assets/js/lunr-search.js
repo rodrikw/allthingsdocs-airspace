@@ -99,7 +99,8 @@ window.addEventListener("DOMContentLoaded", function(event)
 
     // Added
 
-    var starttemplate = document.getElementById("search-result-start");
+    var template = document.getElementById("search-result-start");
+    
     
     //
 
