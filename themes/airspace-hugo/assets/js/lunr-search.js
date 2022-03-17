@@ -97,7 +97,13 @@ window.addEventListener("DOMContentLoaded", function(event)
     while (target.firstChild)
       target.removeChild(target.firstChild);
 
-    var title = document.createElement("h1");
+    // Added
+
+    var starttemplate = document.getElementById("search-result-start");
+    
+    //
+
+    var title = document.createElement("h2");
     title.id = "search-results";
     title.className = "list-title";
 
