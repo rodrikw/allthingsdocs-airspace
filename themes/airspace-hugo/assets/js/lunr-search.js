@@ -100,7 +100,8 @@ window.addEventListener("DOMContentLoaded", function(event)
     // Added
 
     var template = document.getElementById("search-result-start");
-    var element = template.content.cloneNode(true)
+    var element = template.content.cloneNode(true);
+    element.querySelector(".summary").textContent = "Hello2";
     
     
     //
