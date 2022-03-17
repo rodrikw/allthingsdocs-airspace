@@ -103,20 +103,20 @@ window.addEventListener("DOMContentLoaded", function(event)
     target.appendChild(element);    
     // End added
 
-    var subtitle
-    subtitle.id = "search-results-description";
-    subtitle.className = "list-title";
+    var title
+    title.id = "search-results-description";
+    title.className = "list-title";
 
     if (results.length == 0)
-      subtitle.textContent = `No results found for “${term}”`;
+      title.textContent = `No results found for “${term}”`;
     else if (results.length == 1)
-      subtitle.textContent = `Found one result for “${term}”`;
+      title.textContent = `Found one result for “${term}”`;
     else
-      subtitle.textContent = `Found ${results.length} results for “${term}”`;
-    target.appendChild(subtitle);
-    document.title = subtitle.textContent;
+      title.textContent = `Found ${results.length} results for “${term}”`;
+    target.appendChild(title);
+    document.title = title.textContent;
 
-    element.querySelector("search-results-description") = subtitle.textContent;
+    //element.querySelector("search-results-description") = subtitle.textContent;
 
     var template = document.getElementById("search-result");
     for (var result of results)
