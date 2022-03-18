@@ -9,8 +9,7 @@
   border: 1px solid $color-border;
   border-radius: 0.5em;
   height: 2em;
-  justify-content: center;
-  // align-items: center;
+  justify-content: center;  
   line-height: 1;
   margin-top: 0.4em;
   min-width: 2em;  
@@ -49,4 +48,13 @@
 .search-input:focus {
   margin-left: 0.5em;
   width: 10em;
+}
+
+
+// Search results
+
+h2#search-results {
+  color: $color-brand-1;
+  font-size: $h2-sm;
+
 }
