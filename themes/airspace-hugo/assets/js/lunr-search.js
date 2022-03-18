@@ -97,7 +97,13 @@ window.addEventListener("DOMContentLoaded", function(event)
     while (target.firstChild)
       target.removeChild(target.firstChild);
 
-    var title = document.createElement("h1");
+    // Added to insert search-result-start template
+    var template = document.getElementById("search-result-title");
+    var element = template.content.cloneNode(true);
+    target.appendChild(element);    
+    // End added
+
+    var title = document.createElement("h2");
     title.id = "search-results";
     title.className = "list-title";
 
