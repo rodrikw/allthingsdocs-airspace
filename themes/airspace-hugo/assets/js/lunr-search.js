@@ -95,19 +95,13 @@ window.addEventListener("DOMContentLoaded", function(event)
     var target = document.querySelector("main");
 
     while (target.firstChild)
-      target.removeChild(target.firstChild);
+      target.removeChild(target.firstChild);    
 
-    // Added to insert search-result-start template
-    var template = document.getElementById("search-result-title");
-    var element = template.content.cloneNode(true);
-    element.querySelector("#search-result-description").textContent = "Updated wording";  
-    target.appendChild(element);
-      
-    // End added
-
+    /*
     var title = document.createElement("h2");
     title.id = "search-results";
     title.className = "list-title";
+    */
 
     if (results.length == 0)
       title.textContent = `No results found for “${term}”`;
@@ -115,7 +109,7 @@ window.addEventListener("DOMContentLoaded", function(event)
       title.textContent = `Found one result for “${term}”`;
     else
       title.textContent = `Found ${results.length} results for “${term}”`;
-    target.appendChild(title);
+    // target.appendChild(title);
     document.title = title.textContent;
 
 
