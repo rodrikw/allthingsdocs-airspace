@@ -100,7 +100,8 @@ window.addEventListener("DOMContentLoaded", function(event)
     // Added to insert search-result-start template
     var template = document.getElementById("search-result-title");
     var element = template.content.cloneNode(true);
-    target.appendChild(element);    
+    target.appendChild(element);
+    element.querySelector("#search-result-description").textContent = "Updated wording";    
     // End added
 
     var title = document.createElement("h2");
@@ -116,12 +117,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     target.appendChild(title);
     document.title = title.textContent;
 
-    // Added
-
-    element.querySelector("#search-result-description").textContent = "HELLO";
-
-    // End Added
-
+    
     var template = document.getElementById("search-result");
     for (var result of results)
     {
