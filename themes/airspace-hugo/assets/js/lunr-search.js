@@ -118,6 +118,15 @@ window.addEventListener("DOMContentLoaded", function(event)
     target.appendChild(title);
     document.title = title.textContent;
 
+
+    // Added to insert search-result-start template
+    var template = document.getElementById("search-result-title");
+    var element = template.content.cloneNode(true);
+    element.querySelector("#search-result-description").textContent = title.textContent;  
+    target.appendChild(element);
+      
+    // End added
+
     
     var template = document.getElementById("search-result");
     for (var result of results)
