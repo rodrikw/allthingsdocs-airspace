@@ -138,14 +138,15 @@ window.addEventListener("DOMContentLoaded", function(event)
       // Fill out search result template, adjust as needed.
       var element = template.content.cloneNode(true);
       element.querySelector(".summary-title-link").href =
-          element.querySelector(".read-more-link").href = doc.uri;
+      //    element.querySelector(".read-more-link").href = doc.uri;
       element.querySelector(".summary-title-link").textContent = doc.title;
       element.querySelector(".summary").textContent = truncate(doc.content, 70);
       target.appendChild(element);
     }
 
-    var title = document.getElementById("search-result-title");
-    title.scrollIntoView(true);
+    // Not sure if this working
+    // var title = document.getElementById("search-result-title");
+    // title.scrollIntoView(true);
 
     searchDone();
   }
