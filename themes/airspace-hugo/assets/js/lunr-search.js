@@ -125,13 +125,13 @@ window.addEventListener("DOMContentLoaded", function(event)
     else
       resultDescription = `Found ${results.length} results for “${term}”`;
     // target.appendChild(title);
-    document.title = resultDescription;
+    // document.title = resultDescription;
 
 
     // Added to insert search-result-start template
     var template = document.getElementById("search-result-title");
     var element = template.content.cloneNode(true);
-    element.querySelector("#search-result-description").textContent = title.textContent;  
+    element.querySelector("#search-result-description").textContent = resultDescription;  
     target.appendChild(element);
       
     // End added
