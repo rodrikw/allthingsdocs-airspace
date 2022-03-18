@@ -103,6 +103,9 @@ window.addEventListener("DOMContentLoaded", function(event)
     title.className = "list-title";
     */
 
+    
+
+      /*
     if (results.length == 0)
       title.textContent = `No results found for “${term}”`;
     else if (results.length == 1)
@@ -111,6 +114,18 @@ window.addEventListener("DOMContentLoaded", function(event)
       title.textContent = `Found ${results.length} results for “${term}”`;
     // target.appendChild(title);
     document.title = title.textContent;
+    */
+
+    var resultDescription
+
+    if (results.length == 0)
+      resultDescription = `No results found for “${term}”`;
+    else if (results.length == 1)
+      resultDescription = `Found one result for “${term}”`;
+    else
+      resultDescription = `Found ${results.length} results for “${term}”`;
+    // target.appendChild(title);
+    document.title = resultDescription;
 
 
     // Added to insert search-result-start template
