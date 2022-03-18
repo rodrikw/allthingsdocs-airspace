@@ -90,18 +90,22 @@ window.addEventListener("DOMContentLoaded", function(event)
   {
     var results = index.search(term);
 
-    // The element where search results should be displayed, adjust as required.
+    // The element where the container for serach results should be created, adjust as required.
     // var target = document.querySelector(".main-inner");
-    var target = document.querySelector("main");
+    var outertarget = document.querySelector("main");
 
-    while (target.firstChild)
-      target.removeChild(target.firstChild);
+    while (outertarget.firstChild)
+      outertarget.removeChild(target.firstChild);
 
     // Added to insert search-result-start template
     var template = document.getElementById("search-result-start");
     var element = template.content.cloneNode(true);
-    target.appendChild(element);    
+    outertarget.appendChild(element);    
     // End added
+
+    // Inner element where the serach results proper are inserted.
+    // This is created by the search-reult-start template.
+    var target = document.querySelector(".main-inner")
 
     var title = document.createElement("h1");
     title.id = "search-results";
@@ -133,13 +137,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     }
     // title.scrollIntoView(true);
 
-    searchDone();
-
-    // Added to insert search-result-end template
-    var template = document.getElementById("search-result-end");
-    var element = template.content.cloneNode(true);
-    target.appendChild(element);    
-    // End added
+    searchDone();    
   }
 
   // This matches Hugo's own summary logic:
