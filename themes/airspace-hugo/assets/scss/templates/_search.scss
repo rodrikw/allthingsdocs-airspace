@@ -53,8 +53,7 @@
 
 // Search results
 
-h2#search-results {
-  color: $color-brand-1;
-  font-size: $h2-sm;
-
+section .search-result {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
