@@ -101,11 +101,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     var title = document.createElement("h2");
     title.id = "search-results";
     title.className = "list-title";
-    */
-
     
-
-      /*
     if (results.length == 0)
       title.textContent = `No results found for “${term}”`;
     else if (results.length == 1)
@@ -116,6 +112,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     document.title = title.textContent;
     */
 
+    // Modified to simply update a text variable
     var resultDescription
 
     if (results.length == 0)
@@ -124,18 +121,14 @@ window.addEventListener("DOMContentLoaded", function(event)
       resultDescription = `Found one result for “${term}”`;
     else
       resultDescription = `Found ${results.length} results for “${term}”`;
-    // target.appendChild(title);
-    // document.title = resultDescription;
+    // End modified    
 
-
-    // Added to insert search-result-start template
+    // Added to insert search-result-title template
     var template = document.getElementById("search-result-title");
     var element = template.content.cloneNode(true);
     element.querySelector("#search-result-description").textContent = resultDescription;  
-    target.appendChild(element);
-      
+    target.appendChild(element);      
     // End added
-
     
     var template = document.getElementById("search-result");
     for (var result of results)
@@ -150,7 +143,9 @@ window.addEventListener("DOMContentLoaded", function(event)
       element.querySelector(".summary").textContent = truncate(doc.content, 70);
       target.appendChild(element);
     }
-    // title.scrollIntoView(true);
+
+    var title = document.getElementById("search-result-title");
+    title.scrollIntoView(true);
 
     searchDone();
   }
