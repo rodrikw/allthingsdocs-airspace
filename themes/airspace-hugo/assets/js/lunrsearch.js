@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function(event)
       lookup = {};
       index = lunr(function()
       {
-        // Uncomment the following line and replace de by the right language
+        // Uncomment the following line and replace de by the right language.
         // code to use a lunr language pack.
 
         // this.use(lunr.de);
