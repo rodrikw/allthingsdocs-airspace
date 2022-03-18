@@ -116,6 +116,12 @@ window.addEventListener("DOMContentLoaded", function(event)
     target.appendChild(title);
     document.title = title.textContent;
 
+    // Added
+
+    element.querySelector("#search-result-description").textContent = "HELLO";
+
+    // End Added
+
     var template = document.getElementById("search-result");
     for (var result of results)
     {
@@ -129,7 +135,7 @@ window.addEventListener("DOMContentLoaded", function(event)
       element.querySelector(".summary").textContent = truncate(doc.content, 70);
       target.appendChild(element);
     }
-    title.scrollIntoView(true);
+    // title.scrollIntoView(true);
 
     searchDone();
   }
