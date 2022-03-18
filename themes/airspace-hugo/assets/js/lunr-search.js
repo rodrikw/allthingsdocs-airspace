@@ -100,8 +100,9 @@ window.addEventListener("DOMContentLoaded", function(event)
     // Added to insert search-result-start template
     var template = document.getElementById("search-result-title");
     var element = template.content.cloneNode(true);
+    element.querySelector("#search-result-description").textContent = "Updated wording";  
     target.appendChild(element);
-    element.querySelector("#search-result-description").textContent = "Updated wording";    
+      
     // End added
 
     var title = document.createElement("h2");
