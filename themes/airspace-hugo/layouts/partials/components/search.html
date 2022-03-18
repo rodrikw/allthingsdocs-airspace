@@ -6,8 +6,8 @@
     <input type="search" id="search-input" class="search-input">
 </form>
 
-<!-- Template for the start of the results section. -->
-<template id="search-result-start" hidden>
+<!-- Template for the page title. -->
+<template id="search-result-title" hidden>
     <section class="page-title bg-2" style="background-image: url('{{ .Params.bg_image | relURL }}');">
         <div class="container">
           <div class="row">
@@ -15,9 +15,7 @@
               <div class="block">
                 <h1>Search Results</h1>
                 <p id="search-results-description">Your search</p>
-              </div>
-                <div class="main-inner">                  
-                </div>
+              </div>                
             </div>
           </div>
         </div>
