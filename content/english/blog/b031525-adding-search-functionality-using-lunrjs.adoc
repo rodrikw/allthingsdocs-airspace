@@ -112,7 +112,7 @@ Getting the output as I wanted it proved to be quite tricky, and was not helped 
 
 The major changes I made were to `function search(term)` in the `lunr-search.js` file:
 
-.lunr-search.js - search function
+.lunr-search.js -- search function
 [source,javascript]
 ----
  function search(term)
