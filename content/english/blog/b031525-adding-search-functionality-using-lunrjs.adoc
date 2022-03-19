@@ -1,6 +1,6 @@
 ---
 title: "Adding search functionality using lunr.js"
-date: 2022-03-15T15:03:25+02:00
+date: 2022-03-19T14:01:28+02:00
 author: "Rodrik Wade"
 image: "images/blog/hebrew-scroll.jpg"
 image_caption: "<a href='https://unsplash.com/photos/eQ2Z9ay9Wws'>Historic Hebrew scroll from Łódź, Poland</a> by <a href='https://unsplash.com/@rocinante_11'>Mick Haupt</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -21,7 +21,7 @@ Instead, delivering search functionality relies on generating an index of the co
 There are two main approaches to doing this:
 
 [horizontal]
-Algolia::
+https://www.algolia.com/[Algolia]::
 A search API that relies on the site contents being indexed and the index being uploaded to Algolia's servers.
 When a user initiates a search, the search is performed by Algolia and the results are returned to the website.
 This means that search is dependent on a connection to Algolia.
@@ -31,10 +31,10 @@ In addition, Algolia supplies sophisticated analytics.
 Algolia has a free tier that requires only the display of their logo.
 With some care taken to minimize the index data uploaded to their servers, this allocation is likely to suffice for small sites.
 
-lunr.js::
+http://lunarjs.com[lunr.js]::
 A small, full-text search library for use in browsers. lunr.js enables users to search data directly in the client without requiring any interaction with the server.
 This results in quick searches that can be performed even if the network connection to the server is lost.
-The disadvantage is more data needs to be downloaded initially. lunr.js does not offer the kinds analytic functionality that Algolia does, but it's free.
+The disadvantage is more data needs to be downloaded initially. lunr.js does not offer the analytic functionality that Algolia does, but it's free.
 
 Initially, I intended to implement an Algolia-based search for this site.
 My hope was that the API would result in a simpler process delivering a more compelling interface.
@@ -43,85 +43,207 @@ After some minor hurdles, I was able to get the basic search working, but then I
 The Algolia documentation is comprehensive but still left me wanting more basic examples.
 In the end I decided to try lunr.js.
 
-I followed the approach detailed by Victoria Drake in her blog post https://victoria.dev/blog/add-search-to-hugo-static-sites-with-lunr[Add search to Hugo static sites with Lunr].
+I first followed the approach detailed by Victoria Drake in her blog post https://victoria.dev/blog/add-search-to-hugo-static-sites-with-lunr[Add search to Hugo static sites with Lunr].
 I found her instructions very clear, and relatively quickly I had a version working.
-I diverged from Victoria's approach only in using an online service to minify the `lunr.js` file.
+However, I then decided to try to implement the approach detailed by Wladimir Palant in https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/[The easier way to use lunr search with Hugo] because this involves generating an index once when the site is generated rather than doing so on the client.
 
-NOTE: The search doesn't work in the preview provided by Hugo server, so I used Netlify's preview functionality to check that everything was working before deploying.
-
-Sometimes when following procedures, I struggle to know exactly where files should be placed in a Hugo site structure.
-This is where I placed the files files that Victoria's procedure requires:
+Again, getting the basic functionality working was relatively simple once I had figured out where the various files needed to be located.
+This is where I placed the files files that Wladimir Palant's procedure requires:
 
 .File locations
 ....
-\<root-site-folder>\content\english\search\_index.md
-\<root-site-folder>\static\js\lunr.min.js
-\<root-site-folder>\static\js\search.js
-\<root-site-folder>\themes\<my-site-theme>\assets\scss\style.scss -- modified to include @import 'templates/_search.scss';
-\<root-site-folder>\themes\<my-site-theme>\assets\scss\templates\_search.scss -- added to style the search elements
-\<root-site-folder>\themes\<my-site-theme>\layouts\partials\footer.html -- modified to include search-index.html.
-\<root-site-folder>\themes\<my-site-theme>\layouts\partials\header.html -- modified to include search-form.html.
-\<root-site-folder>\themes\<my-site-theme>\layouts\partials\search-form.html
-\<root-site-folder>\themes\<my-site-theme>\layouts\partials\search-index.html
-\<root-site-folder>\themes\<my-site-theme>\layouts\search\list.html
+/<root-folder>/themes/<theme-folder>/config/_default/config.toml <.>
+/<root-folder>/themes/<theme-folder>/assets/js/lunr-search.js <.>
+/<root-folder>/themes/<theme-folder>/assets/scss/components/_search.scss <.>
+/<root-folder>/themes/<theme-folder>/config/_default/config.toml <.>
+/<root-folder>/themes/<theme-folder>/layouts/index.searchindex.json <.>
+/<root-folder>/themes/<theme-folder>/layouts/partials/components/search.html <.>
+/<root-folder>/themes/<theme-folder>/layouts/partials/header.html <.>
+/<root-folder>/themes/<theme-folder>/layouts/partials/script.html   <.>
 ....
 
-The `_search.scss` file contains some styling of the input box and button, and the search results:
-
-._search.scss
-[source,scss]
+<.> Added Wladimir's https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral#the-javascript-code[JavaScript code] and then made some modifications detailed below.
+<.> Added the https://github.com/reuixiy/hugo-theme-meme/blob/1322fdde91af3a147ce9881892a432ebfaf9b535/assets/scss/components/_search.scss[_search.scss] stylesheet and made some modifications to accommodate the Hugo theme used on this site.
+<.> Modified to add `SearchIndex` to outputs:
++
+.config.toml
+[source,toml]
 ----
-// Styles for the search field, button and results page.
-input#search-input {
-    border: 1px solid $color-border;
-    border-radius: 4 * $rem-base;
-    color: $color-text-base;
-    display: inline-flex;
-    font-size: inherit;
-    height: 2em;
-    box-sizing: border-box;
-    margin-top: (4 * $rem-base);
-    padding: (4 * $rem-base) (6 * $rem-base);
-    vertical-align: text-top;
-}
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "WebAppManifest","SearchIndex"]
+⋮
+############################ Output Format #########################
+[outputFormats]
 
-input#search-button {
-    background-color: $white;
-    border: 1px solid $color-border;
-    border-radius: 4 * $rem-base;
-    color: $color-text-light;
-    display: inline-flex;
-    font-size: inherit;
-    height: 2em;
-    margin-top: (4 * $rem-base);
-    padding: (4 * $rem-base) (6 * $rem-base);
-    vertical-align: text-top;
-    @include transition-multi (background-color 0.3s ease, border 0.3s ease, color 0.1s ease);
+#[outputFormats.SearchIndex]#
+mediaType = "application/json"
+baseName = "search"
+----
+<.> Added the https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral#generating-the-search-index[template to generate a JSON] search index.
+<.> Added https://github.com/reuixiy/hugo-theme-meme/blob/1322fdde91af3a147ce9881892a432ebfaf9b535/layouts/partials/components/search.html[Search form and search result template].
+<.> Modified the existing `header.html` partial to include the `search.html` partial as an additional nav-item:
++
+.header.html
+[source,html]
+----
+⋮
+<li class="nav-item">
+    {{ partial "components/search.html" . }}
+</li>
+⋮
+----
 
-    &:hover {
-        color: $color-brand-1;
-        background: rgba($color-brand-1, 0.3);
-        border: 1px solid rgba($color-brand-1, 0.3);
-      }
+<.> Modified the existing `script.html` file to append `lunr-search.js` and include `lunr.min.js` (from jsDelivr):
++
+.script.html
+[source,html]
+----
+⋮
+<!-- Required for Lunr.js search -->
+{{ $scripts := $scripts | append (resources.Get "js/lunr-search.js" | minify) }}
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+⋮
+----
 
-    &:active {
-    color: $color-brand-1;
-    border: 1px solid $color-brand-1;
-    background: $white;
-    @include transition (background-color, 0.1s, ease);
+<.> Deleted.
+
+Getting the output as I wanted it proved to be quite tricky, and was not helped by the fact that search does not work in preview provided by Hugo server, so I had to use Netlify's preview functionality to check that everything was working before deploying.
+
+The major changes I made were to `function search(term)` in the `lunr-search.js` file:
+
+.lunr-search.js - search function
+[source,javascript]
+----
+ function search(term)
+  {
+    var results = index.search(term);
+
+    // The element where search results should be displayed, adjust as needed.
+    //var target = document.querySelector(".main-inner");
+    var target = document.querySelector("main"); <.>
+
+    while (target.firstChild)
+      target.removeChild(target.firstChild);
+
+    /*
+    var title = document.createElement("h2"); <.>
+    title.id = "search-results";
+    title.className = "list-title";
+
+    if (results.length == 0)
+      title.textContent = `No results found for “${term}”`;
+    else if (results.length == 1)
+      title.textContent = `Found one result for “${term}”`;
+    else
+      title.textContent = `Found ${results.length} results for “${term}”`;
+    // target.appendChild(title);
+    document.title = title.textContent;
+    */
+
+    // Modified to simply update a text variable
+    var resultDescription
+
+    if (results.length == 0)
+      resultDescription = `No results found for “${term}”`;
+    else if (results.length == 1)
+      resultDescription = `Found one result for “${term}”`;
+    else
+      resultDescription = `Found ${results.length} results for “${term}”`;
+    // End modified
+
+    // Added to insert search-result-title template <.>
+    var template = document.getElementById("search-result-title");
+    var element = template.content.cloneNode(true);
+    element.querySelector("#search-result-description").textContent = resultDescription; <.>
+    target.appendChild(element);
+    // End added
+
+    var template = document.getElementById("search-result");
+    for (var result of results)
+    {
+      var doc = lookup[result.ref];
+
+      // Fill out search result template, adjust as needed.
+      var element = template.content.cloneNode(true);
+      element.querySelector(".summary-title-link").href = doc.uri;
+      element.querySelector(".read-more-link").href = doc.uri;
+      element.querySelector(".summary-title-link").textContent = doc.title;
+      // element.querySelector(".summary").textContent = truncate(doc.content, 70); <.>
+      element.querySelector(".summary").textContent = truncate(doc.content, 35);
+      target.appendChild(element);
     }
 
-}
+    // title.scrollIntoView(true);
 
-ul#results {
-    li {
-        color: $color-text-base;
-        font-size: $font-size;
-        margin-bottom: 2em;
-
-        a {
-            font-size: $font-size-bigger;
-        }
-    }
-}
+    searchDone();
+  }
 ----
+
+<.> In the case of the Airspace template, the only container that is common to all pages is `main`.
+<.> In Wladimir's original script, an `h2` is added and then variable text is inserted using `.textContent` depending on the number of results.
+I wanted to insert the variable text into the standard Airspace title section, so assigned the variable text to a new `resultDescription` variable.
+<.> This section inserts a new `search-result-title` template that I added to the `search.html` file (see below.)
+<.> This line inserts the contents of the `resultDescription` variable into the description line of the regular Airspace title bar:
++
+image::../../images/blog/search-result-description.jpg[alt="Search result -description"]
+<.> I halved the length of the summaries.
+
+I made the following changes to the `search.html` file:
+
+.search.html
+[source,html]
+----
+<!-- 1. UNCHANGED: Template for search field in the header --> <.>
+<form id="search" class="search" role="search">
+    <label for="search-input">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon search-icon"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+    </label>
+    <input type="search" id="search-input" class="search-input">
+</form>
+
+<!-- 2. ADDED: Template for the page title. This is virtually the same as the Airspace page-title.html. --> <.>
+<template id="search-result-title" hidden>
+    <section class="page-title bg-2" style="background-image: url('/images/feature-bg.jpg');">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block">
+                <h1>Search Results</h1>
+                <p id="search-result-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</template>
+
+<!-- 3. MODIFIED: Template for each search result. Based on the blog post style --> <.>
+<template id="search-result" hidden>
+  <section class="section search-result">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3 class="post-title search-result"><a class="summary-title-link"></a></h3>
+              <div class="post-content">
+                <p class="summary"></p>
+                <div class="read-more-container">
+                    <a href="read-more-link" class="btn btn-main read-more-link">{{ i18n "read_more" }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+----
+
+<.> The input form is unchanged from https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral#adding-the-necessary-elements[Wladimir Palant's original].
+<.> I added this template to insert the standard title bar (identical to what appears at the top of this blog post).
+<.> I modified this template to add divs to ensure that results are laid out correctly using the Bootstrap framework employed by the Airspace theme.
+
+The result is relatively simple search.
+It doesn't provide any fancy features such as context highlighting but it's quite effective.
+Perhaps at a later date I'll revisit search and investigate whether Algolia is a better option.
