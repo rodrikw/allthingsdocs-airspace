@@ -60,13 +60,14 @@
 
 .post-title.search-result {
   text-transform: uppercase;
-  
+
   a {
     color: $color-brand-1;
 
     &:hover {
       color: $color-brand-1;
     }
+  }
 }
 
 .btn-main.read-more-link {
