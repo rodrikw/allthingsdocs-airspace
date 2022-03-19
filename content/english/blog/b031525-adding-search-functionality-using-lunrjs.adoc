@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Search","lunr.js"]
 description: "How search functionality was added using lunr.js."
-draft: true
+draft: false
 type: "post"
 ---
 
