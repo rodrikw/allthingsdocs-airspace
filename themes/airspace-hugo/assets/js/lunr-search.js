@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", function(event)
       // Fill out search result template, adjust as needed.
       var element = template.content.cloneNode(true);
       element.querySelector(".summary-title-link").href = doc.uri;
-      // element.querySelector(".read-more-link").href = doc.uri;
+      element.querySelector(".read-more-link").href = doc.uri;
       element.querySelector(".summary-title-link").textContent = doc.title;
       // element.querySelector(".summary").textContent = truncate(doc.content, 35);
       element.querySelector(".summary").textContent = truncate(doc.content, 35);
