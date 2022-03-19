@@ -57,3 +57,9 @@
   padding-top: 1rem;
   padding-bottom: 2rem;  
 }
+
+.btn-main.read-more-link {
+  font-size: $font-size-small;
+  padding: (20 * $rem-base), (20 * $rem-base);
+  margin: (15 * $rem-base), 0;
+}
