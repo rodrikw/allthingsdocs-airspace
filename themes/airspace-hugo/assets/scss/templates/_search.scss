@@ -58,6 +58,17 @@
   padding-bottom: 2rem;  
 }
 
+.post-title.search-result {
+  text-transform: uppercase;
+  
+  a {
+    color: $color-brand-1;
+
+    &:hover {
+      color: $color-brand-1;
+    }
+}
+
 .btn-main.read-more-link {
   font-size: $font-size-smaller;
   padding: (20 * $rem-base), (20 * $rem-base);
