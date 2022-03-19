@@ -140,6 +140,7 @@ window.addEventListener("DOMContentLoaded", function(event)
       element.querySelector(".summary-title-link").href = doc.uri;
       // element.querySelector(".read-more-link").href = doc.uri;
       element.querySelector(".summary-title-link").textContent = doc.title;
+      // element.querySelector(".summary").textContent = truncate(doc.content, 35);
       element.querySelector(".summary").textContent = truncate(doc.content, 35);
       target.appendChild(element);
     }
