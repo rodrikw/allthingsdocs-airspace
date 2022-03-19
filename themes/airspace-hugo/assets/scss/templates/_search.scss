@@ -39,7 +39,7 @@
   border-width: 0;
   padding: 0;
   margin: 0;
-  width: 0;
+  width: 0em;
   outline: none;
   background: transparent;
   transition: width 0.5s;  
@@ -51,7 +51,7 @@
 }
 
 
-// Search results
+// Search results (based on _blog.scss style)
 
 .section.search-result {
   padding-top: 1rem;
@@ -72,6 +72,6 @@
 
 .btn-main.read-more-link {
   font-size: $font-size-smaller;
-  padding: (20 * $rem-base), (20 * $rem-base);
+  padding: (10 * $rem-base), (20 * $rem-base);
   margin: (15 * $rem-base), 0;
 }
