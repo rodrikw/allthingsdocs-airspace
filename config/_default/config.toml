@@ -61,7 +61,7 @@ style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
 experimental = true
 source-highlighter = "rouge"
 rouge-css = "style"
-rouge-style = "github"
+rouge-style = "base16.solarized"
 relfileprefix = "../"
 relfilesuffix = "/"
 
