@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rodrikw/allthingsdocs-airspace/issues"
   },
-  "homepage": "https://github.com/rodrikw/allthingsdocs-airspace#readme"
+  "homepage": "https://github.com/rodrikw/allthingsdocs-airspace#readme",
+  "dependencies": {
+    "rouge": "^1.0.3"
+  }
 }
