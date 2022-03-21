@@ -40,7 +40,8 @@ The results of the preview build are also reflected in GitHub, so you can easily
 +
 image::/images/blog/merge-pull-request.png["GitHub Merge pull request."]
 +
-Netlify is configured to automatically build and deploy the site whenever a merge occurs (see xref:b022519-triggering-a-netlify-build-on-merge.adoc[Triggering a build of an Antora project by Netlify when merging in GitHub]).
+Netlify is configured to automatically build and deploy the site whenever a merge occurs.
+// (see xref:b022519-triggering-a-netlify-build-on-merge.adoc[Triggering a build of an Antora project by Netlify when merging in GitHub]).
 
 NOTE: Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
 There is an alternative approach in which you merge changes from dev to main on your local Git. The disadvantage to this is that it requires switching to the main branch first, and then I'm apt to forget and start editing the main branch directly.
