@@ -12,9 +12,6 @@ draft: false
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
 Although I liked the appearance of the Airspace theme, it was clear that I would need to make some changes to, minimally, specify the text and background colours, and to provide styling for AsciiDoc-related markup.
 
 Some colours can be altered in the `themes{backslash}airspace-hugo{backslash}config.toml` file, but the options are limited:
@@ -73,7 +70,22 @@ It's not yet comprehensive, but it's easy to add new rules as required.
 . Added a `github.scss` file to `{backslash}themes{backslash}airspace-hugo{backslash}assets{backslash}scss{backslash}templates` and added the line `@import 'github.scss'` to the end of `style.scss` file.
 The `github.scss` file contains the SCSS required to apply GitHub-style syntax highlighting to code blocks processed by the https://rouge-ruby.github.io/docs/[Rouge] syntax highlighter, which is bundled with AsciiDoctor.
 +
+--
 TIP: Run `rougify style github > github.css` to output the CSS to a text file. Then use https://www.cssportal.com/css-to-scss/[CSS to SCSS Converter] to convert the file to SCSS.
 
 Making changes directly to the theme SCSS files does mean that I won't be able to automatically apply theme updates, but I don't get the sense that themes are regularly updated.
+--
+. Added the following entry to the `/<root-folder>/config/_default/config.toml` file:
++
+--
+[source,toml]
+----
+[markup.asciidocExt]
+[markup.asciidocExt.attributes]
+source-highlighter = "rouge"
+----
+
+This activates the highlighter for all AsciiDoc files in the project.
+--
+
 
