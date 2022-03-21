@@ -2,6 +2,9 @@
   publish = "public"
   command = "npm run build:prod"
   
+[dev]
+framework = "hugo"
+  
 [build.environment]
   HUGO_VERSION = "0.89.4"
   HUGO_BASEURL = "/"
