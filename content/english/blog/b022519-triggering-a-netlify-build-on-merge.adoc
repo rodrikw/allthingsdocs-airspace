@@ -12,17 +12,14 @@ draft: true
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
 Triggering a build of a site when changes are merged into the main branch ensures that builds occur regularly but not excessively frequently, and that they are only triggered by a trusted user (repo owner).
-This approach works well with the workflow detailed in xref:../a121630-update-and-deployment-workflow.adoc[Update and deployment workflow].
+This approach works well with the workflow detailed in xref:a121630-update-and-deployment-workflow.adoc[Update and deployment workflow].
 
-As with scheduled builds (see xref:../a022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify]), this technique makes use of a GitHub workflow to trigger a buildhook on Netlify.
+As with scheduled builds (see xref:b022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify]), this technique makes use of a GitHub workflow to trigger a buildhook on Netlify.
 However, in this case the workflow runs whenever a user merges changes back into the repo to which the workflow is attached.
 
 This procedure assumes that you have already created a buildhook in Netlify for the playbook project.
-For instructions on how to do so, see xref:../a022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify].
+For instructions on how to do so, see xref:b022546-setting-up-a-scheduled-build.adoc[Configuring scheduled builds on Netlify].
 
 NOTE: In this case the workflow is added to the content repo but the buildhook is created for the playbook repo because you need to trigger the build to use the playbook.
 If your site uses multiple content repos then you would need to repeat this procedure for each one.
