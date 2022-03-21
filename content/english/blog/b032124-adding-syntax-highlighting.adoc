@@ -1,0 +1,111 @@
+---
+title: "Adding syntax highlighting"
+date: 2022-03-21T12:38:24+02:00
+author: "Rodrik Wade"
+image: "images/blog/rouge.jpg"
+image_caption: "<a href='https://unsplash.com/photos/KWxt54fTh5M'>Red neon from the 30s</a> by <a href='https://unsplash.com/@erwanhesry'>Erwan Hesry</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Website"]
+tags: ["Syntax highlighting"]
+description: "How to add Rouge syntax highlighting to AsciiDoc pages in Hugo."
+draft: true
+type: "post"
+---
+
+The use of AsciiDoc markup in Hugo depends on AsciiDoctor, which supports a number of syntax highlighters:
+
+* highlight.js
+* CodeRay
+* Pygments
+* Rouge
+
+All but highlight.js are build-time highlighters, which apply the highlighting when the site is generated.
+
+I chose Rouge because it supports a large number of languages, unlike CodeRay, and does not require Python, unlike Pygments.
+
+There are two ways to implement Rouge:
+
+* Using a Rouge theme
+* Using a CSS file
+
+In either case, you need to first install Rouge:
+
+. Open a terminal in the root folder of your Hugo project and run the command `gem install rouge`.
+. In the root folder, open the `gemfile` and add an entry for Rouge:
++
+.gemfile
+[source]
+----
+source 'https://rubygems.org'
+gem 'asciidoctor'
+gem 'rouge'
+----
+
+. Update the `gemfile.lock` file by running `bundle update`.
+The file should then look something like this:
++
+.gemfile.lock
+[source]
+----
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciidoctor (2.0.17)
+    rouge (3.28.0)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  asciidoctor
+  rouge
+
+BUNDLED WITH
+   2.2.33
+----
+
+== Using a Rouge theme
+
+This is the simpler approach:
+
+* Add the following entry to the `/<root-folder>/config/_default/config.toml` file:
++
+[source,toml]
+----
+[markup.asciidocExt]
+[markup.asciidocExt.attributes]
+source-highlighter = "rouge" <.>
+rouge-css = "style" <.>
+rouge-style = "base16.solarized" <.>
+----
+<.> Activates the Rouge highlighter.
+This is equivalent to adding `:source-highlighter: rouge` to the top of each AsciiDoc file that you create in your Hugo content folders.
+<.> This setting tells Rouge to download and apply the specified theme.
+The default value is `class`.
+<.> This is the name of the theme you want to use.
+Use the https://spsarolkar.github.io/rouge-theme-preview/[Rouge Theme Preview Page] to choose a style.
+
+== Using CSS
+
+This approach is a little more complicated, but it allows for tweaking the CSS to suit your site:
+
+. Download the Rouge theme that you want to use from https://github.com/rouge-ruby/rouge/tree/HEAD/lib/rouge/themes.
+
+. Run `rougify style _[red]#yourstyle#_ > _[red]#yourstyle#_.css` to output the CSS to a text file.
+
+. If your hugo theme uses SCSS, use https://www.cssportal.com/css-to-scss/[CSS to SCSS Converter] to convert the file.
+
+. Add the `.css` or `.scss` file to the relevant templates folder in your Hugo theme.
+For example, I added my file to `<root-folder>/themes/airspace-hugo/assets/scss/templates/`
+
+. Add an `@import` rule to the end of your `style.scss` file.
+For example, I added  `@import 'github.scss'` to the end of `<root-folder>/themes/airspace-hugo/assets/scss/style.scss`
+
+. Add the following entry to the `/<root-folder>/config/_default/config.toml` file:
++
+[source,toml]
+----
+[markup.asciidocExt]
+[markup.asciidocExt.attributes]
+source-highlighter = "rouge" <.>
+----
