@@ -12,9 +12,6 @@ draft: true
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
 image:../../images/blog/multirepo-ssg.svg[Multirepo SSG,200,float=right]
 Platonem complectitur mediocritatem ea eos.
 Ei nonumy deseruisse ius.

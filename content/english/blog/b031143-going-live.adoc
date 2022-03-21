@@ -12,9 +12,6 @@ draft: false
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
 Today I registered `allthingsdocs.com` through Netlify.
 The registration process is remarkably simple:
 

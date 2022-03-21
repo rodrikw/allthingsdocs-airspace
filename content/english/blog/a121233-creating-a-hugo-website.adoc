@@ -11,8 +11,6 @@ description: "The process followed to create this website using Hugo and the Air
 draft: false
 type: "post"
 ---
-:experimental:
-:source-highlighter: rouge
 
 The basic setup of Hugo on your local computer is easy, and well documented:
 

@@ -12,10 +12,6 @@ draft: true
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
-
 A common approach to updating a doc site is to build the site on a regular automated schedule, for example, daily at midnight.
 Netlify itself has recently introduced https://github.com/netlify/labs/blob/main/features/scheduled-functions/documentation/README.md[scheduled functions] but it's still a beta feature.
 Eric Jinks in https://ericjinks.com/blog/2019/netlify-scheduled-build/[Schedule your Netlify build with GitHub Actions] has detailed an alternative method that involves creating a buildhook in Netlify and then adding it to a GitHub workflow.

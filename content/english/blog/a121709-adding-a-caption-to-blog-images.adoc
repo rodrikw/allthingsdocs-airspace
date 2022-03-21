@@ -12,8 +12,6 @@ draft: true
 type: "post"
 ---
 
-:source-highlighter: rouge
-
 The Airspace blog template includes an image at the top of the blog.
 I like to make use of Creative Commons images but these usually require an attribution.
 Unfortunately, the Airspace template didn't make allowance for that.

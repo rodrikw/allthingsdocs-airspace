@@ -12,9 +12,6 @@ draft: true
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
 In the case of a static website there is no backend database that can be queried.
 Instead, delivering search functionality relies on generating an index of the contents.
 

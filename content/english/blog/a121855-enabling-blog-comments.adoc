@@ -12,9 +12,6 @@ draft: true
 type: "post"
 ---
 
-:experimental:
-:source-highlighter: rouge
-
 Most blogs allow readers to post comments, and enabling comments is easy to do using one of the many commenting services.
 
 My criteria for choosing a commenting solution were the following:
