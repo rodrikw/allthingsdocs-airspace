@@ -151,7 +151,7 @@ Now you can highlight lines in the code:
 
 [source,asciidoc]
 -----
-[source%linenums,javascript,highlight=5]
+[source%linenums,javascript,highlight=7..8]
 ----
 function search(term)
   {
