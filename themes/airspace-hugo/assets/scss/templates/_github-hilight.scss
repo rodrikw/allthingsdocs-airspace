@@ -1,3 +1,15 @@
+// Added for line highlighting:
+
+pre.rouge .hll {
+	background-color: #ffc;
+}
+  
+pre.rouge .hll * {
+	background-color: initial;
+}
+
+// ###########################
+
 .highlight {
 	table {
 		td {
