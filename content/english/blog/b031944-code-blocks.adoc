@@ -1,0 +1,86 @@
+---
+title: "Code blocks"
+date: 2022-03-19T15:04:44+02:00
+author: "Rodrik Wade"
+image: "images/blog/new_image.jpg"
+image_caption: "<a href='https://example.com'>Float</a> by <a href='https://example.com'>Creator's name</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Category one"]
+tags: ["Tag A","Tag B"]
+description: "Formatting AsciiDoc code blocks in Hugo"
+draft: true
+type: "post"
+---
+
+:docinfo: private
+
+.Some JavaScript
+[source%linenums,javascript,highlight=2..5]
+----
+function search(term)
+  {
+    var results = index.search(term);
+
+    // The element where search results should be displayed, adjust as needed.
+    //var target = document.querySelector(".main-inner");
+    var target = document.querySelector("main"); <.>
+
+    while (target.firstChild)
+      target.removeChild(target.firstChild);
+
+    /*
+    var title = document.createElement("h2"); <.>
+    title.id = "search-results";
+    title.className = "list-title";
+
+    if (results.length == 0)
+      title.textContent = `No results found for “${term}”`;
+    else if (results.length == 1)
+      title.textContent = `Found one result for “${term}”`;
+    else
+      title.textContent = `Found ${results.length} results for “${term}”`;
+    // target.appendChild(title);
+    document.title = title.textContent;
+    */
+
+    // Modified to simply update a text variable
+    var resultDescription
+
+    if (results.length == 0)
+      resultDescription = `No results found for “${term}”`;
+    else if (results.length == 1)
+      resultDescription = `Found one result for “${term}”`;
+    else
+      resultDescription = `Found ${results.length} results for “${term}”`;
+    // End modified
+
+    // Added to insert search-result-title template <.>
+    var template = document.getElementById("search-result-title");
+    var element = template.content.cloneNode(true);
+    element.querySelector("#search-result-description").textContent = resultDescription; <.>
+    target.appendChild(element);
+    // End added
+
+    var template = document.getElementById("search-result");
+    for (var result of results)
+    {
+      var doc = lookup[result.ref];
+
+      // Fill out search result template, adjust as needed.
+      var element = template.content.cloneNode(true);
+      element.querySelector(".summary-title-link").href = doc.uri;
+      element.querySelector(".read-more-link").href = doc.uri;
+      element.querySelector(".summary-title-link").textContent = doc.title;
+      // element.querySelector(".summary").textContent = truncate(doc.content, 70); <.>
+      element.querySelector(".summary").textContent = truncate(doc.content, 35);
+      target.appendChild(element);
+    }
+
+    // title.scrollIntoView(true);
+
+    searchDone();
+  }
+----
+
+Something else.
+

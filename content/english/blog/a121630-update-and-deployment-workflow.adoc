@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Netlify","Hugo","Workflow"]
 description: "Devising a workflow for updating and deploying changes to the website"
-draft: false
+draft: true
 type: "post"
 ---
 
@@ -19,7 +19,7 @@ This didn't provide enough control and resulted in too many builds.
 I tried setting up a prod branch and configuring Netlify to build off that, but this resulted in a poor GitHub workflow: GitHub expects changes to branches to be contributed back to main, not the other way round.
 So now Netlify builds off the main branch, while I develop on a dev branch.
 
-This is the workflow:
+This is the workflow I use:
 
 . In GitHub Desktop, I refresh my local copy of the dev branch (I don't always do this because I'm currently the only one working on the site).
 . Make my changes to the site contents.
@@ -29,12 +29,19 @@ This is the workflow:
 +
 image::/images/blog/pull-request.png["GitHub Create pull request."]
 This can be initiated in GitHub Desktop, but it does necessitate the GitHub site being opened.
-. Merge the changes into main:
++
+When the pull request is created, Netlify is configured to automatically generate a preview build of the site:
++
+image::/images/blog/netlify-deploy-preview-settings.png["Preview settings in Netlify"]
++
+This provides a convenient way for reviewers to see changes before they are published to the public site.
+The results of the preview build are also reflected in GitHub, so you can easily see if the changes have resulted in any problems.
+. Merge the changes into the main branch:
 +
 image::/images/blog/merge-pull-request.png["GitHub Merge pull request."]
++
+Netlify is configured to automatically build and deploy the site whenever a merge occurs.
+// (see xref:b022519-triggering-a-netlify-build-on-merge.adoc[Triggering a build of an Antora project by Netlify when merging in GitHub]).
 
-Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
+NOTE: Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
 There is an alternative approach in which you merge changes from dev to main on your local Git. The disadvantage to this is that it requires switching to the main branch first, and then I'm apt to forget and start editing the main branch directly.
-
-NOTE: Netlify can be configured so that whenever a pull request is created, a preview is built and deployed.
-This is allows reviewers to see changes before they are published to the public site.
