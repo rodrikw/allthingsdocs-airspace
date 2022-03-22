@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Category one"]
 tags: ["Tag A","Tag B"]
 description: "Formatting AsciiDoc code blocks in Hugo"
-draft: false
+draft: true
 type: "post"
 ---
 
