@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Netlify","Hugo","Workflow"]
 description: "Devising a workflow for updating and deploying changes to the website"
-draft: false
+draft: true
 type: "post"
 ---
 
