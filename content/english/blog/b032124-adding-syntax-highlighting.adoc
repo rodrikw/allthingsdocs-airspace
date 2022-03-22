@@ -1,6 +1,6 @@
 ---
 title: "Adding syntax highlighting"
-date: 2022-03-21T12:38:24+02:00
+date: 2022-03-22T10:03:48+02:00
 author: "Rodrik Wade"
 image: "images/blog/rouge.jpg"
 image_caption: "<a href='https://unsplash.com/photos/KWxt54fTh5M'>Red neon from the 30s</a> by <a href='https://unsplash.com/@erwanhesry'>Erwan Hesry</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -113,11 +113,6 @@ In my case this was `/<root-folder>/assets/scss/ustom.scss`.
 The styles should now be included automatically.
 
 |===
-
-
-
-
-
 
 . Add the following entry to the `/<root-folder>/config/_default/config.toml` file:
 +
