@@ -1,0 +1,74 @@
+---
+title: "Toolset for online documentation"
+date: 2022-03-22T13:33:04+02:00
+author: "Rodrik Wade"
+image: "images/blog/workshop.jpg"
+image_caption: "<a href='https://unsplash.com/photos/t5YUoHW6zRo'>Tools in tool rack</a> by <a href='https://unsplash.com/@barnimages'>Barn Images</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Doc site"]
+tags: ["Toolset","Jamstack"]
+description: "A toolset for creating and publishing online documentation."
+draft: true
+type: "post"
+---
+
+I spent quite some time last year investigating options for an online documentation toolset.
+I wanted toolset that would meet the following requirements:
+
+* Free and open source (FOSS) as far as possible.
+Low cost is generally attractive but I was motivated more by the desire to be able to plug into active communities.
+
+* Widely used and actively supported.
+
+== Markup
+
+I investigated reStructuredText (RST) and Markdown before stumbling across AsciiDoc, and I nearly committed to RST.
+Within a week of starting to use AsciiDoc , it was clear that it was preferable to the other two.
+My reasons can for liking it can be summed up as:
+
+[horizontal]
+Flexibility::
+AsciiDoc has pretty much all the features I need: flexibles lists and tables, linking and embedding, text variables, conditionals, and so on.
+
+Enjoyability::
+
+AsciiDoc is easy and enjoyable to use.
+Unlike RST, it does not rely on indentation, which is fiddly, and its markup is generally easy to remember. Compare:
++
+--
+
+.reStructuredText
+[source,rst]
+----
+.. note::
+   This is note text.
+----
+
+.AsciiDoc
+[source,asciidoc]
+----
+NOTE: This is note text.
+----
+--
+
+Some people might object that it is not as widely used as Markdown, and that's true.
+But it is, I believe, sufficiently widely used, particularly by technical documenters.
+
+== Editors
+
+In my view https://www.jetbrains.com/help/idea/installation-guide.html[IntelliJ IDEA] with the https://github.com/asciidoctor/asciidoctor-intellij-plugin[AsciiDoc plugin] is the clear leader for among the various options for editing AsciiDoc.
+
+== Static site generator
+
+Antora is a specialized static site generator intended to convert Asciidoc content into documentation sites.
+
+== Version control
+
+Git is predominant among developers.
+In the context of a docs-as-code approach, it makes sense to adopt Git as the version control for documentation too.
+
+Some people might object that it is unnecesarily complex for requirements of documenters.
+I'm somewhat sympathetic to this as I initially found the porocess of committing chnages to the local repo and then pushing them to the remote repo quite confusing -- let alone pull requests and merging.
+
+
+
