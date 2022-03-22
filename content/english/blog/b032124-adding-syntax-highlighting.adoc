@@ -157,7 +157,7 @@ function search(term)
   {
     var results = index.search(term);
 
-    var target = document.querySelector("main"); <.>
+    var target = document.querySelector("main");
 
     while (target.firstChild)
       target.removeChild(target.firstChild);
@@ -172,7 +172,7 @@ function search(term)
   {
     var results = index.search(term);
 
-    var target = document.querySelector("main"); <.>
+    var target = document.querySelector("main");
 
     while (target.firstChild)
       target.removeChild(target.firstChild);
