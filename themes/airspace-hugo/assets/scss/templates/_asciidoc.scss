@@ -179,15 +179,6 @@ span.red {
     color: $color-text-hilight-red;
 }
 
-// Rouge line highlighting
-pre.rouge .hll {
-    background-color: #ffc;
-  }
-
-pre.rouge .hll * {
-    background-color: initial;
-  }
-
 // Headers
 
 h2, h3, h4, h5, h6 {
