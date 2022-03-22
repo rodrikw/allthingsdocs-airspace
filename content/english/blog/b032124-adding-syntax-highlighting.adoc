@@ -139,7 +139,7 @@ Enabling line highlighting involves adding two CSS styles (provided in the https
 In my case this was `/<root-folder>/assets/scss/custom.scss`.
 +
 .custom.scss
-[source,css]
+[source,scss]
 ----
 pre.rouge .hll {
   background-color: #ffc;
@@ -171,7 +171,7 @@ function search(term)
 
 This results in:
 
-[source%linenums,javascript,highlight=5]
+[source%linenums,javascript,highlight=7..8]
 ----
 function search(term)
   {
