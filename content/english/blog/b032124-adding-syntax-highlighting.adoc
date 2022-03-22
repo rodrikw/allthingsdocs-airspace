@@ -94,16 +94,17 @@ This approach is a little more complicated, but it allows for tweaking the CSS t
 
 . Run `rougify style _[red]#yourstyle#_ > _[red]#yourstyle#_.css` to output the CSS to a text file.
 
-. If your hugo theme uses SCSS, use https://www.cssportal.com/css-to-scss/[CSS to SCSS Converter] to convert the file.
+. If your Hugo theme uses SCSS, use https://www.cssportal.com/css-to-scss/[CSS to SCSS Converter] to convert the file.
 
 . Do one of the following:
 +
-Either:{zwsp}::
+[none]
+* Either:
 .. Add the `.css` or `.scss` file to the relevant templates folder in your Hugo theme.
 For example, I added my file to `<root-folder>/themes/airspace-hugo/assets/scss/templates/`
 .. Add an `@import` rule to the end of your `style.scss` file.
 For example, I added `@import 'github.scss'` to the end of `<root-folder>/themes/airspace-hugo/assets/scss/style.scss`
-Or:{zwsp}::
+* Or:
 .. Place the CSS into the default `custom.scss` (or `custom.css`) file below the top-level `assets` folder.
 In my case this was `/<root-folder>/assets/scss/ustom.scss`.
 +
