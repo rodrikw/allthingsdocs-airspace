@@ -1,5 +1,5 @@
 ---
-title: "Asciidoctor Diagrams"
+title: "Setting up Asciidoctor-Diagram"
 date: 2022-03-23T12:19:04+02:00
 author: "Rodrik Wade"
 image: "images/blog/diagram.jpg"
@@ -19,20 +19,24 @@ Asciidoctor-Diagram supports a number of formats, including:
 * https://github.com/mermaid-js/mermaid[Mermaid]
 * https://plantuml.com/[PlantUML]
 
-For example, PlantUML markup can be used to create a simple sequence diagram:
+For example, PlantUML markup can be used to create a sequence diagram:
 
-[source]
+[source,asciidoc]
 ----
 .PlantUML diagram
-[plantuml, target=diagram-classes, format=svg]
+[plantuml,target="sample-plantuml-diagram",format=svg]
 ....
 @startuml
-!theme silver
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: Another authentication Response
+!theme lightgray
+Merchant -> Acquirer: 0100 Auth request
+Acquirer -> Issuer: 0100 Auth request
+Acquirer <-- Issuer: 0110 Auth response
+Merchant <-- Acquirer: 0110 Auth response
+... On completion: ...
+Merchant -> Acquirer: 0220 Tran advice
+Acquirer -> Issuer: 0220 Tran advice
+Acquirer <-- Issuer: 0230 Tran advice response
+Merchant <-- Acquirer: 0230 Tran advice response
 @enduml
 ....
 ----
@@ -40,15 +44,19 @@ Alice <-- Bob: Another authentication Response
 This results in:
 
 .PlantUML diagram
-[plantuml,target=diagram-classes,format=svg]
+[plantuml,target="sample-plantuml-diagram",format=svg]
 ....
 @startuml
 !theme lightgray
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: Another authentication Response
+Merchant -> Acquirer: 0100 Auth request
+Acquirer -> Issuer: 0100 Auth request
+Acquirer <-- Issuer: 0110 Auth response
+Merchant <-- Acquirer: 0110 Auth response
+... On completion: ...
+Merchant -> Acquirer: 0220 Tran advice
+Acquirer -> Issuer: 0220 Tran advice
+Acquirer <-- Issuer: 0230 Tran advice response
+Merchant <-- Acquirer: 0230 Tran advice response
 @enduml
 ....
 
@@ -63,11 +71,12 @@ gem 'asciidoctor'
 gem 'asciidoctor-diagram'
 gem 'rouge'
 ----
+
 . Ran the command `bundle` to install the Asciidoctor-Diagram gem locally and update the `Gemfile.lock` file.
 
 . In the `<root-folder>/config/_default/config.toml` file, I added the following highlighted lines:
 +
-[source%linenums,highlight=2..3;5]
+[source%linenums,toml,highlight=2..3;5]
 ----
 [markup.asciidocExt]
     extensions = ["asciidoctor-diagram"]
@@ -85,9 +94,9 @@ gem 'rouge'
 . Added `--destination public` to the build command: `hugo --minify --gc --destination public`.
 According to the https://gohugo.io/content-management/formats/#external-helper-asciidoctor[Hugo documentation], this is required if using an external Asciidoctor command.
 In my case, I updated the command in the `package.json` file, but it could also be in the `netlify.toml`, both of which are in the root folder.
+
 . Added the `<root-folder>/content/english/blog/.asciidoctor` folder to `.gitignore`.
 This folder fills up with lots of temporary files, as well as the output diagram files.
 
-Although it is convenient to be able to create diagram using plain text, I'm not entirely sure that added this functionality to a Hugo site run on Netlify is a good idea.
-It means that each time the site is built, the diagrams are re-generated, adding time and build minutes to the process.
-
+Although it is convenient to be able to create diagram using plaintext, I'm not entirely sure that adding this functionality to a Hugo site run on Netlify is a good idea.
+Doing so means that each time the site is built, the diagrams are re-generated, adding time and build minutes to the process.
