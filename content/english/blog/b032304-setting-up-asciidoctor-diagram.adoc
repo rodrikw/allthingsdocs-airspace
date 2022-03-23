@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Asciidoctor-Diagram","Diagrams"]
 description: "How to get AsciiDoctor-Diagram to work with Hugo and Netlify."
-draft: true
+draft: false
 type: "post"
 ---
 
