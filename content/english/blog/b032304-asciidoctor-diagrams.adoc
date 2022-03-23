@@ -5,49 +5,85 @@ author: "Rodrik Wade"
 image: "images/blog/diagram.jpg"
 image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>UKRAINE. Kiev. 2019. Kiev Children's Railway. Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
-categories: ["Category one"]
-tags: ["Tag A","Tag B"]
-description: "How to implement diagrams in Hugo."
+categories: ["Website"]
+tags: ["Asciidoctor-Diagram","Diagrams"]
+description: "How to get AsciiDoctor-Diagram to work with Hugo and Netlify."
 draft: false
 type: "post"
 ---
 
-Test the ability of Hugo to generate diagrams using Asciidoctor-Diagram:diagrams.
+AsciiDoctor-Diagram is an extension of Asciidoctor that enables you to create diagrams using plaintext directly in your AsciiDoc files.
+Asciidoctor-Diagram supports a number of formats, including:
 
-The following is  a simple DTAA diagram:
+* http://ditaa.sourceforge.net/[DITAA]
+* https://github.com/mermaid-js/mermaid[Mermaid]
+* https://plantuml.com/[PlantUML]
 
-.DITAA diagram
-[ditaa,target="example-diagram",shadows=false,format=svg]
-....
-                   +-------------+
-                   | Asciidoctor |-------+
-                   |   diagram   |       |
-                   +-------------+       | PNG out
-                       ^                 |
-                       | ditaa in        |
-                       |                 v
- +--------+   +--------+----+    /---------------\
- |        | --+ Asciidoctor +--> |               |
- |  Text  |   +-------------+    |   Beautiful   |
- |Document|   |   !magic!   |    |    Output     |
- |     {d}|   |             |    |               |
- +---+----+   +-------------+    \---------------/
-     :                                   ^
-     |          Lots of work             |
-     +-----------------------------------+
-....
+For example, the following is a simple sequence diagram using PlantUML markup:
 
-And this is a PlantUML diagram:
-
+[source]
+----
 .PlantUML diagram
 [plantuml, target=diagram-classes, format=svg]
 ....
-class BlockProcessor
-class DiagramBlock
-class DitaaBlock
-class PlantUmlBlock
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
 
-BlockProcessor <|-- DiagramBlock
-DiagramBlock <|-- DitaaBlock
-DiagramBlock <|-- PlantUmlBlock
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
 ....
+----
+
+.PlantUML diagram
+[plantuml,target=diagram-classes,format=svg]
+....
+@startuml
+Alice -> Bob: Authentication Request Hello!
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+....
+
+To add Asciidoctor-Diagram functionality to Hugo, I did the following (using the instructions provided by Andreas Longo in https://www.andreaslongo.com/blog/things-i-learned/asciidoc/diagram-hugo/[Generate diagrams with Asciidoctor and Hugo]:
+
+. Added an entry for Asciidoctor-Diagram to the `Gemfile` file in to project's root folder:
++
+[source%linenums,highlight=4]
+----
+source 'https://rubygems.org'
+gem 'asciidoctor'
+gem 'asciidoctor-diagram'
+gem 'rouge'
+----
+. Ran the command `bundle` to install the Asciidoctor-Diagram gem locally and update the `Gemfile.lock` file.
+
+. In the `<root-folder>/config/_default/config.toml` file, I added the following highlighted lines:
++
+[source%linenums,highlight=2..3;5]
+----
+[markup.asciidocExt]
+    extensions = ["asciidoctor-diagram"]
+    workingFolderCurrent = true <.>
+    [markup.asciidocExt.attributes]
+        diagram-cachedir = ".cache"
+        experimental = true
+        source-highlighter = "rouge"
+        relfileprefix = "../"
+        relfilesuffix = "/"
+----
++
+<.> The https://gohugo.io/content-management/formats/#external-helper-asciidoctor[Hugo documentation] states that this is required when using Asciidoctor-Diagram.
+
+. Added `--destination public` to the build command: `hugo --minify --gc --destination public`.
+According to the https://gohugo.io/content-management/formats/#external-helper-asciidoctor[Hugo documentation], this is required if using an external Asciidoctor command.
+In my case, I updated the command in the `package.json` file, but it could also be in the `netlify.toml`, both of which are in the root folder.
+. Added the `<root-folder>/content/english/blog/.asciidoctor` folder to `.gitignore`.
+This folder fills up with lots of temporary files, as well as the output diagram files.
+
+Although it is convenient to be able to create diagram using plain text, I'm not entirely sure that added this functionality to a Hugo site run on Netlify is a good idea.
+It means that each time the site is built, the diagrams are re-generated, adding time and build minutes to the process.
+
