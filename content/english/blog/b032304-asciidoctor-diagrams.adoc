@@ -1,0 +1,53 @@
+---
+title: "Asciidoctor Diagrams"
+date: 2022-03-23T12:19:04+02:00
+author: "Rodrik Wade"
+image: "images/blog/diagram.jpg"
+image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>UKRAINE. Kiev. 2019. Kiev Children's Railway. Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+bg_image: "images/feature-bg.jpg"
+categories: ["Category one"]
+tags: ["Tag A","Tag B"]
+description: "How to implement diagrams in Hugo."
+draft: false
+type: "post"
+---
+
+Test the ability of Hugo to generate diagrams using Asciidoctor-Diagram:diagrams.
+
+The following is  a simple DTAA diagram:
+
+.DITAA diagram
+[ditaa,target="example-diagram",shadows=false,format=svg]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
+
+And this is a PlantUML diagram:
+
+.PlantUML diagram
+[plantuml, target=diagram-classes, format=svg]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
