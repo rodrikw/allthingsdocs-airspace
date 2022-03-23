@@ -19,7 +19,7 @@ Asciidoctor-Diagram supports a number of formats, including:
 * https://github.com/mermaid-js/mermaid[Mermaid]
 * https://plantuml.com/[PlantUML]
 
-For example, the following is a simple sequence diagram using PlantUML markup:
+For example, PlantUML markup can be used to create a simple sequence diagram:
 
 [source]
 ----
@@ -36,11 +36,13 @@ Alice <-- Bob: Another authentication Response
 ....
 ----
 
+This results in:
+
 .PlantUML diagram
 [plantuml,target=diagram-classes,format=svg]
 ....
 @startuml
-Alice -> Bob: Authentication Request Hello!
+Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
 Alice -> Bob: Another authentication Request
