@@ -15,7 +15,7 @@ type: "post"
 This site is built using a Jamstack architecture.
 In March 2021 I hadn't even heard of Jamstack, but then I began investigating current approaches to delivering online documentation, and suddenly Jamstack was everywhere.
 
-The "`jam`" in "`Jamstack`" stands  for JavaScript, API and markup:
+The "`jam`" in "`Jamstack`" stands for JavaScript, API and markup:
 
 [none]
 * *Markup* refers to markup languages such as XML, HTML, Markdown, or reStructuredText in which content is created.
@@ -38,7 +38,7 @@ I chose Hugo for the following reasons:
 Combining all of this, we have a solution architecture that looks like this:
 
 .Website architecture
-image::/images/blog/website-arch-diagram.svg["Diagram showing changes previewed on Hugo Server, then pushed to GitHub, triggering a build deployment on Netlify."]
+image::/images/blog/website-arch-diagram.svg["Diagram showing changes previewed on Hugo Server,then pushed to GitHub,triggering a build deployment on Netlify."]
 
 . Content can be created using any text editor.
 My preferred environment is https://www.jetbrains.com/idea/[IntelliJ IDEA Community edition] with the https://plugins.jetbrains.com/plugin/7391-asciidoc[AsciiDoc plugin].
