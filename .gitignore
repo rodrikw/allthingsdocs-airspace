@@ -4,3 +4,5 @@ _gen
 public
 /Algolia-API-keys.txt
 node_modules
+.asciidoctor
+.cache

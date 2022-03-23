@@ -57,13 +57,16 @@ ordered = false
 style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
 
 [markup.asciidocExt]
-[markup.asciidocExt.attributes]
-experimental = true
-source-highlighter = "rouge"
-# rouge-css = "style"
-# rouge-style = "base16.solarized"
-relfileprefix = "../"
-relfilesuffix = "/"
+    extensions = ["asciidoctor-diagram"]
+    workingFolderCurrent = true
+    [markup.asciidocExt.attributes]
+        diagram-cachedir = ".cache"
+        experimental = true
+        source-highlighter = "rouge"
+        # rouge-css = "style"
+        # rouge-style = "base16.solarized"
+        relfileprefix = "../"
+        relfilesuffix = "/"
 
 ############################ Media types ############################
 [mediaTypes]

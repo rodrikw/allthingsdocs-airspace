@@ -4,8 +4,8 @@
   "description": "Package for All Things Docs website",
   "main": "index.js",
   "scripts": {
-    "start:dev": "hugo server -F -D",
-    "build:prod": "hugo --minify --gc"
+    "start:dev": "hugo server -F -D --destination public",
+    "build:prod": "hugo --minify --gc --destination public"
   },
   "repository": {
     "type": "git",
