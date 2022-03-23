@@ -3,7 +3,7 @@ title: "Asciidoctor Diagrams"
 date: 2022-03-23T12:19:04+02:00
 author: "Rodrik Wade"
 image: "images/blog/diagram.jpg"
-image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>UKRAINE. Kiev. 2019. Kiev Children's Railway. Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>Kiev Children's Railway Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Asciidoctor-Diagram","Diagrams"]
@@ -27,6 +27,7 @@ For example, PlantUML markup can be used to create a simple sequence diagram:
 [plantuml, target=diagram-classes, format=svg]
 ....
 @startuml
+!theme silver
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
@@ -42,6 +43,7 @@ This results in:
 [plantuml,target=diagram-classes,format=svg]
 ....
 @startuml
+!theme lightgray
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
