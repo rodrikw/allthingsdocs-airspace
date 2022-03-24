@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["CSS","Template","AsciiDoc"]
 description: "A test page for checking the application of the AsciiDoc CSS."
-draft: false
+draft: true
 type: "post"
 ---
 
@@ -385,17 +385,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Mauris eget leo nunc, nec tempus mi?
 Curabitur id nisl mi, ut vulputate urna.
 Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
-
-== Maths
-
-[stem]
-++++
-sqrt(4) = 2
-
-
-e = sum_(n=0)^oo 1 / n!
-
-++++
 
 == Fin
 
