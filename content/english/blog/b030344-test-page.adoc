@@ -8,9 +8,11 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["CSS","Template","AsciiDoc"]
 description: "A test page for checking the application of the AsciiDoc CSS."
-draft: true
+draft: false
 type: "post"
 ---
+
+:stem:
 
 image:../../images/blog/multirepo-ssg.svg[Multirepo SSG,200,float=right]
 Platonem complectitur mediocritatem ea eos.
@@ -384,6 +386,16 @@ Mauris eget leo nunc, nec tempus mi?
 Curabitur id nisl mi, ut vulputate urna.
 Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
 
+== Maths
+
+[stem]
+++++
+sqrt(4) = 2
+
+
+e = sum_(n=0)^oo 1 / n!
+
+++++
 
 == Fin
 
