@@ -1,6 +1,6 @@
 ---
 title: "Adding a caption to blog images"
-date: 2021-12-17T10:58:07+02:00
+date: 2022-04-11T16:23:06+02:00
 author: "Rodrik Wade"
 image: "images/blog/tags-japan.jpg"
 image_caption: "<a href='https://unsplash.com/photos/V7RyEH0rvf0'>Tags, Kyoto, Japan</a> by <a href='https://unsplash.com/@trulysoutheastasia'>D J</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
