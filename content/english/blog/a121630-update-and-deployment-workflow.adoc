@@ -1,6 +1,6 @@
 ---
 title: "Update and deployment workflow"
-date: 2021-12-16T11:00:04+02:00
+date: 2022-04-11T15:55:26+02:00
 author: "Rodrik Wade"
 image: "images/blog/leaf-stream.jpg"
 image_caption: "<a href='https://unsplash.com/photos/_wuBZxQIYnU'>Float</a> by <a href='https://unsplash.com/@connerbowe'>conner bowe</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -14,9 +14,9 @@ type: "post"
 
 Initially Netlify was configured to build off the main branch and I also made edits directly to the main branch on my local Git.
 This meant that whenever I pushed changes back to GitHub, Netlify triggered a new build.
-This didn't provide enough control and resulted in too many builds.
+This didn't provide enough control and resulted in far too many builds.
 
-I tried setting up a prod branch and configuring Netlify to build off that, but this resulted in a poor GitHub workflow: GitHub expects changes to branches to be contributed back to main, not the other way round.
+I tried setting up a prod branch and configuring Netlify to build off that, but this resulted in a poor GitHub workflow: GitHub expects changes to branches to be contributed back to main, not the other way around.
 So now Netlify builds off the main branch, while I develop on a dev branch.
 
 This is the workflow I use:
