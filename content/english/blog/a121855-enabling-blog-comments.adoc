@@ -1,6 +1,6 @@
 ---
 title: "Enabling blog comments"
-date: 2021-12-18T10:47:35+02:00
+date: 2022-04-19T12:32:56+02:00
 author: "Rodrik Wade"
 image: "images/blog/graffiti.jpg"
 image_caption: "<a href='https://unsplash.com/photos/uymG7UVPXpI'>Graffiti, Amsterdam, Netherlands</a> by <a href='https://unsplash.com/@maxvdo'>Max van den Oetelaar</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -8,27 +8,30 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Hugo","Comments"]
 description: "How to set up blog comments using GraphComment"
-draft: true
+draft: false
 type: "post"
 ---
 
-Most blogs allow readers to post comments, and enabling comments is easy to do using one of the many commenting services.
+There is considerable debate about the relative worth of enabling blog comments versus relying on social media channels, such as LinkedIn.
+I'm generally quite reluctant to comment via social media, so I'm inclined to think that there is some value in giving people the option of blog comments.
 
+Enabling comments in a Jamstack environment is quite easy to do using one of the many commenting services.
 My criteria for choosing a commenting solution were the following:
 
-* Should be a service.
+* *Should be a service.*
 I didn't want to deal with the complexity of containers or other types of installation, even if these do provide more control.
-* Should have a free tier with reasonably generous limits.
+* *Should have a free tier with reasonably generous limits.*
 I want to try comments out and don't want to commit myself to payments.
-* Should have reasonable payment tiers.
+* *Should have reasonable payment tiers.*
 In the unlikely event that I would need to move to a paid tier, I don't want it to be too expensive -- under USD{nbsp}10 a month is good.
-* Should be easy to install.
-* Shouldn't have ads or dubious tracking.
-* Should allow anonymous comments.
+* *Shouldn't have ads or dubious tracking.*
+Some of the most widely used services have been https://techcrunch.com/2021/05/05/disqus-facing-3m-fine-in-norway-for-tracking-users-without-consent/[accused of tracking users].
+* *Shouldn't require commenters to register.*
+Requiring registration is likely to discourage commenting.
+* *Should be easy to install.*
 
 There are lots of comment services that can be used with Hugo.
-The Hugo documentation provides a https://gohugo.io/content-management/comments/#alternatives[list of alternatives] to Disqus (the de facto default).
-Janne Kemppainen provides https://pakstech.com/blog/hugo-comments/[a summary] of many of them.
+The Hugo documentation provides a https://gohugo.io/content-management/comments/#alternatives[list of alternatives] to Disqus (the de facto default) and Janne Kemppainen https://pakstech.com/blog/hugo-comments/[summarizes the features] of many of them.
 
 In the end, I decided on https://graphcomment.com[GraphComment] for these reasons:
 
@@ -36,8 +39,9 @@ In the end, I decided on https://graphcomment.com[GraphComment] for these reason
 * The first paid tier is a reasonable $7.00 a month.
 * GraphComment is a French company that has to comply with European data standards such as https://en.wikipedia.org/wiki/General_Data_Protection_Regulation[GDPR], which makes me feel more comfortable.
 As does the fact that their clients include _Le Monde_.
+* It allows users to comment as guests, requiring only the provision of an email address and nickname.
 
-GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), text formatting, and media embedding.
+GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), simple text formatting, and media embedding.
 
 To set up GraphComment, I followed the instructions provided in https://discourse.gohugo.io/t/graph-comment-setup-in-2-minutes/34925[Graph Comment setup in 2 Minutes].
 This didn't work as is for me because it seemed that a shortcode couldn't be used in the context in which I wanted to insert it.
@@ -58,11 +62,11 @@ In the end, the `graphcomment.html` file contained the following:
             /* - - - CONFIGURATION VARIABLES - - - */
 
             var __semio__params = {
-              graphcommentId: "Interloquio", // make sure the id is yours <2>
+              graphcommentId: "Interloquio", // make sure the ID is yours <2>
 
               behaviour: {
                 // HIGHLY RECOMMENDED
-                uid: "{{ .Permalink }}", // uniq identifer for the comments thread on your page (ex: your page id) <3>
+                uid: "{{ .Permalink }}", // unique identifer for the comments thread on your page (eg: your page id) <3>
               },
 
               // configure your variables here
@@ -85,6 +89,7 @@ In the end, the `graphcomment.html` file contained the following:
 
 {{- end }} <4>
 ----
+
 <1> Following the advice given in https://msfjarvis.dev/posts/integrating-comments-in-hugo-sites-with-commento/[Integrating comments in Hugo sites with commento], the code is wrapped in an `{{ if -}} {{- end}}` block, which ensures that the comment functionality is not included when previewing the site on my computer.
 This is important because otherwise every build triggered by a change to the project would count towards the page views limit.
 <2> This is the ID that _you_ specify during the sign-up process.
@@ -121,8 +126,9 @@ The `single.html` file contains only a one-line addition:
 
 
 ----
+
 <1> This line referencing the `graphcomment.html` file was added.
-The following lines to the end of the `single.html` file are provided for context.
+The following lines to the end of the `single.html` file are provided only for context.
 
 The appearance of GraphComment is clean and unobtrusive, especially after changing the theme colour:
 
