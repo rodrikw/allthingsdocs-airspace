@@ -27,7 +27,7 @@ In the unlikely event that I would need to move to a paid tier, I don't want it 
 * *Shouldn't have ads or dubious tracking.*
 Some of the most widely used services have been https://techcrunch.com/2021/05/05/disqus-facing-3m-fine-in-norway-for-tracking-users-without-consent/[accused of tracking users].
 * *Shouldn't require commenters to register.*
-Requiring commenters to register is likely to discourage commenting.
+Requiring registration is likely to discourage commenting.
 * *Should be easy to install.*
 
 There are lots of comment services that can be used with Hugo.
@@ -41,7 +41,7 @@ In the end, I decided on https://graphcomment.com[GraphComment] for these reason
 As does the fact that their clients include _Le Monde_.
 * It allows users to comment as guests, requiring only the provision of an email address and nickname.
 
-GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), text formatting, and media embedding.
+GraphComment also has https://graphcomment.com/en/features.html[lots of features], including theme colours, a notification centre for users, easy registration (through Facebook, Twitter, or Google), simple text formatting, and media embedding.
 
 To set up GraphComment, I followed the instructions provided in https://discourse.gohugo.io/t/graph-comment-setup-in-2-minutes/34925[Graph Comment setup in 2 Minutes].
 This didn't work as is for me because it seemed that a shortcode couldn't be used in the context in which I wanted to insert it.
@@ -62,11 +62,11 @@ In the end, the `graphcomment.html` file contained the following:
             /* - - - CONFIGURATION VARIABLES - - - */
 
             var __semio__params = {
-              graphcommentId: "Interloquio", // make sure the id is yours <2>
+              graphcommentId: "Interloquio", // make sure the ID is yours <2>
 
               behaviour: {
                 // HIGHLY RECOMMENDED
-                uid: "{{ .Permalink }}", // uniq identifer for the comments thread on your page (ex: your page id) <3>
+                uid: "{{ .Permalink }}", // unique identifer for the comments thread on your page (eg: your page id) <3>
               },
 
               // configure your variables here
