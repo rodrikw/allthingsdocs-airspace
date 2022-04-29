@@ -35,6 +35,7 @@ The core components of a Jamstack solution are:
 * Hosting solution
 
 === Markup
+
 After six years of using a conventional help authoring tool, I wanted to try writing using a light-weight markup language.
 I investigated https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html[reStructuredText^] (RST) and https://www.markdownguide.org/[Markdown^] before stumbling across https://asciidoctor.org/docs/asciidoc-writers-guide/[AsciiDoc^].
 Within a week of starting to use AsciiDoc, it was clear that it was preferable to the other two.
@@ -101,7 +102,7 @@ But it is, I believe, sufficiently widely used, particularly by technical docume
 It's also supported by GitHub and GitLab.
 Of course, if you already have an entrenched Markdown user-base among the developers, then it might not be worth trying to introduce AsciiDoc.
 
-If you choose AsciiDoc as your markup, that affects your choice of editor and static site generator.
+If you choose AsciiDoc as your markup language, that affects your choice of editor and static site generator.
 
 === Editor
 
@@ -109,8 +110,7 @@ In my view, https://www.jetbrains.com/help/idea/installation-guide.html[IntelliJ
 
 The community edition of IntelliJ IDEA is free, and it includes many features that are useful to technical writers:
 
-* https://plugins.jetbrains.com/plugin/12175-grazie/[Grazie^].
-A spelling, grammar, and style checker.
+* https://plugins.jetbrains.com/plugin/12175-grazie/[Grazie^], a spelling, grammar, and style checker.
 * Git and GitHub/GitLab integration.
 * The ability to define file templates and https://www.jetbrains.com/help/idea/using-live-templates.html[live templates^].
 For example, I have created a live template to quickly insert the date and time in ISO format: 2022-04-27T11:06:40+02:00
@@ -156,7 +156,8 @@ NOTE: Antora expects content to be stored in one or more Git repos.
 ==== Git host
 
 GitHub and GitLab are the two most widely used cloud-based Git hosts.
-For my purposes, there didn't appear to be much to distinguish the two. I've found GitHub easy to use, and it offers many useful features such as https://docs.github.com/en/actions/using-workflows/about-workflows[workflows^].
+For my purposes, there didn't appear to be much to distinguish the two.
+I've found GitHub easy to use, and it offers many useful features such as https://docs.github.com/en/actions/using-workflows/about-workflows[workflows^].
 Both GitHub and GitLab are easily integrated with Netlify.
 
 In most cases, the determining factor in choosing a Git host (cloud-based or on-premise) will be what the development team uses.
