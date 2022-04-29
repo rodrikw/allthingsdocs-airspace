@@ -18,9 +18,10 @@ I know because I spent a number of months in 2021 investigating options and prop
 I wanted a toolset that would meet the following requirements:
 
 * Free and open source (FOSS), as far as possible.
-Low cost is generally attractive, but I was motivated more by the desire to avoid proprietary lock-in.
+Low cost is generally attractive, but I was motivated more by the desire to use tools that would be widely available within the organisation (rather than be restricted to the documentation team), and that would prevent proprietary lock-in.
 
 * Widely used and actively supported.
+Even a technically excellent tool is likely to be a poor choice if it has little or no traction.
 
 Although it was not part of my initial set of requirements, I early on determined that I wanted to focus on a Jamstack solution rather than one employing a content management system such as WordPress.
 
@@ -34,9 +35,9 @@ The core components of a Jamstack solution are:
 * Hosting solution
 
 === Markup
-After six years of using a conventional help authoring tool, I wanted to try authoring using a light-weight markup language.
-I investigated reStructuredText (RST) and Markdown before stumbling across AsciiDoc.
-Within a week of starting to use AsciiDoc , it was clear that it was preferable to the other two.
+After six years of using a conventional help authoring tool, I wanted to try writing using a light-weight markup language.
+I investigated https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html[reStructuredText^] (RST) and https://www.markdownguide.org/[Markdown^] before stumbling across AsciiDoc.
+Within a week of starting to use AsciiDoc, it was clear that it was preferable to the other two.
 My reasons can for liking it can be summed up as:
 
 [horizontal]
@@ -118,7 +119,7 @@ For example, I have created a live template to quickly insert the date and time 
 To the base functionality, the AsciiDoc plugin adds:
 
 * Instant preview of the markup as you type.
-* A toolbar for inserting tables, images, and links.
+* A toolbar for inserting tables, images, and links:
 +
 image::/images/blog/intellij-asciidoc-plugin-toolbar.jpg[alt="IntelliJ AsciiDoc plugin"]
 * Code folding, which enables AsciiDoc sections and block to be collapsed or expanded.
@@ -128,8 +129,8 @@ image::/images/blog/intellij-asciidoc-plugin-toolbar.jpg[alt="IntelliJ AsciiDoc 
 * The ability to quickly generate PDF and HTML previews.
 * Support for Antora projects, which greatly facilitates tasks such as inserting cross-references or links to images.
 
-IntelliJ is not perfect.
-For technical writers there are numerous menus and options that are not relevant to them.
+IntelliJ isn't perfect.
+For technical writers, there are numerous menus and options that are not relevant to them.
 It would be preferable if there were some way to hide these.
 
 An alternative to IntelliJ plus the AsciiDoc plugin is https://asciidocfx.com/[AsciidocFX^], which might better suited to writers who are new to AsciiDoc and who require more support with the syntax.
