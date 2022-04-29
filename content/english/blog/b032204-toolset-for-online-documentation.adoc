@@ -1,6 +1,6 @@
 ---
 title: "Toolset for online documentation"
-date: 2022-03-22T13:33:04+02:00
+date: 2022-04-29T12:29:27+02:00
 author: "Rodrik Wade"
 image: "images/blog/workshop.jpg"
 image_caption: "<a href='https://unsplash.com/photos/t5YUoHW6zRo'>Tools in tool rack</a> by <a href='https://unsplash.com/@barnimages'>Barn Images</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -8,34 +8,74 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Toolset","Jamstack"]
 description: "A toolset for creating and publishing online documentation."
-draft: true
+draft: false
 type: "post"
 ---
 
-I spent quite some time last year investigating options for an online documentation toolset.
-I wanted toolset that would meet the following requirements:
+It can be daunting to put together a toolset to create and deliver online documentation.
+I know because I spent a number of months in 2021 investigating options and proposing a toolset for a software company to which I was consulting.
 
-* Free and open source (FOSS) as far as possible.
-Low cost is generally attractive but I was motivated more by the desire to be able to plug into active communities.
+I wanted a toolset that would meet the following requirements:
+
+* Free and open source (FOSS), as far as possible.
+Low cost is generally attractive, but I was motivated more by the desire to avoid proprietary lock-in.
 
 * Widely used and actively supported.
 
-== Markup
+Although it was not part of my initial set of requirements, I early on determined that I wanted to focus on a Jamstack solution rather than one employing a content management system such as WordPress.
 
-I investigated reStructuredText (RST) and Markdown before stumbling across AsciiDoc, and I nearly committed to RST.
+== Core components
+
+The core components of a Jamstack solution are:
+
+* Markup and a suitable editor
+* Version control
+* Static site generator
+* Hosting solution
+
+=== Markup
+After six years of using a conventional help authoring tool, I wanted to try authoring using a light-weight markup language.
+I investigated reStructuredText (RST) and Markdown before stumbling across AsciiDoc.
 Within a week of starting to use AsciiDoc , it was clear that it was preferable to the other two.
 My reasons can for liking it can be summed up as:
 
 [horizontal]
 Flexibility::
-AsciiDoc has pretty much all the features I need: flexibles lists and tables, linking and embedding, text variables, conditionals, and so on.
+AsciiDoc has virtually all the features I need:
+* Flexible lists
+* Linking and embedding
+* Text variables
+* Conditional content, and so on
 
-Enjoyability::
+Ease of use::
 
 AsciiDoc is easy and enjoyable to use.
-Unlike RST, it does not rely on indentation, which is fiddly, and its markup is generally easy to remember. Compare:
+Unlike RST and Markdown, it doesn't rely on indentation, which I find fiddly.
+Compare:
 +
 --
+.Markdown
+[source,markdown]
+----
+1. Step 1.
+   - Step 1a.
+   - Step 1b.
+2. Step 2.
+----
+
+.AsciiDoc
+[source,asciidoc]
+----
+. Step 1.
+* Step 1a.
+* Step 1b.
+. Step 2.
+----
+
+Markdown prioritizes readability of the source, while AsciiDoc prioritizes editability.
+
+By comparison with RST, AsciiDoc is generally easier to remember.
+Compare:
 
 .reStructuredText
 [source,rst]
@@ -49,26 +89,136 @@ Unlike RST, it does not rely on indentation, which is fiddly, and its markup is 
 ----
 NOTE: This is note text.
 ----
+
+Markdown might beat both in this regard but that's partly because it's less powerful.
+It doesn't, for instance, include admonitions such as notes and tips.
 --
+// End indent
 
-Some people might object that it is not as widely used as Markdown, and that's true.
+Some might object that AsciiDoc is not as widely used as Markdown, which is true.
 But it is, I believe, sufficiently widely used, particularly by technical documenters.
+It's also supported by GitHub and GitLab.
+Of course, if you already have an entrenched Markdown user-base among the developers, then it might not be worth trying to introduce AsciiDoc.
 
-== Editors
+If you choose AsciiDoc as your markup, that affects your choice of editor and static site generator.
 
-In my view https://www.jetbrains.com/help/idea/installation-guide.html[IntelliJ IDEA] with the https://github.com/asciidoctor/asciidoctor-intellij-plugin[AsciiDoc plugin] is the clear leader for among the various options for editing AsciiDoc.
+=== Editor
 
-== Static site generator
+In my view, https://www.jetbrains.com/help/idea/installation-guide.html[IntelliJ IDEA^] with the https://github.com/asciidoctor/asciidoctor-intellij-plugin[AsciiDoc plugin^] is the clear leader among the various tools available for editing AsciiDoc.
 
-Antora is a specialized static site generator intended to convert Asciidoc content into documentation sites.
+The community edition of IntelliJ IDEA is free, and it includes many features that are useful to technical writers:
 
-== Version control
+* https://plugins.jetbrains.com/plugin/12175-grazie/[Grazie^].
+A spelling, grammar, and style checker.
+* Git and GitHub/GitLab integration.
+* The ability to define file templates and https://www.jetbrains.com/help/idea/using-live-templates.html[live templates^].
+For example, I have created a live template to quickly insert the date and time in ISO format: 2022-04-27T11:06:40+02:00
+* Project-wide search and replace.
 
-Git is predominant among developers.
-In the context of a docs-as-code approach, it makes sense to adopt Git as the version control for documentation too.
+To the base functionality, the AsciiDoc plugin adds:
 
-Some people might object that it is unnecesarily complex for requirements of documenters.
-I'm somewhat sympathetic to this as I initially found the porocess of committing chnages to the local repo and then pushing them to the remote repo quite confusing -- let alone pull requests and merging.
+* Instant preview of the markup as you type.
+* A toolbar for inserting tables, images, and links.
++
+image::/images/blog/intellij-asciidoc-plugin-toolbar.jpg[alt="IntelliJ AsciiDoc plugin"]
+* Code folding, which enables AsciiDoc sections and block to be collapsed or expanded.
+* Live templates for inserting a wide range of AsciiDoc markup.
+* Reformatting the source, for example, adjusting empty lines around headings and enforcing a https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[one-sentence-per-line convention^].
+* Validation of the AsciiDoc source, for example, highlighting broken images and deprecated syntax.
+* The ability to quickly generate PDF and HTML previews.
+* Support for Antora projects, which greatly facilitates tasks such as inserting cross-references or links to images.
 
+IntelliJ is not perfect.
+For technical writers there are numerous menus and options that are not relevant to them.
+It would be preferable if there were some way to hide these.
 
+An alternative to IntelliJ plus the AsciiDoc plugin is https://asciidocfx.com/[AsciidocFX^], which might better suited to writers who are new to AsciiDoc and who require more support with the syntax.
+However, I don't recommend it if you are intending to use Antora as the static site generator.
 
+=== Version control system
+
+Git is the dominant version control system (VCS) for open-source projects, and is becoming widespread in other environments.
+
+Some might object that Git is unnecessarily complex for the requirements of documenters.
+I'm somewhat sympathetic to this as I initially found the process of committing changes to the local repo and then pushing them to the remote repo quite confusing -- let alone managing pull requests and merging.
+
+Nevertheless, I think that in a context where the product development team uses Git, it makes sense for documenters to do so too:
+
+* Technical reviewers are more likely to access the source content for review than if it is stored in another VCS, let alone a content management system.
+(On the other hand, Git is less likely to be accessible to reviewers from business or marketing, so you might need to resort to outputting content to PDF for them.)
+* The publication process can be more easily integrated into the product release process, and the DevOps team are more likely to be willing to undertake such integration.
+
+Of course, if the development team uses another VCS such as Subversion, that might well dictate what the documentation team uses.
+
+NOTE: Antora expects content to be stored in one or more Git repos.
+
+==== Git host
+
+GitHub and GitLab are the two most widely used cloud-based Git hosts.
+For my purposes, there didn't appear to be much to distinguish the two. I've found GitHub easy to use, and it offers many useful features such as https://docs.github.com/en/actions/using-workflows/about-workflows[workflows^].
+Both GitHub and GitLab are easily integrated with Netlify.
+
+In most cases, the determining factor in choosing a Git host (cloud-based or on-premise) will be what the development team uses.
+
+==== Git clients
+
+If you do decide to use GitHub, you'll probably want to install GitHub Desktop.
+It makes tasks such as pushing changes to GitHub or branching a repo much easier than doing so using the command line.
+
+I also use the Git functionality provided by IntelliJ IDEA a lot.
+
+=== Static site generator
+
+A static site generator (SSG) is required to aggregate your AsciiDoc content and other assets, and convert them into a structured site.
+
+https://antora.org/[Antora^] is a specialized static site generator intended to convert AsciiDoc content into documentation sites.
+It provides a lot of functionality out of the box that would otherwise be tricky to replicate with a more generalist SSG:
+
+* The ability to aggregate content drawn from multiple Git repositories.
+* Support for multiple versions of documents in a unified site.
+A version menu enables users to easily swap between versions of a document.
+* Source-to-source navigation, which means that cross-references are defined in the source documents independently of the output, greatly facilitating their management.
+* The ability to easily structure content and define navigation.
+
+Antora has some limitations:
+
+* At present, it does not support multilingual sites by default, although it is possible to add the necessary functionality using extensions.
+* It does not yet support automatic generation of PDFs, but development of this functionality is well advanced (as of 28 April 2022).
+
+Antora _is_ a niche player.
+It's not nearly as widely used as the likes of Gatsby, Jekyll, or Hugo, but it is being very actively developed and has a committed and https://antora.zulipchat.com/[helpful community^].
+
+=== Hosting
+
+There are numerous options for hosting your site.
+Some provide pure hosting while others also provide "`serverless`" backend services, meaning that they provide cloud computing resources on demand for tasks such as site generation.
+https://www.netlify.com/[Netlify^] falls into the second category.
+
+I chose Netlify because it seemed that a significant proportion of the Antora sites that I visited were hosted on Netlify, including the official https://docs.antora.org/antora/latest/[Antora Documentation^] site.
+I'm glad that I did as I've been impressed with the ease of use and functionality it offers, not to mention that it has a free https://www.netlify.com/pricing/[Starter tier^].
+
+== Supporting tools
+
+The tools listed below are not essential, but they are useful.
+
+=== Screen capture software
+
+I've used https://www.techsmith.com/screen-capture.html[Snagit^] for so long that I'm willing to pay for the relatively low licence fee.
+
+=== Bitmap image editing
+
+For simple editing of PNGs and JPEGs, I most often use Snagit's editor.
+https://www.gimp.org[GIMP^] is the default FOSS option, although it's overkill for my purposes.
+
+=== Diagraming tools
+
+My preferred tool for creating diagrams and exporting them as SVGs remains https://www.microsoft.com/en-za/microsoft-365/visio/flowchart-software[Visio^].
+It is powerful and generally easy to use.
+Unfortunately, it's not particularly cheap.
+
+I've also used https://www.diagrams.net/[diagrams.net^] (formerly draw.io) and while it isn't comparable to Visio, it can be used to create very acceptable SVG diagrams.
+
+=== Vector image editing
+
+For SVG images, https://inkscape.org[Inkscape^] is the obvious FOSS choice.
+It's powerful (certainly exceeding anything I might require), although it's not always intuitive.
