@@ -36,15 +36,15 @@ The core components of a Jamstack solution are:
 
 === Markup
 After six years of using a conventional help authoring tool, I wanted to try writing using a light-weight markup language.
-I investigated https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html[reStructuredText^] (RST) and https://www.markdownguide.org/[Markdown^] before stumbling across AsciiDoc.
+I investigated https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html[reStructuredText^] (RST) and https://www.markdownguide.org/[Markdown^] before stumbling across https://asciidoctor.org/docs/asciidoc-writers-guide/[AsciiDoc^].
 Within a week of starting to use AsciiDoc, it was clear that it was preferable to the other two.
 My reasons can for liking it can be summed up as:
 
 [horizontal]
 Flexibility::
 AsciiDoc has virtually all the features I need:
-* Flexible lists
-* Linking and embedding
+* Flexible lists and tables
+* Linking and embedding, including linking to external code
 * Text variables
 * Conditional content, and so on
 
@@ -122,7 +122,7 @@ To the base functionality, the AsciiDoc plugin adds:
 * A toolbar for inserting tables, images, and links:
 +
 image::/images/blog/intellij-asciidoc-plugin-toolbar.jpg[alt="IntelliJ AsciiDoc plugin"]
-* Code folding, which enables AsciiDoc sections and block to be collapsed or expanded.
+* Code folding, which enables AsciiDoc sections and blocks to be collapsed or expanded.
 * Live templates for inserting a wide range of AsciiDoc markup.
 * Reformatting the source, for example, adjusting empty lines around headings and enforcing a https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[one-sentence-per-line convention^].
 * Validation of the AsciiDoc source, for example, highlighting broken images and deprecated syntax.
@@ -138,7 +138,7 @@ However, I don't recommend it if you are intending to use Antora as the static s
 
 === Version control system
 
-Git is the dominant version control system (VCS) for open-source projects, and is becoming widespread in other environments.
+Git is the dominant version control system (VCS) for open-source projects, and it's widespread in other environments too.
 
 Some might object that Git is unnecessarily complex for the requirements of documenters.
 I'm somewhat sympathetic to this as I initially found the process of committing changes to the local repo and then pushing them to the remote repo quite confusing -- let alone managing pull requests and merging.
@@ -196,7 +196,7 @@ Some provide pure hosting while others also provide "`serverless`" backend servi
 https://www.netlify.com/[Netlify^] falls into the second category.
 
 I chose Netlify because it seemed that a significant proportion of the Antora sites that I visited were hosted on Netlify, including the official https://docs.antora.org/antora/latest/[Antora Documentation^] site.
-I'm glad that I did as I've been impressed with the ease of use and functionality it offers, not to mention that it has a free https://www.netlify.com/pricing/[Starter tier^].
+I'm glad that I did as I've been impressed with the ease of use and functionality it offers (I particularly like its https://docs.netlify.com/site-deploys/deploy-previews/[preview functionality^]), not to mention that it has a free https://www.netlify.com/pricing/[Starter tier^].
 
 == Supporting tools
 
