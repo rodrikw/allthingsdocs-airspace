@@ -25,22 +25,20 @@ Even a technically excellent tool is likely to be a poor choice if it has little
 
 Although it was not part of my initial set of requirements, I early on decided to focus on a Jamstack solution rather than one employing a content management system such as WordPress.
 
-.TL;DR
+.My choices
 ****
 [horizontal]
-Markup::
+<<_markup,Markup>>::
 AsciiDoc
-Editor::
+<<_editor,Editor>>::
 IntelliJ IDEA plus AsciiDoc Plugin
-Version control system::
+<<_version_control_system,Version control system>>::
 Git plus GitHub
-Static site generator::
+<<_static_site_generator,Static site generator>>::
 Antora
-Hosting solution::
+<<_hosting_solution,Hosting solution>>::
 Netlify
 ****
-
-#If I add links above, should they link to the content below or to external sites, e.g. Netlify site?#
 
 == Core components
 
@@ -50,6 +48,7 @@ The core components of a Jamstack solution are:
 * Version control
 * Static site generator
 * Hosting solution
+
 
 === Markup
 
@@ -210,7 +209,7 @@ Antora has some limitations:
 Antora _is_ a niche player.
 It's not nearly as widely used as the likes of Gatsby, Jekyll, or Hugo, but it is being very actively developed and has a committed and https://antora.zulipchat.com/[helpful community^].
 
-=== Hosting
+=== Hosting solution
 
 There are numerous options for hosting your site.
 Some provide pure hosting while others also provide "`serverless`" backend services, meaning that they provide cloud computing resources on demand for tasks such as site generation.
