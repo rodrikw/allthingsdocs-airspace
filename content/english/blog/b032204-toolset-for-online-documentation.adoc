@@ -34,6 +34,20 @@ The core components of a Jamstack solution are:
 * Static site generator
 * Hosting solution
 
+.TL;DR
+****
+[horizontal]
+Markup::
+AsciiDoc
+Editor::
+IntelliJ IDEA plus AsciiDoc Plugin
+Static site generaor::
+Antora
+Hosting solution::
+Netlify
+****
+
+
 === Markup
 
 After six years of using a conventional help authoring tool and earlier experience using DITA, I wanted to try creating documentation using a light-weight markup language.
