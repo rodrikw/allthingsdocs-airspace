@@ -40,6 +40,8 @@ Hosting solution::
 Netlify
 ****
 
+#If I add links above, should they link to the content below or to external sites, e.g. Netlify site?#
+
 == Core components
 
 The core components of a Jamstack solution are:
