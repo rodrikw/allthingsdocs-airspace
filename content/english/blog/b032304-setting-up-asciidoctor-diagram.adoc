@@ -1,6 +1,6 @@
 ---
 title: "Setting up Asciidoctor-Diagram for Hugo"
-date: 2022-03-23T12:19:04+02:00
+date: 2022-05-05T15:21:11+02:00
 author: "Rodrik Wade"
 image: "images/blog/diagram.jpg"
 image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>Kiev Children's Railway Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -8,7 +8,7 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Asciidoctor-Diagram","Diagrams"]
 description: "How to get AsciiDoctor-Diagram to work with Hugo and Netlify."
-draft: true
+draft: false
 type: "post"
 ---
 
