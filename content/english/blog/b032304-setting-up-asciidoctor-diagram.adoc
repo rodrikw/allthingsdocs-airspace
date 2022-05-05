@@ -1,5 +1,5 @@
 ---
-title: "Setting up Asciidoctor-Diagram"
+title: "Setting up Asciidoctor-Diagram for Hugo"
 date: 2022-03-23T12:19:04+02:00
 author: "Rodrik Wade"
 image: "images/blog/diagram.jpg"
@@ -12,7 +12,7 @@ draft: true
 type: "post"
 ---
 
-AsciiDoctor-Diagram is an extension of Asciidoctor that enables you to create diagrams using plaintext directly in your AsciiDoc files.
+https://docs.asciidoctor.org/diagram-extension/latest/[AsciiDoctor-Diagram^] is an extension of Asciidoctor that enables you to create diagrams using plaintext directly in your AsciiDoc files.
 Asciidoctor-Diagram supports a number of formats, including:
 
 * http://ditaa.sourceforge.net/[DITAA]
@@ -23,11 +23,11 @@ For example, PlantUML markup can be used to create a sequence diagram:
 
 [source,asciidoc]
 ----
-.PlantUML diagram
+.PlantUML diagram -- ISO{nbsp}8583 dual-message flow
 [plantuml,target="sample-plantuml-diagram",format=svg]
 ....
 @startuml
-!theme lightgray
+!theme lightgray <.>
 Merchant -> Acquirer: 0100 Auth request
 Acquirer -> Issuer: 0100 Auth request
 Acquirer <-- Issuer: 0110 Auth response
@@ -41,9 +41,11 @@ Merchant <-- Acquirer: 0230 Tran advice response
 ....
 ----
 
+<.> PlantUML now includes a number of https://the-lum.github.io/puml-themes-gallery/[official themes] that can be referenced using the `!theme` directive. .
+
 This results in:
 
-.PlantUML diagram
+.PlantUML diagram -- ISO{nbsp}8583 dual-message flow
 [plantuml,target="sample-plantuml-diagram",format=svg]
 ....
 @startuml
@@ -98,5 +100,5 @@ In my case, I updated the command in the `package.json` file, but it could also 
 . Added the `<root-folder>/content/english/blog/.asciidoctor` folder to `.gitignore`.
 This folder fills up with lots of temporary files, as well as the output diagram files.
 
-Although it is convenient to be able to create diagram using plaintext, I'm not entirely sure that adding this functionality to a Hugo site run on Netlify is a good idea.
+Although it is convenient to be able to create diagrams using plaintext, I'm not entirely sure that adding this functionality to a Hugo site run on Netlify is a good idea.
 Doing so means that each time the site is built, the diagrams are re-generated, adding time and build minutes to the process.
