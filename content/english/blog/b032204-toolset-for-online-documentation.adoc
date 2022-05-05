@@ -32,6 +32,8 @@ Markup::
 AsciiDoc
 Editor::
 IntelliJ IDEA plus AsciiDoc Plugin
+Version control system::
+Git plus GitHub
 Static site generator::
 Antora
 Hosting solution::
