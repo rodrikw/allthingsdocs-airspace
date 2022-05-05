@@ -3,7 +3,7 @@ title: "Setting up Asciidoctor-Diagram for Hugo"
 date: 2022-05-05T15:21:11+02:00
 author: "Rodrik Wade"
 image: "images/blog/diagram.jpg"
-image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>Kiev Children's Railway Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>Kiev Children’s Railway Museum</a> by <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Asciidoctor-Diagram","Diagrams"]
@@ -41,7 +41,7 @@ Merchant <-- Acquirer: 0230 Tran advice response
 ....
 ----
 
-<.> PlantUML now includes a number of https://the-lum.github.io/puml-themes-gallery/[official themes] that can be referenced using the `!theme` directive. .
+<.> PlantUML now includes a number of https://the-lum.github.io/puml-themes-gallery/[official themes] that can be referenced using the `!theme` directive.
 
 This results in:
 
@@ -62,7 +62,7 @@ Merchant <-- Acquirer: 0230 Tran advice response
 @enduml
 ....
 
-To add Asciidoctor-Diagram functionality to Hugo, I did the following (using the instructions provided by Andreas Longo in https://www.andreaslongo.com/blog/things-i-learned/asciidoc/diagram-hugo/[Generate diagrams with Asciidoctor and Hugo]:
+To add Asciidoctor-Diagram functionality to Hugo, I did the following (using the instructions provided by Andreas Longo in https://www.andreaslongo.com/blog/things-i-learned/asciidoc/diagram-hugo/[Generate diagrams with Asciidoctor and Hugo]):
 
 . Added an entry for Asciidoctor-Diagram to the `Gemfile` file in the project's root folder:
 +
