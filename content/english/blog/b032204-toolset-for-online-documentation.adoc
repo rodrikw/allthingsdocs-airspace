@@ -25,6 +25,19 @@ Even a technically excellent tool is likely to be a poor choice if it has little
 
 Although it was not part of my initial set of requirements, I early on decided to focus on a Jamstack solution rather than one employing a content management system such as WordPress.
 
+.TL;DR
+****
+[horizontal]
+Markup::
+AsciiDoc
+Editor::
+IntelliJ IDEA plus AsciiDoc Plugin
+Static site generator::
+Antora
+Hosting solution::
+Netlify
+****
+
 == Core components
 
 The core components of a Jamstack solution are:
@@ -33,20 +46,6 @@ The core components of a Jamstack solution are:
 * Version control
 * Static site generator
 * Hosting solution
-
-.TL;DR
-****
-[horizontal]
-Markup::
-AsciiDoc
-Editor::
-IntelliJ IDEA plus AsciiDoc Plugin
-Static site generaor::
-Antora
-Hosting solution::
-Netlify
-****
-
 
 === Markup
 
