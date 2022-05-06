@@ -15,9 +15,9 @@ type: "post"
 https://docs.asciidoctor.org/diagram-extension/latest/[AsciiDoctor-Diagram^] is an extension of Asciidoctor that enables you to create diagrams using plaintext directly in your AsciiDoc files.
 Asciidoctor-Diagram supports a number of formats, including:
 
-* http://ditaa.sourceforge.net/[DITAA]
-* https://github.com/mermaid-js/mermaid[Mermaid]
-* https://plantuml.com/[PlantUML]
+* http://ditaa.sourceforge.net/[DITAA^]
+* https://github.com/mermaid-js/mermaid[Mermaid^]
+* https://plantuml.com/[PlantUML^]
 
 For example, PlantUML markup can be used to create a sequence diagram:
 
@@ -41,7 +41,7 @@ Merchant <-- Acquirer: 0230 Tran advice response
 ....
 ----
 
-<.> PlantUML now includes a number of https://the-lum.github.io/puml-themes-gallery/[official themes] that can be referenced using the `!theme` directive.
+<.> PlantUML now includes a number of https://the-lum.github.io/puml-themes-gallery/[official themes^] that can be referenced using the `!theme` directive.
 
 This results in:
 
@@ -62,7 +62,7 @@ Merchant <-- Acquirer: 0230 Tran advice response
 @enduml
 ....
 
-To add Asciidoctor-Diagram functionality to Hugo, I did the following (using the instructions provided by Andreas Longo in https://www.andreaslongo.com/blog/things-i-learned/asciidoc/diagram-hugo/[Generate diagrams with Asciidoctor and Hugo]):
+To add Asciidoctor-Diagram functionality to Hugo, I did the following (using the instructions provided by Andreas Longo in https://www.andreaslongo.com/blog/things-i-learned/asciidoc/diagram-hugo/[Generate diagrams with Asciidoctor and Hugo^]):
 
 . Added an entry for Asciidoctor-Diagram to the `Gemfile` file in the project's root folder:
 +
@@ -82,7 +82,7 @@ gem 'rouge'
 ----
 [markup.asciidocExt]
     extensions = ["asciidoctor-diagram"]
-    workingFolderCurrent = true <.>
+    workingFolderCurrent = true # <.>
     [markup.asciidocExt.attributes]
         diagram-cachedir = ".cache"
         experimental = true
@@ -91,7 +91,7 @@ gem 'rouge'
         relfilesuffix = "/"
 ----
 +
-<.> The https://gohugo.io/content-management/formats/#external-helper-asciidoctor[Hugo documentation] states that this is required when using Asciidoctor-Diagram.
+<.> The https://gohugo.io/content-management/formats/#external-helper-asciidoctor[Hugo documentation^] states that this is required when using Asciidoctor-Diagram.
 
 . Added `--destination public` to the build command: `hugo --minify --gc --destination public`.
 According to the https://gohugo.io/content-management/formats/#external-helper-asciidoctor[Hugo documentation], this is required if using an external Asciidoctor command.
@@ -100,5 +100,5 @@ In my case, I updated the command in the `package.json` file, but it could also 
 . Added the `<root-folder>/content/english/blog/.asciidoctor` folder to `.gitignore`.
 This folder fills up with lots of temporary files, as well as the output diagram files.
 
-Although it is convenient to be able to create diagrams using plaintext, I'm not entirely sure that adding this functionality to a Hugo site run on Netlify is a good idea.
+Although it's convenient to be able to create diagrams using plaintext, I'm not entirely sure that adding this functionality to a Hugo site run on Netlify is a good idea.
 Doing so means that each time the site is built, the diagrams are re-generated, adding time and build minutes to the process.
