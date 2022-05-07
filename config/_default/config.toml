@@ -67,7 +67,7 @@ style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
         # rouge-style = "base16.solarized"
         relfileprefix = "../"
         relfilesuffix = "/"
-        imagesdir = "/"
+        imagesdir = "./"
 
 
 ############################ Media types ############################
