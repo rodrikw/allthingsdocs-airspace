@@ -70,4 +70,4 @@ You can monitor the workflow in GitHub:
 
 . Click btn:[Actions]:
 +
-image::{path-separator}images/blog/github-workflows.jpg[alt="GitHub workflows"]
+image::{imgpath}github-workflows.jpg[alt="GitHub workflows"]

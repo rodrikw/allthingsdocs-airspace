@@ -1,6 +1,6 @@
 // .asciidoctorconfig
 :experimental:
-:path-separator: {empty}
-:imagesdir: {asciidoctorconfigdir}/static{path-separator}
+:imgpath: static/images/blog/
+:imagesdir: {asciidoctorconfigdir}
 // :icons: font
 // :myprojectbasedir: {asciidoctorconfigdir}
