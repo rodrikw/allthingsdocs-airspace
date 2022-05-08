@@ -69,6 +69,7 @@ style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
         relfileprefix = "../"
         relfilesuffix = "/"
         path-separator ="/"
+        workingFolderCurrent = true
 
 ############################ Media types ############################
 [mediaTypes]
