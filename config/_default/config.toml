@@ -65,9 +65,10 @@ style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
         source-highlighter = "rouge"
         # rouge-css = "style"
         # rouge-style = "base16.solarized"
+        # The following relate to indexifying URLs
         relfileprefix = "../"
         relfilesuffix = "/"
-
+        path-separator ="/"
 
 ############################ Media types ############################
 [mediaTypes]
