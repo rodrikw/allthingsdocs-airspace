@@ -114,4 +114,4 @@ After a few seconds you should see that your site has been deployed.
 NOTE: Changes to the playbook project (`docs-site`) will trigger the redeployment of the site.
 Changes to the content repos (in this case \https://gitlab.com/antora/demo/demo-component-a and \https://gitlab.com/antora/demo/demo-component-a) will not.
 This is likely not to be desirable.
-In later posts I'll look at how to configure scheduled builds and also how to configure builds that occur when the content repos are merged.
+In next two posts, I consider how to xref:b022546-configuring-scheduled-antora-builds-on-netlify.adoc[configure scheduled builds] and also how to xref:b022519-configuring-github-to-trigger-netlify-on-merge.adoc[configure builds that occur when the content repos are merged].
