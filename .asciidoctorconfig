@@ -1,0 +1,8 @@
+// .asciidoctorconfig
+:experimental:
+// The following must be manually inserted before each image filename
+// Note that here imgpath does include the static folder unlike in the config/_default/config.toml file
+:imgpath: static/images/blog/
+:imagesdir: {asciidoctorconfigdir}
+// :icons: font
+// :myprojectbasedir: {asciidoctorconfigdir}

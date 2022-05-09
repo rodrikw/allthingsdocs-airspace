@@ -140,7 +140,7 @@ To the base functionality, the AsciiDoc plugin adds:
 * Instant preview of the markup as you type.
 * A toolbar for inserting tables, images, and links:
 +
-image::/images/blog/intellij-asciidoc-plugin-toolbar.jpg[alt="IntelliJ AsciiDoc plugin"]
+image::{imgpath}b032204-intellij-asciidoc-plugin-toolbar.png[alt="IntelliJ AsciiDoc plugin"]
 * Code folding, which enables AsciiDoc sections and blocks to be collapsed or expanded.
 * Live templates for inserting a wide range of AsciiDoc markup.
 * Reformatting the source, for example, adjusting empty lines around headings and enforcing a https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[one-sentence-per-line convention^].

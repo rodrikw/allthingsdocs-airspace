@@ -65,8 +65,13 @@ style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
         source-highlighter = "rouge"
         # rouge-css = "style"
         # rouge-style = "base16.solarized"
+        # The following relate to indexifying URLs
         relfileprefix = "../"
         relfilesuffix = "/"
+        # The following replaces imagesdir. Unfortunately, it has to be included for each image.
+        # Note that here imgpath does not include the static folder unlike in .asciidoctorconfig
+        imgpath ="/images/blog/"
+        workingFolderCurrent = true
 
 ############################ Media types ############################
 [mediaTypes]

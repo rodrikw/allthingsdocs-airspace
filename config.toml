@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://allthingsdocs.com/'
 languageCode = 'en-GB-oxendict'
 title = 'All Things Docs'
 theme = 'airspace-hugo'

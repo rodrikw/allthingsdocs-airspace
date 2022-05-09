@@ -1,6 +1,6 @@
 ---
-title: "Configuring scheduled builds on Netlify"
-date: 2022-02-25T09:24:39+02:00
+title: "Configuring scheduled builds of an Antora project on Netlify"
+date: 2022-05-09T09:02:05+02:00
 author: "Rodrik Wade"
 image: "images/blog/clocks.jpg"
 image_caption: "<a href='https://unsplash.com/photos/yBzrPGLjMQw'>Watchmaker’s junkyard</a> by <a href='https://unsplash.com/@heatherz'>Heather Zabriskie</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -8,30 +8,36 @@ bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify","GitHub"]
 description: "How to set up GitHub to trigger scheduled builds of an Antora project on Netlify."
-draft: true
+draft: false
 type: "post"
 ---
 
 A common approach to updating a doc site is to build the site on a regular automated schedule, for example, daily at midnight.
 Netlify itself has recently introduced https://github.com/netlify/labs/blob/main/features/scheduled-functions/documentation/README.md[scheduled functions] but it's still a beta feature.
-Eric Jinks in https://ericjinks.com/blog/2019/netlify-scheduled-build/[Schedule your Netlify build with GitHub Actions] has detailed an alternative method that involves creating a buildhook in Netlify and then adding it to a GitHub workflow.
+Eric Jinks in https://ericjinks.com/blog/2019/netlify-scheduled-build/[Schedule your Netlify build with GitHub Actions^] has detailed an alternative method that involves creating a buildhook in Netlify and then adding it to a GitHub workflow.
 
-The assumption is that you have already created an Antora playbook project for the site and have set up continuous deployment on Netlify, as described in xref:../b022246-configuring-antora-ci-on-netlify.adoc[Configuring continuous integration of an Antora project on Netlify].
+The assumption is that you have already created an Antora playbook project for the site and have set up continuous deployment on Netlify, as described in xref:b022246-configuring-cd-of-antora-project-on-netlify.adoc[Configuring continuous deployment of an Antora project on Netlify].
 
 To create the buildhook:
 
-. In Netlify, select the relevant site and click *Site settings*.
-. From the left menu, click *Build & deploy*.
-. Click *Add buildhook*.
+. In Netlify, select the relevant site and open btn:[Site settings].
+
+. From the left menu, click btn:[Build & deploy].
+. Click btn:[Add buildhook].
+
 . Provide a name for the webhook.
 For example, `Trigger <my-site> build`.
+
 . Specify the branch to build.
-. Click *Save*.
+
+. Click btn:[Save].
+
 . Copy the buildhook.
 
 To add a workflow in GitHub:
 
 . In the playbook project, create a `/.github/workflows` folder.
+
 . Create a `main.yaml` file with the following content:
 +
 [source,yaml]
@@ -58,9 +64,13 @@ jobs:
 This creates a workflow that runs at the scheduled time.
 When run, a CURL request containing the buildhook is sent to Netlify, triggering the build of the site.
 
-You can monitor the workflow in GitHub:
+To monitor the workflow in GitHub:
 
-. Select the workflow repo.
+. Select the content repo to which you added the workflow.
+
 . Click btn:[Actions]:
 +
-image::/images/blog/github-workflows.jpg[alt="GitHub workflows"]
+image::{imgpath}b022501-github-workflow-on-schedule.png[alt="GitHub workflows"]
+
+. Click the relevant workflow link.
+
