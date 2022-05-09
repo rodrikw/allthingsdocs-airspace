@@ -3,7 +3,7 @@ title: "Configuring GitHub to trigger a Netlify build on merging"
 date: 2022-05-09T09:02:20+02:00
 author: "Rodrik Wade"
 image: "images/blog/b022519-river-confluence.jpg"
-image_caption: "<a href='https://unsplash.com/photos/cxR46yRiJd4'>Confluence of the Indus and Zanskar rivers</a> by <a href='https://unsplash.com/@veda_nimkhedkar17'>Veda Nimkhedkar</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
+image_caption: "<a href='https://unsplash.com/photos/MS9b--ngLO0'>Confluence of the Indus and Zanskar rivers</a> by <a href='https://unsplash.com/@veda_nimkhedkar17'>Veda Nimkhedkar</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
 bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify","GitHub"]
