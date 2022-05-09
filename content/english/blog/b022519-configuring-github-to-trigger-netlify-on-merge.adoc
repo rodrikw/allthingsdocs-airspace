@@ -64,5 +64,6 @@ To monitor the workflow in GitHub:
 
 . Click btn:[Actions]:
 +
-image::{imgpath}b022519-github-workflow-on-merge.png[alt="GitHub actions"]
+image::{imgpath}b022519-github-workflow-on-merge.png[alt="GitHub workflows"]
+
 . Click the relevant workflow link.
