@@ -32,12 +32,12 @@ This is the workflow I use:
 . Create a pull request:
 +
 --
-image::/images/blog/pull-request.png["GitHub Create pull request."]
+image::{imgpath}pull-request.png["GitHub Create pull request."]
 This can be initiated in GitHub Desktop, but it does necessitate the GitHub site being opened.
 
 When the pull request is created, Netlify is configured to automatically generate a preview build of the site:
 
-image::/images/blog/netlify-deploy-preview-settings.png["Preview settings in Netlify"]
+image::{imgpath}netlify-deploy-preview-settings.png["Preview settings in Netlify"]
 
 This provides a convenient way for reviewers to see changes before they are published to the public site.
 The results of the preview build are also reflected in GitHub, so you can easily see if the changes have resulted in any problems.
@@ -46,9 +46,9 @@ The results of the preview build are also reflected in GitHub, so you can easily
 . Merge the changes into the main branch:
 +
 --
-image::/images/blog/merge-pull-request.png["GitHub Merge pull request."]
+image::{imgpath}merge-pull-request.png["GitHub Merge pull request."]
 
-Netlify is configured to build and deploy the site automatically whenever a merge occurs (see xref:b022519-configuring-github-to-trigger-netlify-on-merge.adoc[Triggering a build of an Antora project by Netlify when merging in GitHub]).
+Netlify is configured to build and deploy the site automatically whenever a merge occurs (see xref:b022519-configuring-github-to-trigger-netlify-on-merge.adoc[Configuring GitHub to trigger a Netlify build on merging]).
 --
 
 NOTE: Creating a pull request is required by GitHub even if you are the only one working on a particular repo.
