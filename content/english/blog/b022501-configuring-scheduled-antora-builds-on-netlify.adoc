@@ -64,10 +64,13 @@ jobs:
 This creates a workflow that runs at the scheduled time.
 When run, a CURL request containing the buildhook is sent to Netlify, triggering the build of the site.
 
-You can monitor the workflow in GitHub:
+To monitor the workflow in GitHub:
 
-. Select the workflow repo.
+. Select the content repo to which you added the workflow.
 
 . Click btn:[Actions]:
 +
-image::{imgpath}github-workflows.jpg[alt="GitHub workflows"]
+image::{imgpath}b022501-github-workflow-on-schedule.png[alt="GitHub workflows"]
+
+. Click the relevant workflow link.
+
