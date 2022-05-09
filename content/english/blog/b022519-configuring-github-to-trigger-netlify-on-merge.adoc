@@ -58,11 +58,11 @@ This is based on the workflow detailed in https://docs.github.com/en/actions/usi
 +
 NOTE: If you need to merge the changes back into the main branch, this should immediately trigger the workflow.
 
-To monitor the deployment in GitHub:
+To monitor the workflow in GitHub:
 
 . Select the content repo to which you added the workflow.
 
-. Click btn:[Pull requests]:
+. Click btn:[Actions]:
 +
-image::{imgpath}b022519-github-pull-request.png[alt="GitHub actions"]
-. Click the link of relevant pull request.
+image::{imgpath}b022519-github-workflow-on-merge.png[alt="GitHub actions"]
+. Click the relevant workflow link.
