@@ -157,9 +157,9 @@ kbd {
 .menu::after,
 .submenu::after {
     content: ">";
-    // margin-left: 0.4em;
-    // font-size: 1.1em;
-    // line-height: calc(1 / 1.1);
+    margin-left: 0.4em;
+    font-size: 0.8em;
+    line-height: calc(1 / 1.1);
 }
 
 // highlighting and text decoration
