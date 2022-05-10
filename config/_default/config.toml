@@ -92,5 +92,3 @@ rel = "manifest"
 [outputFormats.SearchIndex]
 mediaType = "application/json"
 baseName = "search"
-
-
