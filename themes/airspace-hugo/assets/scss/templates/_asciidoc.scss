@@ -156,9 +156,9 @@ kbd {
 // Use the menu (first item) and submenu (subsequent items excluding the last)
 .menu::after,
 .submenu::after {
-    content: "&gt;";
+    content: &gt;;
     margin-left: 0.4em;
-    font-size: 1.1em;    
+    // font-size: 1.1em;
     // line-height: calc(1 / 1.1);
 }
 
