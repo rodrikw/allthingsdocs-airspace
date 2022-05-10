@@ -7,7 +7,7 @@ image_caption: "<a href='https://unsplash.com/photos/0bzYFCQcljg'>Kiev Childrenâ
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Asciidoctor-Diagram","Diagrams"]
-description: "How to get AsciiDoctor-Diagram to work with Hugo and Netlify."
+description: "How to get AsciiDoctor-Diagram to work with Hugo and Netlify"
 draft: false
 type: "post"
 ---
