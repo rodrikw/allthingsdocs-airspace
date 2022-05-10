@@ -7,7 +7,7 @@ image_caption: "<a href='https://unsplash.com/photos/yBzrPGLjMQw'>Watchmaker’s
 bg_image: "images/feature-bg.jpg"
 categories: ["Doc site"]
 tags: ["Antora","Netlify","GitHub"]
-description: "How to set up GitHub to trigger scheduled builds of an Antora project on Netlify."
+description: "How to set up GitHub to trigger scheduled builds of an Antora project on Netlify"
 draft: false
 type: "post"
 ---

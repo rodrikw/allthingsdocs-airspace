@@ -7,7 +7,7 @@ image_caption: "<a href='https://unsplash.com/photos/eQ2Z9ay9Wws'>Historic Hebre
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Search","lunr.js"]
-description: "How simple search functionality was added using the lunr.js library."
+description: "How simple search functionality was added using the lunr.js library"
 draft: true
 type: "post"
 ---

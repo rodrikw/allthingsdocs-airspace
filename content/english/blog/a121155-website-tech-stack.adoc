@@ -7,7 +7,7 @@ image_caption: "<a href='https://unsplash.com/photos/AP-OWtqJJeE'>Ship engine</a
 bg_image: "images/feature-bg.jpg"
 categories: ["Website"]
 tags: ["Tech stack","Jamstack"]
-description: "Details of the tech stack used to deploy this website."
+description: "Details of the tech stack used to deploy this website"
 draft: false
 type: "post"
 ---
@@ -47,6 +47,6 @@ My preferred environment is https://www.jetbrains.com/idea/[IntelliJ IDEA Commun
 The site folder must be initiated as a Git repo.
 . Changes are pushed to the remote Git repo.
 In the case of this site, that's on GitHub.
-. When a changes is pushed to the GitHub, this is detected by Netlify.
+. When a changes is pushed to GitHub, this is detected by Netlify.
 The Netlify build environment is instantiated with the necessary components (Hugo, Asciidoctor and so on) and the site is generated.
 . The site contents are then pushed to https://www.netlify.com/products/edge/[Netlify Edge].
