@@ -26,14 +26,12 @@ Work ÷ Time = Productivity
 But this isn't very helpful.
 Obviously, churning out reams of documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
 
-In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as follows:
+In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as follows{empty}footnote:[Barr, J.P. and Rosenbaum, S . (2003) _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471.]:
 
-[quote,"Barr,J.P. and Rosenbaum,S. (2003) Documentation and Training Productivity Benchmarks,Volume 50,No. 4,Nov 2003. p471."]
-____
 ....
 (Quality × Quantity) ÷ Time = Productivity
 ....
-____
+
 
 This is an improvement, but it's still missing something.
 We need to take into account that not all (tech doc) work is equally difficult:
@@ -80,7 +78,7 @@ You need to measure something that represents the bulk of the work being done, a
 One way to measure _raw_ quantity in technical documentation is to count the number of words that technical writers write in a given period.
 While text is likely to be a technical writer's primary output, counting only words might disincentivize other productive, even essential activities.
 For example, technical writers might be discouraged from considering other, possibly more effective approaches to conveying information, such as diagrams and images.
-Even more importantly, prioritizing word counts could discourage planning and design, which according to JoAnn Hackos{empty}footnote:[Hackos, JoAnn T. (2007) _Information Development: Managing Your Documentation Projects, Portfolio, and People_, page 334]  should account for 30 percent of a documentation project's time.
+Even more importantly, prioritizing word counts could discourage planning and design, which according to JoAnn Hackos{empty}footnote:[Hackos, JoAnn T. (2007) _Information Development: Managing Your Documentation Projects, Portfolio, and People_, p334]  should account for 30 percent of a documentation project's time.
 
 How can these perverse effects be mitigated?
 
