@@ -26,12 +26,11 @@ Work ÷ Time = Productivity
 But this isn't very helpful.
 Obviously, churning out reams of documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
 
-In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as follows{empty}footnote:[Barr, J.P. and Rosenbaum, S . (2003) _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471.]:
+In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S . (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online].]:
 
 ....
 (Quality × Quantity) ÷ Time = Productivity
 ....
-
 
 This is an improvement, but it's still missing something.
 We need to take into account that not all (tech doc) work is equally difficult:
@@ -55,7 +54,7 @@ If not, you might be able to make use of estimates.
 
 Complexity can be incorporated by agreeing on a set weightings for different document types (or work products):
 
-[cols="s,>",width=50%]
+[cols="n,>",width=50%]
 |===
 |Work product | Complexity weighting
 
@@ -73,17 +72,17 @@ Complexity can be incorporated by agreeing on a set weightings for different doc
 == Quantity
 
 Measuring quantity is where developing a workable productivity metric starts to get tricky.
-You need to measure something that represents the bulk of the work being done, and you want to ensure that is independent of time.
+You need to measure something that represents the bulk of the work being done, and it should be independent of time.
 
 One way to measure _raw_ quantity in technical documentation is to count the number of words that technical writers write in a given period.
-While text is likely to be a technical writer's primary output, counting only words might disincentivize other productive, even essential activities.
-For example, technical writers might be discouraged from considering other, possibly more effective approaches to conveying information, such as diagrams and images.
-Even more importantly, prioritizing word counts could discourage planning and design, which according to JoAnn Hackos{empty}footnote:[Hackos, JoAnn T. (2007) _Information Development: Managing Your Documentation Projects, Portfolio, and People_, p334]  should account for 30 percent of a documentation project's time.
+Word counts have a bad reputation because they can perversely incentivize verbosity and disincentivize other productive, even essential activities.
+For example, technical writers might be discouraged from considering other, possibly more effective, approaches to conveying information, such as diagrams and images.
+Even more importantly, prioritizing word counts could discourage planning and design, which according to JoAnn Hackos{empty}footnote:[Hackos, JoAnn T. (2007). _Information Development: Managing Your Documentation Projects, Portfolio, and People_, (2nd ed.). Wiley. p334.]  should account for 30 percent of a documentation project's time.
 
-How can these perverse effects be mitigated?
+How can these perverse effects be countered?
 
 One option is to add additional quantity variables relating to important work products.
-But this is likely to be impractical: even if you could determine a weighting for diagrams versus words, how would you take into account planning, especially planning that obviates unnecessary work?
+But this is likely to be impractical: even if you can arrive at a weighting for diagrams versus words, how would you take into account the value of planning, especially planning that obviates unnecessary work?
 
 An alternative, is to rely on the quality variable.
 The idea is that if you have a valid measure of quality, you can ensure that those aspects of the technical writers`' job that are not directly measured are nevertheless accounted for through their impact on quality.
@@ -93,16 +92,17 @@ This, however, makes measuring quality accurately even more critical.
 
 == Quality
 
-The real difficulty with putting the `(Quality × Quantity × Complexity) ÷ Time = Productivity` formula into operation, is arriving at a reliable measure of quality.
+Being able to put the `(Quality × Quantity × Complexity) ÷ Time = Productivity` formula into operation, greatly depends on devising a reliable measure of quality.
 
 One way is to ask reviewers and editors to provide a quality rating for each new document or update.
 This can then be incorporated into the productivity calculation:
 
+.Productivity points calculated using a quality rating.
 image::{imgpath}b051907-simple-productivity-spreadsheet.png[]
 
 The formula I used to calculate Productivity Points (Column E) is:
 
-[source]
+[source,excel]
 ----
 =@WordCount*@Complexity*@QualityRating*QualityMultiplier
 ----
@@ -120,12 +120,13 @@ Assuming `QualityMultiplier` of `0.5`, a manager might set team members a minimu
 Individual team members might meet this minimum target in a variety of ways:
 
 One writer might work on developer documents assigned a complexity of `2` and so need to write only 500 words a day.
-Another writer might consistently a achieve a quality score of `3` and so require only about 670 words.
+Another writer might consistently achieve a quality score of `3` and so require only about 670 words.
 And a third, relatively weak, writer might find that they have to churn out 2000 words a day to make the target because their writing is consistently assigned a quality rating of only `1`.
 
-The formula could be made more sophisticated.
-For example, you might distinguish content-level quality from form-level quality.
+The formula could be refined.
+For example, you might distinguish content-level quality (accuracy, completeness, and relevance) from form-level quality (structure, language, and style).
 The former would be assessed by the subject-matter expert and the latter by an editor.
+You could even make use of a document review form with multiple weighted criteria, but this is probably impractical.
 
 .Pros and cons of using a quality rating
 [cols="a,a"]
@@ -135,37 +136,38 @@ The former would be assessed by the subject-matter expert and the latter by an e
 |
 * Requires managing only a few inputs.
 
-* Can be adjusted to balance quality and quantity, and so avoid pernicious side effects.
+* Can be adjusted to balance quality and quantity, and so avoid perverse effects.
 
-* Should discourage attempts to manipulate the system.
+* Should be resistant to attempts by writers to manipulate the system.
 
 |
 * Requires gaining the cooperation of the editors and SME reviewers, which may be impractical.
 
-* Might be susceptible to generously different reviewers rate quality, leading to issues of unfairness.
+* Might be susceptible to how generously different reviewers rate quality, leading to issues of unfairness.
 
 * Doesn't account for other documentation-related work such as editing, restructuring and so on.
 
 |===
 
 An alternative to using an explicit quality rating is to find a suitable proxy for it.
-I believe that this can be done using the ratio between time spent by the writer creating or updating a document, and the time spent reviewing and editing the document.
+I believe that this can be done using the ratio between the time spent by the writer creating or updating a document, and the time spent reviewing and editing the document.
 The idea is that writers who are producing good quality work will consistently require _relatively_ less time from reviewers and editors.
-Weaker writers require more time on the part of SMEs to check and correct content, and from editors who need perform structural editing.
+Weaker writers require more time on the part of SMEs to check and correct content, and from editors who need to perform structural editing.
 
+.Productivity points calculated using the reviewer writer ratio.
 image:{imgpath}b051907-writer-reviewer-ratio-spreadsheet.png[]
 
-The formula for calculating Productivity Points is now:
+The formula for calculating productivity points is now:
 
 [source,excel,subs="verbatim,quotes"]
 ----
 =IF(#(@WordCount*@Complexity+(@WordCount*-((@ReviewerTime/@WriterTime)-BaselineRatio)\*QualityMultiplier))#<0,0,(@WordCount*@Complexity+(@WordCount*-((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier)))
 ----
 
-The highlighted part is key.
+The important part of the formula is highlighted.
 The IF statement simply ensures that productivity points do not drop below zero.
 
-* `WriterTime` is the total amount of time logged by technical writer in creating or updating the document.
+* `WriterTime` is the total amount of time logged by the technical writer in creating or updating the document.
 
 * `ReviewerTime` is the total amount of time logged by reviewers and editors of the document.
 
@@ -176,21 +178,23 @@ The IF statement simply ensures that productivity points do not drop below zero.
 As with previous approach, it is possible to arrive at a minimum weekly target of 5000 productivity points.
 As depicted above, with the baseline ratio specified as `1/8` and the quality multiplier set to `6`, this equivalent to 1000 words of average complexity (`1`) per eight-hour day, requiring 1 hour of review time.
 
-If a tech writer spends 8 hours writing 1000 words, but the reviewers require only 0.5 hours, then the tech writer will earn 1375 productivity points (row 2):
+If a tech writer spends 8 hours writing 1000 words, but the reviewers require only 0.5 hours, then the tech writer will earn 1375 productivity points (row 3):
 
+.Effect of reducing the reviewer time.
 image:{imgpath}b051907-writer-reviewer-ratio-spreadsheet-2.png[]
 
 The rationale is that the technical writer has produced a higher quality product requiring less remedial input.
 
 But what happens if the technical writer takes longer on the task without a reduction in the reviewer time?
-Consider a case where a technical writer takes twice as long to complete 1000 words (row 2):
+Consider a case where a technical writer takes twice as long to complete 1000 words (row 3):
 
+.Effect of increasing the writer time.
 image:{imgpath}b051907-writer-reviewer-ratio-spreadsheet-3.png[]
 
-They would again earn 1375 productivity points instead of 1000, which might seem counter-intuitive.
+The writer would again earn 1375 productivity points instead of 1000, which might seem counter-intuitive.
 However, notice that they are earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
 
-The formula, too, could be made more sophisticated.
+This formula, too, could be refined.
 For example, you might distinguish SME reviewer time from editor time, and weight them differently.
 Also, you might decide to define a minimum reviewer–writer ratio (for example, 1/14) beyond which no further benefits accrue to the writer.
 This would have the effect of encouraging writers to aim for a reviewer–writer sweet spot.
