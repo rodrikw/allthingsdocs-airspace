@@ -155,7 +155,7 @@ The idea is that writers who are producing good quality work will consistently r
 Weaker writers require more time on the part of SMEs to check and correct content, and from editors who need to perform structural editing.
 
 .Productivity points calculated using the reviewer writer ratio.
-image:{imgpath}b051907-writer-reviewer-ratio-spreadsheet.png[]
+image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet.png[]
 
 The formula for calculating productivity points is now:
 
@@ -181,7 +181,7 @@ As depicted above, with the baseline ratio specified as `1/8` and the quality mu
 If a tech writer spends 8 hours writing 1000 words, but the reviewers require only 0.5 hours, then the tech writer will earn 1375 productivity points (row 3):
 
 .Effect of reducing the reviewer time.
-image:{imgpath}b051907-writer-reviewer-ratio-spreadsheet-2.png[]
+image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet-2.png[]
 
 The rationale is that the technical writer has produced a higher quality product requiring less remedial input.
 
@@ -189,7 +189,7 @@ But what happens if the technical writer takes longer on the task without a redu
 Consider a case where a technical writer takes twice as long to complete 1000 words (row 3):
 
 .Effect of increasing the writer time.
-image:{imgpath}b051907-writer-reviewer-ratio-spreadsheet-3.png[]
+image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet-3.png[]
 
 The writer would again earn 1375 productivity points instead of 1000, which might seem counter-intuitive.
 However, notice that they are earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
