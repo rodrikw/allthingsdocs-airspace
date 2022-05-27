@@ -100,7 +100,7 @@ This can then be incorporated into the productivity calculation:
 .Productivity points calculated using a quality rating.
 image::{imgpath}b051907-simple-productivity-spreadsheet.png[]
 
-The formula I used to calculate Productivity Points (Column E) is:
+The formula used to calculate productivity points (column E) is:
 
 [source,excel]
 ----
