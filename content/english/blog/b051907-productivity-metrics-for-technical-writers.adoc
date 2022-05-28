@@ -24,7 +24,7 @@ Work ÷ Time = Productivity
 ....
 
 But this isn't very helpful.
-Obviously, churning out reams of documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
+Obviously, churning out reams of pointless documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
 
 In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S. (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online^].]:
 
@@ -159,7 +159,7 @@ image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet.png[]
 
 The formula for calculating productivity points is now:
 
-[source,excel,subs="verbatim,quotes"]
+[source,excel]
 ----
 =(@WordCount*@Complexity+(@WordCount*-((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier))
 ----
@@ -194,10 +194,9 @@ Nevertheless, it seems a little counter-intuitive for the writer to receive more
 
 If you want to more actively discourage writers from increasing the reviewer–writer by taking longer, you could also include the word count–writer time ratio in the formula:
 
-.Revised formula for calculating productivity points
-image::{imgpath}b051907-productivity-eqn-2.svg[]
+image::{imgpath}b051907-productivity-eqn-2.svg[width=100%]
 
-Oras an Excel formula:
+Or as an Excel formula:
 
 [source,excel]
 ----
