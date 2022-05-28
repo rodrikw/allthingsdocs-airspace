@@ -12,9 +12,9 @@ draft: false
 type: "post"
 ---
 
-On a number of occasions I have been asked to suggest a productivity metric for technical writers, usually as part of some performance management initiative.
+On a number of occasions I have been asked to suggest a productivity metric for technical writers, usually as part of a performance management initiative.
 
-I'm somewhat sceptical about the value of productivity metrics -- I'm more in the "`Not everything that counts can be counted`" camp than in the "`If it can't be measured, it can't be managed`" one.
+When it comes to metrics, I'm more in the "`Not everything that counts can be counted`" camp than in the "`If it can't be measured, it can't be managed`" one.
 But if you are required to devise a metric, you owe it to your team and company to come up with something that is workable and fair.
 
 At its simplest, productivity is the rate at which work is done:
@@ -26,7 +26,7 @@ Work ÷ Time = Productivity
 But this isn't very helpful.
 Obviously, churning out reams of documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
 
-In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S . (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online].]:
+In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S. (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online^].]:
 
 ....
 (Quality × Quantity) ÷ Time = Productivity
@@ -36,7 +36,7 @@ This is an improvement, but it's still missing something.
 We need to take into account that not all (tech doc) work is equally difficult:
 writing up a procedure for a consumer application is easier than explaining the workings of a complex fraud detection algorithm.
 
-So at the very least, we need add complexity to the formula:
+So at the very least we need add complexity to the formula:
 
 ....
 (Quality × Quantity × Complexity) ÷ Time = Productivity
@@ -54,7 +54,7 @@ If not, you might be able to make use of estimates.
 
 Complexity can be incorporated by agreeing on a set weightings for different document types (or work products):
 
-[cols="n,>",width=50%]
+[cols="n,>",width=50%,frame=ends]
 |===
 |Work product | Complexity weighting
 
@@ -77,7 +77,7 @@ You need to measure something that represents the bulk of the work being done, a
 One way to measure _raw_ quantity in technical documentation is to count the number of words that technical writers write in a given period.
 Word counts have a bad reputation because they can perversely incentivize verbosity and disincentivize other productive, even essential activities.
 For example, technical writers might be discouraged from considering other, possibly more effective, approaches to conveying information, such as diagrams and images.
-Even more importantly, prioritizing word counts could discourage planning and design, which according to JoAnn Hackos{empty}footnote:[Hackos, JoAnn T. (2007). _Information Development: Managing Your Documentation Projects, Portfolio, and People_, (2nd ed.). Wiley. p334.]  should account for 30 percent of a documentation project's time.
+Even more importantly, prioritizing word counts could discourage planning and design, which according to JoAnn Hackos{empty}footnote:[Hackos, J.T. (2007). _Information Development: Managing Your Documentation Projects, Portfolio, and People_, (2nd ed.). Wiley. p334.]  should account for 30 percent of a documentation project's time.
 
 How can these perverse effects be countered?
 
@@ -161,11 +161,8 @@ The formula for calculating productivity points is now:
 
 [source,excel,subs="verbatim,quotes"]
 ----
-=IF(#(@WordCount*@Complexity+(@WordCount*-((@ReviewerTime/@WriterTime)-BaselineRatio)\*QualityMultiplier))#<0,0,(@WordCount*@Complexity+(@WordCount*-((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier)))
+=(@WordCount*@Complexity+(@WordCount*-((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier))
 ----
-
-The important part of the formula is highlighted.
-The IF statement simply ensures that productivity points do not drop below zero.
 
 * `WriterTime` is the total amount of time logged by the technical writer in creating or updating the document.
 
@@ -191,13 +188,39 @@ Consider a case where a technical writer takes twice as long to complete 1000 wo
 .Effect of increasing the writer time.
 image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet-3.png[]
 
-The writer would again earn 1375 productivity points instead of 1000, which might seem counter-intuitive.
+The writer would again earn 1375 productivity points instead of 1000.
 However, notice that they are earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
+Nevertheless, it seems a little counter-intuitive for the writer to receive more productivity points for the same output.
 
-This formula, too, could be refined.
-For example, you might distinguish SME reviewer time from editor time, and weight them differently.
-Also, you might decide to define a minimum reviewer–writer ratio (for example, 1/14) beyond which no further benefits accrue to the writer.
-This would have the effect of encouraging writers to aim for a reviewer–writer sweet spot.
+If you want to more actively discourage writers from increasing the reviewer–writer by taking longer, you could also include the word count–writer time ratio in the formula:
+
+.Revised formula for calculating productivity points
+image::{imgpath}b051907-productivity-eqn-2.svg[]
+
+Oras an Excel formula:
+
+[source,excel]
+----
+=(((@WordCount/@WriterTime)/@BaseLineTarget)-(((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier))*PointsMultiplier
+----
+
+Fundamentally, the formula subtracts the ReviewerTime–WriterTime ratio from the WordCount–WriterTime ratio.
+The effect is that changes to the reviewer time affect the score in the same ways as before.
+But now, changes to the writer time are "`counteracted`" by changes to the WordCount–WriterTime ratio.
+
+image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet-4.png[]
+
+Notice that in row 3, as the review time decreases, the productivity points resulting from the original formula (column J) and the revised formula (column P) increase.
+However, when in row 4 the writer time is reduced, the resulting productivity points differ.
+Using the revised formula, the productivity points increase.
+I believe this is more intuitive: the writer is producing the same amount of work in less time while requiring no greater effort by the reviewers (implying constant quality).
+So the writer is now more productive.
+
+Similarly, in row 5 when the writer takes longer to do the work while requiring the same amount of effort from the reviewers, the revised formula results in fewer productivity points, which intuitively seems correct.
+But if the writer's increased time results in even a modest reduction in the effort required by the reviewers (row 6), the writer is rewarded with more productivity points
+
+
+
 
 .Pros and cons of using reviewer–writer ratio
 [cols="a,a"]
@@ -214,10 +237,15 @@ If writers and SMEs are already logging time, the only additional inputs are wor
 
 
 |
-* Provides only an indirect, and possibly unreliable, measure of quality.
+* Provides only an indirect measure of quality, and one that has not, to my knowledge, been tested.
 
-* #Might not be perceived as intuitive.#
+* Might lack https://en.wikipedia.org/wiki/Face_validity[face validity^], that is, not be perceived to measure what it is meant to.
 
 * Doesn't account for other documentation-related work such as editing, restructuring and so on.
 
 |===
+
+I'd love to hear what you think.
+Do either of these approaches seem valid, or are they just metrological madness?
+
+In a later post I intend considering other, extrinsic, ways of measuring quality (or value), such as customer ratings.
