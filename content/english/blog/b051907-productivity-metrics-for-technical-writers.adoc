@@ -192,7 +192,7 @@ The writer would again earn 1375 productivity points instead of 1000.
 However, notice that they are earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
 Nevertheless, it still seems a little counter-intuitive for the writer to receive more productivity points for the same output.
 
-In order to arrive ata formula that better fitted my expectations, I decided include the word-count–write ratio in the formula:
+In order to arrive at an output that better fitted my expectations, I included the word-count–write ratio in the formula:
 
 image::{imgpath}b051907-productivity-eqn-2.svg[width=100%]
 
