@@ -192,10 +192,10 @@ Consider a case where a technical writer takes twice as long to complete 1000 wo
 image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet-3.png[]
 
 The writer would again earn 1375 productivity points instead of 1000.
-However, notice that they are earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
+However, notice that they _are_ earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
 Nevertheless, it still seems a little counter-intuitive for the writer to receive more productivity points for the same output.
 
-In order to arrive at an output that better fitted my expectations, I included the word-count–write ratio in the formula:
+In order to arrive at an output that better fitted my expectations, I included the WordCount–WriterTime ratio in the formula:
 
 image::{imgpath}b051907-productivity-eqn-2.svg[width=100%]
 
@@ -208,11 +208,11 @@ Or as an Excel formula:
 
 * `TargetDailyWord` specifies the number of words that technical writers are expected to produce per day.
 
-* `PointsMultiplier` is used to bring the result of the formula into the desired range.
+* `PointsMultiplier` is used to adjust the output of the formula to convenient values.
 If the `PointsMultiplier` equals `TargetDailyWords`, `Complexity` is `1` and the review–write ratio is equal to the specified `BaselineRatio`, each word will result in one point.
 
-Fundamentally, the formula subtracts the review–write ratio from the word-count–write ratio.
-The effect is that changes to the reviewer time influence the score as before, but changes to the write time are "`counteracted`" by the wordcount–write ratio.
+Fundamentally, the formula subtracts the ReviewerTime–WriterTime ratio from the WordCount–WriterTime ratio.
+The effect is that changes to the reviewer time influence the score as before, but changes to the WriterTime are "`counteracted`" by the WordCount–WriterTime ratio.
 The image below shows how this works:
 
 .Comparison of the outputs of the original and revised formulas.
@@ -227,7 +227,7 @@ Similarly, in row 5 when the writer takes longer to do the work while requiring 
 But if the writer's increased time results in even a modest reduction in the effort required by the reviewers (row 6), the writer is rewarded with more productivity points.
 This should incentivize writers to balance quality and quantity.
 
-.Pros and cons of using reviewer–writer ratio
+.Pros and cons of using a ReviewerTime–WriterTime ratio
 [cols="a,a"]
 |===
 |Pros |Cons
@@ -249,10 +249,10 @@ If writers and SMEs are already logging time, the only additional inputs are wor
 
 |===
 
-I'd love to hear what you think.
-Do either of these approaches seem valid, or are they just metrological madness?
-
 A reviewer's quality rating is a summary of the reviewer's judgment of the document in terms of a number of quality characteristics such as completeness, accuracy, clarity, style, and so forth.
 As such, it reflects the document's intrinsic quality.
-The claim I've made is that the writer-reviewer ratio is a proxy for this sort measure of intrinsic quality.
-In a later post I intend considering other ways of measuring quality (and by extension, productivity), including extrinsic measures such as user ratings.
+The claim I've made is that the WriterTime-ReviewerTime ratio is a proxy for this sort of measure of intrinsic quality.
+In a later post I'll consider other ways of measuring quality (and by extension, productivity), including extrinsic measures such as user ratings.
+
+I'd love to hear what you think.
+Do any of the approaches outlined above seem workable, or are they just metrological madness?
