@@ -143,6 +143,8 @@ You could even make use of a document review form with multiple weighted criteri
 
 * Should be resistant to attempts by writers to manipulate the system.
 
+* Does not require tracking time per task.
+
 |
 * Requires gaining the cooperation of the editors and SME reviewers, which may be impractical.
 
@@ -246,6 +248,8 @@ If writers and SMEs are already logging time, the only additional inputs are wor
 * Might lack https://en.wikipedia.org/wiki/Face_validity[face validity^], that is, not be perceived to measure what it is meant to.
 
 * Doesn't account for other documentation-related work such as editing, restructuring and so on.
+
+* Does require tracking time per task.
 
 |===
 
