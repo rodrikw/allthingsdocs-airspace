@@ -132,7 +132,7 @@ The former would be assessed by the subject-matter expert and the latter by an e
 You could even make use of a document review form with multiple weighted criteria, but this is probably impractical.
 
 .Pros and cons of using a quality rating
-[cols="a,a"]
+[cols="a,a",frame=ends]
 |===
 |Pros |Cons
 
@@ -228,7 +228,7 @@ But if the writer's increased time results in even a modest reduction in the eff
 This should incentivize writers to balance quality and quantity.
 
 .Pros and cons of using a ReviewerTime–WriterTime ratio
-[cols="a,a"]
+[cols="a,a"frame=ends]
 |===
 |Pros |Cons
 
