@@ -123,9 +123,10 @@ For example, specifying a `PointsMultiplier` value of `0.5`, you might set team 
 
 Individual team members might meet this minimum target in a variety of ways:
 
-One writer might work on developer documents assigned a complexity of `2` and so need to write only 500 words a day.
-Another writer might consistently achieve a quality score of `3` and so require only about 670 words a day.
-And a third, relatively weak, writer might find that they have to churn out 2000 words a day to make the target because their writing is consistently assigned a quality rating of only `1`.
+[none]
+* One writer might work on developer documents assigned a complexity of `2` and so need to write only 500 words a day.
+* Another writer might consistently achieve a quality score of `3` and so require only about 670 words a day.
+* And a third, relatively weak, writer might find that they have to produce 2000 words a day to make the target because their writing is consistently assigned a quality rating of only `1`.
 
 The formula could be refined.
 For example, you might distinguish content-level quality (accuracy, completeness, and relevance) from form-level quality (structure, language, and style).
