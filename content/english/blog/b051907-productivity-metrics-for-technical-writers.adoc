@@ -112,12 +112,12 @@ The formula used to calculate productivity points (column E) is:
 * `Complexity` is a scale like the one <<_Complexity,proposed above>>.
 
 * `QualityRating` is a value on a five-point scale from `0` (Unacceptable) to `4` (Excellent).
-This is essentially the same as the scale employed in _Developing Quality Technical information_.{empty}footnote:[Carey, M., Lanyi, M.M., Longo, D., Radzinski, E., Rouiller, S. and Wilde, E. (2014). _Developing Quality Technical Information: A Handbook for Writers and Editors_. IBM Press. p545.]
+This is essentially the same as the scale employed by Carey _et al._,{empty}footnote:[Carey, M., Lanyi, M.M., Longo, D., Radzinski, E., Rouiller, S. and Wilde, E. (2014). _Developing Quality Technical Information: A Handbook for Writers and Editors_. IBM Press. p545.] except zero-based.
 
 * `PointsMultiplier` is simply used to adjust the output of the formula to convenient values.
 
 Productivity points do not have time as a denominator, unlike productivity (column F).
-This means that you don't actually need to track the time for individual tasks.
+This means that you don't actually need to track time for individual tasks.
 Instead, you could simply set team members a target for a defined period such as a 40-hour week.
 For example, specifying a `PointsMultiplier` value of `0.5`, you might set team members a minimum target of 5000 productivity points per week, equivalent to 1000 words per eight-hour day, of average complexity (`1`) and average quality (`2`).
 
@@ -130,7 +130,7 @@ And a third, relatively weak, writer might find that they have to churn out 2000
 The formula could be refined.
 For example, you might distinguish content-level quality (accuracy, completeness, and relevance) from form-level quality (structure, language, and style).
 The former would be assessed by the subject-matter expert and the latter by an editor.
-You could even make use of a document review checklist such as the one provided in _Developing Quality Technical information_.{empty}footnote:[Ibid.]
+You could even make use of a document review checklist, such as the one provided by Carey _et al._{empty}footnote:[Ibid.]
 
 .Pros and cons of using a quality rating
 [cols="a,a",frame=ends]
@@ -138,7 +138,7 @@ You could even make use of a document review checklist such as the one provided 
 |Pros |Cons
 
 |
-* Requires managing only a few inputs.
+* Requires managing relatively few inputs.
 
 * Can be adjusted to balance quality and quantity, and so avoid perverse effects.
 
@@ -149,7 +149,7 @@ You could even make use of a document review checklist such as the one provided 
 |
 * Requires gaining the cooperation of the editors and expert reviewers, which may be impractical.
 
-* Might be susceptible to how generously different reviewers rate quality, leading to issues of unfairness.
+* Might be susceptible to how generously different reviewers rate quality, leading to charges of unfairness.
 
 * Doesn't account for other documentation-related work such as editing, restructuring and so on.
 
@@ -236,12 +236,12 @@ This should incentivize writers to balance quality and quantity.
 |Pros |Cons
 
 |
-* Requires very few inputs.
+* Requires few inputs.
 If writers and expert reviewers are already logging time, the only additional inputs are word count and complexity.
 
-* Doesn't require gaining the cooperation of the editors and expert reviewers, which may be impractical.
+* Doesn't require gaining the cooperation of the editors and expert reviewers.
 
-* Does not require any subjective assessments by subject-matter experts or editors, avoiding one potential source of unfairness.
+* Doesn't require any subjective assessments by subject-matter experts or editors, avoiding one potential source of unfairness.
 
 |
 * Provides only an indirect measure of quality, and one that has not, to my knowledge, been tested.
@@ -261,4 +261,5 @@ In a later post I'll consider other ways of measuring quality (and by extension,
 
 I'd love to hear what you think.
 Do any of the approaches outlined above seem workable, or are they just metrological madness?
-If you'd like the spreadsheets, send a request via LinkedIn or using the comments below.
+
+If you'd like the spreadsheets, send me a request via https://www.linkedin.com/in/rodrikwade/[LinkedIn^] or using the comments below.
