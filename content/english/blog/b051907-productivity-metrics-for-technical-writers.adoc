@@ -1,6 +1,6 @@
 ---
 title: "Productivity metrics for technical writers"
-date: 2022-05-19T16:19:25+02:00
+date: 2022-05-30T10:58:20+02:00
 author: "Rodrik Wade"
 image: "images/blog/dashboard.jpg"
 image_caption: "<a href='https://unsplash.com/photos/MHIw0nSxCR4'>Assorted dial-meter board</a> by <a href='https://unsplash.com/@condorito1953'>Arie Wubben</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -12,7 +12,7 @@ draft: false
 type: "post"
 ---
 
-On a number of occasions I've been asked to suggest a productivity metric for technical writers, usually as part of some or other performance management initiative.
+On a number of occasions I've been asked to suggest a productivity metric for technical writers, usually as part of a performance management initiative.
 
 When it comes to metrics, I'm more in the "`Not everything that counts can be counted`" camp than in the "`If it can't be measured, it can't be managed`" one.
 But if you are required to devise a metric, you owe it to your team and company to come up with something that is workable and fair.
@@ -26,7 +26,7 @@ Work ÷ Time = Productivity
 But this isn't very helpful.
 Obviously, churning out reams of pointless documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
 
-In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S. (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online^].]:
+In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?^] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S. (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online^].]:
 
 ....
 (Quality × Quantity) ÷ Time = Productivity
@@ -52,7 +52,7 @@ If not, you might be able to get by with estimates.
 [#_Complexity]
 == Complexity
 
-Complexity can be incorporated by agreeing on a set weightings for different document types (or work products):
+Complexity can be incorporated by agreeing on a set of weightings for different document types (or work products):
 
 [cols="n,>",width=50%,frame=ends]
 |===
@@ -92,9 +92,9 @@ This, however, makes measuring quality accurately even more critical.
 
 == Quality
 
-Being able to put the `(Quality × Quantity × Complexity) ÷ Time = Productivity` formula into operation, greatly depends on devising a reliable measure of quality.
+Being able to put the `(Quality × Quantity × Complexity) ÷ Time = Productivity` formula into operation, heavily depends on devising a reliable measure of quality.
 
-One way is to ask reviewers and editors to provide a quality rating for each new document or update.
+One way is to ask expert reviewers and editors to provide a quality rating for each new document or update.
 This can then be incorporated into the productivity calculation:
 
 .Productivity points calculated using a quality rating.
@@ -113,7 +113,7 @@ The formula used to calculate productivity points (column E) is:
 
 * `QualityRating` is a value on a five-point scale from `0` (Unacceptable) to `4` (Excellent).
 
-* `PointsMultiplier` is used to adjust the output of the formula to convenient values.
+* `PointsMultiplier` is simply used to adjust the output of the formula to convenient values.
 
 Productivity points do not have time as a denominator, unlike productivity (column F).
 This means that you don't actually need to track the time for individual tasks.
@@ -129,7 +129,7 @@ And a third, relatively weak, writer might find that they have to churn out 2000
 The formula could be refined.
 For example, you might distinguish content-level quality (accuracy, completeness, and relevance) from form-level quality (structure, language, and style).
 The former would be assessed by the subject-matter expert and the latter by an editor.
-You could even make use of a document review form with multiple weighted criteria, but this is probably impractical.
+You could even make use of a document review checklist such as the one provided in _Developing Quality Technical information_.{empty}footnote:[Carey, M., Lanyi, M.M., Longo, D., Radzinski, E., Rouiller, S. and Wilde, E. (2014). _Developing Quality Technical Information: A Handbook for Writers and Editors_. IBM Press. p545.]
 
 .Pros and cons of using a quality rating
 [cols="a,a",frame=ends]
@@ -146,7 +146,7 @@ You could even make use of a document review form with multiple weighted criteri
 * Does not require tracking time per task.
 
 |
-* Requires gaining the cooperation of the editors and SME reviewers, which may be impractical.
+* Requires gaining the cooperation of the editors and expert reviewers, which may be impractical.
 
 * Might be susceptible to how generously different reviewers rate quality, leading to issues of unfairness.
 
@@ -154,10 +154,10 @@ You could even make use of a document review form with multiple weighted criteri
 
 |===
 
-An alternative to using an explicit quality rating is to find a suitable proxy for it.
+An alternative to using an explicit quality rating is to find a reasonable proxy for it.
 I believe that this can be done using the ratio between the time spent by the writer creating or updating a document, and the time spent reviewing and editing the document.
 The idea is that writers who are producing good quality work will consistently require _relatively_ less time from reviewers and editors.
-Weaker writers require more time on the part of SMEs to check and correct content, and from editors who need to perform structural editing.
+Weaker writers require more time on the part of subject-matter experts to check and correct content, and from editors who need to perform structural editing.
 
 .Productivity points calculated using the review–write ratio.
 image::{imgpath}b051907-writer-reviewer-ratio-spreadsheet.png[]
@@ -236,11 +236,11 @@ This should incentivize writers to balance quality and quantity.
 
 |
 * Requires very few inputs.
-If writers and SMEs are already logging time, the only additional inputs are word count and complexity.
+If writers and expert reviewers are already logging time, the only additional inputs are word count and complexity.
 
-* Doesn't require gaining the cooperation of the editors and SME reviewers, which may be impractical.
+* Doesn't require gaining the cooperation of the editors and expert reviewers, which may be impractical.
 
-* Does not require any subjective assessments by SMEs or editors, avoiding one potential source of unfairness.
+* Does not require any subjective assessments by subject-matter experts or editors, avoiding one potential source of unfairness.
 
 |
 * Provides only an indirect measure of quality, and one that has not, to my knowledge, been tested.
