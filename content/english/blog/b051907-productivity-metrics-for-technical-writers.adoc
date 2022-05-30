@@ -130,7 +130,7 @@ And a third, relatively weak, writer might find that they have to churn out 2000
 The formula could be refined.
 For example, you might distinguish content-level quality (accuracy, completeness, and relevance) from form-level quality (structure, language, and style).
 The former would be assessed by the subject-matter expert and the latter by an editor.
-You could even make use of a document review checklist such as the one provided in _Developing Quality Technical information_.{empty}footnote:[Carey, M., _et al_. (2014). p545.]
+You could even make use of a document review checklist such as the one provided in _Developing Quality Technical information_.{empty}footnote:[Ibid.]
 
 .Pros and cons of using a quality rating
 [cols="a,a",frame=ends]
