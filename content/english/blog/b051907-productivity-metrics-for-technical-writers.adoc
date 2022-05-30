@@ -112,6 +112,7 @@ The formula used to calculate productivity points (column E) is:
 * `Complexity` is a scale like the one <<_Complexity,proposed above>>.
 
 * `QualityRating` is a value on a five-point scale from `0` (Unacceptable) to `4` (Excellent).
+This is essentially the same as the scale employed in _Developing Quality Technical information_.{empty}footnote:[Carey, M., Lanyi, M.M., Longo, D., Radzinski, E., Rouiller, S. and Wilde, E. (2014). _Developing Quality Technical Information: A Handbook for Writers and Editors_. IBM Press. p545.]
 
 * `PointsMultiplier` is simply used to adjust the output of the formula to convenient values.
 
@@ -129,7 +130,7 @@ And a third, relatively weak, writer might find that they have to churn out 2000
 The formula could be refined.
 For example, you might distinguish content-level quality (accuracy, completeness, and relevance) from form-level quality (structure, language, and style).
 The former would be assessed by the subject-matter expert and the latter by an editor.
-You could even make use of a document review checklist such as the one provided in _Developing Quality Technical information_.{empty}footnote:[Carey, M., Lanyi, M.M., Longo, D., Radzinski, E., Rouiller, S. and Wilde, E. (2014). _Developing Quality Technical Information: A Handbook for Writers and Editors_. IBM Press. p545.]
+You could even make use of a document review checklist such as the one provided in _Developing Quality Technical information_.{empty}footnote:[Carey, M., _et al_. (2014). p545.]
 
 .Pros and cons of using a quality rating
 [cols="a,a",frame=ends]
