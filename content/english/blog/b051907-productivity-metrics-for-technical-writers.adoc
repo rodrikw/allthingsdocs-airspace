@@ -254,7 +254,7 @@ If writers and expert reviewers are already logging time, the only additional in
 
 |===
 
-A reviewer's quality rating is a summary of the reviewer's judgment of the document in terms of a number of quality characteristics such as completeness, accuracy, clarity, style, and so forth.
+A reviewer's quality rating is a summary of the reviewer's judgment of the document in terms of a number of quality characteristics such as completeness, accuracy, clarity, organization, style, and so forth.
 As such, it reflects the document's intrinsic quality.
 The claim I've made is that the WriterTime-ReviewerTime ratio is a proxy for this sort of measure of intrinsic quality.
 In a later post I'll consider other ways of measuring quality (and by extension, productivity), including extrinsic measures such as user ratings.
