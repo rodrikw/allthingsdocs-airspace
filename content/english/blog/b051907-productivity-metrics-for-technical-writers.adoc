@@ -26,7 +26,7 @@ Work ÷ Time = Productivity
 But this isn't very helpful.
 Obviously, churning out reams of pointless documentation like https://dilbert.com/strip/2007-11-28[Tina the tech writer^] isn't useful productivity.
 
-In his blog https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?^] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S. (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online^].]:
+In his blog post https://idratherbewriting.com/2012/03/02/technical-communication-metrics-what-should-you-track/[Technical Communication Metrics: What Should You Track?^] Tom Johnson quotes Jack Barr and Stephanie Rosenbaum, who define productivity as{empty}footnote:[Barr, J.P. and Rosenbaum, S. (2003). _Documentation and Training Productivity Benchmarks_, Volume 50, No. 4, Nov 2003. p471. https://www.thefreelibrary.com/Documentation+and+training+productivity+benchmarks.-a0111165965[Online^].]:
 
 ....
 (Quality × Quantity) ÷ Time = Productivity
