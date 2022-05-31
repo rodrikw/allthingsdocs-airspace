@@ -7,7 +7,7 @@ image_caption: "<a href='https://unsplash.com/photos/MHIw0nSxCR4'>Assorted dial-
 bg_image: "images/feature-bg.jpg"
 categories: ["Managerial"]
 tags: ["Metrics","Productivity"]
-description: "A discussion of productivity metrics that can be applied to technical writers"
+description: "Two approaches to measuring the productivity of technical writers"
 draft: false
 type: "post"
 ---
