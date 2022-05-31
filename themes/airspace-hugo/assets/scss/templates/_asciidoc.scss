@@ -160,8 +160,15 @@ kbd {
     margin-left: 0.4em;
     font-size: 1.3em;
     vertical-align:text-bottom;
-    line-height: calc(1 / 1.3);
+    line-height: calc(1 / 1.3);    
 }
+
+// Footnotes
+
+.footnote {
+    padding-left: 22px ;
+    text-indent: -22px ;
+  }
 
 // highlighting and text decoration
 mark {
