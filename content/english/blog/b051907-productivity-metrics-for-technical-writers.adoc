@@ -12,11 +12,7 @@ draft: false
 type: "post"
 ---
 
-:toc: macro
-
 On a number of occasions I've been asked to suggest a productivity metric for technical writers, usually as part of a performance management initiative.
-
-toc::[]
 
 When it comes to metrics, I'm more in the "`Not everything that counts can be counted`" camp than in the "`If it can't be measured, it can't be managed`" one.
 But if you are required to devise a metric, you owe it to your team and company to come up with something that is workable and fair.
