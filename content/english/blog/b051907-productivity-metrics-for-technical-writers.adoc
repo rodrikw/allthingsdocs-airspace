@@ -269,7 +269,7 @@ If writers and expert reviewers are already logging time, the only additional in
 
 I've suggested two ways of tracking technical writers`' productivity both of which rely on a measure of the intrinsic quality of documents:
 
-* A reviewer’s quality rating is based on their assessment of the intrinsic characteristics of the document, such as completeness, accuracy, clarity, organization, style, and so forth.
+* A quality rating reflects a reviewer's assessment of intrinsic qualities of the document, such as completeness, accuracy, clarity, organization, style, and so forth.
 
 * The claim I've made is that the reviewer time-writer time ratio is a proxy for this sort of measure of intrinsic quality.
 
