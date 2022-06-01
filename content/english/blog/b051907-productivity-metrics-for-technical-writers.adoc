@@ -38,6 +38,7 @@ writing up a procedure for a consumer application is easier than explaining the 
 
 So at the very least we need to add complexity to the formula:
 
+[#_ProductivityFormula]
 ....
 (Quality × Quantity × Complexity) ÷ Time = Productivity
 ....
@@ -211,7 +212,7 @@ Nevertheless, it still seems a little counter-intuitive for the writer to receiv
 
 In order to arrive at an output that better fitted my expectations, I included the ratio between the word count and the time taken by the writer in the formula:
 
-image::{imgpath}b051907-productivity-equation.svg[width=100%,alt="(((@WordCount/@WriterTime)/(BaselineRatio × TargetDailyWords))-(((ReviewerTime/WriterTime)-BaselineRatio) × QualityMultiplier))× PointsMultiplier"]
+image::{imgpath}b051907-productivity-equation.svg[width=100%,alt="Refined formula for calculating productivity points: (((@WordCount/@WriterTime)/(BaselineRatio × TargetDailyWords))-(((ReviewerTime/WriterTime)-BaselineRatio) × QualityMultiplier))× PointsMultiplier"]
 
 Or as an Excel formula:
 
@@ -230,7 +231,7 @@ The effect is that changes to the reviewer time influence the score as before, b
 The image below shows how this works:
 
 .Comparison of the outputs of the original and revised formulas.
-image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-4.png[alt="Excel sheet showing how an increase in the writer time results in a decrease in productivity points using the refined formula."]
+image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-4.png[alt="Excel sheet showing how, using the refined formula, an increase in the writer time results in a decrease in productivity points."]
 
 Notice that in row 3, as the review time decreases, the productivity points resulting from the original formula (column J) and the revised formula (column P) both increase.
 However, when in row 4 the writer time is reduced, the resulting productivity points are different.
