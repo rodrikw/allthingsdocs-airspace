@@ -93,7 +93,7 @@ This, however, makes measuring quality accurately even more critical.
 
 Determining word counts is easy when writing new documents but can prove more difficult when updating documents.
 If a writer adds 400 new words but deletes 100 old words, you would presumably want the word count to be 400 words not 250.
-And similarly if a writer rewrites a section, you'd want to credit them for that work.
+And similarly, if a writer rewrites a section, you'd want to credit them for that work.
 
 == Quality
 
