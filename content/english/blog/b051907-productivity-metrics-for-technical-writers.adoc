@@ -107,7 +107,7 @@ One way of measuring quality is to ask expert reviewers and editors to provide a
 This can then be incorporated into the productivity calculation:
 
 .Productivity points calculated using a quality rating.
-image::{imgpath}b051907-quality-rating-spreadsheet.png[]
+image::{imgpath}b051907-quality-rating-spreadsheet.png[alt="Excel sheet showing productivity points calculated as WordCount × Complexity × QualityRating × QualityMultiplier"]
 
 The formula used to calculate productivity points (column E) is:
 
@@ -172,7 +172,7 @@ The idea is that writers who are producing good quality work will consistently r
 Weaker writers require more time from subject-matter experts to check and correct content and from editors who need to perform structural editing.
 
 .Productivity points calculated using the reviewer time–writer time ratio.
-image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet.png[]
+image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet.png[alt="Excel sheet showing productivity points calculated as WordCount × Complexity + (WordCount ×- ((ReviewerTime/WriterTime) - BaselineRatio) × QualityMultiplier)"]
 
 The formula for calculating productivity points is now:
 
@@ -195,7 +195,7 @@ As shown above, with the baseline ratio specified as 1/8 and the quality multipl
 If a technical writer spends 8 hours writing 1000 words, but the reviewers require only 0.5 hours, then the writer will earn 1375 productivity points (row 3):
 
 .Effect of reducing the reviewer time.
-image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-2.png[]
+image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-2.png[alt="Excel sheet showing how a reduction in the reviewer time results in an increase in productivity points."]
 
 The reasoning is that the technical writer has produced a higher quality product requiring less remedial input.
 
@@ -203,7 +203,7 @@ But what happens if the technical writer takes longer on the task without a redu
 Consider a case where a technical writer takes twice as long to complete 1000 words (row 3):
 
 .Effect of increasing the writer time.
-image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-3.png[]
+image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-3.png[alt="Excel sheet showing how an increase in the writer time also results in an increase in productivity points but a reduction in productivity for the period."]
 
 The writer would again earn 1375 productivity points instead of 1000.
 However, notice that they _are_ earning points at a slower rate, so that within the 40-hour week they will earn a total of only 4375 productivity points (all other tasks being equal).
@@ -211,7 +211,7 @@ Nevertheless, it still seems a little counter-intuitive for the writer to receiv
 
 In order to arrive at an output that better fitted my expectations, I included the ratio between the word count and the time taken by the writer in the formula:
 
-image::{imgpath}b051907-productivity-equation.svg[width=100%,alt="(((@WordCount/@WriterTime)/(BaselineRatio*TargetDailyWords))-(((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier))*PointsMultiplier"]
+image::{imgpath}b051907-productivity-equation.svg[width=100%,alt="(((@WordCount/@WriterTime)/(BaselineRatio × TargetDailyWords))-(((ReviewerTime/WriterTime)-BaselineRatio) × QualityMultiplier))× PointsMultiplier"]
 
 Or as an Excel formula:
 
@@ -230,7 +230,7 @@ The effect is that changes to the reviewer time influence the score as before, b
 The image below shows how this works:
 
 .Comparison of the outputs of the original and revised formulas.
-image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-4.png[]
+image::{imgpath}b051907-reviewer-writer-ratio-spreadsheet-4.png[alt="Excel sheet showing how an increase in the writer time results in a decrease in productivity points using the refined formula."]
 
 Notice that in row 3, as the review time decreases, the productivity points resulting from the original formula (column J) and the revised formula (column P) both increase.
 However, when in row 4 the writer time is reduced, the resulting productivity points are different.
