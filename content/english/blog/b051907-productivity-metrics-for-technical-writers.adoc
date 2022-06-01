@@ -1,6 +1,6 @@
 ---
 title: "Productivity metrics for technical writers"
-date: 2022-05-31T10:41:58+02:00
+date: 2022-06-01T09:31:30+02:00
 author: "Rodrik Wade"
 image: "images/blog/dashboard.jpg"
 image_caption: "<a href='https://unsplash.com/photos/MHIw0nSxCR4'>Assorted dial-meter board</a> by <a href='https://unsplash.com/@condorito1953'>Arie Wubben</a>, <a href='https://unsplash.com/license'>Unsplash licence</a>, cropped"
@@ -211,7 +211,7 @@ Nevertheless, it still seems a little counter-intuitive for the writer to receiv
 
 In order to arrive at an output that better fitted my expectations, I included the ratio between the word count and the time taken by the writer in the formula:
 
-image::{imgpath}b051907-productivity-equation.svg[width=100%]
+image::{imgpath}b051907-productivity-equation.svg[width=100%,alt="(((@WordCount/@WriterTime)/(BaselineRatio*TargetDailyWords))-(((@ReviewerTime/@WriterTime)-BaselineRatio)*QualityMultiplier))*PointsMultiplier"]
 
 Or as an Excel formula:
 
