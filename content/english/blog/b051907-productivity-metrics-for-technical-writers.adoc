@@ -108,13 +108,13 @@ One way of measuring quality is to ask expert reviewers and editors to provide a
 This can then be incorporated into the productivity calculation:
 
 .Productivity points calculated using a quality rating.
-image::{imgpath}b051907-quality-rating-spreadsheet.png[alt="Excel sheet showing productivity points calculated as WordCount × Complexity × QualityRating × QualityMultiplier"]
+image::{imgpath}b051907-quality-rating-spreadsheet.png[alt="Excel sheet showing productivity points calculated as WordCount × Complexity × QualityRating × PointsMultiplier"]
 
 The formula used to calculate productivity points (column E) is:
 
 [source,excel]
 ----
-=@WordCount*@Complexity*@QualityRating*QualityMultiplier
+=@WordCount*@Complexity*@QualityRating*PointsMultiplier
 ----
 
 * `WordCount` is the number of words added or rewritten.
